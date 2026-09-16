@@ -20,7 +20,7 @@ def telegram_caption(data):
     return (
         "🟢 <b>TOTO 50x je inzet!</b> ⚽\n"
         f"Vandaag: {wed}\n\n"
-        f"{keuze} en pak <b>50x je inleg</b> — jouw €1 wordt <b>€50</b>! 💸\n"
-        "✅ Nieuw bij TOTO Sport · geen rondspeelvoorwaarden · direct cash\n\n"
+        f"{keuze} en pak <b>50x je inleg</b>: jouw €1 wordt <b>€50 aan Free Bets</b>! 💸\n"
+        "✅ Nieuw bij TOTO Sport · max. €1 inzet · uitbetaling in Free Bets (7 dagen geldig)\n\n"
         "<i>Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust.</i>"
     )
