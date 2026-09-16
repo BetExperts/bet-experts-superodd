@@ -1,0 +1,44 @@
+name: Bet365 Super Odd
+
+on:
+  schedule:
+    # Elk uur op :15. Public repo = onbeperkte Actions-minuten.
+    # Evergreen item wordt bijgewerkt als de Super Boost wijzigt.
+    - cron: "15 * * * *"
+  workflow_dispatch:      # handmatig starten kan altijd
+
+jobs:
+  superodd:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: superodd
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installeer dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Genereer Super Odd
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # Optioneel; laat leeg om het standaardkanaal @BetExpertsGroup te gebruiken.
+          TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
+        run: python generate.py
+
+      - name: Commit state terug
+        run: |
+          git config user.name "superodd-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/superodd.json || true
+          git commit -m "state: Super Odd $(date -u +%F)" || echo "geen wijzigingen"
+          git pull --rebase --autostash || true
+          git push || echo "niets te pushen"
