@@ -4,3 +4,4 @@ __pycache__/
 preview/
 .env
 logs/
+.DS_Store
