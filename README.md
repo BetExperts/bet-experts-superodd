@@ -63,3 +63,13 @@ python generate.py                # live in CMS + Telegram naar het kanaal
   geo-weigeren. Lukt de crawl niet op Actions, dan draait de agent wél op een
   NL-/residentieel IP (bv. je eigen Mac via cron, of Actions + NL-proxy).
 - Meer bookmakers later = extra config-blok + eigen vaste slug/state-sleutel.
+
+## Tweede agent: TOTO 50x je inzet (`toto50x.py`)
+Crawlt dagelijks `toto.nl/welkomstbonus/sport`, leest de 50x-wedstrijd van vandaag
+(bv. "winst Juventus of winst NEC" → Juventus - NEC), en werkt **alleen de titel**
+van het bestaande CMS-item `toto-50x-je-inzet` bij. Bij een **nieuwe wedstrijd**
+stuurt hij één Telegram-bericht: de TOTO 50x-afbeelding (`assets/toto-50x.jpg`) met
+een teaser-bijschrift + knop naar het artikel.
+- Bestanden: `toto_config/crawl/build/telegram.py` + `toto50x.py`, state `state/toto50x.json`.
+- Mac: `run_toto.sh` + LaunchAgent `com.betexperts.toto50x` (08:45-22:45).
+- Draait op de Mac (TOTO laadt vanaf NL-IP; net als Bet365 niet vanaf datacenter).
