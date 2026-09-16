@@ -1,11 +1,13 @@
 name: Bet365 Super Odd
 
 on:
-  schedule:
-    # Elk uur op :15. Public repo = onbeperkte Actions-minuten.
-    # Evergreen item wordt bijgewerkt als de Super Boost wijzigt.
-    - cron: "15 * * * *"
-  workflow_dispatch:      # handmatig starten kan altijd
+  # LET OP: de uurlijkse cron staat UIT — Bet365 blokkeert het GitHub-datacenter-IP.
+  # De agent draait op de Mac (LaunchAgent com.betexperts.superodd, 08:15-23:15).
+  # Wil je 'm tóch in de cloud draaien? Zet een NL-proxy in de secrets
+  # (PROXY_SERVER/PROXY_USER/PROXY_PASS) en haal onderstaande cron uit commentaar.
+  #  schedule:
+  #    - cron: "15 * * * *"
+  workflow_dispatch:      # handmatig starten kan altijd (bv. om met proxy te testen)
 
 jobs:
   superodd:
@@ -32,6 +34,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           # Optioneel; laat leeg om het standaardkanaal @BetExpertsGroup te gebruiken.
           TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
+          # Optioneel: NL-proxy om het geo/bot-block te omzeilen vanaf de cloud.
+          PROXY_SERVER: ${{ secrets.PROXY_SERVER }}
+          PROXY_USER: ${{ secrets.PROXY_USER }}
+          PROXY_PASS: ${{ secrets.PROXY_PASS }}
         run: python generate.py
 
       - name: Commit state terug

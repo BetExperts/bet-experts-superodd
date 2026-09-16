@@ -4,8 +4,19 @@
 Onderscheid Super Boost vs Bet Boost: Bet365 gebruikt een aparte badge-SVG
 (`SuperBoostBadges/Super-Boost-*.svg`). Er staat er precies één op de homepage.
 """
-import re
+import os, re
 from so_config import BET365_URL
+
+def _proxy():
+    """Optionele proxy uit env (voor draaien vanaf een geblokkeerd IP).
+    Zet PROXY_SERVER (bv. http://nl.proxy.example:8000) + evt. PROXY_USER/PASS."""
+    server = os.environ.get("PROXY_SERVER", "").strip()
+    if not server:
+        return None
+    cfg = {"server": server}
+    if os.environ.get("PROXY_USER"): cfg["username"] = os.environ["PROXY_USER"]
+    if os.environ.get("PROXY_PASS"): cfg["password"] = os.environ["PROXY_PASS"]
+    return cfg
 
 # JS dat in de paginacontext draait: vindt de Super-Boost-kaart via de badge
 # en geeft de losse tekstblokjes (leaf nodes) terug in leesvolgorde.
@@ -70,6 +81,7 @@ def crawl_super_boost(headless=True, timeout_ms=45000):
             locale="nl-NL",
             timezone_id="Europe/Amsterdam",
             viewport={"width": 1366, "height": 900},
+            proxy=_proxy(),
             user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                         "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"),
         )
