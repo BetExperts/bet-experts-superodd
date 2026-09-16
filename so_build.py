@@ -43,24 +43,26 @@ def build_fielddata(data, slug=None, now=None):
     sels = data.get("selections") or []
     datum = nl_datum(now)
 
+    sel_zin = _selecties_zin(sels)   # "A én B"
+
     title = f"Bet365 Super Odd Vandaag: {match} @ {new_o} (was {old_o})"
-    subtitel = f"Super Boost van {datum}: {match} — verhoogd van {old_o} naar {new_o}."
+    subtitel = f"{match}: {sel_zin} — geboost van {old_o} naar {new_o}."
     bonus_tekst = f"{old_o} → {new_o}"
 
     if not slug:
         slug = "bet365-super-odd"   # evergreen; wordt dagelijks/uurlijks bijgewerkt
 
-    sel_zin = _selecties_zin(sels)
     sel_html = _selecties_html(sels)
 
     content1 = (f"<p><strong>Bet365 Super Odd van vandaag ({datum}):</strong> "
-                f"de quotering op <strong>{match}</strong> is verhoogd van "
-                f"<strong>{old_o}</strong> naar <strong>{new_o}</strong>.</p>")
+                f"Bet365 boost bij <strong>{match}</strong> de weddenschap "
+                f"<strong>{sel_zin}</strong> — de quotering gaat omhoog van "
+                f"<strong>{old_o}</strong> naar <strong>{new_o}</strong>."
+                + (f" {payout}." if payout else "") + "</p>")
 
-    content2 = (f"<p>De Super Boost van vandaag gaat over <strong>{match}</strong>. "
-                f"Bet365 verhoogt de standaardquotering van {old_o} naar een gebooste "
-                f"<strong>Super Odd van {new_o}</strong>. "
-                f"{'De weddenschap bestaat uit: ' if sels else ''}</p>"
+    content2 = (f"<p><strong>Wat wordt er geboost?</strong> De Super Boost van vandaag "
+                f"gaat over <strong>{match}</strong>. Deze weddenschap is verhoogd van "
+                f"{old_o} naar een gebooste <strong>Super Odd van {new_o}</strong>:</p>"
                 f"{sel_html}"
                 + (f"<p>{payout}.</p>" if payout else ""))
 

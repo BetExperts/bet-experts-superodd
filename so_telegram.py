@@ -22,7 +22,7 @@ def send(text, promo_url, test=False):
         "parse_mode": "HTML",
         "disable_web_page_preview": False,
         "reply_markup": {"inline_keyboard": [[
-            {"text": "Bekijk de Super Odd →", "url": promo_url}
+            {"text": "Bekijk de Boost →", "url": promo_url}
         ]]},
     }
     r = requests.post(api, json=body, timeout=20)
@@ -30,15 +30,16 @@ def send(text, promo_url, test=False):
     return True
 
 def build_message(data, promo_url):
+    """Teaser: wél de wedstrijd + de odd-boost, NIET wat er geboost wordt
+    (dat lezen ze in het artikel). Knop 'Bekijk de Boost →' staat eronder."""
     match = data["match"].replace(" v ", " - ")
     old_o, new_o = data["old_odd"], data["new_odd"]
-    payout = data.get("payout") or ""
     lines = [
-        "🔥 <b>Bet365 Super Odd van vandaag</b>",
+        "🔥 <b>Bet365 Super Odd LIVE!</b>",
+        "",
         f"⚽ <b>{match}</b>",
-        f"📈 Quotering: <s>{old_o}</s> → <b>{new_o}</b>",
+        f"📈 Quotering geboost: <s>{old_o}</s> → <b>{new_o}</b>",
+        "",
+        f"<i>{DISCLAIMER}</i>",
     ]
-    if payout:
-        lines.append(f"💶 {payout}")
-    lines += ["", f"<i>{DISCLAIMER}</i>"]
     return "\n".join(lines)
