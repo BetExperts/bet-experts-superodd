@@ -47,24 +47,37 @@ _EXTRACT_JS = r"""
 """
 
 def _parse(leaves):
-    """Zet de rauwe leaf-teksten om naar gestructureerde velden."""
+    """Zet de rauwe leaf-teksten om naar gestructureerde velden.
+
+    De wedstrijd is de regel die eruitziet als 'TeamA v TeamB' (Bet365 gebruikt ' v ').
+    De kaart-layout wisselt: soms staat de wedstrijd vooraan, soms na de selectie(s)."""
     if not leaves:
         return None
-    title = leaves[0]
+    def is_fixture(t):
+        return bool(re.search(r"\S\s+v\s+\S", t)) and not re.fullmatch(r"\d+(?:[.,]\d+)?\s*k?", t or "", re.I)
+    match, rest = None, []
+    for t in leaves:
+        if match is None and is_fixture(t):
+            match = t
+        else:
+            rest.append(t)
+    if match is None:                 # geen ' v '-regel gevonden → val terug op de eerste
+        match, rest = leaves[0], leaves[1:]
+
     odds, payout, popularity, selections = [], None, None, []
-    for t in leaves[1:]:
-        if re.fullmatch(r"\d+\.\d{2}", t):            # 2.00 / 3.00
+    for t in rest:
+        if re.fullmatch(r"\d+\.\d{2}", t):            # 1.83 / 2.60
             odds.append(t)
-        elif re.search(r"betaalt.*uit", t, re.I):     # €10 betaalt €30 uit
+        elif re.search(r"betaalt.*uit", t, re.I):     # €10 betaalt €26 uit
             payout = t
-        elif re.fullmatch(r"\d+(?:[.,]\d+)?\s*k?", t, re.I):  # 2k / 1.3k (populariteit)
+        elif re.fullmatch(r"\d+(?:[.,]\d+)?\s*k?", t, re.I):  # 399 / 2k (populariteit)
             popularity = t
         elif re.search(r"[a-zA-Z]", t):               # beschrijvende selectie
             selections.append(t)
     if len(odds) < 2:
         return None
     return {
-        "match": title,
+        "match": match,
         "selections": selections,
         "old_odd": odds[0],
         "new_odd": odds[-1],
