@@ -10,7 +10,7 @@ KAMBI_API   = f"https://eu-offering-api.kambicdn.com/offering/v2018/{KAMBI_BRAND
 
 # Evergreen CMS-item (Promoties) dat dagelijks/uurlijks wordt bijgewerkt.
 OP_ITEM_ID = "6aad0e95a9e2428f79776379"
-OP_SLUG    = "oranje-palace-super-odd"
+OP_SLUG    = "oranje-palace-luckys-boost"
 
 # Bookmaker-item in de Bookmakers-collectie (referentie/logo/affiliate).
 BOOKMAKER_ID = "6aad0c21a14e9435daf42e79"

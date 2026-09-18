@@ -24,7 +24,7 @@ def phrase(data):
     return (market or sel) + tail
 
 def build_title(data):
-    return f"Oranje Palace Super Odd: {phrase(data)} @ {_fmt(data.get('new_odd'))}"
+    return f"Oranje Palace Lucky's Boost: {phrase(data)} @ {_fmt(data.get('new_odd'))}"
 
 def signature(data):
     return "|".join(str(x) for x in (data.get("event"), data.get("selection"),
@@ -38,7 +38,7 @@ def build_fielddata(data, now=None):
     maxs = data.get("max_stake")
     maxs_fmt = maxs.rstrip("0").rstrip(".") if maxs else None    # '14.00' -> '14'
     sub = f"{ev} · verhoogd van {old} naar {new}" + (f" · max. inzet €{maxs_fmt}" if maxs_fmt else "")
-    body = (f"<h3><strong>De Oranje Palace Super Odd van vandaag</strong></h3>"
+    body = (f"<h3><strong>De Oranje Palace Lucky's Boost van vandaag</strong></h3>"
             f"<p>Vandaag verhoogt Oranje Palace met de dagelijkse Lucky's Boost de quotering op "
             f"<strong>{ph}</strong>{(' bij ' + ev) if ev else ''} van {old} naar <strong>{new}</strong>."
             + (f" Je kunt maximaal €{maxs_fmt} inzetten;" if maxs_fmt else "")
@@ -53,18 +53,18 @@ def build_fielddata(data, now=None):
     fd = {
         "name": build_title(data),
         "subtitel": sub,
-        "informatie": f"Oranje Palace Super Odd: {ev}" if ev else "Oranje Palace Super Odd",
+        "informatie": f"Oranje Palace Lucky's Boost: {ev}" if ev else "Oranje Palace Lucky's Boost",
         "bonus-tekst": f"{old} → {new}",
-        "bedrag-of-boost": f"Odds {old} → {new}",
-        "soort-welkomstbonus": "Super Odd (verhoogde quotering)",
+        "bedrag-of-boost": f"Lucky's Boost {old} → {new}",
+        "soort-welkomstbonus": "Lucky's Boost (verhoogde quotering)",
         "minimale-storting": "Geen",
         "odds-om-vrij-te-spelen": new,
         "rondspeelvoorwaarden": "Geen",
         "leeftijd": "24 jaar of ouder",
-        "check-1": f"Super Odd: {old} → {new}",
+        "check-1": f"Lucky's Boost: {old} → {new}",
         "check-2": ph,
         "check-3": (f"Max. inzet €{maxs_fmt}" if maxs_fmt else "Wisselt elke dag"),
-        "button-1": "Bekijk de Super Odd bij Oranje Palace",
+        "button-1": "Bekijk de Lucky's Boost bij Oranje Palace",
         "voorwaarde-promotie": voorwaarde,
         "content-informatie-promotie-2": body,
         "boosted-odd": True,
@@ -81,7 +81,7 @@ def build_fielddata(data, now=None):
 def telegram_caption(promo_url):
     """Teaser: onthult NIET wat er geboost is (nieuwsgierigheid → klik)."""
     return (
-        "⚡ <b>De Oranje Palace Super Odd van vandaag staat online!</b> 🔥\n"
+        "⚡ <b>De Oranje Palace Lucky's Boost van vandaag staat online!</b> 🔥\n"
         "Elke dag verhoogt Oranje Palace één quotering flink met de Lucky's Boost. "
         "Benieuwd op welke wedstrijd het vandaag is? Bekijk 'm snel 👇\n\n"
         f"<i>{DISCLAIMER}</i>"
