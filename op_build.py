@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+"""Titel, CMS-velddata en Telegram-teaser voor de Oranje Palace Super Odd."""
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+NL = ZoneInfo("Europe/Amsterdam")
+DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
+
+def _fmt(o):
+    return ("%.2f" % o) if isinstance(o, (int, float)) else (o or "?")
+
+def phrase(data):
+    """Leesbare omschrijving van de boost, bv. 'Thom van Bergen — Scoort of geeft een assist'."""
+    sel = (data.get("selection") or "").strip()
+    market = (data.get("market") or "").strip()
+    base, tail = sel, ""
+    for suf in (" - Ja", " - Nee", " - JA", " - NEE"):
+        if sel.endswith(suf):
+            base = sel[: -len(suf)]
+            tail = "" if "ja" in suf.lower() else " (nee)"
+            break
+    if market and base and base.lower() not in market.lower():
+        return f"{base} — {market}{tail}"
+    return (market or sel) + tail
+
+def build_title(data):
+    return f"Oranje Palace Super Odd: {phrase(data)} @ {_fmt(data.get('new_odd'))}"
+
+def signature(data):
+    return "|".join(str(x) for x in (data.get("event"), data.get("selection"),
+                                     data.get("old_odd"), data.get("new_odd")))
+
+def build_fielddata(data, now=None):
+    now = now or datetime.now(NL)
+    old, new = _fmt(data.get("old_odd")), _fmt(data.get("new_odd"))
+    ev = data.get("event") or ""
+    ph = phrase(data)
+    maxs = data.get("max_stake")
+    sub = f"{ev} · verhoogd van {old} naar {new}" + (f" · max. inzet €{maxs}" if maxs else "")
+    body = (f"<h3><strong>De Oranje Palace Super Odd van vandaag</strong></h3>"
+            f"<p>Vandaag verhoogt Oranje Palace met de dagelijkse Lucky's Boost de quotering op "
+            f"<strong>{ph}</strong>{(' bij ' + ev) if ev else ''} van {old} naar <strong>{new}</strong>."
+            + (f" Je kunt maximaal €{maxs} inzetten;" if maxs else "")
+            + " de boost verloopt rond de aftrap.</p>")
+    fd = {
+        "name": build_title(data),
+        "subtitel": sub,
+        "informatie": f"Oranje Palace Super Odd: {ev}" if ev else "Oranje Palace Super Odd",
+        "bonus-tekst": f"{old} → {new}",
+        "bedrag-of-boost": f"Odds {old} → {new}",
+        "content-informatie-promotie-2": body,
+        "boosted-odd": True,
+    }
+    kickoff = data.get("kickoff")
+    if kickoff:
+        try:
+            fd["wanneer-toegevoegd"] = datetime.fromisoformat(
+                kickoff.replace("Z", "+00:00")).astimezone(timezone.utc).isoformat()
+        except Exception:
+            pass
+    return fd
+
+def telegram_caption(promo_url):
+    """Teaser: onthult NIET wat er geboost is (nieuwsgierigheid → klik)."""
+    return (
+        "⚡ <b>De Oranje Palace Super Odd van vandaag staat online!</b> 🔥\n"
+        "Elke dag verhoogt Oranje Palace één quotering flink met de Lucky's Boost. "
+        "Benieuwd op welke wedstrijd het vandaag is? Bekijk 'm snel 👇\n\n"
+        f"<i>{DISCLAIMER}</i>"
+    )
