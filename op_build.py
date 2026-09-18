@@ -68,6 +68,14 @@ def build_fielddata(data, now=None):
         "voorwaarde-promotie": voorwaarde,
         "content-informatie-promotie-2": body,
         "boosted-odd": True,
+        "stap-1-titel": "Open Oranje Palace",
+        "stap-1-tekst": "Ga naar Oranje Palace en log in of maak een account aan (24+).",
+        "stap-2-titel": "Zoek de Lucky's Boost",
+        "stap-2-tekst": (f"De Lucky's Boost van vandaag staat op {ev} — {ph}, quotering {new}."
+                         if ev else f"De Lucky's Boost van vandaag: {ph}, quotering {new}."),
+        "stap-3-titel": "Plaats je weddenschap",
+        "stap-3-tekst": ("Voeg de Lucky's Boost toe aan je bonnetje en bevestig je inzet zolang de "
+                         "boost geldig is" + (f" (max. inzet €{maxs_fmt})." if maxs_fmt else ".")),
     }
     kickoff = data.get("kickoff")
     if kickoff:
