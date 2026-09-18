@@ -36,18 +36,36 @@ def build_fielddata(data, now=None):
     ev = data.get("event") or ""
     ph = phrase(data)
     maxs = data.get("max_stake")
-    sub = f"{ev} · verhoogd van {old} naar {new}" + (f" · max. inzet €{maxs}" if maxs else "")
+    maxs_fmt = maxs.rstrip("0").rstrip(".") if maxs else None    # '14.00' -> '14'
+    sub = f"{ev} · verhoogd van {old} naar {new}" + (f" · max. inzet €{maxs_fmt}" if maxs_fmt else "")
     body = (f"<h3><strong>De Oranje Palace Super Odd van vandaag</strong></h3>"
             f"<p>Vandaag verhoogt Oranje Palace met de dagelijkse Lucky's Boost de quotering op "
             f"<strong>{ph}</strong>{(' bij ' + ev) if ev else ''} van {old} naar <strong>{new}</strong>."
-            + (f" Je kunt maximaal €{maxs} inzetten;" if maxs else "")
+            + (f" Je kunt maximaal €{maxs_fmt} inzetten;" if maxs_fmt else "")
             + " de boost verloopt rond de aftrap.</p>")
+    voorwaarde = (
+        f"Dagelijkse Lucky's Boost van Oranje Palace: de quotering op {ph}"
+        f"{(' bij ' + ev) if ev else ''} is verhoogd van {old} naar {new}."
+        + (f" Max. inzet €{maxs_fmt}." if maxs_fmt else "")
+        + " Boosts wisselen dagelijks en zijn kort geldig (tot de aftrap); controleer de actuele"
+          " boost op oranjepalace.nl. Alleen voor spelers van 24 jaar of ouder."
+          " Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust.")
     fd = {
         "name": build_title(data),
         "subtitel": sub,
         "informatie": f"Oranje Palace Super Odd: {ev}" if ev else "Oranje Palace Super Odd",
         "bonus-tekst": f"{old} → {new}",
         "bedrag-of-boost": f"Odds {old} → {new}",
+        "soort-welkomstbonus": "Super Odd (verhoogde quotering)",
+        "minimale-storting": "Geen",
+        "odds-om-vrij-te-spelen": new,
+        "rondspeelvoorwaarden": "Geen",
+        "leeftijd": "24 jaar of ouder",
+        "check-1": f"Super Odd: {old} → {new}",
+        "check-2": ph,
+        "check-3": (f"Max. inzet €{maxs_fmt}" if maxs_fmt else "Wisselt elke dag"),
+        "button-1": "Bekijk de Super Odd bij Oranje Palace",
+        "voorwaarde-promotie": voorwaarde,
         "content-informatie-promotie-2": body,
         "boosted-odd": True,
     }

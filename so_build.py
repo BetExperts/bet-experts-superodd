@@ -103,7 +103,7 @@ def build_fielddata(data, slug=None, now=None):
         "odds-om-vrij-te-spelen": new_o,
         "soort-welkomstbonus": "Super Boost (verhoogde quotering)",
         "minimale-storting": "n.v.t. (odds-boost)",
-        "rondspeelvoorwaarden": "n.v.t. (odds-boost)",
+        "rondspeelvoorwaarden": "Geen",
         "leeftijd": "24 jaar of ouder",
         "stap-1-titel": "Open Bet365",
         "stap-1-tekst": "Ga naar Bet365 en log in of maak een account aan (24+).",
