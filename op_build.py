@@ -77,13 +77,8 @@ def build_fielddata(data, now=None):
         "stap-3-tekst": ("Voeg de Lucky's Boost toe aan je bonnetje en bevestig je inzet zolang de "
                          "boost geldig is" + (f" (max. inzet €{maxs_fmt})." if maxs_fmt else ".")),
     }
-    kickoff = data.get("kickoff")
-    if kickoff:
-        try:
-            fd["wanneer-toegevoegd"] = datetime.fromisoformat(
-                kickoff.replace("Z", "+00:00")).astimezone(timezone.utc).isoformat()
-        except Exception:
-            pass
+    # Geen 'geldig tot' zetten: een Lucky's Boost is doorlopend (elke dag opnieuw).
+    # Een gevulde datum toont anders een 'Verlopen'-badge in de template.
     return fd
 
 def telegram_caption(promo_url):
