@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betexperts.toto50x</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/run_toto.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
+
+  <!-- Elke 15 minuten: nieuwe 50x-wedstrijd tijdig oppikken én rond de kickoff
+       de teamnamen op tijd verwijderen (KSA). Draait alleen als de Mac wakker is.
+       Telegram gaat maar 1x per nieuwe wedstrijd uit. -->
+  <key>StartInterval</key>
+  <integer>900</integer>
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/toto.launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/toto.launchd.err.log</string>
+</dict>
+</plist>

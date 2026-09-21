@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betexperts.s888</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/run_888.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
+
+  <!-- Elke 15 minuten: nieuwe promo tijdig oppikken én rond de kickoff de
+       teamnamen op tijd verwijderen (KSA). Draait alleen als de Mac wakker is. -->
+  <key>StartInterval</key>
+  <integer>900</integer>
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/888.launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/888.launchd.err.log</string>
+</dict>
+</plist>

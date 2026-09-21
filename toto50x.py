@@ -54,62 +54,67 @@ def main():
         print("Geen 50x-actie gevonden op toto.nl (mogelijk even geen actie). Niets gedaan.")
         sys.exit(0)
 
-    title = B.build_title(data)
     print(f"  Wedstrijd: {data['match']}")
-    print(f"  Titel    : {title}")
 
-    # Geldig tot = de dag ná de wedstrijd (de actie loopt t/m de wedstrijddag zelf).
-    # We zoeken de aftrap op (staat niet op toto.nl → uit de API) en zetten het veld
-    # op 12:00 lokaal van de dag erna. Noon voorkomt de UTC-dagverschuiving.
-    kickoff = None       # ruwe aftrap (voor logging + state-vergelijking)
-    geldig_tot = None    # wat we in het CMS-veld zetten
+    # Aftrap opzoeken (staat niet op toto.nl → uit de API): voor 'geldig tot', het
+    # datum/tijd-veld, én om te bepalen of de wedstrijd al live is (dan namen weg).
+    kickoff = None; geldig_tot = None; wed_dt = ""; live = False
     try:
         kickoff = API.kickoff_for(data["teams"])
     except Exception as e:
-        print(f"  · geldig-tot niet opgezocht: {e}")
+        print(f"  · aftrap niet opgezocht: {e}")
     if kickoff:
         kk = datetime.fromisoformat(kickoff).astimezone(NL)
+        live = now >= kk
+        wed_dt = f"{kk:%d-%m-%Y om %H:%M}"
         gt = (kk.replace(hour=12, minute=0, second=0, microsecond=0) + timedelta(days=1))
         geldig_tot = gt.isoformat()
-        print(f"  Wedstrijd aftrap: {kk:%Y-%m-%d %H:%M}  →  Geldig tot: {gt:%Y-%m-%d} (dag erna)")
+        print(f"  Aftrap: {kk:%Y-%m-%d %H:%M} → "
+              f"{'LIVE (algemeen, namen weg)' if live else 'vóór kickoff (met namen)'} | geldig tot {gt:%Y-%m-%d}")
     else:
-        print("  Geldig tot: niet gevonden (veld blijft ongemoeid)")
+        print("  Aftrap onbekend (geldig tot/datum-tijd leeg; namen blijven staan)")
+
+    title = B.build_title(data, live)
+    print(f"  Titel    : {title}")
 
     if a.dry:
-        print("  [dry] zou de CMS-titel (+ geldig tot) hierop zetten en (bij nieuwe wedstrijd) Telegram sturen.")
+        print("  [dry] zou de CMS-titel (+ geldig tot + datum/tijd) zetten en (bij nieuwe wedstrijd) Telegram sturen.")
         return
 
     if not WEBFLOW_TOKEN:
         print("FOUT: WEBFLOW_TOKEN ontbreekt."); sys.exit(1)
 
     state = load_state()
-    prev = state.get(STATE_KEY)
-    match_changed = (prev is None) or (prev.get("match") != data["match"])
-    geldig_changed = bool(geldig_tot) and (prev is None or prev.get("geldig_tot") != geldig_tot)
+    prev = state.get(STATE_KEY) or {}
+    match_changed = prev.get("match") != data["match"]
+    content_sig = f'{data["match"]}|{"live" if live else "pre"}'
+    content_changed = (prev.get("content_sig") != content_sig
+                       or (bool(geldig_tot) and prev.get("geldig_tot") != geldig_tot))
     promo_url = PROMO_BASE + TOTO_SLUG
 
-    fields = {"name": title}
+    fields = {"name": title, "wedstrijd-datum-tijd": ("" if live else wed_dt)}
     if geldig_tot:
         fields["wanneer-toegevoegd"] = geldig_tot   # "Geldig tot" = dag na de wedstrijd
 
-    if match_changed or geldig_changed:
+    if content_changed:
         WF.update_item(TOTO_ITEM_ID, fields)
-        wat = "titel + geldig tot" if geldig_tot else "titel"
-        print(f"  ✔ CMS bijgewerkt + live ({wat}): {title}")
+        print(f"  ✔ CMS bijgewerkt + live ({'algemeen' if live else 'met namen'}): {title}")
     else:
-        print("  · Zelfde wedstrijd én geldig tot als vorige run — niets bijgewerkt.")
+        print("  · Zelfde inhoud als vorige run — niets bijgewerkt.")
 
     state[STATE_KEY] = {"item_id": TOTO_ITEM_ID, "slug": TOTO_SLUG,
-                        "match": data["match"], "title": title,
-                        "kickoff": kickoff, "geldig_tot": geldig_tot,
+                        "match": data["match"], "title": title, "content_sig": content_sig,
+                        "kickoff": kickoff, "geldig_tot": geldig_tot, "live": live,
                         "url": promo_url, "updated": now.isoformat()}
     save_state(state)
 
-    # Telegram: één bericht per nieuwe wedstrijd (≈ dagelijks).
+    # Telegram: één bericht per nieuwe wedstrijd, en alleen vóór kickoff (namen ok).
     if a.no_telegram:
         print("  · Telegram overgeslagen (--no-telegram).")
     elif not match_changed:
         print("  · Telegram overgeslagen (zelfde wedstrijd, al gepost).")
+    elif live:
+        print("  · Telegram overgeslagen (wedstrijd is al live).")
     else:
         caption = B.telegram_caption(data)
         if TG.send_photo(caption, promo_url, test=a.test):

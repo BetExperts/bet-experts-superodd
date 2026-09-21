@@ -13,6 +13,21 @@ KEY = os.environ.get("APISPORTS_KEY", "").strip()
 
 FINISHED = {"FT", "AET", "PEN", "PST", "CANC", "ABD", "AWD", "WO"}
 
+# api-sports gebruikt Engelse namen; nationale teams komen bij TOTO vaak in het NL.
+_NL_EN = {
+    "nederland": "Netherlands", "duitsland": "Germany", "belgië": "Belgium", "belgie": "Belgium",
+    "frankrijk": "France", "engeland": "England", "spanje": "Spain", "italië": "Italy",
+    "italie": "Italy", "portugal": "Portugal", "kroatië": "Croatia", "kroatie": "Croatia",
+    "polen": "Poland", "turkije": "Turkey", "oostenrijk": "Austria", "zwitserland": "Switzerland",
+    "denemarken": "Denmark", "zweden": "Sweden", "noorwegen": "Norway", "schotland": "Scotland",
+    "wales": "Wales", "ierland": "Ireland", "tsjechië": "Czech-Republic", "tsjechie": "Czech-Republic",
+    "griekenland": "Greece", "hongarije": "Hungary", "servië": "Serbia", "servie": "Serbia",
+    "oekraïne": "Ukraine", "oekraine": "Ukraine", "roemenië": "Romania", "roemenie": "Romania",
+}
+
+def _en(name):
+    return _NL_EN.get(name.strip().lower(), name)
+
 def _get(path, **params):
     r = requests.get(f"{BASE}/{path}", headers={"x-apisports-key": KEY},
                      params=params, timeout=25)
@@ -21,6 +36,7 @@ def _get(path, **params):
 
 def _team_id(name):
     """Beste team-id voor een naam. Voorkeur voor een exacte naam-match."""
+    name = _en(name)                   # NL→EN voor nationale teams
     res = _get("teams", search=name)
     if not res:
         return None

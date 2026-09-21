@@ -2,11 +2,13 @@
   "toto": {
     "item_id": "67865ef6d4531cbd03e8f9f1",
     "slug": "toto-50x-je-inzet",
-    "match": "Ajax - Excelsior",
-    "title": "TOTO: 50x je inzet — zet €1 op Ajax of Excelsior en win €50!",
-    "kickoff": "2026-09-19T18:00:00+00:00",
-    "geldig_tot": "2026-09-20T12:00:00+02:00",
+    "match": "Nederland - Duitsland",
+    "title": "TOTO: 50x je inzet — zet €1 op Nederland of Duitsland en win €50!",
+    "content_sig": "Nederland - Duitsland|pre",
+    "kickoff": "2026-09-24T18:45:00+00:00",
+    "geldig_tot": "2026-09-25T12:00:00+02:00",
+    "live": false,
     "url": "https://www.bet-experts.nl/promoties/toto-50x-je-inzet",
-    "updated": "2026-09-18T11:45:04.213791+02:00"
+    "updated": "2026-09-21T14:14:37.376501+02:00"
   }
 }
