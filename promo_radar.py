@@ -53,7 +53,7 @@ def save_state(st):
     json.dump(st, open(os.path.join(BASE, C.STATE_FILE), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 def star_key(card):
-    return f"starcasino|{slugify(card['title'])}"
+    return card.get("key") or f"starcasino|{slugify(card['title'])}"
 
 def card_key(card):
     return f"{card['op']}|{slugify(card['title'])}|{slugify(card['tag'])}"
@@ -146,8 +146,13 @@ def main():
     if not a.only or a.only == "starcasino":
         try:
             with sync_playwright() as pw:
-                b = pw.chromium.launch(); star = pr_starcasino.fetch(b); b.close()
-            print(f"   starcasino.nl: {len(star)} promoties")
+                b = pw.chromium.launch()
+                star = pr_starcasino.fetch(b)
+                big, small = pr_starcasino.fetch_tournaments(b)
+                b.close()
+            star += big
+            print(f"   starcasino.nl: {len(star) - len(big)} promoties + {len(big)} toernooien ≥ €{pr_starcasino.MIN_PRIZE} "
+                  f"({len(small)} kleinere overgeslagen)")
         except Exception as e:
             print(f"   ! starcasino.nl niet gelezen: {e} (bestaande StarCasino-promo's blijven ongemoeid)")
             star = None

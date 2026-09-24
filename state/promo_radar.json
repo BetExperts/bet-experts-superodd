@@ -888,5 +888,19 @@
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
   "hash": "e8cb0f091deca706033ecd8de7bda9f7"
- }
+ },
+ "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d29a43a1d53046a780"
+ },
+ "starcasino-toernooi|sport-toernooi|2026-09-21": {
+  "status": "live",
+  "item_id": "6ab57c728472f0e3bc72b3a6",
+  "hash": "3587a81390a65ef2df94ee54a0f2115b",
+  "slug": "starcasino-1-000-sport-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-09-24"
+ },
+ "_ter_beoordeling": {}
 }

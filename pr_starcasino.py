@@ -107,3 +107,71 @@ def fetch(browser):
         })
     ctx.close()
     return cards
+
+
+# ---------------------------------------------------------------- toernooien
+TOURNAMENTS = BASE + "/tournaments"
+MIN_PRIZE = 1000          # alleen toernooien met een prijzenpot van €1.000 of meer (afspraak gebruiker)
+
+def _eur(s):
+    return float(s.replace(".", "").replace(",", ".")) if s else None
+
+def _dm(s, today):
+    m = re.search(r"(\d{1,2})/(\d{1,2}),?\s*(\d{1,2}):(\d{2})", s or "")
+    if not m:
+        return None
+    d = date(today.year, int(m.group(2)), int(m.group(1)))
+    if (d - today).days < -180:
+        d = d.replace(year=today.year + 1)
+    return d
+
+def fetch_tournaments(browser, today=None):
+    """Lopende + aankomende toernooien via de info-knop van elke kaart (prijzenpot, inzet, start, einde)."""
+    today = today or date.today()
+    ctx = browser.new_context(locale="nl-NL", viewport={"width": 1500, "height": 1100}, user_agent=UA)
+    pg = ctx.new_page()
+    pg.goto(TOURNAMENTS, wait_until="domcontentloaded", timeout=60000)
+    pg.wait_for_timeout(7000)
+    L = pg.locator("img[src*='MultiplierTournamentImage']")
+    seen, cards = set(), []
+    for n in range(L.count()):
+        img = L.nth(n)
+        title = (img.get_attribute("alt") or "").strip()
+        src = img.get_attribute("src") or ""
+        try:
+            img.locator("xpath=ancestor::*[3]").locator("svg").first.click(force=True)
+            pg.wait_for_timeout(2500)
+            dlg = pg.locator("[role=dialog]")
+            txt = dlg.last.inner_text() if dlg.count() else ""
+            pg.keyboard.press("Escape"); pg.wait_for_timeout(1500)
+        except Exception as e:
+            print(f"   ! toernooi '{title}': {str(e)[:80]}")
+            continue
+        if not txt.strip().startswith(title):
+            continue      # geen (juiste) info-venster, bv. aankomend toernooi -> later opnieuw
+        g = lambda lab: (re.search(lab + r"\s*\n\s*(.+)", txt) or [None, None])[1]
+        prize = _eur((re.search(r"Prijzenpot\s*\n\s*€\s?([\d.,]+)", txt) or [None, None])[1])
+        start, end = _dm(g("Start"), today), _dm(g("Einde"), today)
+        ident = (title, str(start))
+        if ident in seen or not prize:
+            continue
+        seen.add(ident)
+        inzet, spellen, voorw, odds = g("Minimale inzet"), g("Deelnemende spellen"), g("Inzet voorwaarden"), g("Minimale odds")
+        sport = bool(voorw or odds) or "sport" in title.lower()
+        prize_txt = f"€{prize:,.0f}".replace(",", ".")
+        bullets = [f"Prijzenpot: {prize_txt}"]
+        inzet = inzet.replace("\xa0", " ") if inzet else inzet
+        if inzet: bullets.append(f"Minimale inzet: {inzet.strip()}")
+        if spellen: bullets.append(f"Deelnemende spellen: {spellen.strip()}")
+        if voorw: bullets.append(f"Inzetvoorwaarden: {voorw.strip()}")
+        if odds: bullets.append(f"Minimale odds: {odds.strip()}")
+        big = re.sub(r"&w=\d+", "&w=1200", src) if src.startswith("http") else None
+        cards.append({
+            "op": "starcasino", "kind": "toernooi", "title": f"{prize_txt} {title}", "desc": f"Multiplier-toernooi met {prize_txt} aan prijzen",
+            "bullets": bullets[:4], "types": ["tournamentBonus"] + (["sportBonus"] if sport else []), "tag": "",
+            "prize": prize, "period": (start, end, None), "detail_url": TOURNAMENTS, "image": big,
+            "key": f"starcasino-toernooi|{re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')}|{start}",
+            "hash": hashlib.md5(txt.split("Ranglijst")[0].encode()).hexdigest(),
+        })
+    ctx.close()
+    return [c for c in cards if c["prize"] >= MIN_PRIZE], [c for c in cards if c["prize"] < MIN_PRIZE]
