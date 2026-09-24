@@ -23,6 +23,7 @@ from pr_calendar import fetch_cards, parse_period
 from pr_verify import Verifier, tokens, key_numbers, _has_num
 from pr_build import build_fields, slugify
 from pr_rubrieken import rubrieken
+import cf_redirects
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 H = lambda: {"Authorization": f"Bearer {WEBFLOW_TOKEN}", "accept": "application/json", "content-type": "application/json"}
@@ -181,13 +182,19 @@ def main():
         if a.dry:
             continue
         try:
-            if it.get("lastPublished") and not it.get("isDraft"):
+            was_live = bool(it.get("lastPublished")) and not it.get("isDraft")
+            if was_live:
+                # eerst de 301 (sport -> /promoties, casino -> /casino-bonussen), dan pas verwijderen
+                target = "/promoties" if it["fieldData"].get("geldig-voor") == C.GELDIG_SPORT else "/casino-bonussen"
+                row = (f"www.bet-experts.nl/promoties/{it['fieldData'].get('slug')}", f"https://www.bet-experts.nl{target}", 301)
+                try:
+                    cf_redirects.add([row])
+                except Exception as ex:
+                    print(f"    ! redirect niet gezet ({ex}) -> promo blijft staan"); continue
                 wf("DELETE", f"/collections/{C.PROMOTIES}/items/{e['item_id']}/live")
             wf("DELETE", f"/collections/{C.PROMOTIES}/items/{e['item_id']}")
             e.update({"status": "verwijderd", "reden": "verlopen" if expired else "niet meer in kalender",
                       "verwijderd": str(date.today())})
-            with open(os.path.join(BASE, "state", "promo_redirects.csv"), "a", encoding="utf-8") as fh:
-                fh.write(f"www.bet-experts.nl/promoties/{it['fieldData'].get('slug')},https://www.bet-experts.nl/promoties,301\n")
         except Exception as ex:
             print(f"    ! {ex}")
     save_state(state)
