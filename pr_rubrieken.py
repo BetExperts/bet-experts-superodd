@@ -7,7 +7,7 @@ TEXT_RULES = [
     (r"free ?spins?|gratis spins", "free-spins"), (r"toernooi|tournament|races\b", "toernooi"),
     (r"jackpot", "jackpot"), (r"live ?casino|live blackjack|live roulette|evolution|free chips", "live-casino"),
     (r"\bbingo", "bingo-bonus"), (r"\bpoker", "poker-bonus"),
-    (r"loyalit|award points|punten|rewards|coins|vip", "loyaliteitsbonus"), (r"\bapp\b|app-", "casino-apps"),
+    (r"loyalit|award points|(?<![a-z])punten\b|\brewards\b|\bcoins\b|\bvip\b", "loyaliteitsbonus"), (r"\bapp\b|app-", "casino-apps"),
     (r"drops?\b|cash drop|prize drop|wheel drop", "cash-drop"), (r"bet ?(&|en|and) ?get|zet .{1,12} in (en|&) (krijg|ontvang|pak)", "bet-en-get"),
     (r"bonuscode", "bonuscode"), (r"stortingsbonus|bovenop je storting|op je storting|extra tegoed", "stortingsbonus"),
     (r"free ?bets?", "free-bets"),

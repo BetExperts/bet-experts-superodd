@@ -166,7 +166,8 @@ def main():
     current = {card_key(c) for c in cards}
     now = datetime.now().astimezone()
     for k, e in state.items():
-        if e.get("status") not in ("live", "draft") or not e.get("item_id"):
+        # 'einddatum' = handmatig toegevoegde promo die op zijn 'Geldig tot' offline moet (niet in de kalender)
+        if e.get("status") not in ("live", "draft", "einddatum") or not e.get("item_id"):
             continue
         if a.only and not k.startswith(a.only + "|"):
             continue
@@ -175,7 +176,7 @@ def main():
             e["status"] = "verwijderd"; continue
         end = it["fieldData"].get("wanneer-toegevoegd")
         expired = bool(end) and datetime.fromisoformat(end.replace("Z", "+00:00")) < now
-        gone = k not in current
+        gone = k not in current and e.get("status") != "einddatum"
         if not (expired or gone):
             continue
         print(f"  ✂ {'verlopen' if expired else 'niet meer in kalender'} -> verwijderen: {it['fieldData'].get('name', '')[:70]}")
@@ -267,7 +268,8 @@ def sweep_nieuw(dry=False):
             continue
         f = it["fieldData"]; cur = f.get("bonus-rubrieken") or []
         created = datetime.fromisoformat(it["createdOn"].replace("Z", "+00:00"))
-        new = created.date().isoformat() >= C.NIEUW_VANAF and (now - created).days < C.NIEUW_DAGEN
+        new = (created.date().isoformat() >= C.NIEUW_VANAF and (now - created).days < C.NIEUW_DAGEN) or \
+              now.date().isoformat() <= C.NIEUW_HANDMATIG.get(it["id"], "")
         rub = [x for x in cur if x != nid] + ([nid] if (new and nid) else [])
         types = types_for(f, rub, new)
         patch = {}

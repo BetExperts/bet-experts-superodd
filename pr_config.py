@@ -70,3 +70,9 @@ DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
 # De eerste bulk (24-09-2026) telt niet mee -> pas vanaf NIEUW_VANAF.
 NIEUW_DAGEN = 3
 NIEUW_VANAF = "2026-09-25"
+
+# Handmatig 'Nieuw' tot en met deze datum (item-id -> YYYY-MM-DD), naast de automatische 3-dagenregel.
+NIEUW_HANDMATIG = {
+    "66c5cc4307ddceb00c519f75": "2026-09-27",   # ComeOn! Dubbele Casino Welkomstbonus
+    "6ab5284c35713b17e2523870": "2026-09-27",   # 888 Casino Welkomstbonus Special
+}
