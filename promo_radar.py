@@ -231,6 +231,7 @@ def main():
         browser.close()
 
     if a.dry:
+        sweep_nieuw(dry=True)
         print(f"\nDRY — {sum(1 for p in plans if p[2])} zouden live gaan, {sum(1 for p in plans if not p[2])} als draft.")
         return
 
@@ -251,7 +252,36 @@ def main():
             print(f"  ! mislukt: {fd['name'][:60]} — {e}")
         save_state(state)
     save_state(state)
+    sweep_nieuw(a.dry)
     print(f"\nKLAAR — {made['live']} live, {made['draft']} als draft.")
+
+def sweep_nieuw(dry=False):
+    """Rubriek 'Nieuw' toevoegen aan promo's van de laatste NIEUW_DAGEN dagen, en weer weghalen daarna."""
+    from pr_rubrieken import RUB
+    nid = RUB.get("nieuw")
+    if not nid:
+        return
+    now = datetime.now().astimezone()
+    for it in all_items(C.PROMOTIES):
+        if it.get("isArchived"):
+            continue
+        f = it["fieldData"]; cur = f.get("bonus-rubrieken") or []
+        created = datetime.fromisoformat(it["createdOn"].replace("Z", "+00:00"))
+        new = created.date().isoformat() >= C.NIEUW_VANAF and (now - created).days < C.NIEUW_DAGEN
+        if new == (nid in cur):
+            continue
+        rub = (cur + [nid]) if new else [x for x in cur if x != nid]
+        print(f"  {'+' if new else '-'} Nieuw: {f.get('name', '')[:70]}")
+        if dry:
+            continue
+        live = bool(it.get("lastPublished")) and not it.get("isDraft")
+        try:
+            wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}" + ("/live" if live else ""), {"fieldData": {"bonus-rubrieken": rub}})
+        except RuntimeError as e:
+            if "409" in str(e):
+                wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}", {"fieldData": {"bonus-rubrieken": rub}})
+            else:
+                print(f"    ! {e}")
 
 if __name__ == "__main__":
     main()

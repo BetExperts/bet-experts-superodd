@@ -65,3 +65,8 @@ WELCOME_AS_DRAFT = True
 
 STATE_FILE = "state/promo_radar.json"
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
+
+# Filter "Nieuw": promo's die korter dan NIEUW_DAGEN geleden zijn aangemaakt krijgen de rubriek 'nieuw'.
+# De eerste bulk (24-09-2026) telt niet mee -> pas vanaf NIEUW_VANAF.
+NIEUW_DAGEN = 3
+NIEUW_VANAF = "2026-09-25"
