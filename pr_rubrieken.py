@@ -10,7 +10,9 @@ TEXT_RULES = [
     (r"loyalit|award points|punten|rewards|coins|vip", "loyaliteitsbonus"), (r"\bapp\b|app-", "casino-apps"),
     (r"drops?\b|cash drop|prize drop|wheel drop", "cash-drop"), (r"bet ?(&|en|and) ?get|zet .{1,12} in (en|&) (krijg|ontvang|pak)", "bet-en-get"),
     (r"bonuscode", "bonuscode"), (r"stortingsbonus|bovenop je storting|op je storting|extra tegoed", "stortingsbonus"),
-    (r"free ?bets?", "free-bets"), (r"\d{2,3}x je in(zet|leg)", "100x-je-inzet"),
+    (r"free ?bets?", "free-bets"),
+    # alleen echte 50x/60x/100x-acties (niet "100.000x je inzet" bij slots)
+    (r"(?<![\d.,])\d{2,3}(?:[.,]00)?\s?x je in(zet|leg)\b|zet\s?€\s?1 in (en|&) win\s?€\s?(50|60|100)\b", "100x-je-inzet"),
 ]
 TYPE_TO_RUB = {"welkomstbonus": "welkomstbonus", "free-bets": "free-bets", "free-spins": "free-spins",
                "bet-and-get": "bet-en-get", "no-deposit": "no-deposit-bonus", "stortingsbonus": "stortingsbonus",
