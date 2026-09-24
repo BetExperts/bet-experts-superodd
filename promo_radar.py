@@ -280,11 +280,20 @@ def _unlink_from_news(item_id):
 def cleanup_expired(dry=False):
     """Elke verlopen promo (behalve evergreen agent-pagina's): 301 zetten, offline halen en uit de CMS verwijderen."""
     now = datetime.now().astimezone()
+    state = load_state()
+    eenmalig = {e.get("item_id") for e in state.values() if isinstance(e, dict)
+                and e.get("status") in ("live", "draft", "einddatum") and e.get("item_id")}
+    beoordeling = {}
     for it in all_items(C.PROMOTIES):
         f = it["fieldData"]; end = f.get("wanneer-toegevoegd")
         if it.get("isArchived") or not end or f.get("slug") in C.EVERGREEN_SLUGS:
             continue
         if (now - datetime.fromisoformat(end.replace("Z", "+00:00"))).total_seconds() < C.OPRUIM_MARGE_UUR * 3600:
+            continue
+        if it["id"] not in eenmalig:
+            # Niet zeker dat het eenmalig is -> NIET verwijderen, eerst aan de gebruiker vragen.
+            beoordeling[it["id"]] = {"slug": f.get("slug"), "name": f.get("name"), "geldig_tot": end[:10]}
+            print(f"  ? verlopen, ter beoordeling (niet verwijderd): {f.get('name', '')[:70]}")
             continue
         print(f"  ✂ verlopen ({end[:10]}) -> offline + verwijderen: {f.get('name', '')[:70]}")
         if dry:
@@ -307,6 +316,8 @@ def cleanup_expired(dry=False):
                     print(f"    · nog gekoppeld aan nieuwsartikelen -> {_unlink_from_news(it['id'])} artikel(en) losgekoppeld")
                     continue
                 print(f"    ! {ex}"); break
+    if not dry:
+        state = load_state(); state["_ter_beoordeling"] = beoordeling; save_state(state)
 
 def sweep_nieuw(dry=False):
     """Houdt voor ALLE promo's de rubriek 'Nieuw' (laatste NIEUW_DAGEN dagen) en het veld 'bonus-types'

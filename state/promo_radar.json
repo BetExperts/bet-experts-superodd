@@ -1,6 +1,6 @@
 {
  "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|23-september-t-m-26-september": {
-  "status": "handmatig",
+  "status": "evergreen",
   "item_id": "6ab508ae3ffd8df3c0efeb2d"
  },
  "oranje-palace|pak-50-free-spins-met-de-weekbonus-van-oranje-palace|21-september-t-m-25-september": {
@@ -798,12 +798,12 @@
   "datum": "2026-09-24"
  },
  "handmatig|comeon-dubbele-welkomstbonus": {
-  "status": "einddatum",
+  "status": "terugkerend",
   "item_id": "66c5cc4307ddceb00c519f75",
   "tot": "2026-10-05"
  },
  "handmatig|888-welkomstbonus-special": {
-  "status": "einddatum",
+  "status": "terugkerend",
   "item_id": "6ab5284c35713b17e2523870",
   "tot": "2026-10-05"
  },
@@ -821,5 +821,17 @@
   "status": "einddatum",
   "item_id": "6ab5358457e2d1582090b99a",
   "tot": "2026-09-24 20:45"
+ },
+ "handmatig|op-nations-league-1-euro-free-bet": {
+  "status": "einddatum",
+  "item_id": "6ab509a5d621dc6925640422"
+ },
+ "handmatig|op-weekbonus-2026-39": {
+  "status": "einddatum",
+  "item_id": "6ab509a3d621dc692564030f"
+ },
+ "handmatig|jacks-100x": {
+  "status": "evergreen",
+  "item_id": "6ab508ae3ffd8df3c0efeb2d"
  }
 }
