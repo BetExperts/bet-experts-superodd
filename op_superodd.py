@@ -111,11 +111,18 @@ def main():
                         "url": promo_url, "updated": now.isoformat()}
     save_state(state)
 
-    if a.post and changed:
+    # Telegram alleen bij een NIEUWE boost (andere wedstrijd/selectie). Schommelende odds
+    # (bv. oude quotering 2.05 <-> 2.10) passen alleen stil de pagina aan.
+    boost_key = f"{data.get('event')}|{data.get('selection')}"
+    posted = prev.get("posted_key") or (prev.get("sig", "").rsplit("|", 2)[0] if prev.get("sig") else None)
+    if a.post and boost_key != posted:
         if send_telegram(B.telegram_caption(data, promo_url), promo_url, test=a.test):
             print(f"  ✔ Telegram-teaser verstuurd{' (TEST)' if a.test else ''}.")
+            if not a.test:
+                state[STATE_KEY]["posted_key"] = boost_key; save_state(state)
     elif a.post:
-        print("  · Telegram overgeslagen (zelfde boost).")
+        print("  · Telegram overgeslagen (zelfde boost, alleen odd gewijzigd of niets veranderd).")
+        state[STATE_KEY]["posted_key"] = posted; save_state(state)
 
     print("KLAAR.")
 
