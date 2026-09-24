@@ -123,7 +123,9 @@ def main():
     def affiliate(bm_id, sport):
         want = C.GELDIG_SPORT if sport else C.GELDIG_CASINO
         for f in by_bm.get(bm_id, []):
-            if f.get("geldig-voor") == want and f.get("welkomstbonus-promotie") and f.get("affiliatie-link-naar-broker"):
+            # gewone welkomstbonus-link (niet die van een 100x/boost-actie: die landt op een speciale promo)
+            if (f.get("geldig-voor") == want and f.get("welkomstbonus-promotie") and f.get("affiliatie-link-naar-broker")
+                    and not f.get("100x-promotie") and not f.get("boosted-odd")):
                 return f["affiliatie-link-naar-broker"]
         return bms.get(bm_id, {}).get("affiliate-url")
 
