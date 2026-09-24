@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betexperts.promoradar</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/run_radar.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
+  <!-- Promo-radar: 2x per dag nieuwe acties oppikken en verdwenen acties laten verlopen. -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>40</integer></dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/promoradar.launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/promoradar.launchd.err.log</string>
+</dict>
+</plist>
