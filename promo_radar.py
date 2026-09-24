@@ -151,8 +151,8 @@ def main():
         if re.search(r"\bexclusie(f|ve)\b", c["title"], re.I):
             state[k] = {"status": "overgeslagen", "reden": "exclusieve deal van de kalender-site"}; continue
         _, end, _ = parse_period(c["tag"])
-        if end and end <= date.today():
-            continue      # eindigt vandaag of eerder: niet meer aanmaken (volgende run niet opnieuw bekijken is ok)
+        if end and end < date.today():
+            continue      # al afgelopen: niet aanmaken (acties die vandaag eindigen wél: je kunt nog meedoen)
         s, name = similar_existing(c, by_bm.get(cfg["id"], []), cfg["name"])
         if s >= 0.5:
             state[k] = {"status": "bestond al", "cms": name, "score": round(s, 2), "datum": str(date.today())}
