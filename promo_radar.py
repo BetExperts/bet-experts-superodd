@@ -91,7 +91,7 @@ def git_push(paths):
     try:
         subprocess.run(["git", "-C", BASE, "add"] + paths, check=True)
         subprocess.run(["git", "-C", BASE, "commit", "-q", "-m", f"promo-radar: {len(paths)} afbeelding(en)"], check=True)
-        subprocess.run(["git", "-C", BASE, "pull", "-q", "--rebase"], check=False)
+        subprocess.run(["git", "-C", BASE, "pull", "-q", "--rebase", "--autostash"], check=False)
         subprocess.run(["git", "-C", BASE, "push", "-q"], check=True)
         return True
     except subprocess.CalledProcessError as e:
