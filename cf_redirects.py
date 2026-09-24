@@ -78,3 +78,24 @@ if __name__ == "__main__":
     if a.csv:
         rows = [r for r in csv.reader(open(a.csv, encoding="utf-8")) if len(r) >= 3]
         print("toegevoegd:", add(rows))
+
+
+def remove(sources, name=LIST_NAME):
+    """Verwijdert redirects op bron-URL (zonder schema). Retourneert het aantal verwijderde regels."""
+    lid = list_id(name)
+    want = {s.replace("https://", "").replace("http://", "").strip().lower() for s in sources}
+    ids, cursor = [], None
+    while True:
+        r = requests.get(f"{API}/accounts/{_acc()}/rules/lists/{lid}/items", headers=_h(),
+                         params={"cursor": cursor} if cursor else None, timeout=30)
+        r.raise_for_status(); j = r.json()
+        ids += [i["id"] for i in j["result"] if i.get("redirect") and i["redirect"]["source_url"].lower() in want]
+        cursor = ((j.get("result_info") or {}).get("cursors") or {}).get("after")
+        if not cursor:
+            break
+    if not ids:
+        return 0
+    r = requests.delete(f"{API}/accounts/{_acc()}/rules/lists/{lid}/items", headers=_h(),
+                        json={"items": [{"id": i} for i in ids]}, timeout=60)
+    r.raise_for_status()
+    return len(ids)
