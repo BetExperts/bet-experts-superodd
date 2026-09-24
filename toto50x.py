@@ -65,7 +65,7 @@ def main():
         print(f"  · aftrap niet opgezocht: {e}")
     if kickoff:
         kk = datetime.fromisoformat(kickoff).astimezone(NL)
-        live = now >= kk
+        live = now >= kk - timedelta(minutes=15)   # namen 15 min vóór de aftrap weg (agent draait elke 15 min)
         wed_dt = f"{kk:%d-%m-%Y om %H:%M}"
         gt = (kk.replace(hour=12, minute=0, second=0, microsecond=0) + timedelta(days=1))
         geldig_tot = gt.isoformat()

@@ -3,15 +3,18 @@
 
 Tot de kickoff noemen we de wedstrijd + markt; zodra de wedstrijd live gaat
 (nu >= kickoff) schakelen we naar de ALGEMENE variant zonder teamnamen (KSA)."""
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 
 NL = ZoneInfo("Europe/Amsterdam")
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
 
+# Namen gaan er al zoveel minuten vóór de aftrap af (agent draait elke 15 min) -> nooit namen na de aftrap.
+NAMES_OFF_MIN = 15
+
 def is_live(data, now=None):
     now = now or datetime.now(NL)
-    return bool(data.get("kickoff")) and now >= data["kickoff"]
+    return bool(data.get("kickoff")) and now >= data["kickoff"] - timedelta(minutes=NAMES_OFF_MIN)
 
 def signature(data):
     return f'{data.get("home")}|{data.get("away")}|{data.get("date")}'
@@ -22,8 +25,9 @@ def build_fields(data, now=None):
     home, away, market = data.get("home"), data.get("away"), data.get("market")
     if live:
         fd = {
-            "name": "🔥 888sport: Pak 60x je inzet!",
-            "subtitel": "Zet €1 in en pak 60x je inzet met de 888sport welkomstboost.",
+            "name": f"🔥 888sport: Pak 60x je inzet op '{market}'!" if market else "🔥 888sport: Pak 60x je inzet!",
+            "subtitel": (f"Zet €1 op '{market}' en pak 60x je inzet met de 888sport welkomstboost." if market
+                         else "Zet €1 in en pak 60x je inzet met de 888sport welkomstboost."),
             "informatie": "888sport: pak 60x je inzet",
             "wedstrijd-datum-tijd": "",          # namen/tijd weg zodra live
             "bedrag-of-boost": "60x je inzet",
