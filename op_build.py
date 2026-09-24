@@ -79,9 +79,19 @@ def build_fielddata(data, now=None):
         "stap-3-tekst": ("Voeg de Lucky's Boost toe aan je bonnetje en bevestig je inzet zolang de "
                          "boost geldig is" + (f" (max. inzet €{maxs_fmt})." if maxs_fmt else ".")),
     }
-    # Geen 'geldig tot' zetten: een Lucky's Boost is doorlopend (elke dag opnieuw).
-    # Een gevulde datum toont anders een 'Verlopen'-badge in de template.
+    # 'Geldig tot' = einde van de wedstrijddag (gebruiker, 24-09-2026). Aftrap onbekend -> leeg.
+    fd["wanneer-toegevoegd"] = geldig_tot(data.get("kickoff"))
     return fd
+
+def geldig_tot(kickoff_iso):
+    """ISO-aftrap -> 23:59 lokale tijd op de wedstrijddag (of None als onbekend)."""
+    if not kickoff_iso:
+        return None
+    try:
+        ko = datetime.fromisoformat(str(kickoff_iso).replace("Z", "+00:00")).astimezone(NL)
+    except ValueError:
+        return None
+    return ko.replace(hour=23, minute=59, second=0, microsecond=0).isoformat()
 
 def telegram_caption(data, promo_url):
     """Zelfde opbouw als de Bet365 Super Odd-post: wél de wedstrijd + de odd-boost,

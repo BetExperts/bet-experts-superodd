@@ -11,12 +11,14 @@ Eén vast CMS-item (slug 'bet365-super-odd') dat elk uur wordt bijgewerkt:
   python3 generate.py --no-telegram # wel CMS, geen Telegram
   python3 generate.py               # CMS live + Telegram naar het kanaal
 """
-import sys, argparse
+import sys, re, argparse
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import so_crawl as C
 import so_build as B
+import toto_api as API          # aftrap opzoeken (api-sports)
+import op_build as OB           # geldig_tot()
 import so_webflow as WF
 import so_telegram as TG
 from so_config import PROMO_BASE, WEBFLOW_TOKEN, SUPERODD_SLUG, STATE_KEY
@@ -52,6 +54,19 @@ def main():
     print(f"  Uitbetaling: {data.get('payout')}")
 
     fd, slug, title = B.build_fielddata(data, slug=SUPERODD_SLUG, now=now)
+
+    # 'Geldig tot' = einde van de wedstrijddag (aftrap via api-sports). Onbekend -> leeg.
+    fd["wanneer-toegevoegd"] = None
+    try:
+        teams = [t.strip() for t in re.split(r"\s+(?:v|vs|-|–)\s+", data["match"]) if t.strip()]
+        ko = API.kickoff_for(teams)
+        if ko:
+            fd["wanneer-toegevoegd"] = OB.geldig_tot(ko)
+            print(f"  Aftrap   : {ko} -> geldig tot {fd['wanneer-toegevoegd'][:10]}")
+        else:
+            print("  Aftrap onbekend -> geldig tot leeg")
+    except Exception as e:
+        print(f"  · aftrap niet opgezocht: {e}")
 
     if a.dry:
         print(f"  [dry] evergreen item '{slug}' zou titel krijgen: {title}")
