@@ -276,7 +276,7 @@
   "datum": "2026-09-24"
  },
  "711|711-loyaliteitsprogramma|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f0ebefbeeaa61869813",
   "slug": "711-loyaliteitsprogramma",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -284,15 +284,16 @@
   "datum": "2026-09-24"
  },
  "vbet|zet-in-op-nederland-duitsland-en-krijg-2-free-bet-per-doelpunt-van-oranje|22-september-t-m-24-september": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ab50f0f80981fc54279fa7c",
   "slug": "vbet-zet-in-op-nederland-duitsland-en-krijg-2-free-bet-per-doelpunt-van-oranje",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "alleen geldig op 24-09"
  },
  "toto|win-kaarten-voor-nederland-servie-in-de-nations-league|22-september-t-m-27-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f1076e8d6a8bda4bc81",
   "slug": "toto-win-kaarten-voor-nederland-servie-in-de-nations-league",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -300,7 +301,7 @@
   "datum": "2026-09-24"
  },
  "toto|win-een-voetbalreis-naar-bayern-munchen-arsenal|22-september-t-m-5-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f11853dffd5974dd62a",
   "slug": "toto-win-een-voetbalreis-naar-bayern-munchen-arsenal",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -313,7 +314,7 @@
   "datum": "2026-09-24"
  },
  "one|one-casino-spin-royale-80-000-aan-prijzen|23-september-t-m-2-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f148ea57f0499f230a2",
   "slug": "one-casino-spin-royale-80-000-aan-prijzen",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -334,7 +335,7 @@
   "datum": "2026-09-24"
  },
  "oranje-palace|spaar-award-points-bij-oranje-palace-en-pak-beloningen|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f19051338276051bd84",
   "slug": "oranje-palace-spaar-award-points-en-pak-beloningen",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
@@ -363,7 +364,7 @@
   "datum": "2026-09-24"
  },
  "unibet|3-verschillende-bingo-promoties|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f22d2c8a1757a7fec6e",
   "slug": "unibet-3-verschillende-bingo-promoties",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -371,7 +372,7 @@
   "datum": "2026-09-24"
  },
  "bet365|drops-en-wins-speel-mee-voor-490-000-per-week|16-september-t-m-14-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f24094b30e4af13813c",
   "slug": "bet365-drops-en-wins-speel-mee-voor-490-000-per-week",
   "check": "geen officiële promopagina bekend",
@@ -387,7 +388,7 @@
   "datum": "2026-09-24"
  },
  "toto|speel-monopoly-roulette-en-win-een-deel-van-10-000|21-september-t-m-27-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f2731aaff63b5f87021",
   "slug": "toto-speel-monopoly-roulette-en-win-een-deel-van-10-000",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -395,7 +396,7 @@
   "datum": "2026-09-24"
  },
  "hard-rock|octofest-bij-hard-rock-casino|19-september-t-m-4-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f2bd2c8a1757a7ff223",
   "slug": "hard-rock-casino-octofest",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
@@ -403,7 +404,7 @@
   "datum": "2026-09-24"
  },
  "comeon|weekknaller-bij-comeon|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f2c8ea57f0499f23ad2",
   "slug": "comeon-weekknaller",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -419,7 +420,7 @@
   "datum": "2026-09-24"
  },
  "circus|spaar-punten-en-coins-voor-extra-beloningen|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f339fed9cbeaf6cb15d",
   "slug": "circus-spaar-punten-en-coins-voor-extra-beloningen",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
@@ -427,7 +428,7 @@
   "datum": "2026-09-24"
  },
  "betmgm|betmgm-showtime-slot-40-free-spins|iedere-ma-di-wo-do": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f356fe664ee14b8da6f",
   "slug": "betmgm-showtime-slot-40-free-spins",
   "check": "0/3 kerngetallen gevonden",
@@ -435,7 +436,7 @@
   "datum": "2026-09-24"
  },
  "toto|slots-toernooi-met-10-000-prijzenpot|21-september-t-m-27-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f37edf5b0ae6584757e",
   "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
@@ -443,7 +444,7 @@
   "datum": "2026-09-24"
  },
  "vbet|doe-mee-met-het-red-tiger-toernooi|21-september-t-m-27-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f38bfafcef1b3f009a9",
   "slug": "vbet-doe-mee-met-het-red-tiger-toernooi",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -451,7 +452,7 @@
   "datum": "2026-09-24"
  },
  "comeon|toernooien-bij-comeon|19-september-t-m-26-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f3976e8d6a8bda4ce31",
   "slug": "comeon-toernooien",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -467,7 +468,7 @@
   "datum": "2026-09-24"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|20-september-t-m-26-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f3e9fed9cbeaf6cb864",
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -475,7 +476,7 @@
   "datum": "2026-09-24"
  },
  "tonybet|elke-maandag-no-deposit-free-spins|iedere-ma-di-wo-do-vr": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f3f52e5d34cd7e3aa1d",
   "slug": "tonybet-elke-maandag-no-deposit-free-spins",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
@@ -488,7 +489,7 @@
   "datum": "2026-09-24"
  },
  "bet365|verdien-tot-250-free-spins-bij-bet365|14-september-t-m-27-september": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f42ab5374a157ab04da",
   "slug": "bet365-verdien-tot-250-free-spins",
   "check": "geen officiële promopagina bekend",
@@ -506,7 +507,7 @@
   "datum": "2026-09-24"
  },
  "hard-rock|rock-reload-pak-tot-100-free-spins|iedere-donderdag-en-vrijdag": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f466fe664ee14b8e3d1",
   "slug": "hard-rock-casino-rock-reload-pak-tot-100-free-spins",
   "check": "2/4 kerngetallen gevonden (alleen overzichtspagina)",
@@ -522,7 +523,7 @@
   "datum": "2026-09-24"
  },
  "jacks.nl|pak-elke-speelronde-een-free-bet-bij-jacks-nl|16-september-t-m-23-mei": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f49bfafcef1b3f01262",
   "slug": "jacks-nl-pak-elke-speelronde-een-free-bet",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -554,7 +555,7 @@
   "datum": "2026-09-24"
  },
  "888|speel-mee-met-score8-en-win-free-spins|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f4f9fed9cbeaf6cc3c5",
   "slug": "888-speel-mee-met-score8-en-win-free-spins",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -575,7 +576,7 @@
   "datum": "2026-09-24"
  },
  "vbet|voorspel-gratis-elke-speelronde-van-de-eredivisie-en-win-free-bets|1-september-t-m-23-mei": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f53dfd7249e0b442615",
   "slug": "vbet-voorspel-gratis-elke-speelronde-van-de-eredivisie-en-win-free-bets",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -599,7 +600,7 @@
   "datum": "2026-09-24"
  },
  "vbet|draai-aan-het-lucky-wheel-bij-vbet|28-augustus-t-m-12-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f57dcc09e961f889632",
   "slug": "vbet-draai-aan-het-lucky-wheel",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -615,7 +616,7 @@
   "datum": "2026-09-24"
  },
  "leovegas|draai-elke-dag-gratis-aan-het-leowheel|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f59f8ce38e2c2364475",
   "slug": "leovegas-draai-elke-dag-gratis-aan-het-leowheel",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -631,7 +632,7 @@
   "datum": "2026-09-24"
  },
  "888|pak-een-free-bet-bij-888|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f5b853dffd5974e010c",
   "slug": "888-pak-een-free-bet",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -647,7 +648,7 @@
   "datum": "2026-09-24"
  },
  "unibet|drops-en-wins-bij-unibet|4-maart-t-m-3-maart": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f5e894266c406cc488d",
   "slug": "unibet-drops-en-wins",
   "check": "0/1 kerngetallen gevonden",
@@ -655,7 +656,7 @@
   "datum": "2026-09-24"
  },
  "hard-rock|drops-en-wins-bij-hard-rock-casino|3-maart-t-m-4-maart": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f606fe664ee14b8f401",
   "slug": "hard-rock-casino-drops-en-wins",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -663,7 +664,7 @@
   "datum": "2026-09-24"
  },
  "leovegas|maak-kans-op-vier-jackpots-bij-leovegas|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f61d2c8a1757a801d84",
   "slug": "leovegas-maak-kans-op-vier-jackpots",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -671,7 +672,7 @@
   "datum": "2026-09-24"
  },
  "jacks.nl|wheel-drop-promotie-bij-jacks|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f63dfd7249e0b442c4e",
   "slug": "jacks-nl-wheel-drop-promotie",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -679,7 +680,7 @@
   "datum": "2026-09-24"
  },
  "betmgm|betmgm-rewards-speel-300-spins-en-draai-aan-het-spin-en-win-rad|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f64894266c406cc4c7c",
   "slug": "betmgm-rewards-speel-300-spins-en-draai-aan-het-spin-en-win-rad",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -695,7 +696,7 @@
   "datum": "2026-09-24"
  },
  "tonybet|win-free-spins-en-free-bets-met-tonybet-missies|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f67ff3c1de4366d4bff",
   "slug": "tonybet-win-free-spins-en-free-bets-met-tonybet-missies",
   "check": "geen getallen; tekstoverlap",
@@ -703,7 +704,7 @@
   "datum": "2026-09-24"
  },
  "bet365|lucky-rush-toernooi-bij-bet365|24-april-t-m-17-januari": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f6976e8d6a8bda4defe",
   "slug": "bet365-lucky-rush-toernooi",
   "check": "geen officiële promopagina bekend",
@@ -711,7 +712,7 @@
   "datum": "2026-09-24"
  },
  "one|daily-quests-bij-onecasino|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f6a3ebe367e5788acf1",
   "slug": "one-casino-daily-quests-bij-onecasino",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
@@ -724,7 +725,7 @@
   "datum": "2026-09-24"
  },
  "jacks.nl|pak-elke-f1-grand-prix-een-free-bet-bij-jacks-nl|12-maart-t-m-6-december": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f6cedf5b0ae658487a7",
   "slug": "jacks-nl-pak-elke-f1-grand-prix-een-free-bet",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
@@ -737,7 +738,7 @@
   "datum": "2026-09-24"
  },
  "comeon|flash-jackpots-win-een-van-de-44-progressieve-jackpots|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f6e34d362f0bd9b5139",
   "slug": "comeon-flash-jackpots-win-een-van-de-44-progressieve-jackpots",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -745,7 +746,7 @@
   "datum": "2026-09-24"
  },
  "tonybet|bet-builders-bij-tonybet|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f6f051338276051df89",
   "slug": "tonybet-bet-builders",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
@@ -766,7 +767,7 @@
   "datum": "2026-09-24"
  },
  "vbet|profit-boost-bij-vbet|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab50f73894266c406cc53ad",
   "slug": "vbet-profit-boost",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
