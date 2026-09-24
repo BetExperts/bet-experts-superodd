@@ -234,6 +234,7 @@ def main():
         browser.close()
 
     if a.dry:
+        cleanup_expired(dry=True)
         sweep_nieuw(dry=True)
         print(f"\nDRY — {sum(1 for p in plans if p[2])} zouden live gaan, {sum(1 for p in plans if not p[2])} als draft.")
         return
@@ -255,8 +256,57 @@ def main():
             print(f"  ! mislukt: {fd['name'][:60]} — {e}")
         save_state(state)
     save_state(state)
+    cleanup_expired(a.dry)
     sweep_nieuw(a.dry)
     print(f"\nKLAAR — {made['live']} live, {made['draft']} als draft.")
+
+def _unlink_from_news(item_id):
+    """Haalt een promo uit het veld 'promotie-s' van nieuwsartikelen (anders weigert Webflow verwijderen)."""
+    N = "64ff0fbd5a8f205b05d54656"
+    fixed = 0
+    for it in all_items(N):
+        refs = it["fieldData"].get("promotie-s") or []
+        if item_id not in refs:
+            continue
+        new = [x for x in refs if x != item_id]
+        live = bool(it.get("lastPublished")) and not it.get("isDraft")
+        try:
+            wf("PATCH", f"/collections/{N}/items/{it['id']}" + ("/live" if live else ""), {"fieldData": {"promotie-s": new}})
+        except RuntimeError:
+            wf("PATCH", f"/collections/{N}/items/{it['id']}", {"fieldData": {"promotie-s": new}})
+        fixed += 1
+    return fixed
+
+def cleanup_expired(dry=False):
+    """Elke verlopen promo (behalve evergreen agent-pagina's): 301 zetten, offline halen en uit de CMS verwijderen."""
+    now = datetime.now().astimezone()
+    for it in all_items(C.PROMOTIES):
+        f = it["fieldData"]; end = f.get("wanneer-toegevoegd")
+        if it.get("isArchived") or not end or f.get("slug") in C.EVERGREEN_SLUGS:
+            continue
+        if (now - datetime.fromisoformat(end.replace("Z", "+00:00"))).total_seconds() < C.OPRUIM_MARGE_UUR * 3600:
+            continue
+        print(f"  ✂ verlopen ({end[:10]}) -> offline + verwijderen: {f.get('name', '')[:70]}")
+        if dry:
+            continue
+        was_live = bool(it.get("lastPublished"))
+        if was_live:
+            target = "/promoties" if f.get("geldig-voor") == C.GELDIG_SPORT else "/casino-bonussen"
+            try:
+                cf_redirects.add([(f"www.bet-experts.nl/promoties/{f['slug']}", f"https://www.bet-experts.nl{target}", 301)])
+            except Exception as ex:
+                print(f"    ! redirect niet gezet ({ex}) -> promo blijft staan"); continue
+        for attempt in (1, 2):
+            try:
+                if was_live:
+                    wf("DELETE", f"/collections/{C.PROMOTIES}/items/{it['id']}/live")
+                wf("DELETE", f"/collections/{C.PROMOTIES}/items/{it['id']}")
+                break
+            except RuntimeError as ex:
+                if "409" in str(ex) and attempt == 1:
+                    print(f"    · nog gekoppeld aan nieuwsartikelen -> {_unlink_from_news(it['id'])} artikel(en) losgekoppeld")
+                    continue
+                print(f"    ! {ex}"); break
 
 def sweep_nieuw(dry=False):
     """Houdt voor ALLE promo's de rubriek 'Nieuw' (laatste NIEUW_DAGEN dagen) en het veld 'bonus-types'

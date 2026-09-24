@@ -76,3 +76,14 @@ NIEUW_HANDMATIG = {
     "66c5cc4307ddceb00c519f75": "2026-09-27",   # ComeOn! Dubbele Casino Welkomstbonus
     "6ab5284c35713b17e2523870": "2026-09-27",   # 888 Casino Welkomstbonus Special
 }
+
+# Algemene opruiming: ELKE promo waarvan 'Geldig tot' langer dan OPRUIM_MARGE_UUR voorbij is, wordt
+# offline gehaald + verwijderd (met 301). Uitgezonderd: evergreen pagina's die agents hergebruiken
+# voor de volgende boost/wedstrijd (hun 'Geldig tot' schuift steeds mee).
+OPRUIM_MARGE_UUR = 2
+EVERGREEN_SLUGS = {
+    "bet365-super-odd",                              # Bet365 Super Odd (so-agent)
+    "oranje-palace-luckys-boost",                    # Oranje Palace Lucky's Boost (op-agent)
+    "toto-50x-je-inzet",                             # TOTO 50x (toto-agent)
+    "888sport-odd-boosts-pak-60-00x-je-inzet",       # 888sport 60x (s888-agent)
+}
