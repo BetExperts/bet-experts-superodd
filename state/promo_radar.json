@@ -308,11 +308,8 @@
   "datum": "2026-09-24"
  },
  "toto|toto-exclusief-zet-25-in-en-krijg-20-free-spins|iedere-woensdag-en-donderdag": {
-  "status": "live",
-  "item_id": "6ab50f12894266c406cc1be2",
-  "slug": "toto-exclusief-zet-25-in-en-krijg-20-free-spins",
-  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "exclusieve deal van de concurrent",
   "datum": "2026-09-24"
  },
  "one|one-casino-spin-royale-80-000-aan-prijzen|23-september-t-m-2-oktober": {
@@ -324,11 +321,8 @@
   "datum": "2026-09-24"
  },
  "tonybet|exclusieve-welkomstbonus-tonybet-tot-300-free-spins|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f15befbeeaa6186999f",
-  "slug": "tonybet-exclusieve-welkomstbonus-tonybet-tot-300-free-spins",
-  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "jacks.nl|pak-maximaal-20-aan-free-bets-bij-jacks-nl|23-september-t-m-6-oktober": {
@@ -356,11 +350,8 @@
   "datum": "2026-09-24"
  },
  "comeon|400-free-spins-80-aan-evolution-vouchers-of-50-aan-free-bets|22-september-t-m-5-oktober": {
-  "status": "draft",
-  "item_id": "6ab50f1cbfafcef1b3eff808",
-  "slug": "comeon-400-free-spins-80-aan-evolution-vouchers-of-50-aan-free-bets",
-  "check": "0/4 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|22-september-t-m-28-september": {
@@ -492,11 +483,8 @@
   "datum": "2026-09-24"
  },
  "unibet|zet-25-in-en-ontvang-50-aan-free-spins|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f40894266c406cc3adc",
-  "slug": "unibet-zet-25-in-en-ontvang-50-aan-free-spins",
-  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "bet365|verdien-tot-250-free-spins-bij-bet365|14-september-t-m-27-september": {
@@ -508,19 +496,13 @@
   "datum": "2026-09-24"
  },
  "jacks.nl|bragg-toernooi-met-een-prijzenpot-van-2-000-aan-free-spins|18-september-t-m-24-september": {
-  "status": "draft",
-  "item_id": "6ab50f44ec47ac3375eef884",
-  "slug": "jacks-nl-bragg-toernooi-met-een-prijzenpot-van-2-000-aan-free-spins",
-  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "eindigt vandaag",
   "datum": "2026-09-24"
  },
  "oranje-palace|hpg-palace-races-toernooi-bij-oranje-palace|18-september-t-m-24-september": {
-  "status": "draft",
-  "item_id": "6ab50f45dfd7249e0b441e3a",
-  "slug": "oranje-palace-hpg-palace-races-toernooi",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "eindigt vandaag",
   "datum": "2026-09-24"
  },
  "hard-rock|rock-reload-pak-tot-100-free-spins|iedere-donderdag-en-vrijdag": {
@@ -588,11 +570,8 @@
   "datum": "2026-09-24"
  },
  "hard-rock|tot-250-free-spins-voor-big-bass-vegas-double-down-deluxe|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f52ddc77f0861db67e4",
-  "slug": "hard-rock-casino-tot-250-free-spins-voor-big-bass-vegas-double-down-deluxe",
-  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "vbet|voorspel-gratis-elke-speelronde-van-de-eredivisie-en-win-free-bets|1-september-t-m-23-mei": {
@@ -740,11 +719,8 @@
   "datum": "2026-09-24"
  },
  "betmgm|betmgm-golden-wheel-hoofdprijs-van-1-000|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f6bff3c1de4366d4db8",
-  "slug": "betmgm-golden-wheel-hoofdprijs-van-1-000",
-  "check": "0/1 kerngetallen gevonden",
-  "bron": "https://www.betmgm.nl/promoties/wedden/golden-goals",
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "jacks.nl|pak-elke-f1-grand-prix-een-free-bet-bij-jacks-nl|12-maart-t-m-6-december": {
@@ -756,11 +732,8 @@
   "datum": "2026-09-24"
  },
  "leovegas|elke-maand-85-free-spins-op-henry-the-ape|altijd-geldig": {
-  "status": "live",
-  "item_id": "6ab50f6d051338276051df22",
-  "slug": "leovegas-elke-maand-85-free-spins-op-henry-the-ape",
-  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "onderdeel van LeoVegas-welkomstbonus",
   "datum": "2026-09-24"
  },
  "comeon|flash-jackpots-win-een-van-de-44-progressieve-jackpots|altijd-geldig": {
@@ -780,11 +753,8 @@
   "datum": "2026-09-24"
  },
  "one|sportbonus-onecasino|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f71144595c877a9095c",
-  "slug": "one-casino-sportbonus-onecasino",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://nl.onecasino.com/promotions/free-bet",
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "toto|win-100-gratis-chips-bij-live-blackjack|altijd-geldig": {
@@ -804,11 +774,8 @@
   "datum": "2026-09-24"
  },
  "toto|live-casino-welkomstbonus-zet-20-in-en-claim-50-aan-free-chips|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f769fed9cbeaf6ce341",
-  "slug": "toto-live-casino-welkomstbonus-zet-20-in-en-claim-50-aan-free-chips",
-  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "hard-rock|ontdekkings-quest|altijd-geldig": {
@@ -820,19 +787,13 @@
   "datum": "2026-09-24"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f7ad2c8a1757a803038",
-  "slug": "hard-rock-casino-zet-20-in-en-krijg-20-live-casino-tegoed",
-  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  },
  "betmgm|live-casino-250-cash-en-20-reward-games|altijd-geldig": {
-  "status": "draft",
-  "item_id": "6ab50f7be613c6bc5f584716",
-  "slug": "betmgm-live-casino-250-cash-en-20-reward-games",
-  "check": "3/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "status": "verwijderd",
+  "reden": "welkomstbonus (beheer je zelf)",
   "datum": "2026-09-24"
  }
 }

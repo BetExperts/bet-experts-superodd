@@ -145,6 +145,13 @@ def main():
             continue
         if not cfg["id"]:
             state[k] = {"status": "overgeslagen", "reden": "bookmaker niet in CMS"}; continue
+        if "welcomeBonus" in c["types"]:
+            state[k] = {"status": "overgeslagen", "reden": "welkomstbonus (beheert de gebruiker zelf)"}; continue
+        if re.search(r"\bexclusie(f|ve)\b", c["title"], re.I):
+            state[k] = {"status": "overgeslagen", "reden": "exclusieve deal van de kalender-site"}; continue
+        _, end, _ = parse_period(c["tag"])
+        if end and end <= date.today():
+            continue      # eindigt vandaag of eerder: niet meer aanmaken (volgende run niet opnieuw bekijken is ok)
         s, name = similar_existing(c, by_bm.get(cfg["id"], []), cfg["name"])
         if s >= 0.5:
             state[k] = {"status": "bestond al", "cms": name, "score": round(s, 2), "datum": str(date.today())}
@@ -153,27 +160,37 @@ def main():
     if a.limit:
         todo = todo[:a.limit]
 
-    # Door de radar aangemaakte acties die niet meer in de kalender staan en geen einddatum
-    # hebben: 'Geldig tot' op nu zetten -> de template toont 'Verlopen'.
+    # Door de radar aangemaakte acties die verlopen zijn (einddatum voorbij) of niet meer in de
+    # kalender staan: verwijderen (gebruiker: verlopen promoties mogen weg).
     current = {card_key(c) for c in cards}
-    now_iso = datetime.now().astimezone().isoformat(timespec="seconds")
+    now = datetime.now().astimezone()
     for k, e in state.items():
-        if e.get("status") not in ("live", "draft") or k in current or e.get("verlopen") or not e.get("item_id"):
+        if e.get("status") not in ("live", "draft") or not e.get("item_id"):
             continue
         if a.only and not k.startswith(a.only + "|"):
             continue
         it = next((p for p in promos if p["id"] == e["item_id"]), None)
-        if not it or it["fieldData"].get("wanneer-toegevoegd"):
+        if not it:
+            e["status"] = "verwijderd"; continue
+        end = it["fieldData"].get("wanneer-toegevoegd")
+        expired = bool(end) and datetime.fromisoformat(end.replace("Z", "+00:00")) < now
+        gone = k not in current
+        if not (expired or gone):
             continue
-        print(f"  ⌛ niet meer in kalender -> verlopen: {it['fieldData'].get('name', '')[:70]}")
-        if not a.dry:
-            live_item = bool(it.get("lastPublished")) and not it.get("isDraft")
-            try:
-                wf("PATCH", f"/collections/{C.PROMOTIES}/items/{e['item_id']}" + ("/live" if live_item else ""),
-                   {"fieldData": {"wanneer-toegevoegd": now_iso}})
-                e["verlopen"] = str(date.today())
-            except Exception as ex:
-                print(f"    ! {ex}")
+        print(f"  ✂ {'verlopen' if expired else 'niet meer in kalender'} -> verwijderen: {it['fieldData'].get('name', '')[:70]}")
+        if a.dry:
+            continue
+        try:
+            if it.get("lastPublished") and not it.get("isDraft"):
+                wf("DELETE", f"/collections/{C.PROMOTIES}/items/{e['item_id']}/live")
+            wf("DELETE", f"/collections/{C.PROMOTIES}/items/{e['item_id']}")
+            e.update({"status": "verwijderd", "reden": "verlopen" if expired else "niet meer in kalender",
+                      "verwijderd": str(date.today())})
+            with open(os.path.join(BASE, "state", "promo_redirects.csv"), "a", encoding="utf-8") as fh:
+                fh.write(f"www.bet-experts.nl/promoties/{it['fieldData'].get('slug')},https://www.bet-experts.nl/promoties,301\n")
+        except Exception as ex:
+            print(f"    ! {ex}")
+    save_state(state)
     print(f"   nieuw te verwerken: {len(todo)}")
 
     plans, images = [], []
