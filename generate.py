@@ -81,6 +81,10 @@ def main():
 
     is_new_item   = prev is None
     match_changed = (prev is None) or (prev.get("match") != data["match"])
+    # Nieuwe boost = andere wedstrijd óf andere selectie(s); alleen een odd-wijziging telt niet.
+    boost_key     = f"{data['match']}|{'/'.join(data.get('selections') or [])}"
+    prev_boost    = (prev or {}).get("boost_key") or ((prev or {}).get("match") and f"{prev.get('match')}|{'/'.join(data.get('selections') or [])}")
+    boost_changed = is_new_item or boost_key != prev_boost
     unchanged     = (prev is not None) and (prev.get("sig") == sig)
 
     if unchanged:
@@ -96,16 +100,16 @@ def main():
         kind = "nieuwe Super Boost" if match_changed else "odd/selectie bijgewerkt"
         print(f"  ✎ artikel bijgewerkt ({kind}): {title}  (item {item_id})")
 
-    state[STATE_KEY] = {"item_id": item_id, "slug": slug, "match": data["match"],
+    state[STATE_KEY] = {"item_id": item_id, "slug": slug, "match": data["match"], "boost_key": boost_key,
                         "sig": sig, "url": promo_url, "updated": now.isoformat()}
     WF.save_state(state)
 
-    # Telegram: bij een nieuw item of een nieuwe wedstrijd; niet bij kleine tweaks.
-    send = (is_new_item or match_changed or a.force_telegram)
+    # Telegram: bij een nieuwe boost (andere wedstrijd of selectie); niet bij alleen een odd-wijziging.
+    send = (boost_changed or a.force_telegram)
     if a.no_telegram:
         print("  · Telegram overgeslagen (--no-telegram).")
     elif not send:
-        print("  · Telegram overgeslagen (alleen kleine update, zelfde wedstrijd).")
+        print("  · Telegram overgeslagen (zelfde boost, alleen odd gewijzigd).")
     else:
         msg = TG.build_message(data, promo_url)
         if TG.send(msg, promo_url, test=a.test):

@@ -22,6 +22,20 @@ SLUG = "unibet-uniboost"
 ITEM_ID = "6ab569a498befe31ca6d402d"
 AFFILIATE = "https://b1.trickyrock.com/redirect.aspx?pid=86118747&bid=39312"
 STATE = "state/unibet_uniboost.json"
+KAMBI = "https://eu-offering-api.kambicdn.com/offering/v2018/ubnl/betoffer/outcome.json"
+
+def kambi_odds(outcome_id):
+    """Actuele normale odd van een Unibet-outcome (Kambi, brand ubnl) of None."""
+    try:
+        d = requests.get(KAMBI, params={"id": outcome_id, "lang": "nl_NL", "market": "NL"}, timeout=20).json()
+        for bo in d.get("betOffers", []):
+            for o in bo.get("outcomes", []):
+                if str(o.get("id")) == str(outcome_id) and o.get("odds"):
+                    return o["odds"] / 1000
+    except Exception:
+        pass
+    return None
+
 BOOST_RE = re.compile(r"^(?P<home>.+?)\s+-\s+(?P<away>.+?)\s*\|\s*(?P<sel>.+?)\s+NU geboost naar\s+(?P<new>\d+[.,]\d+)\s*\(was\s+(?P<old>\d+[.,]\d+)\)", re.I)
 
 def crawl():
@@ -79,6 +93,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true"); ap.add_argument("--publish", action="store_true")
     ap.add_argument("--post", action="store_true"); ap.add_argument("--test", action="store_true")
+    ap.add_argument("--coupon", help="Unibet-couponlink van de boost (coupon=combination|<outcomeId>|...): "
+                                      "normale odd komt dan uit Kambi i.p.v. de (soms verouderde) promotekst")
     a = ap.parse_args()
     now = datetime.now(NL)
     print(f"== Unibet Uniboost — {now:%Y-%m-%d %H:%M} ==")
@@ -93,6 +109,23 @@ def main():
         b["kickoff"] = datetime.fromisoformat(k).astimezone(NL) if k else None
     except Exception:
         b["kickoff"] = None
+    try:
+        st0 = json.load(open(STATE, encoding="utf-8"))
+    except Exception:
+        st0 = {}
+    key0 = f"{b['event']}|{b['selection']}"
+    oid = None
+    if a.coupon:
+        m = re.search(r"combination(?:%7C|\|)(\d+)", a.coupon)
+        oid = m.group(1) if m else None
+    elif st0.get("outcome_id") and st0.get("outcome_key") == key0:
+        oid = st0["outcome_id"]
+    if oid:
+        k_old = kambi_odds(oid)
+        if k_old:
+            print(f"  · normale odd uit Kambi (outcome {oid}): {fmt(k_old)} (promotekst zei {fmt(b['old'])})")
+            b["old"] = k_old
+        b["outcome_id"] = oid
     print(f"  {b['event']} | {b['selection']} | {fmt(b['old'])} -> {fmt(b['new'])} | max €{b.get('max')} | aftrap {b['kickoff']}")
     if b["kickoff"] and now >= b["kickoff"]:
         print("  · Wedstrijd is al begonnen — niets bijwerken/posten."); return
@@ -116,6 +149,8 @@ def main():
         if send_telegram(caption(b), PROMO_BASE + SLUG, test=a.test):
             print("  ✔ Telegram-teaser verstuurd."); st["posted_key"] = key
     st.update({"sig": sig, "event": b["event"], "updated": now.isoformat()})
+    if b.get("outcome_id"):
+        st.update({"outcome_id": b["outcome_id"], "outcome_key": key})
     json.dump(st, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print("KLAAR.")
 
