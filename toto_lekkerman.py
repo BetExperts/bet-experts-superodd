@@ -24,6 +24,7 @@ TOTO_BM = "669ab9f5aceb8b717cea24c3"
 AFFILIATE = "https://partner.toto.nl/C.ashx?btag=a_375b_474c_&affid=184&siteid=375&adid=474&c="
 LOGO = "https://cdn.prod.website-files.com/64f9f8e867f73b8e88841e09/66ec2585dcd5bb973c21cbab_toto-nederland-rond.webp"
 RUB_SPECIALS = "65eb24f2e8d4c04e87892eab"
+RUB_SUPERODD = "6aaa9afdf92f60c1aeff6a58"   # rubriek SuperOdd: de kalender toont dan de eigen boost-naam
 GELDIG_SPORT = "9c0fbc22d905260428d1de2988b86dea"
 STATE = "state/toto_lekkerman.json"
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
@@ -106,7 +107,7 @@ def build_fields(bst):
         "button-1": "Bekijk de Lekker Man bij TOTO",
         "odds-om-vrij-te-spelen": new, "minimale-storting": "Geen", "rondspeelvoorwaarden": "Geen", "leeftijd": "24+",
         "boosted-odd": True, "beste-boosted-odd": True, "100x-promotie": False, "welkomstbonus-promotie": False,
-        "casino-promotie": False, "geldig-voor": GELDIG_SPORT, "promotie-rubriek": RUB_SPECIALS,
+        "casino-promotie": False, "geldig-voor": GELDIG_SPORT, "promotie-rubriek": RUB_SUPERODD,
         "bookmaker-3": TOTO_BM, "bookmakers": [TOTO_BM], "affiliatie-link-naar-broker": AFFILIATE,
         "afbeelding-promotie": {"url": LOGO},
         "wedstrijd-datum-tijd": wanneer,
@@ -130,8 +131,8 @@ def build_fields(bst):
         "waar-op-letten-tekst": "De Lekker Man is kort geldig (tot de aftrap) en wisselt per wedstrijd. Controleer de actuele boost en eventuele maximale inzet bij TOTO.",
         "voorwaarde-promotie": f"TOTO Lekker Man bij {ev}: {sel}, verhoogd van {old} naar {new}. Geldig tot de aftrap. Alleen voor spelers van 24 jaar of ouder. {DISCLAIMER}",
         "volledige-voorwaarden-tekst": f"TOTO Lekker Man bij {ev}{datum}: {sel}, verhoogde quotering {new} (was {old}). Geldig tot de aftrap; alleen voor spelers van 24+. Voorwaarden van TOTO zijn van toepassing.",
-        "bonus-types": "odds-boost,specials,sport",
-        "bonus-rubrieken": ["6aaa9afdf92f60c1aeff6a58", RUB_SPECIALS, "6ab50fb0ddc77f0861db8e44"],   # SuperOdd, Specials, Sport bonus
+        "bonus-types": "odds-boost,sport",
+        "bonus-rubrieken": [RUB_SUPERODD, "6ab50fb0ddc77f0861db8e44"],   # SuperOdd, Sport bonus (zoals Bet365/Lucky's Boost)
     }
     return fd
 

@@ -76,6 +76,8 @@ def build_fields(b):
         "wedstrijd-datum-tijd": f"{ko:%d-%m-%Y} om {ko:%H:%M}" if ko else "",
         "wanneer-toegevoegd": ko.replace(hour=23, minute=59).isoformat() if ko else None,
         "affiliatie-link-naar-broker": AFFILIATE,
+        "promotie-rubriek": "6aaa9afdf92f60c1aeff6a58",          # SuperOdd -> kalender toont 'Uniboost'
+        "bonus-types": "odds-boost,sport", "bonus-rubrieken": ["6aaa9afdf92f60c1aeff6a58", "6ab50fb0ddc77f0861db8e44"],
         "content-soort-promotie-1": (f"<h3><strong>Unibet Uniboost: {ev}</strong></h3><p>Met de <strong>Uniboost</strong> verhoogt Unibet af en toe "
             f"de quotering op een speciale weddenschap bij een grote wedstrijd. Bij <strong>{ev}</strong>{datum}: <strong>{sel}</strong>, "
             f"verhoogd van {old} naar <strong>{new}</strong>.{maxi}</p>"),
