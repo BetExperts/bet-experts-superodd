@@ -256,32 +256,41 @@ def main():
     print(f"\nKLAAR — {made['live']} live, {made['draft']} als draft.")
 
 def sweep_nieuw(dry=False):
-    """Rubriek 'Nieuw' toevoegen aan promo's van de laatste NIEUW_DAGEN dagen, en weer weghalen daarna."""
-    from pr_rubrieken import RUB
+    """Houdt voor ALLE promo's de rubriek 'Nieuw' (laatste NIEUW_DAGEN dagen) en het veld 'bonus-types'
+    (tokens voor de bonuskalender-embed, incl. 'nieuw' en 'welkomstbonus') in sync."""
+    from pr_rubrieken import RUB, types_for
     nid = RUB.get("nieuw")
-    if not nid:
-        return
     now = datetime.now().astimezone()
+    n = 0
     for it in all_items(C.PROMOTIES):
         if it.get("isArchived"):
             continue
         f = it["fieldData"]; cur = f.get("bonus-rubrieken") or []
         created = datetime.fromisoformat(it["createdOn"].replace("Z", "+00:00"))
         new = created.date().isoformat() >= C.NIEUW_VANAF and (now - created).days < C.NIEUW_DAGEN
-        if new == (nid in cur):
+        rub = [x for x in cur if x != nid] + ([nid] if (new and nid) else [])
+        types = types_for(f, rub, new)
+        patch = {}
+        if sorted(rub) != sorted(cur):
+            patch["bonus-rubrieken"] = rub
+        if types != (f.get("bonus-types") or ""):
+            patch["bonus-types"] = types
+        if not patch:
             continue
-        rub = (cur + [nid]) if new else [x for x in cur if x != nid]
-        print(f"  {'+' if new else '-'} Nieuw: {f.get('name', '')[:70]}")
+        n += 1
+        if "bonus-rubrieken" in patch:
+            print(f"  {'+' if new else '-'} Nieuw: {f.get('name', '')[:70]}")
         if dry:
             continue
         live = bool(it.get("lastPublished")) and not it.get("isDraft")
         try:
-            wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}" + ("/live" if live else ""), {"fieldData": {"bonus-rubrieken": rub}})
+            wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}" + ("/live" if live else ""), {"fieldData": patch})
         except RuntimeError as e:
             if "409" in str(e):
-                wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}", {"fieldData": {"bonus-rubrieken": rub}})
+                wf("PATCH", f"/collections/{C.PROMOTIES}/items/{it['id']}", {"fieldData": patch})
             else:
                 print(f"    ! {e}")
+    print(f"   bonus-types/Nieuw gesynchroniseerd: {n} promo('s) {'zouden worden ' if dry else ''}bijgewerkt")
 
 if __name__ == "__main__":
     main()

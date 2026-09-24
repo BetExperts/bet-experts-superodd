@@ -40,3 +40,24 @@ def rubrieken(f):
         if re.search(pat, blob):
             slugs.add(slug)
     return sorted(ids_by_slug[s] for s in slugs if s in ids_by_slug)
+
+
+# Rubriek-slug -> token in 'bonus-types' (dat veld leest de bonuskalender-embed uit)
+RUB_TO_TOKEN = {"welkomstbonus": "welkomstbonus", "free-bets": "free-bets", "free-spins": "free-spins",
+                "bet-en-get": "bet-and-get", "no-deposit-bonus": "no-deposit", "stortingsbonus": "stortingsbonus",
+                "cash-drop": "cash-drop", "toernooi": "toernooi", "loyaliteitsbonus": "loyaliteit",
+                "casino-apps": "casino-app", "live-casino": "live-casino", "jackpot": "jackpot",
+                "bingo-bonus": "bingo", "poker-bonus": "poker", "bonuscode": "bonuscode", "sport-bonus": "sport",
+                "casino-promotie": "casino", "100x-je-inzet": "100x", "superodd": "odds-boost",
+                "specials": "specials", "nieuw": "nieuw"}
+
+def types_for(f, rub_ids, nieuw):
+    """bonus-types = tokens van alle rubrieken (+ 'welkomstbonus' bij welkomstbonussen, + 'nieuw' zolang nieuw)."""
+    by_id = {v: k for k, v in RUB.items()}
+    toks = [RUB_TO_TOKEN[by_id[i]] for i in rub_ids if by_id.get(i) in RUB_TO_TOKEN]
+    if f.get("welkomstbonus-promotie"):
+        toks.insert(0, "welkomstbonus")
+    toks = [t for t in dict.fromkeys(toks) if t != "nieuw"]
+    if nieuw:
+        toks.append("nieuw")
+    return ",".join(toks)
