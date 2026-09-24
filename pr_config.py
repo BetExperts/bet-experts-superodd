@@ -37,6 +37,12 @@ BOOKMAKERS = {
     "711":           {"id": None, "name": "711",       "pages": ["https://www.711.nl/promoties"]},
     "comeon":        {"id": None, "name": "ComeOn!",   "pages": ["https://www.comeon.nl/nl/promoties"]},
     "bet365":        {"id": None, "name": "Bet365",    "pages": []},     # promo's zitten achter de app/login
+    # Directe bron (niet in de kalender): starcasino.nl/bonussen via pr_starcasino.py
+    "starcasino":    {"id": "6a7afdaa4a7453c17d31cab5", "name": "Starcasino", "pages": []},
+}
+# Vaste affiliatelink per operator (gaat vóór de automatische keuze uit de welkomstbonussen)
+AFFILIATE_OVERRIDE = {
+    "starcasino": "https://media1.affiliates.starcasino.nl/redirect.aspx?pid=2170&bid=1477",
 }
 # id None -> wordt bij de start opgezocht op naam in de Bookmakers-collectie.
 

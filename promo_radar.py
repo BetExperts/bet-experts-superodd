@@ -24,6 +24,7 @@ from pr_verify import Verifier, tokens, key_numbers, _has_num
 from pr_build import build_fields, slugify
 from pr_rubrieken import rubrieken
 import cf_redirects
+import pr_starcasino
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 H = lambda: {"Authorization": f"Bearer {WEBFLOW_TOKEN}", "accept": "application/json", "content-type": "application/json"}
@@ -50,6 +51,9 @@ def load_state():
 
 def save_state(st):
     json.dump(st, open(os.path.join(BASE, C.STATE_FILE), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+def star_key(card):
+    return f"starcasino|{slugify(card['title'])}"
 
 def card_key(card):
     return f"{card['op']}|{slugify(card['title'])}|{slugify(card['tag'])}"
@@ -138,6 +142,15 @@ def main():
     state = load_state()
     cards = fetch_cards()
     print(f"   kalender: {len(cards)} acties vandaag")
+    star = []
+    if not a.only or a.only == "starcasino":
+        try:
+            with sync_playwright() as pw:
+                b = pw.chromium.launch(); star = pr_starcasino.fetch(b); b.close()
+            print(f"   starcasino.nl: {len(star)} promoties")
+        except Exception as e:
+            print(f"   ! starcasino.nl niet gelezen: {e} (bestaande StarCasino-promo's blijven ongemoeid)")
+            star = None
     todo = []
     for c in cards:
         cfg = C.BOOKMAKERS.get(c["op"])
@@ -163,7 +176,9 @@ def main():
 
     # Door de radar aangemaakte acties die verlopen zijn (einddatum voorbij) of niet meer in de
     # kalender staan: verwijderen (gebruiker: verlopen promoties mogen weg).
-    current = {card_key(c) for c in cards}
+    current = {card_key(c) for c in cards} | {star_key(c) for c in (star or [])}
+    if star is None:     # bron niet bereikbaar -> StarCasino-promo's niet als 'verdwenen' behandelen
+        current |= {k for k in state if k.startswith("starcasino|")}
     now = datetime.now().astimezone()
     for k, e in state.items():
         # 'einddatum' = handmatig toegevoegde promo die op zijn 'Geldig tot' offline moet (niet in de kalender)
@@ -231,6 +246,47 @@ def main():
                   f"{' | banner' if v.get('image') else ''}{' | ' + v['detail_url'] if v.get('detail_url') else ''}")
         browser.close()
 
+    # ---- StarCasino (directe bron) ----
+    for c in (star or []):
+        k = star_key(c); e = state.get(k)
+        if e:
+            if e.get("hash") and e["hash"] != c["hash"]:
+                if e.get("status") == "live" and e.get("item_id") and not a.dry:
+                    fd, sport, rub = build_fields(c, {"id": C.BOOKMAKERS["starcasino"]["id"], "name": "Starcasino"},
+                                                  c["period"], {"detail_url": c["detail_url"]}, None, None)
+                    for x in ("slug", "afbeelding-promotie"):
+                        fd.pop(x, None)
+                    fd["affiliatie-link-naar-broker"] = C.AFFILIATE_OVERRIDE["starcasino"]
+                    fd["bonus-rubrieken"] = rubrieken(fd)
+                    try:
+                        wf("PATCH", f"/collections/{C.PROMOTIES}/items/{e['item_id']}/live", {"fieldData": fd})
+                        print(f"  ↻ StarCasino bijgewerkt (inhoud gewijzigd): {c['title']}")
+                    except Exception as ex:
+                        print(f"    ! {ex}")
+                elif e.get("status") == "bron-handmatig":
+                    state.setdefault("_ter_beoordeling", {})[e.get("item_id", k)] = {
+                        "name": f"Starcasino: {c['title']}", "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+                        "bron": c["detail_url"]}
+                    print(f"  ? StarCasino gewijzigd, ter beoordeling: {c['title']}")
+                e["hash"] = c["hash"]
+            continue
+        cfg = C.BOOKMAKERS["starcasino"]
+        fd, sport, rub = build_fields(c, {"id": cfg["id"], "name": "Starcasino"}, c["period"],
+                                      {"detail_url": c["detail_url"]}, None, logo(cfg["id"]))
+        fd["affiliatie-link-naar-broker"] = C.AFFILIATE_OVERRIDE["starcasino"]
+        fd["link-artikel-voor-sidebar"] = PROMO_BASE + fd["slug"]
+        fd["bonus-rubrieken"] = rubrieken(fd)
+        img_name = None
+        if c.get("image") and not a.dry:
+            try:
+                img_name = f"betexperts-{fd['slug'][:70]}.webp"
+                images.append(os.path.relpath(to_webp(c["image"], img_name), BASE))
+            except Exception as ex:
+                print(f"   ! afbeelding mislukt: {ex}"); img_name = None
+        c["_key"] = k; c["_hash"] = c["hash"]
+        plans.append((c, fd, True, {"reason": "bron: starcasino.nl", "detail_url": c["detail_url"]}, img_name, rub))
+        print(f"  ● {fd['name'][:78]}\n      {rub} | {'sport' if sport else 'casino'} | bron: starcasino.nl")
+
     if a.dry:
         update_recurring(cards, dry=True)
         cleanup_expired(dry=True)
@@ -247,7 +303,7 @@ def main():
             body = {"isDraft": not live, "isArchived": False, "fieldData": fd}
             j = wf("POST", f"/collections/{C.PROMOTIES}/items" + ("/live" if live else ""), body)
             made["live" if live else "draft"] += 1
-            state[card_key(c)] = {"status": "live" if live else "draft", "item_id": j.get("id"),
+            state[c.get("_key") or card_key(c)] = {"status": "live" if live else "draft", "item_id": j.get("id"), "hash": c.get("_hash"),
                                   "slug": (j.get("fieldData") or {}).get("slug"), "check": v["reason"],
                                   "bron": v.get("detail_url"), "datum": str(date.today())}
             print(f"  ✔ {'LIVE ' if live else 'DRAFT'} {PROMO_BASE}{(j.get('fieldData') or {}).get('slug')}")

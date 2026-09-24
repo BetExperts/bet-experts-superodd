@@ -848,5 +848,45 @@
  "handmatig|starcasino-pragmatic-play-toernooi-5000": {
   "status": "einddatum",
   "item_id": "6ab541d29a43a1d53046a780"
+ },
+ "starcasino|app-missie": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541cf73d4c88fb5cb61a8",
+  "hash": "641a3fc6ae54399fd1f4090dc834693a"
+ },
+ "starcasino|win-en-get-nations-league": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d1ce0b67ef50fe4994",
+  "hash": "cdb804e53bc8fa03b033ace0330d2279"
+ },
+ "starcasino|5-000-pragmatic-play-toernooi": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d29a43a1d53046a780",
+  "hash": "0aea110e63a689c3b8321d21b44e2fe2"
+ },
+ "starcasino|wow-wheel": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d49a43a1d53046a7ea",
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
+ },
+ "starcasino|starcasino-s-voetbal-quiz": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d6c4dfb56f3fbfc8a0",
+  "hash": "6cc2b036c1323d761d92f1a05b458280"
+ },
+ "starcasino|starclub": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d867ea55c8a770a447",
+  "hash": "b74569aa32f648d0fa471d28bb1c15e0"
+ },
+ "starcasino|party-wheel": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541d93d653e3c3ce112dc",
+  "hash": "89de1828e66577543b47e2f16e5d5fbc"
+ },
+ "starcasino|geldkluis": {
+  "status": "bron-handmatig",
+  "item_id": "6ab541dbe7e5f9b30ec2e9ce",
+  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
  }
 }
