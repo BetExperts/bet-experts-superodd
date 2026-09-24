@@ -31,7 +31,7 @@ def rubrieken(f):
     if f.get("no-deposit-bonus"): slugs.add("no-deposit-bonus")
     if f.get("free-bets"): slugs.add("free-bets")
     if f.get("100x-promotie"): slugs.add("100x-je-inzet")
-    if f.get("boosted-odd"): slugs.add("superodd")
+    if f.get("boosted-odd"): slugs.add("superodd")      # volgt de (gecorrigeerde) boosted-odd-vink
     slugs.add("sport-bonus" if f.get("geldig-voor") == SPORT else "casino-promotie")
     blob = " ".join(str(f.get(k) or "") for k in ("name", "subtitel", "bonus-tekst", "soort-welkomstbonus", "check-1", "check-2", "check-3")).lower()
     for pat, slug in TEXT_RULES:

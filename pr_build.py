@@ -65,6 +65,14 @@ def classify(card):
         rub = "specials"
     return sport, rub
 
+# Alleen echte odds-boosts: 50x/60x/100x je inzet, SuperBoost/Super Odd, Lucky's Boost e.d.
+# (géén Profit Boost, acca boost of 'boost je odds' bij bet builders).
+BOOST_RE = re.compile(r"(?<![\d.])\d{2,3}(?:[.,]00)?\s?x je in(?:zet|leg)|super ?(?:boost|odds?)|lucky'?s? ?boost|"
+                      r"golden odds|oddboost|uniboost|zet\s?€\s?1 in (?:en|&) win\s?€\s?(?:50|60|100)\b", re.I)
+
+def is_boosted(text):
+    return bool(BOOST_RE.search(text or ""))
+
 def extract(card):
     s = " · ".join(card["bullets"] + [card["title"]])
     dep = re.search(r"(?:minimale\s+storting|stort(?:ing)?(?:\s+minimaal)?)[^€\d]{0,20}€\s?(\d+(?:,\d+)?)", s, re.I)
@@ -128,7 +136,7 @@ def build_fields(card, bm, period, verify, affiliate, logo):
         "casino-promotie": not sport,
         "no-deposit-bonus": "noDepositBonus" in card["types"],
         "free-bets": "freeBetsBonus" in card["types"],
-        "boosted-odd": bool(re.search(r"boost|\d+x je in", (card["title"] + " ".join(card["bullets"])).lower())),
+        "boosted-odd": is_boosted(card["title"] + " " + " ".join(card["bullets"])),
         "100x-promotie": rub == "100x",
         "minimale-storting": ex["deposit"] or "Zie voorwaarden",
         "rondspeelvoorwaarden": ex["wager"] or "Zie voorwaarden",
