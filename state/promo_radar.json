@@ -806,5 +806,15 @@
   "status": "einddatum",
   "item_id": "6ab5284c35713b17e2523870",
   "tot": "2026-10-05"
+ },
+ "handmatig|bingoal-20-procent-casinobonus": {
+  "status": "einddatum",
+  "item_id": "6ab52a956adb58c6d8db2744",
+  "tot": "2026-09-28"
+ },
+ "handmatig|bingoal-najaarkermis": {
+  "status": "einddatum",
+  "item_id": "6ab52a970ca382528b0d9074",
+  "tot": "2026-10-02"
  }
 }

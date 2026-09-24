@@ -75,4 +75,8 @@ NIEUW_VANAF = "2026-09-25"
 NIEUW_HANDMATIG = {
     "66c5cc4307ddceb00c519f75": "2026-09-27",   # ComeOn! Dubbele Casino Welkomstbonus
     "6ab5284c35713b17e2523870": "2026-09-27",   # 888 Casino Welkomstbonus Special
+    "6ab52a956adb58c6d8db2744": "2026-09-27",   # Bingoal 20% casinobonus
+    "6ab52a970ca382528b0d9074": "2026-09-27",   # Bingoal Najaarkermis
+    "6ab52a9882a03ddf4be8f67a": "2026-09-27",   # Bingoal Coins Casino
+    "6ab52a9a6adb58c6d8db2962": "2026-09-27",   # Bingoal Coins Sport
 }
