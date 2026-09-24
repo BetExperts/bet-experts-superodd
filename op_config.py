@@ -15,5 +15,9 @@ OP_SLUG    = "oranje-palace-luckys-boost"
 # Bookmaker-item in de Bookmakers-collectie (referentie/logo/affiliate).
 BOOKMAKER_ID = "6aad0c21a14e9435daf42e79"
 
+# Affiliatelink (partnership live sinds 24-09-2026): de Lucky's Boost staat op de
+# sport-homepage, dus de CTA gaat naar de sport-home-link.
+OP_AFFILIATE = "https://record.oranjepalaceaffiliates.nl/_uAsFg0X5kInUOsjNOfgKeWNd7ZgqdRLk/1/"
+
 # State (aparte sleutel, los van bet365/toto).
 STATE_KEY = "oranjepalace"

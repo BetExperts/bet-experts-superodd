@@ -54,7 +54,7 @@ def send_telegram(caption, url, test=False):
     api = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     data = {"chat_id": chat, "text": caption, "parse_mode": "HTML",
             "disable_web_page_preview": False,
-            "reply_markup": json.dumps({"inline_keyboard": [[{"text": "Bekijk de Super Odd →", "url": url}]]})}
+            "reply_markup": json.dumps({"inline_keyboard": [[{"text": "Bekijk de Lucky's Boost →", "url": url}]]})}
     r = requests.post(api, data=data, timeout=30); r.raise_for_status(); return True
 
 def main():

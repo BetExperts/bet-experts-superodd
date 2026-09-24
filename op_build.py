@@ -2,6 +2,7 @@
 """Titel, CMS-velddata en Telegram-teaser voor de Oranje Palace Super Odd."""
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+from op_config import OP_AFFILIATE
 
 NL = ZoneInfo("Europe/Amsterdam")
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
@@ -65,6 +66,7 @@ def build_fielddata(data, now=None):
         "check-2": ph,
         "check-3": (f"Max. inzet €{maxs_fmt}" if maxs_fmt else "Wisselt elke dag"),
         "button-1": "Bekijk de Lucky's Boost bij Oranje Palace",
+        "affiliatie-link-naar-broker": OP_AFFILIATE,
         "voorwaarde-promotie": voorwaarde,
         "content-informatie-promotie-2": body,
         "boosted-odd": True,
