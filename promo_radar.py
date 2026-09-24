@@ -150,8 +150,6 @@ def main():
             state[k] = {"status": "overgeslagen", "reden": "bookmaker niet in CMS"}; continue
         if "welcomeBonus" in c["types"]:
             state[k] = {"status": "overgeslagen", "reden": "welkomstbonus (beheert de gebruiker zelf)"}; continue
-        if re.search(r"\bexclusie(f|ve)\b", c["title"], re.I):
-            state[k] = {"status": "overgeslagen", "reden": "exclusieve deal van de kalender-site"}; continue
         _, end, _ = parse_period(c["tag"])
         if end and end < date.today():
             continue      # al afgelopen: niet aanmaken (acties die vandaag eindigen wél: je kunt nog meedoen)
@@ -234,6 +232,7 @@ def main():
         browser.close()
 
     if a.dry:
+        update_recurring(cards, dry=True)
         cleanup_expired(dry=True)
         sweep_nieuw(dry=True)
         print(f"\nDRY — {sum(1 for p in plans if p[2])} zouden live gaan, {sum(1 for p in plans if not p[2])} als draft.")
@@ -256,6 +255,7 @@ def main():
             print(f"  ! mislukt: {fd['name'][:60]} — {e}")
         save_state(state)
     save_state(state)
+    update_recurring(cards, a.dry)
     cleanup_expired(a.dry)
     sweep_nieuw(a.dry)
     print(f"\nKLAAR — {made['live']} live, {made['draft']} als draft.")
@@ -318,6 +318,53 @@ def cleanup_expired(dry=False):
                 print(f"    ! {ex}"); break
     if not dry:
         state = load_state(); state["_ter_beoordeling"] = beoordeling; save_state(state)
+
+def update_recurring(cards, dry=False):
+    """Wekelijkse acties (pr_config.RECURRING): spel van de week + looptijd bijwerken; nooit 'Verlopen'."""
+    from datetime import timedelta
+    today = datetime.now().astimezone().date()
+    state = load_state(); rs = state.setdefault("_recurring", {})
+    for r in C.RECURRING:
+        d0, d1 = r["days"][0], r["days"][-1]
+        if today.weekday() in r["days"]:
+            start = today - timedelta(days=today.weekday() - d0)
+        else:
+            start = today + timedelta(days=(d0 - today.weekday()) % 7)
+        end = start + timedelta(days=d1 - d0)
+        in_window = start <= today <= end
+        slot = None
+        card = next((c for c in cards if c["op"] == r["op"] and re.search(r["title_re"], c["title"], re.I)), None)
+        if card and in_window:
+            for b in card["bullets"]:
+                m = re.search(r["slot_re"], b, re.I)
+                if m:
+                    slot = m.group(1).strip(); break
+        prev = rs.get(r["item_id"], {})
+        if slot is None and in_window:
+            slot = prev.get("slot")                       # kalender (nog) leeg: laatst bekende spel houden
+        if prev.get("start") == str(start) and prev.get("slot") == slot:
+            continue
+        dagen = " & ".join(["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"][d] for d in r["days"])
+        spel = f"Deze week: {slot}" if slot else f"Het spel van de week wordt op {['maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag','zondag'][d0]} bekend"
+        patch = {
+            "geldig-vanaf": datetime.combine(start, datetime.min.time()).astimezone().isoformat(),
+            "wanneer-toegevoegd": datetime.combine(end, datetime.min.time()).replace(hour=23, minute=59).astimezone().isoformat(),
+            "subtitel": (f"Deze week: speel €25 op {slot} en krijg 20 free spins" if slot
+                         else f"Elke {dagen}: speel €25 op de exclusieve slot van de week en krijg 20 free spins"),
+            "check-2": (f"Slot van deze week: {slot}" if slot else "Elke week een andere exclusieve slot"),
+            "content-soort-promotie-1": (f"<h3><strong>{r['naam']}: speel €25 en krijg 20 free spins</strong></h3><p>Elke <strong>{dagen}</strong> "
+                f"zet TOTO een exclusieve slot in de schijnwerpers: een spel dat je alleen bij TOTO speelt. Speel in totaal €25 op die slot en je "
+                f"krijgt <strong>20 free spins</strong>. <strong>{spel}.</strong></p>"),
+        }
+        print(f"  ↻ {r['naam']}: {start} t/m {end} | {slot or 'spel nog onbekend'}")
+        if dry:
+            continue
+        try:
+            wf("PATCH", f"/collections/{C.PROMOTIES}/items/{r['item_id']}/live", {"fieldData": patch})
+            rs[r["item_id"]] = {"start": str(start), "slot": slot}
+            save_state(state)
+        except Exception as ex:
+            print(f"    ! {ex}")
 
 def sweep_nieuw(dry=False):
     """Houdt voor ALLE promo's de rubriek 'Nieuw' (laatste NIEUW_DAGEN dagen) en het veld 'bonus-types'

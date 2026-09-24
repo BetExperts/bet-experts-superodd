@@ -309,9 +309,10 @@
   "datum": "2026-09-24"
  },
  "toto|toto-exclusief-zet-25-in-en-krijg-20-free-spins|iedere-woensdag-en-donderdag": {
-  "status": "verwijderd",
+  "status": "terugkerend",
   "reden": "exclusieve deal van de concurrent",
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "item_id": "6ab53f21ed7e65c979c56788"
  },
  "one|one-casino-spin-royale-80-000-aan-prijzen|23-september-t-m-2-oktober": {
   "status": "live",
@@ -833,5 +834,11 @@
  "handmatig|jacks-100x": {
   "status": "evergreen",
   "item_id": "6ab508ae3ffd8df3c0efeb2d"
+ },
+ "_recurring": {
+  "6ab53f21ed7e65c979c56788": {
+   "start": "2026-09-23",
+   "slot": "Immortal Romance Assembl’Em"
+  }
  }
 }

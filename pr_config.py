@@ -90,4 +90,12 @@ EVERGREEN_SLUGS = {
     # Terugkerende acties: blijven staan en worden bijgewerkt zodra ze terugkomen (gebruiker, 24-09)
     "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
     "888-casino-welkomstbonus-special-400-free-spins",
+    "toto-exclusief-speel-25-en-krijg-20-free-spins",   # wekelijks (woe+do), wordt bijgewerkt via RECURRING
 }
+
+# Wekelijks terugkerende acties met een wisselend spel: de radar werkt ze bij vanuit de kalender.
+# days = weekdagen (ma=0) waarop de actie loopt; slot_re haalt het spel uit de kalender-bullets.
+RECURRING = [
+    {"item_id": "6ab53f21ed7e65c979c56788", "op": "toto", "title_re": r"exclusief.*20 free spins",
+     "days": [2, 3], "slot_re": r"geldig op (?:het spel )?(.+?)\.?$", "naam": "TOTO Exclusief"},
+]
