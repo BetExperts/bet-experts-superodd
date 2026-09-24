@@ -83,11 +83,13 @@ def build_fielddata(data, now=None):
     # Een gevulde datum toont anders een 'Verlopen'-badge in de template.
     return fd
 
-def telegram_caption(promo_url):
-    """Teaser: onthult NIET wat er geboost is (nieuwsgierigheid → klik)."""
-    return (
-        "⚡ <b>De Oranje Palace Lucky's Boost van vandaag staat online!</b> 🔥\n"
-        "Elke dag verhoogt Oranje Palace één quotering flink met de Lucky's Boost. "
-        "Benieuwd op welke wedstrijd het vandaag is? Bekijk 'm snel 👇\n\n"
-        f"<i>{DISCLAIMER}</i>"
-    )
+def telegram_caption(data, promo_url):
+    """Zelfde opbouw als de Bet365 Super Odd-post: wél de wedstrijd + de odd-boost,
+    NIET wat er geboost is (dat lezen ze in het artikel)."""
+    ev = (data.get("event") or "").strip()
+    old, new = data.get("old_odd"), data.get("new_odd")
+    lines = ["🧡 <b>Oranje Palace Lucky's Boost LIVE!</b> 👑", ""]
+    if ev:
+        lines.append(f"⚽ <b>{ev}</b>")
+    lines += [f"📈 Quotering geboost: <s>{old}</s> → <b>{new}</b>", "", f"<i>{DISCLAIMER}</i>"]
+    return "\n".join(lines)
