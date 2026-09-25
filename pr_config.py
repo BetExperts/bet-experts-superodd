@@ -99,6 +99,7 @@ EVERGREEN_SLUGS = {
     "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
     "888-casino-welkomstbonus-special-400-free-spins",
     "toto-exclusief-speel-25-en-krijg-20-free-spins",   # wekelijks (woe+do), wordt bijgewerkt via RECURRING
+    "711-super-early-payout---win-al-bij-een-doelpunt-voorsprong-van-nederland",  # komt bij elke Oranje-wedstrijd terug (gebruiker, 25-09)
 }
 
 # Wekelijks terugkerende acties met een wisselend spel: de radar werkt ze bij vanuit de kalender.
