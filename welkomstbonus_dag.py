@@ -108,6 +108,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true"); ap.add_argument("--post", action="store_true")
     ap.add_argument("--test", action="store_true"); ap.add_argument("--force", action="store_true", help="ook als er vandaag al gepost is")
+    ap.add_argument("--vanaf", type=int, default=POST_UREN.start, help="niet posten vóór dit uur (NL-tijd); GitHub-cron draait in UTC")
     a = ap.parse_args()
     now = datetime.now(NL)
     print(f"== Welkomstbonus van de dag — {now:%Y-%m-%d %H:%M} ==")
@@ -119,7 +120,7 @@ def main():
     if a.post and not a.test and not a.force:
         if st.get("datum") == today:
             print("  · Vandaag al gepost."); return
-        if now.hour not in POST_UREN:
+        if now.hour < a.vanaf or now.hour not in POST_UREN:
             print(f"  · Buiten posttijden ({now:%H:%M}) — morgen weer."); return
     if not wacht_op_netwerk():
         print("  ! Geen netwerk — overgeslagen."); sys.exit(2)

@@ -1,0 +1,45 @@
+name: Welkomstbonus van de dag
+
+# Elke dag om 11:00 NL-tijd één sport-welkomstbonus in Telegram (@BetExpertsGroup).
+# Draait in de cloud, dus ook als de Mac uit staat. Cron is UTC: 09:00 én 10:00 UTC,
+# het script post alleen vanaf 11:00 NL-tijd en max. 1x per dag (zomer- én wintertijd goed).
+on:
+  schedule:
+    - cron: "0 9 * * *"
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: welkomstbonus
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installeer dependencies
+        run: pip install "requests>=2.31.0"
+
+      - name: Post welkomstbonus van de dag
+        env:
+          WEBFLOW_TOKEN: ${{ secrets.WEBFLOW_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ vars.TELEGRAM_CHANNEL }}
+        run: python welkomstbonus_dag.py --post --vanaf 11
+
+      - name: Commit state terug
+        run: |
+          git config user.name "welkomstbonus-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/welkomstbonus_dag.json || true
+          git commit -m "state: welkomstbonus van de dag $(date -u +%F)" || echo "geen wijzigingen"
+          git pull --rebase --autostash || true
+          git push || echo "niets te pushen"
