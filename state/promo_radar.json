@@ -890,13 +890,7 @@
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-09-24"
  },
- "_ter_beoordeling": {
-  "6a2d18c10b98e527cbe42537": {
-   "slug": "711-super-early-payout---win-al-bij-een-doelpunt-voorsprong-van-nederland",
-   "name": "711 Super Early Payout – Win al bij één doelpunt voorsprong van Nederland!",
-   "geldig_tot": "2026-09-24"
-  }
- },
+ "_ter_beoordeling": {},
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
