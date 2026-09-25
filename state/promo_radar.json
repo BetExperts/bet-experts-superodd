@@ -875,7 +875,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
+  "hash": "b74569aa32f648d0fa471d28bb1c15e0"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -996,6 +996,12 @@
   "slug": "starcasino-thunder-coins-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
+  "datum": "2026-09-25"
+ },
+ "circus|circus-nl-roulette-toernooi-win-een-deel-van-5-000|24-september-t-m-30-september": {
+  "status": "bestond al",
+  "cms": "Circus: €5.000 Pragmatic Play toernooi (van 22 september t/m 28 september)",
+  "score": 0.78,
   "datum": "2026-09-25"
  }
 }
