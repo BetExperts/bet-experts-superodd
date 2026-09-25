@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betexperts.welkomstbonus</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/run_welkomstbonus.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
+  <!-- Welkomstbonus van de dag: dagelijks 11:00 (script post max. 1x per dag, alleen 09-22 uur) -->
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict>
+  <key>StandardOutPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/welkomstbonus.launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/welkomstbonus.launchd.err.log</string>
+</dict>
+</plist>
