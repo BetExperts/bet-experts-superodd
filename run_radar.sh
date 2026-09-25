@@ -1,5 +1,5 @@
 #!/bin/bash
-# Wrapper voor de promo-radar-LaunchAgent (08:40 en 14:40).
+# Wrapper voor de promo-radar-LaunchAgent (08:40, 11:40, 14:40, 18:40).
 cd "$(dirname "$0")" || exit 1
 mkdir -p logs
 set -a
