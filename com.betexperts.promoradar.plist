@@ -11,11 +11,13 @@
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
-  <!-- Promo-radar: 2x per dag nieuwe acties oppikken en verdwenen acties laten verlopen. -->
+  <!-- Promo-radar: 4x per dag nieuwe acties oppikken en verdwenen acties laten verlopen. -->
   <key>StartCalendarInterval</key>
   <array>
     <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>40</integer></dict>
     <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>40</integer></dict>
   </array>
   <key>StandardOutPath</key>
   <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/promoradar.launchd.out.log</string>

@@ -452,22 +452,6 @@
   "bron": null,
   "datum": "2026-09-24"
  },
- "comeon|toernooien-bij-comeon|19-september-t-m-26-september": {
-  "status": "live",
-  "item_id": "6ab50f3976e8d6a8bda4ce31",
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-24"
- },
- "888|toernooien-bij-888|20-september-t-m-26-september": {
-  "status": "live",
-  "item_id": "6ab50f3acb059f721b3e2095",
-  "slug": "888-toernooien",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
-  "datum": "2026-09-24"
- },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|20-september-t-m-26-september": {
   "status": "live",
   "item_id": "6ab50f3e9fed9cbeaf6cb864",
@@ -819,13 +803,17 @@
   "tot": "2026-10-02"
  },
  "handmatig|vbet-nl-duitsland-free-bet": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ab5358457e2d1582090b99a",
-  "tot": "2026-09-24 20:45"
+  "tot": "2026-09-24 20:45",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-25"
  },
  "handmatig|op-nations-league-1-euro-free-bet": {
-  "status": "einddatum",
-  "item_id": "6ab509a5d621dc6925640422"
+  "status": "verwijderd",
+  "item_id": "6ab509a5d621dc6925640422",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-25"
  },
  "handmatig|op-weekbonus-2026-39": {
   "status": "einddatum",
@@ -837,8 +825,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-09-23",
-   "slot": "Immortal Romance Assembl’Em"
+   "start": "2026-09-30",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -902,11 +890,118 @@
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-09-24"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6a2d18c10b98e527cbe42537": {
+   "slug": "711-super-early-payout---win-al-bij-een-doelpunt-voorsprong-van-nederland",
+   "name": "711 Super Early Payout – Win al bij één doelpunt voorsprong van Nederland!",
+   "geldig_tot": "2026-09-24"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
   "score": 0.66,
+  "datum": "2026-09-25"
+ },
+ "comeon|toernooien-bij-comeon|24-september-t-m-1-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3976e8d6a8bda4ce31",
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-24"
+ },
+ "888|toernooien-bij-888|24-september-t-m-1-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3acb059f721b3e2095",
+  "slug": "888-toernooien",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
+  "datum": "2026-09-24"
+ },
+ "betmgm|elke-maandag-en-vrijdag-150-cash-live-casino|iedere-maandag-en-vrijdag": {
+  "status": "overgeslagen",
+  "reden": "kalenderdata onjuist (voorwaarden van andere actie), 25-09"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-3-000|25-september-t-m-1-oktober": {
+  "status": "live",
+  "item_id": "6ab62d5709fbc5725a086068",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-3-000",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "one|onecasino-spins-royale-toernooi|23-september-t-m-2-oktober": {
+  "status": "live",
+  "item_id": "6ab62d58a9791b1f2d1941cd",
+  "hash": null,
+  "slug": "one-casino-onecasino-spins-royale-toernooi",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://nl.onecasino.com/promotions/free-spins",
+  "datum": "2026-09-25"
+ },
+ "leovegas|pak-5-free-bet-door-in-te-zetten-op-de-nations-league|21-september-t-m-27-september": {
+  "status": "live",
+  "item_id": "6ab62d5a36be038a68992e8d",
+  "hash": null,
+  "slug": "leovegas-pak-5-free-bet-door-in-te-zetten-op-de-nations-league",
+  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "vbet|vbet-winmissies-verdien-tot-720-free-spins|25-september-t-m-30-september": {
+  "status": "live",
+  "item_id": "6ab62d5bc4913869c0a6059f",
+  "hash": null,
+  "slug": "vbet-winmissies-verdien-tot-720-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "vbet|elk-weekend-10-gratis-spins-bij-vbet|iedere-vr-za-zo": {
+  "status": "live",
+  "item_id": "6ab62d5da9791b1f2d1943d1",
+  "hash": null,
+  "slug": "vbet-elk-weekend-10-gratis-spins",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "one|club-one-iedere-week-extra-bonussen-bij-onecasino|alleen-25-september": {
+  "status": "live",
+  "item_id": "6ab62d5f46d3ceb56d1b9508",
+  "hash": null,
+  "slug": "one-casino-club-one-iedere-week-extra-bonussen-bij-onecasino",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "hard-rock|pak-elke-week-tot-45-free-spins-bij-hard-rock-casino|iedere-vr-za-zo": {
+  "status": "live",
+  "item_id": "6ab62d6046d3ceb56d1b95b7",
+  "hash": null,
+  "slug": "hard-rock-casino-pak-elke-week-tot-45-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-25"
+ },
+ "unibet|elk-weekend-5-000-aan-cash-drops-bij-unibet|iedere-vr-za-zo": {
+  "status": "live",
+  "item_id": "6ab62d626fab4f62cc809596",
+  "hash": null,
+  "slug": "unibet-elk-weekend-5-000-aan-cash-drops",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.unibet.nl/promotions/livecasino-promotions/pragmatic-play-live-casino-drops",
+  "datum": "2026-09-25"
+ },
+ "starcasino|thunder-coins-missie": {
+  "status": "live",
+  "item_id": "6ab62d632ff712192560907a",
+  "hash": "bc4c38adaf01d467a6e4af5d1e4cd44d",
+  "slug": "starcasino-thunder-coins-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/missies",
   "datum": "2026-09-25"
  }
 }
