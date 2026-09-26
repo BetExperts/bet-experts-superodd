@@ -816,8 +816,10 @@
   "verwijderd": "2026-09-25"
  },
  "handmatig|op-weekbonus-2026-39": {
-  "status": "einddatum",
-  "item_id": "6ab509a3d621dc692564030f"
+  "status": "verwijderd",
+  "item_id": "6ab509a3d621dc692564030f",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-26"
  },
  "handmatig|jacks-100x": {
   "status": "evergreen",
@@ -963,13 +965,15 @@
   "datum": "2026-09-25"
  },
  "one|club-one-iedere-week-extra-bonussen-bij-onecasino|alleen-25-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab62d5f46d3ceb56d1b9508",
   "hash": null,
   "slug": "one-casino-club-one-iedere-week-extra-bonussen-bij-onecasino",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-25"
+  "datum": "2026-09-25",
+  "reden": "niet meer in kalender",
+  "verwijderd": "2026-09-26"
  },
  "hard-rock|pak-elke-week-tot-45-free-spins-bij-hard-rock-casino|iedere-vr-za-zo": {
   "status": "live",
@@ -1003,5 +1007,14 @@
   "cms": "Circus: €5.000 Pragmatic Play toernooi (van 22 september t/m 28 september)",
   "score": 0.78,
   "datum": "2026-09-25"
+ },
+ "leovegas|tot-20-free-spins-met-de-weekend-super-spins|iedere-zaterdag-en-zondag": {
+  "status": "draft",
+  "item_id": "6ab76a18168d87291cb8a728",
+  "hash": null,
+  "slug": "leovegas-tot-20-free-spins-met-de-weekend-super-spins",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-26"
  }
 }
