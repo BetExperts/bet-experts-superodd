@@ -1,17 +1,24 @@
 {
-  "datum": "2026-09-25",
+  "datum": "2026-09-26",
   "gehad": [
-    "669ab9f5aceb8b717cea24c3"
+    "669ab9f5aceb8b717cea24c3",
+    "66bb685ec057aa8c4337ceea"
   ],
-  "laatste_book": "669ab9f5aceb8b717cea24c3",
+  "laatste_book": "66bb685ec057aa8c4337ceea",
   "laatste_slug": {
-    "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets"
+    "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
+    "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
   },
   "historie": [
     {
       "datum": "2026-09-25",
       "book": "Toto",
       "slug": "welkomstbonus-toto-sport-pak-eu50-aan-freebets"
+    },
+    {
+      "datum": "2026-09-26",
+      "book": "BetMGM",
+      "slug": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
     }
   ]
 }
