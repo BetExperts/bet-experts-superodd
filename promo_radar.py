@@ -35,6 +35,12 @@ def wf(method, path, body=None):
         raise RuntimeError(f"{method} {path} -> {r.status_code}: {r.text[:300]}")
     return r.json() if r.text.strip() else {}
 
+def backup(item):
+    """Volledige kopie van een promo vóór verwijderen -> state/verwijderd/<slug>.json (herstel op dezelfde URL)."""
+    os.makedirs("state/verwijderd", exist_ok=True)
+    slug = (item.get("fieldData") or {}).get("slug") or item.get("id")
+    json.dump(item, open(f"state/verwijderd/{slug}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 def all_items(coll):
     out, off = [], 0
     while True:
@@ -209,8 +215,9 @@ def main():
         expired = bool(end) and datetime.fromisoformat(end.replace("Z", "+00:00")) < now
         # Wekelijks terugkerende acties ('iedere donderdag', 'elk weekend', 'vr, za, zo') staan alleen op die
         # dagen in de kalender -> verdwijnen uit de kalender betekent dan NIET dat de actie voorbij is.
-        recurring = bool(re.search(r"iedere|elke|weekend|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
-                                   r"\b(ma|di|wo|do|vr|za|zo)\b", k.split("|")[-1]))
+        # Titel én looptijd tellen mee ('Club One: iedere week ...' met tag 'alleen 25 september').
+        recurring = bool(re.search(r"iedere|elke|wekelijks|weekend|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
+                                   r"loyalit|club-one|vip|\b(ma|di|wo|do|vr|za|zo)\b", "|".join(k.split("|")[1:])))
         gone = k not in current and e.get("status") != "einddatum" and not recurring
         same = cur_by_title.get("|".join(k.split("|")[:2])) if gone else None
         if same and not expired:
@@ -230,10 +237,19 @@ def main():
             continue
         if not (expired or gone):
             continue
-        print(f"  ✂ {'verlopen' if expired else 'niet meer in kalender'} -> verwijderen: {it['fieldData'].get('name', '')[:70]}")
+        if gone and not expired:
+            # Niet meer in de kalender maar 'Geldig tot' nog niet voorbij (of leeg): twijfelgeval -> NIET
+            # verwijderen maar ter beoordeling (gebruiker: bij twijfel eerst vragen).
+            state.setdefault("_ter_beoordeling", {})[e["item_id"]] = {
+                "slug": it["fieldData"].get("slug"), "name": it["fieldData"].get("name"),
+                "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"}
+            print(f"  ? niet meer in kalender, ter beoordeling (niet verwijderd): {it['fieldData'].get('name', '')[:70]}")
+            continue
+        print(f"  ✂ verlopen -> verwijderen: {it['fieldData'].get('name', '')[:70]}")
         if a.dry:
             continue
         try:
+            backup(it)
             was_live = bool(it.get("lastPublished")) and not it.get("isDraft")
             if was_live:
                 # eerst de 301 (sport -> /promoties, casino -> /casino-bonussen), dan pas verwijderen
@@ -392,6 +408,7 @@ def cleanup_expired(dry=False):
         print(f"  ✂ verlopen ({end[:10]}) -> offline + verwijderen: {f.get('name', '')[:70]}")
         if dry:
             continue
+        backup(it)
         was_live = bool(it.get("lastPublished"))
         if was_live:
             target = "/promoties" if f.get("geldig-voor") == C.GELDIG_SPORT else "/casino-bonussen"
@@ -411,7 +428,10 @@ def cleanup_expired(dry=False):
                     continue
                 print(f"    ! {ex}"); break
     if not dry:
-        state = load_state(); state["_ter_beoordeling"] = beoordeling; save_state(state)
+        # andere meldingen (StarCasino gewijzigd, niet meer in kalender) behouden; verlopen-lijst verversen
+        state = load_state()
+        state["_ter_beoordeling"] = {**{k: v for k, v in state.get("_ter_beoordeling", {}).items() if v.get("reden")}, **beoordeling}
+        save_state(state)
 
 def update_recurring(cards, dry=False):
     """Wekelijkse acties (pr_config.RECURRING): spel van de week + looptijd bijwerken; nooit 'Verlopen'."""

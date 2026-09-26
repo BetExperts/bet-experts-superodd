@@ -965,15 +965,16 @@
   "datum": "2026-09-25"
  },
  "one|club-one-iedere-week-extra-bonussen-bij-onecasino|alleen-25-september": {
-  "status": "verwijderd",
-  "item_id": "6ab62d5f46d3ceb56d1b9508",
+  "status": "live",
+  "item_id": "6ab78fd9b4645496e0408437",
   "hash": null,
   "slug": "one-casino-club-one-iedere-week-extra-bonussen-bij-onecasino",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-09-25",
-  "reden": "niet meer in kalender",
-  "verwijderd": "2026-09-26"
+  "reden": null,
+  "verwijderd": null,
+  "hersteld": "2026-09-26"
  },
  "hard-rock|pak-elke-week-tot-45-free-spins-bij-hard-rock-casino|iedere-vr-za-zo": {
   "status": "live",
@@ -1009,12 +1010,12 @@
   "datum": "2026-09-25"
  },
  "leovegas|tot-20-free-spins-met-de-weekend-super-spins|iedere-zaterdag-en-zondag": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ab76a18168d87291cb8a728",
   "hash": null,
   "slug": "leovegas-tot-20-free-spins-met-de-weekend-super-spins",
-  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
+  "check": "handmatig gecontroleerd 26-09",
+  "bron": "https://www.leovegas.nl/promoties/casino/weekend-super-spins",
   "datum": "2026-09-26"
  }
 }
