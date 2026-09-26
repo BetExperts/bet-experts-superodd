@@ -76,6 +76,10 @@ def main():
     if not data:
         print("Geen Lucky's Boost gevonden op de homepage. Niets gedaan."); sys.exit(0)
 
+    if not data.get("new_odd") or not data.get("old_odd"):
+        # nooit een half uitgelezen boost ('@ ?') op de site of in Telegram zetten
+        print(f"  ! Boost gevonden maar odds niet compleet ({data.get('old_odd')} -> {data.get('new_odd')}) — niets gedaan.")
+        sys.exit(0)
     title = B.build_title(data)
     print(f"  Wedstrijd : {data.get('event')}")
     print(f"  Selectie  : {data.get('selection')}  ({data.get('market')})")

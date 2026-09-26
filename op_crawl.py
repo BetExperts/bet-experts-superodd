@@ -26,6 +26,13 @@ _JS_EXTRACT = r"""
   const bs = document.querySelector('.KambiBC-betslip') || document.querySelector('[class*="betslip"]');
   if (!bs) return {ok:false};
   const txt = bs.innerText.replace(/\s+/g,' ').trim();
+  // Combinatie/bet builder ('SPECIAL 2 selecties'): meerdere sgp-outcomes met elk een criterium
+  const sgp = [...document.querySelectorAll('.mod-KambiBC-betslip__sgp-outcome')].map(o => ({
+    label: (o.querySelector('.mod-KambiBC-betslip-outcome__sgp-outcome-label')||{}).innerText || '',
+    crit:  (o.querySelector('.mod-KambiBC-betslip-outcome__criteria')||{}).innerText || ''}));
+  const sumOld = q('.mod-KambiBC-betslip-summary__obsolete-odds');
+  const sumNew = document.querySelector('.mod-KambiBC-betslip__summary--boosted-odds')
+                 ? q('.mod-KambiBC-betslip-summary__total-odds-value') : null;
   const selection = q('.mod-KambiBC-betslip-outcome__outcome-label');
   const event     = q('.mod-KambiBC-betslip-outcome__event-link');
   const oldOdd    = q('.mod-KambiBC-betslip-outcome__odds');
@@ -56,7 +63,8 @@ _JS_EXTRACT = r"""
     }
   }
   const isBoost = /ODDS ?BOOST/i.test(txt);
-  return {ok:true, isBoost, selection, market, event, oldOdd, newOdd, flags, maxStake, expiry, raw: txt.slice(0,300)};
+  return {ok:true, isBoost, selection, market, event, oldOdd, newOdd, flags, maxStake, expiry, sgp, sumOld, sumNew,
+          raw: txt.slice(0,300)};
 }
 """
 
@@ -70,6 +78,39 @@ def _kickoff(event_id):
         return ev.get("start"), ev.get("name")
     except Exception:
         return None, None
+
+STICKERS = re.compile(r"LUCKY ?WISSEL|ODDS ?BOOST|CASH ?OUT|BET ?BUILDER", re.I)
+
+def _strip_stickers(t):
+    return re.sub(r"\s{2,}", " ", STICKERS.sub("", t or "")).strip(" ·-") or None
+
+def _combo(sgp):
+    """[{label:'Lamine Yamal - Meer dan 0.5', crit:'Schoten van speler op doel (Volgens Opta-gegevens)'}, ...]
+    -> ('Lamine Yamal & Harry Kane', 'Schoten op doel: allebei minimaal 1')"""
+    crits = [re.sub(r"\s*\(.*?\)", "", _strip_stickers(o["crit"]) or "").replace("van speler ", "").strip() for o in sgp]
+    names, lines = [], []
+    for o in sgp:
+        lab = _strip_stickers(o["label"]) or ""
+        n, _, ln = lab.partition(" - ")
+        names.append(n.strip()); lines.append(ln.strip())
+    if len(set(crits)) == 1 and all(re.fullmatch(r"(Meer dan|Over) 0[.,]5", l or "") for l in lines):
+        return " & ".join(names), f"{crits[0]}: {'allebei' if len(names) == 2 else 'allemaal'} minimaal 1"
+    if all(l.lower() in ("ja", "") for l in lines) and len(set(crits)) == 1:
+        return " & ".join(names), crits[0]
+    return " + ".join(f"{n} ({l})" if l else n for n, l in zip(names, lines)), " / ".join(dict.fromkeys(c for c in crits if c))
+
+def _event_from_outcome(href):
+    """Event-id via de eerste outcome uit de coupon (prepack-links hebben geen /event/)."""
+    m = re.search(r"combination(?:%7C|\|)(\d+)", href or "")
+    if not m:
+        return None
+    try:
+        j = requests.get(f"{KAMBI_API}/betoffer/outcome.json", params={"id": m.group(1), "lang": "nl_NL", "market": "NL"},
+                         timeout=20).json()
+        bo = (j.get("betOffers") or [{}])[0]
+        return str(bo.get("eventId")) if bo.get("eventId") else None
+    except Exception:
+        return None
 
 def _num(s):
     if not s: return None
@@ -111,25 +152,33 @@ def crawl_superodd(headless=True, timeout_ms=45000):
         # coupon laden -> boost verschijnt in de betslip
         page.evaluate("h => { location.hash = h.replace(/^#/, ''); }", href)
         try:
-            page.wait_for_selector('.mod-KambiBC-betslip-outcome__outcome-label', timeout=timeout_ms)
+            page.wait_for_selector('.mod-KambiBC-betslip-outcome__outcome-label, '
+                                   '.mod-KambiBC-betslip-outcome__sgp-outcome-label', timeout=timeout_ms)
         except Exception:
             browser.close(); return None
         page.wait_for_timeout(1200)
         data = page.evaluate(_JS_EXTRACT)
         browser.close()
 
-    if not data or not data.get("ok") or not data.get("selection"):
+    if not data or not data.get("ok"):
         return None
+    selection, market = data.get("selection"), data.get("market")
+    sgp = [o for o in (data.get("sgp") or []) if o.get("label")]
+    if sgp:                                    # combinatie, bv. Kane én Yamal schieten op doel
+        selection, market = _combo(sgp)
+    if not selection:
+        return None
+    market = _strip_stickers(market)
 
     m = re.search(r"/event/(\d+)/", href or "")
-    event_id = m.group(1) if m else None
+    event_id = m.group(1) if m else _event_from_outcome(href)
     kickoff, api_name = _kickoff(event_id) if event_id else (None, None)
 
-    old = _num(data.get("oldOdd"))
-    new = _num(data.get("newOdd"))
+    old = _num(data.get("oldOdd")) or _num(data.get("sumOld"))
+    new = _num(data.get("newOdd")) or _num(data.get("sumNew"))
     return {
-        "selection": data.get("selection"),          # bv. 'Thom van Bergen - Ja'
-        "market":    data.get("market"),             # bv. 'Scoort of geeft een assist (...)'
+        "selection": selection,                      # bv. 'Thom van Bergen - Ja' of 'Lamine Yamal & Harry Kane'
+        "market":    market,                         # bv. 'Scoort of geeft een assist (...)'
         "event":     data.get("event") or api_name,  # 'FC Groningen - PEC Zwolle'
         "old_odd":   old, "new_odd": new,
         "max_stake": data.get("maxStake"),           # '14.00'

@@ -101,5 +101,5 @@ def telegram_caption(data, promo_url):
     lines = ["🧡 <b>Oranje Palace Lucky's Boost LIVE!</b> 👑", ""]
     if ev:
         lines.append(f"⚽ <b>{ev}</b>")
-    lines += [f"📈 Quotering geboost: <s>{old}</s> → <b>{new}</b>", "", f"<i>{DISCLAIMER}</i>"]
+    lines += [f"📈 Quotering geboost: <s>{_fmt(old)}</s> → <b>{_fmt(new)}</b>", "", f"<i>{DISCLAIMER}</i>"]
     return "\n".join(lines)
