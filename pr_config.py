@@ -94,6 +94,7 @@ EVERGREEN_SLUGS = {
     "888sport-odd-boosts-pak-60-00x-je-inzet",       # 888sport 60x (s888-agent)
     "toto-lekker-man",                               # TOTO Lekker Man (toto_lekkerman.py)
     "unibet-uniboost",                               # Unibet Uniboost (Super Boost van Unibet, handmatig bijwerken)
+    "betmgm-odds-boost",                             # BetMGM Odds Boost (handmatig via betmgm_boost.py, geen bron om te scrapen)
     "jacks-nl-100x-je-inzet",                        # JACKS.NL 100x (vaste pagina, bij elke nieuwe 100x-actie bijwerken)
     # Terugkerende acties: blijven staan en worden bijgewerkt zodra ze terugkomen (gebruiker, 24-09)
     "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
