@@ -344,12 +344,14 @@
   "datum": "2026-09-24"
  },
  "hard-rock|stortingsbonus-tot-100-free-spins|22-september-t-m-26-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f1a051338276051c027",
   "slug": "hard-rock-casino-stortingsbonus-tot-100-free-spins",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-27"
  },
  "comeon|400-free-spins-80-aan-evolution-vouchers-of-50-aan-free-bets|22-september-t-m-5-oktober": {
   "status": "verwijderd",
@@ -453,12 +455,14 @@
   "datum": "2026-09-24"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|20-september-t-m-26-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f3e9fed9cbeaf6cb864",
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-27"
  },
  "tonybet|elke-maandag-no-deposit-free-spins|iedere-ma-di-wo-do-vr": {
   "status": "live",
@@ -892,7 +896,13 @@
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-09-24"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6ab57c728472f0e3bc72b3a6": {
+   "slug": "starcasino-1-000-sport-toernooi",
+   "name": "Starcasino: €1.000 Sport Toernooi (van 21 september t/m 27 september)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
