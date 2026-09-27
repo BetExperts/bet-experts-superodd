@@ -200,7 +200,7 @@ def main():
     cur_by_title = {"|".join(card_key(c).split("|")[:2]): c for c in cards}
     remap = {}
     if star is None:     # bron niet bereikbaar -> StarCasino-promo's niet als 'verdwenen' behandelen
-        current |= {k for k in state if k.startswith("starcasino|")}
+        current |= {k for k in state if k.startswith(("starcasino|", "starcasino-toernooi|"))}
     now = datetime.now().astimezone()
     for k, e in state.items():
         # 'einddatum' = handmatig toegevoegde promo die op zijn 'Geldig tot' offline moet (niet in de kalender)
