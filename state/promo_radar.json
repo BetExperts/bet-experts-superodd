@@ -915,22 +915,6 @@
   "score": 0.66,
   "datum": "2026-09-25"
  },
- "comeon|toernooien-bij-comeon|24-september-t-m-1-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3976e8d6a8bda4ce31",
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-24"
- },
- "888|toernooien-bij-888|24-september-t-m-1-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3acb059f721b3e2095",
-  "slug": "888-toernooien",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
-  "datum": "2026-09-24"
- },
  "betmgm|elke-maandag-en-vrijdag-150-cash-live-casino|iedere-maandag-en-vrijdag": {
   "status": "overgeslagen",
   "reden": "kalenderdata onjuist (voorwaarden van andere actie), 25-09"
@@ -1232,5 +1216,21 @@
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-09-28"
+ },
+ "comeon|toernooien-bij-comeon|24-september-t-m-5-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3976e8d6a8bda4ce31",
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-24"
+ },
+ "888|toernooien-bij-888|24-september-t-m-5-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3acb059f721b3e2095",
+  "slug": "888-toernooien",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
+  "datum": "2026-09-24"
  }
 }
