@@ -24,6 +24,9 @@ SITES = {
     "betcity": "https://www.betcity.nl", "betmgm": "https://www.betmgm.nl", "leovegas": "https://www.leovegas.nl",
     "comeon": "https://www.comeon.nl/nl", "holland-casino": "https://www.hollandcasino.nl", "kansino": "https://www.kansino.nl",
     "tonybet": "https://tonybet.nl", "betnation": "https://www.betnation.nl", "zebet": "https://www.zebet.nl",
+    "oranje-palace": "https://www.oranjepalace.nl", "starcasino": "https://starcasino.nl", "888": "https://www.888.nl/nl",
+    "bingoal": "https://www.bingoal.nl", "hard-rock-casino": "https://hardrockcasino.nl", "vbet": "https://www.vbet.nl",
+    "one-casino": "https://nl.onecasino.com", "get-lucky": "https://www.getlucky.nl",
 }
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
 HEADERS = {"User-Agent": UA, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "nl-NL,nl;q=0.9"}
