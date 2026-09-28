@@ -293,7 +293,7 @@
   "reden": "alleen geldig op 24-09"
  },
  "toto|win-kaarten-voor-nederland-servie-in-de-nations-league|22-september-t-m-27-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f1076e8d6a8bda4bc81",
   "slug": "toto-win-kaarten-voor-nederland-servie-in-de-nations-league",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
@@ -908,7 +908,13 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6aba2fba6352d95819b50e60": {
+   "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+   "name": "TOTO: Slots toernooi €10.000 (draft)",
+   "reden": "kalender-details (Pragmatic, min €0,60, hoofdprijs €5.000) niet te vinden op toto.nl; daar staat Ice Fishing Game Show Special €10.000"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
@@ -1013,13 +1019,15 @@
   "datum": "2026-09-25"
  },
  "starcasino|thunder-coins-missie": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab62d632ff712192560907a",
   "hash": "bc4c38adaf01d467a6e4af5d1e4cd44d",
   "slug": "starcasino-thunder-coins-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
-  "datum": "2026-09-25"
+  "datum": "2026-09-25",
+  "reden": "verlopen (25-27 sep)",
+  "verwijderd": "2026-09-28"
  },
  "circus|circus-nl-roulette-toernooi-win-een-deel-van-5-000|24-september-t-m-30-september": {
   "status": "bestond al",
@@ -1061,6 +1069,55 @@
   "slug": "toto-maandag-maak-kans-op-500-cash-of-free-spins",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-09-28"
+ },
+ "toto|slots-toernooi-met-10-000-prijzenpot|28-september-t-m-4-oktober": {
+  "status": "draft",
+  "item_id": "6aba2fba6352d95819b50e60",
+  "hash": null,
+  "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-28"
+ },
+ "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|27-september-t-m-3-oktober": {
+  "status": "live",
+  "item_id": "6aba2fbcbac91d2bbc21706c",
+  "hash": null,
+  "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-28"
+ },
+ "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|28-september-t-m-30-september": {
+  "status": "live",
+  "item_id": "6aba2fbe18a3f7a91393dad7",
+  "hash": null,
+  "slug": "circus-krijg-tot-100-free-spins-met-missies",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-28"
+ },
+ "starcasino|5-000-playson-toernooi": {
+  "status": "overgeslagen",
+  "reden": "toernooi-kaart op /bonussen; komt via /tournaments"
+ },
+ "starcasino-toernooi|playson-toernooi|2026-09-28": {
+  "status": "live",
+  "item_id": "6aba2fbfe06c8d04da0c3e53",
+  "hash": "2024f7ebd293601870bd0045979c4fdc",
+  "slug": "starcasino-5-000-playson-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-09-28"
+ },
+ "starcasino-toernooi|sport-toernooi|2026-09-28": {
+  "status": "live",
+  "item_id": "6aba2fc27766e026d16f8515",
+  "hash": "8032b6764b1ba72810d86e0fc89776a3",
+  "slug": "starcasino-1-000-sport-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-09-28"
  }
 }

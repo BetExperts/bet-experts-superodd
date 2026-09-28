@@ -13,7 +13,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
 
 # Geen promoties maar producten/features, of welkomstbonussen (die beheert de gebruiker zelf).
-SKIP = re.compile(r"^(2up|starcombo|boosts?|jackpots?|toernooien|bonus informatie)\b|welkomst", re.I)
+SKIP = re.compile(r"^(2up|starcombo|boosts?|jackpots?|toernooien|bonus informatie)\b|welkomst|toernooi", re.I)
 
 TYPE_RULES = [
     (r"free ?spins?", "freeSpinsBonus"), (r"free ?bet", "freeBetsBonus"), (r"toernooi|prijzenpot", "tournamentBonus"),
