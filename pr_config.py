@@ -26,7 +26,7 @@ BOOKMAKERS = {
     "leovegas":      {"id": None, "name": "LeoVegas",  "pages": ["https://www.leovegas.nl/promoties", "https://www.leovegas.nl/promoties/wedden"]},
     "betmgm":        {"id": None, "name": "BetMGM",    "pages": ["https://www.betmgm.nl/promoties", "https://www.betmgm.nl/promoties/casino",
                                                                   "https://www.betmgm.nl/promoties/wedden"]},
-    "toto":          {"id": None, "name": "TOTO",      "pages": ["https://www.toto.nl/acties"]},
+    "toto":          {"id": "669ab9f5aceb8b717cea24c3", "name": "TOTO",      "pages": ["https://www.toto.nl/acties"]},
     "hard-rock":     {"id": None, "name": "Hard Rock Casino", "pages": ["https://hardrockcasino.nl/promoties"]},
     "888":           {"id": None, "name": "888",       "pages": ["https://www.888.nl/nl/promotions"]},
     "vbet":          {"id": None, "name": "Vbet",      "pages": ["https://www.vbet.nl/nl/promotions"]},
@@ -41,6 +41,11 @@ BOOKMAKERS = {
     "starcasino":    {"id": "6a7afdaa4a7453c17d31cab5", "name": "Starcasino", "pages": []},
 }
 # Vaste affiliatelink per operator (gaat vóór de automatische keuze uit de welkomstbonussen)
+# TOTO (directe bron toto.nl/acties): sport- en casinolink apart
+TOTO_AFFILIATE = {
+    "SPORT": "https://partner.toto.nl/C.ashx?btag=a_375b_445c_&affid=184&siteid=375&adid=445&c=",
+    "CASINO": "https://partner.toto.nl/C.ashx?btag=a_547b_443c_&affid=184&siteid=547&adid=443&c=",
+}
 AFFILIATE_OVERRIDE = {
     "starcasino": "https://media1.affiliates.starcasino.nl/redirect.aspx?pid=2170&bid=1477",
 }

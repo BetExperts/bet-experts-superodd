@@ -25,6 +25,7 @@ from pr_build import build_fields, slugify
 from pr_rubrieken import rubrieken
 import cf_redirects
 import pr_starcasino
+import pr_toto
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 H = lambda: {"Authorization": f"Bearer {WEBFLOW_TOKEN}", "accept": "application/json", "content-type": "application/json"}
@@ -170,6 +171,17 @@ def main():
         except Exception as e:
             print(f"   ! starcasino.nl niet gelezen: {e} (bestaande StarCasino-promo's blijven ongemoeid)")
             star = None
+    toto = []
+    if not a.only or a.only == "toto":
+        try:
+            with sync_playwright() as pw:
+                b = pw.chromium.launch()
+                toto = pr_toto.fetch(b)
+                b.close()
+            print(f"   toto.nl/acties: {len(toto)} acties")
+        except Exception as e:
+            print(f"   ! toto.nl/acties niet gelezen: {e} (bestaande TOTO-promo's blijven ongemoeid)")
+            toto = None
     todo = []
     for c in cards:
         cfg = C.BOOKMAKERS.get(c["op"])
@@ -178,6 +190,8 @@ def main():
         k = card_key(c)
         if k in state:
             continue
+        if c["op"] == "toto" and toto is not None:
+            state[k] = {"status": "overgeslagen", "reden": "TOTO komt via de directe bron toto.nl/acties"}; continue
         if not cfg["id"]:
             state[k] = {"status": "overgeslagen", "reden": "bookmaker niet in CMS"}; continue
         if "welcomeBonus" in c["types"]:
@@ -195,12 +209,14 @@ def main():
 
     # Door de radar aangemaakte acties die verlopen zijn (einddatum voorbij) of niet meer in de
     # kalender staan: verwijderen (gebruiker: verlopen promoties mogen weg).
-    current = {card_key(c) for c in cards} | {star_key(c) for c in (star or [])}
+    current = {card_key(c) for c in cards} | {star_key(c) for c in (star or [])} | {c["key"] for c in (toto or [])}
     # zelfde actie (operator + titel) met een nieuwe looptijd in de kalender -> bijwerken i.p.v. verwijderen
     cur_by_title = {"|".join(card_key(c).split("|")[:2]): c for c in cards}
     remap = {}
     if star is None:     # bron niet bereikbaar -> StarCasino-promo's niet als 'verdwenen' behandelen
         current |= {k for k in state if k.startswith(("starcasino|", "starcasino-toernooi|"))}
+    if toto is None:     # idem voor toto.nl/acties
+        current |= {k for k in state if k.startswith("toto-acties|")}
     now = datetime.now().astimezone()
     for k, e in state.items():
         # 'einddatum' = handmatig toegevoegde promo die op zijn 'Geldig tot' offline moet (niet in de kalender)
@@ -340,6 +356,45 @@ def main():
         c["_key"] = k; c["_hash"] = c["hash"]
         plans.append((c, fd, True, {"reason": "bron: starcasino.nl", "detail_url": c["detail_url"]}, img_name, rub))
         print(f"  ● {fd['name'][:78]}\n      {rub} | {'sport' if sport else 'casino'} | bron: starcasino.nl")
+
+    # ---- TOTO (directe bron toto.nl/acties) ----
+    tcfg = C.BOOKMAKERS["toto"]
+    for c in (toto or []):
+        k = c["key"]; e = state.get(k)
+        if e:
+            if e.get("hash") and e["hash"] != c["hash"] and e.get("status") == "live" and e.get("item_id") and not a.dry:
+                fd, sport, rub = build_fields(c, {"id": tcfg["id"], "name": "TOTO"}, c["period"], {"detail_url": c["detail_url"]}, None, None)
+                for x in ("slug", "afbeelding-promotie"):
+                    fd.pop(x, None)
+                fd["affiliatie-link-naar-broker"] = C.TOTO_AFFILIATE.get(c["category"], C.TOTO_AFFILIATE["CASINO"])
+                fd["bonus-rubrieken"] = rubrieken(fd)
+                try:
+                    wf("PATCH", f"/collections/{C.PROMOTIES}/items/{e['item_id']}/live", {"fieldData": fd})
+                    print(f"  ↻ TOTO bijgewerkt (kaart gewijzigd): {c['title']}")
+                except Exception as ex:
+                    print(f"    ! {ex}")
+            e["hash"] = c["hash"]
+            continue
+        s, name = similar_existing(c, by_bm.get(tcfg["id"], []), tcfg["name"])
+        if s >= 0.5:
+            state[k] = {"status": "bestond al", "cms": name, "score": round(s, 2), "hash": c["hash"], "datum": str(date.today())}
+            print(f"  = TOTO bestond al: {c['title'][:60]}  ~ {name[:50]}")
+            continue
+        fd, sport, rub = build_fields(c, {"id": tcfg["id"], "name": "TOTO"}, c["period"],
+                                      {"detail_url": c["detail_url"]}, None, logo(tcfg["id"]))
+        fd["affiliatie-link-naar-broker"] = C.TOTO_AFFILIATE.get(c["category"], C.TOTO_AFFILIATE["CASINO"])
+        fd["link-artikel-voor-sidebar"] = PROMO_BASE + fd["slug"]
+        fd["bonus-rubrieken"] = rubrieken(fd)
+        img_name = None
+        if c.get("image") and not a.dry:
+            try:
+                img_name = f"betexperts-{fd['slug'][:70]}.webp"
+                images.append(os.path.relpath(to_webp(c["image"], img_name), BASE))
+            except Exception as ex:
+                print(f"   ! afbeelding mislukt: {ex}"); img_name = None
+        c["_key"] = k; c["_hash"] = c["hash"]
+        plans.append((c, fd, True, {"reason": "bron: toto.nl/acties", "detail_url": c["detail_url"]}, img_name, rub))
+        print(f"  ● {fd['name'][:78]}\n      {rub} | {'sport' if sport else 'casino'} | bron: toto.nl/acties")
 
     if a.dry:
         update_recurring(cards, dry=True)
