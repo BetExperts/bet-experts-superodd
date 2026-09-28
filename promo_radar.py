@@ -361,6 +361,13 @@ def main():
                                   "slug": (j.get("fieldData") or {}).get("slug"), "check": v["reason"],
                                   "bron": v.get("detail_url"), "datum": str(date.today())}
             print(f"  ✔ {'LIVE ' if live else 'DRAFT'} {PROMO_BASE}{(j.get('fieldData') or {}).get('slug')}")
+            if live:
+                # Terugkerende actie op dezelfde slug: de 301 van de vorige (verwijderde) editie weghalen
+                try:
+                    if cf_redirects.remove([f"www.bet-experts.nl/promoties/{(j.get('fieldData') or {}).get('slug')}"]):
+                        print("    ↺ oude redirect op deze URL verwijderd")
+                except Exception as ex:
+                    print(f"    ! redirect-check mislukt: {ex}")
         except Exception as e:
             print(f"  ! mislukt: {fd['name'][:60]} — {e}")
         save_state(state)

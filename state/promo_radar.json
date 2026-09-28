@@ -1119,5 +1119,33 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-09-28"
+ },
+ "handmatig|toto-basketbal-zet-20-in-krijg-5-gratis-weddenschap": {
+  "status": "handmatig",
+  "item_id": "6aba324a228916da38f5ce00",
+  "slug": "toto-basketbal-zet-20-in-krijg-5-gratis-weddenschap",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-09-28"
+ },
+ "handmatig|toto-nfl-zet-10-in-krijg-5-gratis-weddenschap": {
+  "status": "handmatig",
+  "item_id": "6aba324c56ea7d0eadd377cd",
+  "slug": "toto-nfl-zet-10-in-krijg-5-gratis-weddenschap",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-09-28"
+ },
+ "handmatig|toto-nations-league-zet-10-in-krijg-10-gratis-weddenschap": {
+  "status": "handmatig",
+  "item_id": "6aba324ec3095e28b4e07793",
+  "slug": "toto-nations-league-zet-10-in-krijg-10-gratis-weddenschap",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-09-28"
+ },
+ "handmatig|toto-maandag-gratis-spins": {
+  "status": "handmatig",
+  "item_id": "6aba32509070a78d822c4d48",
+  "slug": "toto-maandag-gratis-spins",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-09-28"
  }
 }
