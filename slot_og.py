@@ -15,7 +15,7 @@ import base64, hashlib, html, io, json, os, re, subprocess, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(HERE, "assets", "slot-og")
 OUT = os.path.join(HERE, "assets", "slots")
-RAW = "https://raw.githubusercontent.com/BetExperts/bet-experts-superodd/main/assets/slots/"
+RAW_BASE = "https://raw.githubusercontent.com/BetExperts/bet-experts-superodd/main/"
 SLOTS, PROVIDERS = "6abbdb3436d326e0b5292850", "6abbdb32ec098f3c93d66937"
 
 
@@ -269,30 +269,38 @@ class Renderer:
         self._browser = self._pw.chromium.launch()
         self._logo = _data_uri(os.path.join(ASSETS, "betexperts-logo.svg"), "image/svg+xml")
 
-    def render(self, info):
-        """-> (webp-bytes, png-bytes)"""
+    def shoot(self, page_html, fit_js=None, slug=""):
+        """HTML (1200x630) -> (webp-bytes, png-bytes), gerenderd op 2x en verkleind."""
         from PIL import Image
-        thumb = None
-        if info.get("thumb"):
-            try:
-                b, mt = _fetch(info["thumb"])
-                thumb = _data_uri(b, mt or "image/jpeg")
-            except Exception as ex:
-                print(f"   ! afbeelding niet op te halen voor {info['slug']}: {ex}")
         page = self._browser.new_page(viewport={"width": 1200, "height": 630}, device_scale_factor=2)
-        page.set_content(_page(info, thumb, self._logo), wait_until="load")
+        page.set_content(page_html, wait_until="load")
         page.evaluate("document.fonts.ready")
-        fit = page.evaluate(FIT_JS)
-        if fit.get("overflow"):
-            print(f"   ! waarde past niet helemaal: {info['slug']}")
+        if fit_js:
+            fit = page.evaluate(fit_js)
+            if (fit or {}).get("overflow"):
+                print(f"   ! tekst past niet helemaal: {slug}")
         png = page.screenshot(type="png")
         page.close()
         im = Image.open(io.BytesIO(png)).convert("RGB").resize((1200, 630), Image.LANCZOS)
-        out = io.BytesIO()
+        out, pv = io.BytesIO(), io.BytesIO()
         im.save(out, "WEBP", quality=90, method=6)
-        pv = io.BytesIO()
         im.save(pv, "PNG")
         return out.getvalue(), pv.getvalue()
+
+    def image_uri(self, url, slug=""):
+        if not url:
+            return None
+        try:
+            b, mt = _fetch(url)
+            return _data_uri(b, mt or "image/jpeg")
+        except Exception as ex:
+            print(f"   ! afbeelding niet op te halen voor {slug}: {ex}")
+            return None
+
+    def render(self, info):
+        """-> (webp-bytes, png-bytes)"""
+        thumb = self.image_uri(info.get("thumb"), info["slug"])
+        return self.shoot(_page(info, thumb, self._logo), FIT_JS, info["slug"])
 
     def close(self):
         self._browser.close()
@@ -308,22 +316,22 @@ def render_slot(info, renderer=None):
             r.close()
 
 
-def save(info, webp):
+def save(info, webp, out_dir=OUT):
     """Schrijft assets/slots/<slug>-<hash>.webp (hash in de naam, zodat Webflow een nieuwe versie ophaalt)."""
-    os.makedirs(OUT, exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
     name = f"{info['slug']}-{hashlib.md5(webp).hexdigest()[:6]}.webp"
-    for old in os.listdir(OUT):
-        if old.startswith(info["slug"] + "-") and old != name and re.fullmatch(re.escape(info["slug"]) + r"-[0-9a-f]{6}\.webp", old):
-            os.remove(os.path.join(OUT, old))
-    open(os.path.join(OUT, name), "wb").write(webp)
+    for old in os.listdir(out_dir):
+        if old != name and re.fullmatch(re.escape(info["slug"]) + r"-[0-9a-f]{6}\.webp", old):
+            os.remove(os.path.join(out_dir, old))
+    open(os.path.join(out_dir, name), "wb").write(webp)
     return name
 
 
-def attach(files, items_by_slug):
+def attach(files, items_by_slug, collection=SLOTS, subdir="assets/slots", alt_suffix=" review", label="Slot"):
     """Commit + push assets/slots en zet 'deelafbeelding' (staged en, indien gepubliceerd, live)."""
-    subprocess.run(["git", "add", "-A", "assets/slots"], cwd=HERE, check=True)
+    subprocess.run(["git", "add", "-A", subdir], cwd=HERE, check=True)
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HERE).returncode:
-        subprocess.run(["git", "commit", "-m", f"Slot-deelafbeeldingen ({len(files)})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=HERE, check=True)
+        subprocess.run(["git", "commit", "-m", f"{label}-deelafbeeldingen ({len(files)})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=HERE, check=True)
         for _ in range(3):
             if subprocess.run(["git", "push"], cwd=HERE).returncode == 0:
                 break
@@ -331,13 +339,13 @@ def attach(files, items_by_slug):
     staged, live = [], []
     for slug, name in files.items():
         it = items_by_slug[slug]
-        row = {"id": it["id"], "fieldData": {"deelafbeelding": {"url": RAW + name, "alt": it["fieldData"]["name"] + " review"}}}
+        row = {"id": it["id"], "fieldData": {"deelafbeelding": {"url": RAW_BASE + subdir + "/" + name, "alt": it["fieldData"]["name"] + alt_suffix}}}
         staged.append(row)
         if it.get("lastPublished"):
             live.append(row)
     for path, rows in (("items", staged), ("items/live", live)):
         for i in range(0, len(rows), 25):
-            print("PATCH", path, _wf(f"/collections/{SLOTS}/{path}", "PATCH", {"items": rows[i:i + 25]}))
+            print("PATCH", path, _wf(f"/collections/{collection}/{path}", "PATCH", {"items": rows[i:i + 25]}))
 
 
 def main(argv):
