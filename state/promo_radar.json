@@ -1308,5 +1308,22 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-09-29"
+ },
+ "vbet|houdt-oranje-de-nul-en-pak-een-free-bet|29-september-t-m-1-oktober": {
+  "status": "bestond al",
+  "cms": "Vbet: Voorspel gratis elke speelronde van de Eredivisie en win free bets",
+  "score": 0.7,
+  "datum": "2026-09-29"
+ },
+ "toto|maak-elke-spin-kans-op-een-prijs-bij-toto|alleen-29-september": {
+  "status": "overgeslagen",
+  "reden": "TOTO komt via de directe bron toto.nl/acties"
+ },
+ "toto-acties|verloopt-in-5u-17m": {
+  "status": "bestond al",
+  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
+  "score": 0.6,
+  "hash": "6f9360b51b6f837fcffe6a270817afb1",
+  "datum": "2026-09-29"
  }
 }
