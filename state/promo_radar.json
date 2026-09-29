@@ -359,12 +359,14 @@
   "datum": "2026-09-24"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|22-september-t-m-28-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f1eab5374a157aaf4c2",
   "slug": "circus-5-000-pragmatic-play-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-29"
  },
  "unibet|3-verschillende-bingo-promoties|altijd-geldig": {
   "status": "live",
@@ -805,9 +807,11 @@
   "tot": "2026-10-05"
  },
  "handmatig|bingoal-20-procent-casinobonus": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ab52a956adb58c6d8db2744",
-  "tot": "2026-09-28"
+  "tot": "2026-09-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-29"
  },
  "handmatig|bingoal-najaarkermis": {
   "status": "einddatum",
@@ -891,7 +895,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "b74569aa32f648d0fa471d28bb1c15e0"
+  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -908,7 +912,13 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6ab541dbe7e5f9b30ec2e9ce": {
+   "name": "Starcasino: Geldkluis",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/geldkluisbonus"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
@@ -1232,5 +1242,12 @@
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
   "datum": "2026-09-24"
+ },
+ "toto-acties|verloopt-in-14u-51m": {
+  "status": "bestond al",
+  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
+  "score": 0.56,
+  "hash": "d2696cdac6d40790f9d7c8c5bf602aca",
+  "datum": "2026-09-29"
  }
 }
