@@ -1249,5 +1249,43 @@
   "score": 0.56,
   "hash": "d2696cdac6d40790f9d7c8c5bf602aca",
   "datum": "2026-09-29"
+ },
+ "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|28-september-t-m-1-oktober": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "toto-acties|verloopt-in-12u-17m": {
+  "status": "bestond al",
+  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
+  "score": 0.56,
+  "hash": "f3ecf128d8f6e74a69909c11dcf8ddec",
+  "datum": "2026-09-29"
+ },
+ "circus|5-000-pragmatic-play-toernooi-bij-circus|29-september-t-m-5-oktober": {
+  "status": "live",
+  "item_id": "6abb8811e17cd41641267861",
+  "hash": null,
+  "slug": "circus-5-000-pragmatic-play-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-09-29"
+ },
+ "leovegas|pak-5-free-bet-door-in-te-zetten-op-de-nations-league|27-september-t-m-4-oktober": {
+  "status": "live",
+  "item_id": "6abb881c2877e460093d943b",
+  "hash": null,
+  "slug": "leovegas-pak-5-free-bet-door-in-te-zetten-op-de-nations-league",
+  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-29"
+ },
+ "711|711-casino-quest-pak-25-free-spins|28-september-t-m-4-oktober": {
+  "status": "draft",
+  "item_id": "6abb8827eb747af563ad89c2",
+  "hash": null,
+  "slug": "711-casino-quest-pak-25-free-spins",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/loyaliteitsprogramma",
+  "datum": "2026-09-29"
  }
 }
