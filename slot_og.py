@@ -323,7 +323,7 @@ def attach(files, items_by_slug):
     """Commit + push assets/slots en zet 'deelafbeelding' (staged en, indien gepubliceerd, live)."""
     subprocess.run(["git", "add", "-A", "assets/slots"], cwd=HERE, check=True)
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HERE).returncode:
-        subprocess.run(["git", "commit", "-m", f"Slot-deelafbeeldingen ({len(files)})"], cwd=HERE, check=True)
+        subprocess.run(["git", "commit", "-m", f"Slot-deelafbeeldingen ({len(files)})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=HERE, check=True)
         for _ in range(3):
             if subprocess.run(["git", "push"], cwd=HERE).returncode == 0:
                 break
