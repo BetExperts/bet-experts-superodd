@@ -917,6 +917,11 @@
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/geldkluisbonus"
+  },
+  "6aba2fc27766e026d16f8515": {
+   "slug": "starcasino-1-000-sport-toernooi",
+   "name": "Starcasino: €1.000 Sport Toernooi (van 28 september t/m 4 oktober)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1286,6 +1291,22 @@
   "slug": "711-casino-quest-pak-25-free-spins",
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/loyaliteitsprogramma",
+  "datum": "2026-09-29"
+ },
+ "toto-acties|verloopt-in-9u-17m": {
+  "status": "bestond al",
+  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
+  "score": 0.6,
+  "hash": "c4f7f9d649c827b90caf2cf8d2603db7",
+  "datum": "2026-09-29"
+ },
+ "bet365|bet365-50-000-spins-verdeler|28-september-t-m-4-oktober": {
+  "status": "draft",
+  "item_id": "6abbb20f1311a883512cbb78",
+  "hash": null,
+  "slug": "bet365-50-000-spins-verdeler",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
   "datum": "2026-09-29"
  }
 }
