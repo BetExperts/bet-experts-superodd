@@ -96,6 +96,19 @@ def faq5(name, status, release, live_nl, casinos):
     return q, a
 
 
+NIEUW_DAGEN = 90
+
+
+def is_nieuw(status, release, live_nl, today):
+    """Nieuw = in de laatste 90 dagen uitgekomen (NL-datum, anders wereldwijd), of recent/aangekondigd maar nog niet in NL."""
+    t = dt.date.fromisoformat(today)
+    grens = (t - dt.timedelta(days=NIEUW_DAGEN)).isoformat()
+    if status != STATUS["ja"]:
+        return not release or release >= (t - dt.timedelta(days=180)).isoformat()
+    d = live_nl or release
+    return bool(d) and grens <= d <= today
+
+
 def main(argv):
     _env()
     write, alles = "--write" in argv, "--all" in argv
@@ -111,6 +124,10 @@ def main(argv):
         fd = it["fieldData"]
         status = name_of.get(fd.get("status-nl"))
         if status == STATUS["ja"] and not alles:
+            nieuw = is_nieuw(status, (fd.get("releasedatum") or "")[:10] or None, (fd.get("live-in-nl") or "")[:10] or None, today)
+            if nieuw != bool(fd.get("nieuw")):
+                changed.append((it, {"nieuw": nieuw}))
+                print(f"{fd['name'][:32]:32} nieuw -> {nieuw}")
             continue
         found = find_casinos(it, provs.get(fd.get("provider")))
         cas_ids = [books[c] for c in found if c in books]
@@ -133,6 +150,9 @@ def main(argv):
         if managed and (new or not fd.get("faq-5-vraag")):
             new["faq-5-vraag"], new["faq-5-antwoord"] = faq5(fd["name"], new_status, (fd.get("releasedatum") or "")[:10] or None,
                                                              live_nl, [c for c in found] or [])
+        nieuw = is_nieuw(new_status, (fd.get("releasedatum") or "")[:10] or None, live_nl, today)
+        if nieuw != bool(fd.get("nieuw")):
+            new["nieuw"] = nieuw
         print(f"{fd['name'][:32]:32} {status or '-':18} -> {new_status:18} {', '.join(found) or 'geen NL-casino'}")
         if new:
             changed.append((it, new))
