@@ -185,6 +185,8 @@ def main(argv):
             sim.append({"id": by_slug[r["slug"]]["id"], "fieldData": {"vergelijkbare-slots": ids}})
     for i in range(0, len(sim), 25):
         print("PATCH vergelijkbaar", _wf(f"/collections/{SLOTS}/items", "PATCH", {"items": sim[i:i + 25]}))
+        if live:
+            print("PATCH vergelijkbaar live", _wf(f"/collections/{SLOTS}/items/live", "PATCH", {"items": sim[i:i + 25]}))
 
 
 if __name__ == "__main__":
