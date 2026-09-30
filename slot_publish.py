@@ -105,6 +105,25 @@ def _ul(items):
     return "<ul>" + "".join(f"<li>{html.escape(x, quote=False)}</li>" for x in items or []) + "</ul>"
 
 
+def nl_fields(r, has_casinos, opt):
+    """Status NL / Live in NL / FAQ 5 voor een nieuwe slot (daarna houdt slot_nl_check.py het bij)."""
+    from slot_nl_check import STATUS, faq5
+    today = dt.date.today().isoformat()
+    verwacht = r.get("nl_verwacht") if re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("nl_verwacht") or "") else None
+    if has_casinos:
+        st, live = STATUS["ja"], (verwacht if verwacht and verwacht <= today else None)
+    elif verwacht and verwacht > today:
+        st, live = STATUS["binnenkort"], verwacht
+    else:
+        st, live = STATUS["nee"], None
+    out = {"status-nl": opt.get(st)}
+    if live:
+        out["live-in-nl"] = live + "T00:00:00.000Z"
+    if len(r.get("faq") or []) < 5:                       # 5e vraag = NL-beschikbaarheid (automatisch beheerd)
+        out["faq-5-vraag"], out["faq-5-antwoord"] = faq5(r["naam"], st, r.get("releasedatum"), live, r.get("nl_casinos") or [])
+    return {k: v for k, v in out.items() if v}
+
+
 def field_data(r, provider_id, casino_ids, thumb):
     fd = {"name": r["naam"], "slug": r["slug"], "seo-titel": r.get("seo_titel"), "meta-omschrijving": r.get("meta_omschrijving"),
           "provider": provider_id, "intro": r.get("intro"), "slotslaunch-game-id": r.get("slotslaunch_id"),
@@ -133,6 +152,8 @@ def main(argv):
     prov_sl = {p["id"]: p["fieldData"].get("slotslaunch-provider-id") for p in prov_items}
     books = {b["fieldData"]["name"]: b["id"] for b in _all_items(BOOKMAKERS) if not b.get("isDraft") and not b.get("isArchived")}
     existing = {i["fieldData"]["slug"]: i for i in _all_items(SLOTS)}
+    opt = {o["name"]: o["id"] for f in _wf(f"/collections/{SLOTS}")["fields"] if f["slug"] == "status-nl"
+           for o in f["validations"]["options"]}
     rows_new, rows_upd = [], []
     for r in reviews:
         pid = provs.get((r.get("provider") or "").lower())
@@ -140,6 +161,7 @@ def main(argv):
                       if CASINO_ALIAS.get(c.lower(), c) in books})          # alleen live bookmakers
         g = sl_game(r.get("slotslaunch_id"), prov_sl.get(pid))
         fd = field_data(r, pid, cas, (g or {}).get("thumb"))
+        fd.update(nl_fields(r, bool(cas), opt))
         print(f"{fd['onze-beoordeling']:>4} {r['naam'][:32]:32} provider={'ok' if pid else '??'} casino's={len(cas)} "
               f"demo={r.get('slotslaunch_id')} img={'ok' if fd.get('afbeelding') else '-'} woorden={len(re.sub('<[^>]+>', ' ', fd.get('review', '')).split())}")
         (rows_upd if r["slug"] in existing else rows_new).append(

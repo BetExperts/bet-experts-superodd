@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betexperts.slotnlcheck</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/run_slot_nl_check.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent</string>
+  <!-- Slots: dagelijks checken of nieuwe slots al bij NL-casino's staan (status, datum, FAQ, deelafbeelding) -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>20</integer></dict>
+    <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>20</integer></dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/slotnlcheck.launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jaspervandenboogaard/bet-experts/superodd-agent/logs/slotnlcheck.launchd.err.log</string>
+</dict>
+</plist>

@@ -96,6 +96,30 @@ def tagline_from(fd):
     return first + "." if 0 < len(first) <= 60 else ""
 
 
+MND = "jan feb mrt apr mei jun jul aug sep okt nov dec".split()
+_STATUS_NAMES = {}
+
+
+def _status_name(opt_id):
+    """Option-id van 'Status NL' -> naam (één keer ophalen)."""
+    if not _STATUS_NAMES:
+        for f in _wf(f"/collections/{SLOTS}")["fields"]:
+            if f["slug"] == "status-nl":
+                _STATUS_NAMES.update({o["id"]: o["name"] for o in f["validations"]["options"]})
+    return _STATUS_NAMES.get(opt_id)
+
+
+def nl_pill(fd):
+    """Tekst voor de NL-pil, of None als het spel gewoon in NL beschikbaar is."""
+    st = _status_name(fd.get("status-nl")) if fd.get("status-nl") else None
+    if st == "Binnenkort in NL" and fd.get("live-in-nl"):
+        y, m, d = fd["live-in-nl"][:10].split("-")
+        return f"IN NL VANAF {int(d)} {MND[int(m) - 1].upper()}"
+    if st in ("Nog niet in NL", "Binnenkort in NL"):
+        return "NOG NIET IN NL"
+    return None
+
+
 def info_from_item(item, provider_names):
     fd = item["fieldData"]
     stats = []
@@ -114,6 +138,7 @@ def info_from_item(item, provider_names):
     return {
         "slug": fd["slug"], "naam": fd["name"], "provider": provider_names.get(fd.get("provider"), ""),
         "tagline": tagline_from(fd), "demo": bool(fd.get("slotslaunch-game-id")), "thumb": img,
+        "nl": nl_pill(fd),
         "score": num(fd.get("onze-beoordeling")),
         "subs": [(k, num(fd.get(f))) for k, f in (("Gameplay", "gameplay-score"), ("Bonusronde", "bonusronde-score"),
                                                    ("Uitbetaling", "uitbetaling-score")) if num(fd.get(f)) is not None],
@@ -169,6 +194,8 @@ body{background:#0a1016;font-family:Jakarta,sans-serif;color:#f4f7f9;position:re
   background:linear-gradient(180deg,#5fcf86,#3fb56b);color:#08130d;font-weight:700;font-size:11px;letter-spacing:.1em;
   box-shadow:0 0 0 1px rgba(95,207,134,.35),0 6px 16px rgba(22,154,71,.28)}
 .pill svg{width:8px;height:9px}
+.pill.nl{background:linear-gradient(180deg,#ffc56b,#f2a33a);color:#1a1204;box-shadow:0 0 0 1px rgba(255,197,107,.35),0 6px 16px rgba(242,163,58,.25)}
+.pill.nl i{width:7px;height:7px;border-radius:50%;background:#1a1204;display:block}
 h1{margin-top:14px;font-family:Poppins;font-weight:700;font-size:58px;line-height:1.08;letter-spacing:-.02em;color:#fff}
 .tag{margin-top:14px;font-weight:500;font-size:20px;line-height:1.4;color:#a7b1bc;white-space:nowrap}
 .cards{position:absolute;left:100px;top:392px;width:560px;height:166px;display:flex;gap:16px}
@@ -234,7 +261,7 @@ def _page(info, thumb_uri, logo_uri):
 <div class="left">
   <div class="eyebrow"><span class="bar"></span><span class="kind">SLOT REVIEW</span>
     {'<span class="dot"></span><span class="prov">' + e(info["provider"]) + '</span>' if info["provider"] else ''}
-    {'<span class="pill">' + PLAY + 'DEMO SPELEN</span>' if info["demo"] else ''}</div>
+    {('<span class="pill nl"><i></i>' + e(info["nl"]) + '</span>') if info.get("nl") else ('<span class="pill">' + PLAY + 'DEMO SPELEN</span>' if info["demo"] else '')}</div>
   <h1 id="h1">{e(info["naam"])}</h1>
   {'<div class="tag" id="tag">' + e(info["tagline"]) + '</div>' if info["tagline"] else ''}
 </div>
