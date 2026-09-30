@@ -1265,7 +1265,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.56,
-  "hash": "f3ecf128d8f6e74a69909c11dcf8ddec",
+  "hash": "3b26bab96334cd1d03cab25445123af6",
   "datum": "2026-09-29"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|29-september-t-m-5-oktober": {
@@ -1340,6 +1340,48 @@
   "cms": "TOTO: NFL – zet €10 in en krijg een €5 gratis weddenschap",
   "score": 0.8,
   "hash": "cd072f51055ee3cc3def00afd324d998",
+  "datum": "2026-09-30"
+ },
+ "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
+  "status": "overgeslagen",
+  "reden": "TOTO komt via de directe bron toto.nl/acties"
+ },
+ "toto|toto-exclusief-zet-25-in-en-krijg-10-free-spins|iedere-woensdag-en-donderdag": {
+  "status": "overgeslagen",
+  "reden": "TOTO komt via de directe bron toto.nl/acties"
+ },
+ "toto-acties|verloopt-in-10u-18m": {
+  "status": "bestond al",
+  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
+  "score": 0.78,
+  "hash": "6dd35f533294d3df16002b7e6fb5fef4",
+  "datum": "2026-09-30"
+ },
+ "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-30-september": {
+  "status": "draft",
+  "item_id": "6abcd974a113ed323bb5de97",
+  "hash": null,
+  "slug": "circus-pak-willekeurig-geldprijzen",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-30"
+ },
+ "jacks.nl|pragmatic-play-toernooi-met-een-prijzenpot-van-5-000|30-september-t-m-4-oktober": {
+  "status": "draft",
+  "item_id": "6abcd97524f2a6f78b5164dd",
+  "hash": null,
+  "slug": "jacks-nl-pragmatic-play-toernooi-met-een-prijzenpot-van-5-000",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-30"
+ },
+ "toto-acties|toto-exclusief-speel-25-en-krijg-10-gratis-spins": {
+  "status": "live",
+  "item_id": "6abcd976a13ac908f226783e",
+  "hash": "6089950ffbc0ef7b51a2bb69f2b4495d",
+  "slug": "toto-exclusief-speel-25-en-krijg-10-gratis-spins",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
   "datum": "2026-09-30"
  }
 }
