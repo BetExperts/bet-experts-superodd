@@ -1295,10 +1295,6 @@
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
  },
- "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
-  "status": "overgeslagen",
-  "reden": "TOTO komt via de directe bron toto.nl/acties"
- },
  "toto|toto-exclusief-zet-25-in-en-krijg-10-free-spins|iedere-woensdag-en-donderdag": {
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
@@ -1340,9 +1336,21 @@
   "datum": "2026-09-30"
  },
  "bet365|zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed|30-september-t-m-3-oktober": {
-  "status": "bestond al",
-  "cms": "Bet365: 50.000 Spins-Verdeler (van 28 september t/m 4 oktober)",
-  "score": 0.64,
+  "status": "draft",
+  "item_id": "6abd25565457347c4e38eb5a",
+  "hash": null,
+  "slug": "bet365-zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-09-30"
+ },
+ "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
+  "status": "live",
+  "item_id": "6abd25588f5cf1863129c300",
+  "hash": null,
+  "slug": "toto-bet-en-get-zet-10-in-en-ontvang-5-free-bet",
+  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-09-30"
  }
 }
