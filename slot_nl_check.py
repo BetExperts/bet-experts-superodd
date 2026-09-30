@@ -133,15 +133,19 @@ def main(argv):
         cas_ids = [books[c] for c in found if c in books]
         live_nl = (fd.get("live-in-nl") or "")[:10] or None
         new = {}
-        if found:
+        release = (fd.get("releasedatum") or "")[:10] or None
+        if found and release and release > today:          # casino heeft de pagina al, maar het spel is nog niet uit
+            new_status, live_nl = STATUS["binnenkort"], release
+        elif found:
             new_status = STATUS["ja"]
             if not live_nl or live_nl > today:
                 live_nl = today
+        else:
+            new_status = STATUS["binnenkort"] if live_nl and live_nl > today else (status if status == STATUS["ja"] else STATUS["nee"])
+        if found:
             merged = list(dict.fromkeys((fd.get("casino-s") or []) + cas_ids))
             if merged != (fd.get("casino-s") or []):
                 new["casino-s"] = merged
-        else:
-            new_status = STATUS["binnenkort"] if live_nl and live_nl > today else (status if status == STATUS["ja"] else STATUS["nee"])
         if new_status != status:
             new["status-nl"] = opt[new_status]
         if live_nl and live_nl != (fd.get("live-in-nl") or "")[:10]:

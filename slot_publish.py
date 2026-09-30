@@ -110,7 +110,10 @@ def nl_fields(r, has_casinos, opt):
     from slot_nl_check import STATUS, faq5
     today = dt.date.today().isoformat()
     verwacht = r.get("nl_verwacht") if re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("nl_verwacht") or "") else None
-    if has_casinos:
+    release = r.get("releasedatum") if re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("releasedatum") or "") else None
+    if has_casinos and release and release > today:      # pagina staat al klaar, spel komt nog uit
+        st, live = STATUS["binnenkort"], release
+    elif has_casinos:
         st, live = STATUS["ja"], (verwacht if verwacht and verwacht <= today else None)
     elif verwacht and verwacht > today:
         st, live = STATUS["binnenkort"], verwacht
