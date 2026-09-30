@@ -1,0 +1,48 @@
+{
+ "id": "6ab38e04f5c16e34d6937c24",
+ "cmsLocaleId": "64ff0fbd5a8f205b05d54655",
+ "lastPublished": "2026-09-23T08:58:28.548Z",
+ "lastUpdated": "2026-09-23T08:53:24.771Z",
+ "createdOn": "2026-09-23T08:29:56.670Z",
+ "isArchived": false,
+ "isDraft": false,
+ "fieldData": {
+  "robots-meta": null,
+  "team-id": "1113",
+  "league-slug": "nations-league",
+  "logo": {
+   "fileId": "6ab3935e344f73eb194dff39",
+   "url": "https://cdn.prod.website-files.com/64f9f8e867f73b8e88841e09/6ab3935e344f73eb194dff39_1113.png",
+   "alt": null
+  },
+  "eindstand-seizoen-ervoor": null,
+  "punten-aantal-seizoen-ervoor": null,
+  "stadion": "Stadion Bilino Polje, Zenica",
+  "opgericht-op": null,
+  "over-de-club-2": "Bosnië en Herzegovina bracht ondanks een korte zelfstandige geschiedenis opvallend veel talent voort. De ploeg speelt haar thuiswedstrijden vaak in het sfeervolle Stadion Bilino Polje in Zenica. Het blauwe shirt staat voor een trotse, strijdbare natie waar voetbal een belangrijke bindende factor is en de aanhang de ploeg met veel passie steunt.",
+  "historie": "Bosnië en Herzegovina speelt sinds de onafhankelijkheid in de vroege jaren negentig als zelfstandig land. Het historische hoogtepunt kwam met de kwalificatie voor het WK van 2014 in Brazilië, het eerste grote eindtoernooi in de landsgeschiedenis. De ploeg werd gedragen door spits Edin Džeko, spelmaker Miralem Pjanić en doelman Asmir Begović, spelers die bij Europese topclubs schitterden. Ondanks uitschakeling in de groepsfase werd het toernooi in het land als een mijlpaal gevierd. Sindsdien wacht Bosnië op een terugkeer op het grote podium, maar de constante stroom talent houdt de hoop levend dat het land opnieuw kan doorstoten naar een eindronde.",
+  "club-pagina-link": "https://www.bet-experts.nl/clubs/bosnie-en-herzegovina",
+  "competitie-eigen-land": "Nations League",
+  "competitie-in-eigen-land": "66d5a7f7fb9f23ce90376ef4",
+  "competities-actief": [
+   "66d5a7f7fb9f23ce90376ef4"
+  ],
+  "korte-intro-club-sectie": null,
+  "manager": null,
+  "hoevaak-kampioen": null,
+  "laatste-keer-kampioen": null,
+  "land": null,
+  "stad": null,
+  "uefa-ranking": null,
+  "squad-waarde": null,
+  "club-kleur": null,
+  "korte-intro-club": null,
+  "paragraaf-1-club": null,
+  "paragraaf-2-club": null,
+  "voorbeschouwingen": null,
+  "voorbeschouwingen-tekst": null,
+  "lijstblok": null,
+  "name": "Bosnië en Herzegovina",
+  "slug": "bosnie-en-herzegovina"
+ }
+}

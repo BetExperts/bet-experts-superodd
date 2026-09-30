@@ -162,11 +162,34 @@ def main(argv):
             changed.append((it, new))
             if "status-nl" in new:
                 rerender.append(fd["slug"])
+    # slots zonder demo: kijk of SlotsLaunch de game inmiddels heeft (demo-ID + afbeelding; deelafbeelding opnieuw)
+    import slot_publish
+    prov_sl = {p["id"]: p["fieldData"].get("slotslaunch-provider-id") for p in _all_items(PROVIDERS)}
+    norm = lambda t: re.sub(r"[^a-z0-9]", "", slugify(t))
+    geo = set(json.load(open(os.path.join(HERE, "state", "slot_demo_geoblocked.json"))))   # demo geblokkeerd in NL
+    for it in items:
+        fd = it["fieldData"]
+        pid = prov_sl.get(fd.get("provider"))
+        if fd.get("slotslaunch-game-id") or not pid or fd["slug"] in geo:
+            continue
+        slot_publish.sl_game(1, pid)
+        g = next((g for g in slot_publish._SL_CACHE.get(pid, {}).values() if norm(g["name"]) == norm(fd["name"])), None)
+        if g:
+            new = {"slotslaunch-game-id": g["id"]}
+            if not (fd.get("afbeelding") or {}).get("url") and g.get("thumb"):
+                new["afbeelding"] = {"url": g["thumb"], "alt": fd["name"]}
+            print(f"{fd['name'][:32]:32} demo gevonden bij SlotsLaunch: {g['id']}")
+            changed.append((it, new))
+            rerender.append(fd["slug"])
     if not write or not changed:
         print(f"{len(changed)} wijzigingen" + ("" if write else " (dry-run)"))
         return
-    staged = [{"id": it["id"], "fieldData": new} for it, new in changed]
-    live = [{"id": it["id"], "fieldData": new} for it, new in changed if it.get("lastPublished") and not it.get("isDraft")]
+    merged = {}
+    for it, new in changed:                        # één regel per item (Webflow weigert dubbele items)
+        merged.setdefault(it["id"], (it, {}))[1].update(new)
+    staged = [{"id": i, "fieldData": new} for i, (it, new) in merged.items()]
+    live = [{"id": i, "fieldData": new} for i, (it, new) in merged.items() if it.get("lastPublished") and not it.get("isDraft")]
+    rerender = list(dict.fromkeys(rerender))
     for path, rows in (("items", staged), ("items/live", live)):
         for i in range(0, len(rows), 25):
             print("PATCH", path, _wf(f"/collections/{SLOTS}/{path}", "PATCH", {"items": rows[i:i + 25]}))
