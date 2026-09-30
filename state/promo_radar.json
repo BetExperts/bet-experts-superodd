@@ -1299,7 +1299,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.6,
-  "hash": "c4f7f9d649c827b90caf2cf8d2603db7",
+  "hash": "6623949e217d511746aad4408a258f6b",
   "datum": "2026-09-29"
  },
  "bet365|bet365-50-000-spins-verdeler|28-september-t-m-4-oktober": {
@@ -1382,6 +1382,13 @@
   "slug": "toto-exclusief-speel-25-en-krijg-10-gratis-spins",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
+  "datum": "2026-09-30"
+ },
+ "toto-acties|verloopt-in-7u-18m": {
+  "status": "bestond al",
+  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
+  "score": 0.8,
+  "hash": "90aca53354397a52c154a471bd414953",
   "datum": "2026-09-30"
  }
 }
