@@ -15,7 +15,7 @@ OUT = os.path.join(HERE, "assets", "providers")
 # ---------- waarden ----------
 
 def nl_chip(status):
-    m = re.search(r"(\d+)\s+van\s+(\d+)", status or "")
+    m = re.search(r"(\d+)\s+van\s+(?:de\s+)?(\d+)", status or "")
     return f"{m.group(1)} van de {m.group(2)} NL-casino's" if m and int(m.group(1)) > 0 else None
 
 
