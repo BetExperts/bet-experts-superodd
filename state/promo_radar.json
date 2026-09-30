@@ -1330,12 +1330,6 @@
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-09-30"
  },
- "bet365|zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed|30-september-t-m-3-oktober": {
-  "status": "bestond al",
-  "cms": "Bet365: Sport Welkomstbonus | Stort €10 & ontvang tot €50 wedtegoed",
-  "score": 0.72,
-  "datum": "2026-09-30"
- },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
   "item_id": "6abd240f92ef18192a96e3dd",
@@ -1343,6 +1337,12 @@
   "slug": "hard-rock-casino-zet-20-in-en-krijg-20-live-casino-tegoed",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-09-30"
+ },
+ "bet365|zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed|30-september-t-m-3-oktober": {
+  "status": "bestond al",
+  "cms": "Bet365: 50.000 Spins-Verdeler (van 28 september t/m 4 oktober)",
+  "score": 0.64,
   "datum": "2026-09-30"
  }
 }
