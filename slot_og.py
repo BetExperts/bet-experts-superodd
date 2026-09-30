@@ -33,8 +33,11 @@ def _wf(path, method="GET", body=None):
                                data=json.dumps(body).encode() if body is not None else None,
                                headers={"Authorization": "Bearer " + os.environ["WEBFLOW_TOKEN"],
                                         "Content-Type": "application/json"})
-    with urllib.request.urlopen(r, timeout=120) as x:
-        return json.load(x) if method == "GET" else x.status
+    try:
+        with urllib.request.urlopen(r, timeout=120) as x:
+            return json.load(x) if method == "GET" else x.status
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Webflow {method} {path}: {e.code} {e.read()[:600].decode('utf-8', 'replace')}") from None
 
 
 def _all_items(cid):
@@ -55,7 +58,7 @@ def fmt_maxwin(v):
         return None
     if re.search(r"geen.*limiet", v, re.I):
         return "Geen limiet"
-    xs = re.findall(r"(\d{1,3}(?:\.\d{3})+|\d+)\s*x", v)
+    xs = re.findall(r"(\d{1,3}(?:\.\d{3})+|\d+)(?:,\d+)?\s*x", v)     # '9.395,5x' -> 9.395x
     if xs:
         best = max(xs, key=lambda s: int(s.replace(".", "")))
         return best + "x" + (" lijninzet" if "lijninzet" in v else "")
