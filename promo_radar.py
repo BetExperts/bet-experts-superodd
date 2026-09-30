@@ -416,6 +416,15 @@ def main():
                                   "slug": (j.get("fieldData") or {}).get("slug"), "check": v["reason"],
                                   "bron": v.get("detail_url"), "datum": str(date.today())}
             print(f"  ✔ {'LIVE ' if live else 'DRAFT'} {PROMO_BASE}{(j.get('fieldData') or {}).get('slug')}")
+            promo_txt = " ".join(str(fd.get(k) or "") for k in ("name", "bonus-tekst", "subtitel"))
+            if live and fd.get("geldig-voor") == C.GELDIG_CASINO and \
+                    re.search(r"toernooi|tournament|cash ?drop|drops ?(&|en|and) ?wins|prijzenpot|race\b|leaderboard|klassement", promo_txt, re.I):
+                try:                                           # grote casino-toernooien/cash drops -> @betexpertscasino
+                    import casino_telegram
+                    if casino_telegram.post_promo(j):
+                        print("    ✈ gepost in het casino-kanaal")
+                except Exception as ex:
+                    print(f"    ! casino-kanaal mislukt: {ex}")
             if live:
                 # Terugkerende actie op dezelfde slug: de 301 van de vorige (verwijderde) editie weghalen
                 try:

@@ -234,7 +234,21 @@ def publish(argv):
         save_state(st)
         slot_nl_check.main(["--write"])
         link_provider_reviews()
+        post_nieuwe_slots([x["slug"] for x in ready])
     log(f"klaar: {len(ready)} slots live")
+
+
+def post_nieuwe_slots(slugs):
+    """Nieuwe releases in het casino-kanaal (@betexpertscasino), met de verse deelafbeelding."""
+    import casino_telegram as T
+    provs = {p["id"]: p["fieldData"] for p in _all_items(PROVIDERS)}
+    items = {i["fieldData"]["slug"]: i for i in _all_items(SLOTS)}
+    for sl in slugs:
+        it = items.get(sl)
+        if it:
+            pf = provs.get(it["fieldData"].get("provider")) or {}
+            if T.post_slot(it, "nieuw", pf.get("name"), pf.get("slug")):
+                log(f"Telegram casino: nieuwe slot {it['fieldData']['name']} gepost")
 
 
 if __name__ == "__main__":

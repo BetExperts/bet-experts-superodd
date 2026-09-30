@@ -196,6 +196,18 @@ def main(argv):
     if rerender:                                   # status-pil op de deelafbeelding bijwerken
         import slot_og
         slot_og.main(rerender + ["--attach"])
+    # nieuwe slots die vandaag in NL live gingen: melden in het casino-kanaal
+    nu_live = [it["fieldData"]["slug"] for i, (it, new) in merged.items()
+               if new.get("status-nl") == opt[STATUS["ja"]] and name_of.get(it["fieldData"].get("status-nl")) in (STATUS["nee"], STATUS["binnenkort"])]
+    if nu_live:
+        import casino_telegram as T
+        provs = {p["id"]: p["fieldData"] for p in _all_items(PROVIDERS)}
+        fresh = {i["fieldData"]["slug"]: i for i in _all_items(SLOTS)}
+        for sl in nu_live:
+            it = fresh.get(sl)
+            pf = provs.get(it["fieldData"].get("provider")) or {}
+            if T.post_slot(it, "live_nl", pf.get("name"), pf.get("slug")):
+                print(f"Telegram casino: {it['fieldData']['name']} nu live in NL gepost")
 
 
 if __name__ == "__main__":

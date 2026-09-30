@@ -1,23 +1,27 @@
 # -*- coding: utf-8 -*-
-"""Welkomstbonus van de dag: elke dag één sport-welkomstbonus uitlichten in Telegram.
+"""Welkomstbonus van de dag: elke dag één sport- of casino-welkomstbonus uitlichten in Telegram.
 
-Bron: de live sport-welkomstbonussen in de Promoties-CMS ('<Bookmaker>: Sport Welkomstbonus | ...').
+Bron: de live welkomstbonussen in de Promoties-CMS ('<Bookmaker>: Sport/Casino Welkomstbonus | ...').
+Sport -> @BetExpertsGroup, casino (--soort casino) -> @betexpertscasino.
 Willekeurige keuze, maar pas een bookmaker herhalen als alle bookmakers een keer geweest zijn
 (en nooit twee dagen achter elkaar dezelfde). Knoppen: onze welkomstbonus-review + bookmaker-review.
 
   python3 welkomstbonus_dag.py --dry        # laat zien wat er gepost zou worden
   python3 welkomstbonus_dag.py --post       # posten (max. 1x per dag)
   python3 welkomstbonus_dag.py --post --test  # naar de testchat
+  python3 welkomstbonus_dag.py --post --soort casino --vanaf 12   # casino-welkomstbonus van de dag
 """
 import os, sys, json, time, html, random, socket, argparse
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import requests
-from so_config import WEBFLOW_TOKEN, WF_API, PROMO_BASE, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL, TELEGRAM_TEST_CHAT
+from so_config import WEBFLOW_TOKEN, WF_API, PROMO_BASE, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL, TELEGRAM_TEST_CHAT, TELEGRAM_CASINO_CHANNEL
 import pr_config as C
 
 NL = ZoneInfo("Europe/Amsterdam")
-STATE = "state/welkomstbonus_dag.json"
+STATE = "state/welkomstbonus_dag.json"          # sport (casino: state/welkomstbonus_dag_casino.json)
+SOORT = {"sport": {"geldig": C.GELDIG_SPORT, "naam": "sport welkomstbonus", "icoon": "⚽", "state": STATE},
+         "casino": {"geldig": C.GELDIG_CASINO, "naam": "casino welkomstbonus", "icoon": "🎰", "state": "state/welkomstbonus_dag_casino.json"}}
 POST_UREN = range(9, 22)          # na het wakker worden van de Mac niet 's nachts nog posten
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."
 
@@ -35,18 +39,22 @@ def all_items(coll):
             return out
         off += 100
 
-def kandidaten():
-    books = {b["id"]: b["fieldData"] for b in all_items(C.BOOKMAKERS_COLL)}
+def kandidaten(soort="sport"):
+    S = SOORT[soort]
+    books = {b["id"]: b["fieldData"] for b in all_items(C.BOOKMAKERS_COLL)
+             if not b.get("isDraft") and not b.get("isArchived")}          # draft-bookmakers nooit uitlichten
     out = []
     for it in all_items(C.PROMOTIES):
         f = it["fieldData"]
         if it.get("isDraft") or it.get("isArchived") or not it.get("lastPublished"):
             continue
-        if not f.get("welkomstbonus-promotie") or f.get("geldig-voor") != C.GELDIG_SPORT:
+        if not f.get("welkomstbonus-promotie") or f.get("geldig-voor") != S["geldig"]:
             continue
-        if "sport welkomstbonus" not in (f.get("name") or "").lower():
-            continue      # geen 100x-acties, no-deposit of seizoenkaart: alleen de echte sport-welkomstbonus
-        b = books.get(f.get("bookmaker-3")) or {}
+        if S["naam"] not in (f.get("name") or "").lower():
+            continue      # geen 100x-acties, no-deposit of seizoenkaart: alleen de echte sport-/casino-welkomstbonus
+        if f.get("bookmaker-3") not in books:
+            continue
+        b = books[f["bookmaker-3"]]
         out.append({"slug": f["slug"], "book_id": f.get("bookmaker-3"), "book": f["name"].split(":")[0].strip() if ":" in f["name"] else b.get("name"),
                     "review": b.get("review-pagina"), "f": f})
     return out
@@ -67,10 +75,10 @@ def kies(cands, st):
         opties = [c for c in opties if c["slug"] != st.get("laatste_slug", {}).get(book)] or opties
     return random.choice(opties), gehad + [book]
 
-def caption(c):
+def caption(c, soort="sport"):
     f = {k: html.escape(v, quote=False) if isinstance(v, str) else v for k, v in c["f"].items()}
     bonus = f["name"].split("|", 1)[1].strip() if "|" in f["name"] else (f.get("bonus-tekst") or "")
-    lines = [f"🎁 <b>Welkomstbonus van de dag: {html.escape(c['book'])}</b>", "", f"⚽ <b>{bonus}</b>"]
+    lines = [f"🎁 <b>Welkomstbonus van de dag: {html.escape(c['book'])}</b>", "", f"{SOORT[soort]['icoon']} <b>{bonus}</b>"]
     if f.get("subtitel"):
         lines.append(f.get("subtitel"))
     checks = [f.get(k) for k in ("check-1", "check-2", "check-3") if f.get(k)]
@@ -83,8 +91,8 @@ def caption(c):
     lines += [""] + extra + ["", "👇 Lees in onze review hoe je de bonus claimt en waar je op moet letten.", "", f"<i>{DISCLAIMER}</i>"]
     return "\n".join(lines)
 
-def send(text, c, test=False):
-    chat = TELEGRAM_TEST_CHAT if test else TELEGRAM_CHANNEL
+def send(text, c, test=False, soort="sport"):
+    chat = TELEGRAM_TEST_CHAT if test else (TELEGRAM_CASINO_CHANNEL if soort == "casino" else TELEGRAM_CHANNEL)
     if not TELEGRAM_BOT_TOKEN or not chat:
         print("  · Telegram overgeslagen (token/chat ontbreekt)."); return False
     kb = [[{"text": "📖 Lees de welkomstbonus review →", "url": PROMO_BASE + c["slug"]}]]
@@ -109,11 +117,13 @@ def main():
     ap.add_argument("--dry", action="store_true"); ap.add_argument("--post", action="store_true")
     ap.add_argument("--test", action="store_true"); ap.add_argument("--force", action="store_true", help="ook als er vandaag al gepost is")
     ap.add_argument("--vanaf", type=int, default=POST_UREN.start, help="niet posten vóór dit uur (NL-tijd); GitHub-cron draait in UTC")
+    ap.add_argument("--soort", choices=list(SOORT), default="sport")
     a = ap.parse_args()
+    state_file = SOORT[a.soort]["state"]
     now = datetime.now(NL)
-    print(f"== Welkomstbonus van de dag — {now:%Y-%m-%d %H:%M} ==")
+    print(f"== Welkomstbonus van de dag ({a.soort}) — {now:%Y-%m-%d %H:%M} ==")
     try:
-        st = json.load(open(STATE, encoding="utf-8"))
+        st = json.load(open(state_file, encoding="utf-8"))
     except Exception:
         st = {}
     today = f"{now:%Y-%m-%d}"
@@ -124,16 +134,16 @@ def main():
             print(f"  · Buiten posttijden ({now:%H:%M}) — morgen weer."); return
     if not wacht_op_netwerk():
         print("  ! Geen netwerk — overgeslagen."); sys.exit(2)
-    cands = kandidaten()
+    cands = kandidaten(a.soort)
     if not cands:
-        print("  ! Geen sport-welkomstbonussen gevonden."); return
+        print(f"  ! Geen {a.soort}-welkomstbonussen gevonden."); return
     c, gehad = kies(cands, st)
-    text = caption(c)
+    text = caption(c, a.soort)
     print(f"  Gekozen: {c['book']} — {c['slug']}  ({len(gehad)}/{len({x['book_id'] for x in cands})} bookmakers deze ronde)\n")
     print(text)
     if a.dry or not a.post:
         return
-    if send(text, c, test=a.test):
+    if send(text, c, test=a.test, soort=a.soort):
         print("  ✔ Telegram verstuurd.")
         if not a.test:
             st.update({"datum": today, "gehad": gehad, "laatste_book": c["book_id"],
@@ -141,7 +151,7 @@ def main():
             st.setdefault("historie", []).append({"datum": today, "book": c["book"], "slug": c["slug"]})
             st["historie"] = st["historie"][-60:]
             os.makedirs("state", exist_ok=True)
-            json.dump(st, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+            json.dump(st, open(state_file, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
     main()

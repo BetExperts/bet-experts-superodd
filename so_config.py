@@ -35,6 +35,7 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 # Doelkanaal: @username of numeriek -100... id. Default = het echte kanaal.
 TELEGRAM_CHANNEL   = os.environ.get("TELEGRAM_CHANNEL") or "@BetExpertsGroup"
 # Aparte testbestemming (je eigen user-id of testkanaal) voor --test.
+TELEGRAM_CASINO_CHANNEL = os.environ.get("TELEGRAM_CASINO_CHANNEL") or "@betexpertscasino"   # casino-kanaal
 TELEGRAM_TEST_CHAT = os.environ.get("TELEGRAM_TEST_CHAT", "").strip()
 
 # Disclaimer (verplicht, KSA)
