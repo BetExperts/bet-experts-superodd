@@ -786,11 +786,6 @@
   "bron": null,
   "datum": "2026-09-24"
  },
- "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
-  "status": "verwijderd",
-  "reden": "welkomstbonus (beheer je zelf)",
-  "datum": "2026-09-24"
- },
  "betmgm|live-casino-250-cash-en-20-reward-games|altijd-geldig": {
   "status": "verwijderd",
   "reden": "welkomstbonus (beheer je zelf)",
@@ -1167,7 +1162,7 @@
   "status": "bestond al",
   "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
   "score": 0.84,
-  "hash": "baf90b81cae8171f9cfb1fb67f6d48ba",
+  "hash": "28265b802baf0aabbfb58d10c1b7dce8",
   "datum": "2026-09-28"
  },
  "toto-acties|nfl-verdien-een-5-gratis-weddenschap": {
@@ -1250,23 +1245,9 @@
   "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
   "datum": "2026-09-24"
  },
- "toto-acties|verloopt-in-14u-51m": {
-  "status": "bestond al",
-  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
-  "score": 0.56,
-  "hash": "d2696cdac6d40790f9d7c8c5bf602aca",
-  "datum": "2026-09-29"
- },
  "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|28-september-t-m-1-oktober": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
- },
- "toto-acties|verloopt-in-12u-17m": {
-  "status": "bestond al",
-  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
-  "score": 0.56,
-  "hash": "3b26bab96334cd1d03cab25445123af6",
-  "datum": "2026-09-29"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|29-september-t-m-5-oktober": {
   "status": "live",
@@ -1295,13 +1276,6 @@
   "bron": "https://www.711.nl/promoties/loyaliteitsprogramma",
   "datum": "2026-09-29"
  },
- "toto-acties|verloopt-in-9u-17m": {
-  "status": "bestond al",
-  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
-  "score": 0.6,
-  "hash": "6623949e217d511746aad4408a258f6b",
-  "datum": "2026-09-29"
- },
  "bet365|bet365-50-000-spins-verdeler|28-september-t-m-4-oktober": {
   "status": "draft",
   "item_id": "6abbb20f1311a883512cbb78",
@@ -1321,27 +1295,6 @@
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
  },
- "toto-acties|verloopt-in-5u-17m": {
-  "status": "bestond al",
-  "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
-  "score": 0.6,
-  "hash": "6f9360b51b6f837fcffe6a270817afb1",
-  "datum": "2026-09-29"
- },
- "toto-acties|verloopt-in-13u-18m": {
-  "status": "bestond al",
-  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
-  "score": 0.78,
-  "hash": "815322992bcc6c056b863cab6ce11274",
-  "datum": "2026-09-30"
- },
- "toto-acties|verloopt-in-15u-17m": {
-  "status": "bestond al",
-  "cms": "TOTO: NFL – zet €10 in en krijg een €5 gratis weddenschap",
-  "score": 0.8,
-  "hash": "cd072f51055ee3cc3def00afd324d998",
-  "datum": "2026-09-30"
- },
  "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
@@ -1349,13 +1302,6 @@
  "toto|toto-exclusief-zet-25-in-en-krijg-10-free-spins|iedere-woensdag-en-donderdag": {
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
- },
- "toto-acties|verloopt-in-10u-18m": {
-  "status": "bestond al",
-  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
-  "score": 0.78,
-  "hash": "6dd35f533294d3df16002b7e6fb5fef4",
-  "datum": "2026-09-30"
  },
  "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-30-september": {
   "status": "draft",
@@ -1384,11 +1330,19 @@
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-09-30"
  },
- "toto-acties|verloopt-in-7u-18m": {
+ "bet365|zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed|30-september-t-m-3-oktober": {
   "status": "bestond al",
-  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
-  "score": 0.8,
-  "hash": "90aca53354397a52c154a471bd414953",
+  "cms": "Bet365: Sport Welkomstbonus | Stort €10 & ontvang tot €50 wedtegoed",
+  "score": 0.72,
+  "datum": "2026-09-30"
+ },
+ "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6abd240f92ef18192a96e3dd",
+  "hash": null,
+  "slug": "hard-rock-casino-zet-20-in-en-krijg-20-live-casino-tegoed",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-09-30"
  }
 }
