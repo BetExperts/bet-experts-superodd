@@ -844,12 +844,14 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-09-30",
-   "slot": null
+   "slot": "Immortal Romance Assembl’Em"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
-  "status": "einddatum",
-  "item_id": "6ab541d1ce0b67ef50fe4994"
+  "status": "verwijderd",
+  "item_id": "6ab541d1ce0b67ef50fe4994",
+  "reden": "verlopen",
+  "verwijderd": "2026-09-30"
  },
  "handmatig|starcasino-pragmatic-play-toernooi-5000": {
   "status": "verwijderd",
@@ -1165,7 +1167,7 @@
   "status": "bestond al",
   "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
   "score": 0.84,
-  "hash": "28265b802baf0aabbfb58d10c1b7dce8",
+  "hash": "baf90b81cae8171f9cfb1fb67f6d48ba",
   "datum": "2026-09-28"
  },
  "toto-acties|nfl-verdien-een-5-gratis-weddenschap": {
@@ -1325,5 +1327,19 @@
   "score": 0.6,
   "hash": "6f9360b51b6f837fcffe6a270817afb1",
   "datum": "2026-09-29"
+ },
+ "toto-acties|verloopt-in-13u-18m": {
+  "status": "bestond al",
+  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
+  "score": 0.78,
+  "hash": "815322992bcc6c056b863cab6ce11274",
+  "datum": "2026-09-30"
+ },
+ "toto-acties|verloopt-in-15u-17m": {
+  "status": "bestond al",
+  "cms": "TOTO: NFL – zet €10 in en krijg een €5 gratis weddenschap",
+  "score": 0.8,
+  "hash": "cd072f51055ee3cc3def00afd324d998",
+  "datum": "2026-09-30"
  }
 }
