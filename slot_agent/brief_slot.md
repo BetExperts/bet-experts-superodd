@@ -40,3 +40,9 @@ De officiële spelinfo van de provider eerst (gamepagina, factsheet, persbericht
 - `bronnen`: alle gebruikte URLs.
 
 Toon en opbouw: zie het voorbeeld hieronder (bestaande review op de site).
+
+## Output (agents in de Claude Code-chat)
+Je krijgt een of meer items uit `worklist.json` (naam, provider, release, AboutSlots-url, `provider_in_cms` + `provider_nl_status`, `nl_casinos_gevonden` = onze eigen NL-check, `demo`, `output`). Schrijf per slot één JSON-object naar het pad in `output` met deze velden:
+`komt_naar_nl` (bool), `nl_zekerheid` ("bevestigd"/"waarschijnlijk"/null), `reden_niet_nl` (bij false), `provider` (exact de naam uit `providers_in_cms.json` als hij daar staat, anders de officiële naam + `provider_nieuw: true`), `naam`, `officiele_naam`, `slug`, `seo_titel`, `meta_omschrijving`, `intro`, `rtp`, `rtp_versies`, `volatiliteit`, `max_winst`, `raster`, `winlijnen`, `inzet`, `releasedatum`, `review_html`, `bonusfuncties_html`, `pluspunten`, `minpunten`, `faq` (4 × {vraag, antwoord}), `vergelijkbare_slots` (namen uit `alle_slotnamen.json` in dezelfde map), `deelregel`, `nl_verwacht`, `bronnen`.
+Bij `komt_naar_nl: false` volstaan `komt_naar_nl`, `reden_niet_nl`, `provider`, `naam` en `bronnen`.
+Controleer zelf: geldige JSON, review 1.200-1.800 woorden, geen – of — als gedachtestreepje, NL-beschikbaarheid niet genoemd in de teksten, en de 8-woordcheck: `cd /Users/jaspervandenboogaard/bet-experts/superodd-agent && .venv/bin/python slot_agent/plagcheck.py <jouw json in een lijst>` (verwacht een lijst van items; max. overlap onder 3%).
