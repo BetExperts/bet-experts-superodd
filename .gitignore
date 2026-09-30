@@ -5,3 +5,4 @@ preview/
 .env
 logs/
 .DS_Store
+state/slot_agent_runs/
