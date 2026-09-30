@@ -171,7 +171,19 @@ def main(argv):
     live = "--publish" in argv
     for i in range(0, len(rows_new), 25):
         path = f"/collections/{SLOTS}/items" + ("/live" if live else "")
-        print("POST", _wf(path, "POST", {"items": rows_new[i:i + 25]}))
+        batch = rows_new[i:i + 25]
+        for _ in range(5):
+            try:
+                print("POST", _wf(path, "POST", {"items": batch}))
+                break
+            except RuntimeError as e:                      # Webflow kan een externe afbeelding soms niet importeren
+                m = re.search(r"request to (\S+) failed", str(e))
+                if not m:
+                    raise
+                for row in batch:
+                    for k in [k for k, v in row["fieldData"].items() if isinstance(v, dict) and v.get("url") == m.group(1)]:
+                        print(f"   ! afbeelding niet te importeren, weggelaten: {row['fieldData']['name']} ({k})")
+                        row["fieldData"].pop(k)
     for i in range(0, len(rows_upd), 25):
         print("PATCH", _wf(f"/collections/{SLOTS}/items", "PATCH", {"items": rows_upd[i:i + 25]}))
     # vergelijkbare slots pas nu (nieuwe items hebben dan een id)
