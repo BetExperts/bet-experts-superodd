@@ -1,17 +1,24 @@
 {
-  "datum": "2026-09-30",
+  "datum": "2026-10-01",
   "gehad": [
-    "682b116bb82996896cb52d5d"
+    "682b116bb82996896cb52d5d",
+    "67c9acaf7db0b29e5b03370d"
   ],
-  "laatste_book": "682b116bb82996896cb52d5d",
+  "laatste_book": "67c9acaf7db0b29e5b03370d",
   "laatste_slug": {
-    "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins"
+    "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
+    "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots"
   },
   "historie": [
     {
       "datum": "2026-09-30",
       "book": "Tonybet",
       "slug": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins"
+    },
+    {
+      "datum": "2026-10-01",
+      "book": "Vbet",
+      "slug": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots"
     }
   ]
 }
