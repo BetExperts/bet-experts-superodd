@@ -866,7 +866,7 @@
  "starcasino|win-en-get-nations-league": {
   "status": "bron-handmatig",
   "item_id": "6ab541d1ce0b67ef50fe4994",
-  "hash": "cdb804e53bc8fa03b033ace0330d2279"
+  "hash": "4c5b808a4997a0acf0424d28b8d303f8"
  },
  "starcasino|5-000-pragmatic-play-toernooi": {
   "status": "bron-handmatig",
@@ -928,6 +928,11 @@
    "slug": "circus-pak-willekeurig-geldprijzen",
    "name": "Circus: Pak willekeurig geldprijzen",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d1ce0b67ef50fe4994": {
+   "name": "Starcasino: Win & Get Nations League",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/winandgetnationsleague"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1416,7 +1421,7 @@
   "datum": "2026-10-01"
  },
  "toto-acties|toto-s-missies-missie-1-van-3": {
-  "status": "live",
+  "status": "einddatum",
   "item_id": "6abe2b2ce25f9cd71dc4292d",
   "hash": "8c02cfa2fcff205a72dbcec0a245871b",
   "slug": "toto-toto-s-missies-missie-1-van-3",
@@ -1454,7 +1459,7 @@
   "datum": "2026-09-24"
  },
  "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-oktober-t-m-7-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6abe555b3a2916ab15e3b007",
   "hash": null,
   "slug": "leovegas-elke-dag-een-nieuwe-interessante-bonus",
@@ -1481,7 +1486,7 @@
   "datum": "2026-10-01"
  },
  "hard-rock|prize-drop-bij-hard-rock-casino|1-oktober-t-m-7-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6abe55736e171d21adf94743",
   "hash": null,
   "slug": "hard-rock-casino-prize-drop",
@@ -1514,6 +1519,16 @@
   "slug": "circus-circus-nl-roulette-toernooi-win-een-deel-van-10-000",
   "check": "2/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-10-01"
+ },
+ "toto|toto-viert-feest-en-jij-pakt-extra-voordeel|1-oktober-en-2-oktober": {
+  "status": "overgeslagen",
+  "reden": "TOTO komt via de directe bron toto.nl/acties"
+ },
+ "toto|verdien-tot-wel-80-free-spins-met-totos-missies|1-oktober-t-m-5-oktober": {
+  "status": "bestond al",
+  "cms": "TOTO: TOTO's Missies – verdien tot 80 free spins (van 1 oktober t/m 5 oktober)",
+  "score": 0.96,
   "datum": "2026-10-01"
  }
 }
