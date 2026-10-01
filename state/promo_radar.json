@@ -1239,22 +1239,6 @@
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-09-28"
  },
- "comeon|toernooien-bij-comeon|24-september-t-m-5-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3976e8d6a8bda4ce31",
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-24"
- },
- "888|toernooien-bij-888|24-september-t-m-5-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3acb059f721b3e2095",
-  "slug": "888-toernooien",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
-  "datum": "2026-09-24"
- },
  "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|28-september-t-m-1-oktober": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
@@ -1438,6 +1422,95 @@
   "slug": "toto-toto-s-missies-missie-1-van-3",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-01"
+ },
+ "handmatig|oranje-palace-bet-builder-griekenland-nederland": {
+  "status": "einddatum",
+  "item_id": "6abe2b91ac8e44c4f27a72ef",
+  "slug": "oranje-palace-bet-builder-griekenland-nederland-5-free-bet",
+  "bron": "mail Oranje Palace 01-10",
+  "datum": "2026-10-01"
+ },
+ "circus|circus-nl-roulette-toernooi-win-een-deel-van-10-000|1-oktober-t-m-4-oktober": {
+  "status": "bestond al",
+  "cms": "Circus: €5.000 Pragmatic Play toernooi (van 29 september t/m 5 oktober)",
+  "score": 0.58,
+  "datum": "2026-10-01"
+ },
+ "comeon|toernooien-bij-comeon|25-september-t-m-7-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3976e8d6a8bda4ce31",
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-24"
+ },
+ "oranje-palace|wed-10-op-de-nations-league-en-pak-5-free-bet|1-oktober-t-m-4-oktober": {
+  "status": "bestond al",
+  "cms": "Oranje Palace: Maak een Bet Builder op Griekenland – Nederland en pak een €5 Free Bet",
+  "score": 0.65,
+  "datum": "2026-10-01"
+ },
+ "888|toernooien-bij-888|25-september-t-m-7-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3acb059f721b3e2095",
+  "slug": "888-toernooien",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
+  "datum": "2026-09-24"
+ },
+ "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-oktober-t-m-7-oktober": {
+  "status": "draft",
+  "item_id": "6abe555b3a2916ab15e3b007",
+  "hash": null,
+  "slug": "leovegas-elke-dag-een-nieuwe-interessante-bonus",
+  "check": "geen getallen; tekstoverlap",
+  "bron": "https://www.leovegas.nl/promoties/free-spin-festival",
+  "datum": "2026-10-01"
+ },
+ "circus|prize-drops-bij-circus-nl-op-gates-of-olympus-2500|1-oktober-t-m-7-oktober": {
+  "status": "live",
+  "item_id": "6abe555d62786a50db2c9e9a",
+  "hash": null,
+  "slug": "circus-prize-drops-op-gates-of-olympus-2500",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/gates2500-network-promo-nl",
+  "datum": "2026-10-01"
+ },
+ "betmgm|doe-mee-met-de-betmgm-bonusweek|1-oktober-t-m-7-oktober": {
+  "status": "live",
+  "item_id": "6abe55682511f85c2d957764",
+  "hash": null,
+  "slug": "betmgm-doe-mee-met-de-betmgm-bonusweek",
+  "check": "geen getallen; tekstoverlap",
+  "bron": "https://www.betmgm.nl/campaigns/bonus-week",
+  "datum": "2026-10-01"
+ },
+ "hard-rock|prize-drop-bij-hard-rock-casino|1-oktober-t-m-7-oktober": {
+  "status": "draft",
+  "item_id": "6abe55736e171d21adf94743",
+  "hash": null,
+  "slug": "hard-rock-casino-prize-drop",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-01"
+ },
+ "hard-rock|stortingsbonus-tot-170-free-spins|1-oktober-t-m-6-oktober": {
+  "status": "live",
+  "item_id": "6abe5574de270322cc52eed0",
+  "hash": null,
+  "slug": "hard-rock-casino-stortingsbonus-tot-170-free-spins",
+  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-01"
+ },
+ "jacks.nl|maak-kans-op-een-deel-van-de-500-prijzenpot|1-oktober-t-m-31-oktober": {
+  "status": "draft",
+  "item_id": "6abe557f9f37cb9bc41f1ef1",
+  "hash": null,
+  "slug": "jacks-nl-maak-kans-op-een-deel-van-de-500-prijzenpot",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-10-01"
  }
 }
