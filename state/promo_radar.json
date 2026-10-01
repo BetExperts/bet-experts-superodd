@@ -1431,12 +1431,6 @@
   "bron": "mail Oranje Palace 01-10",
   "datum": "2026-10-01"
  },
- "circus|circus-nl-roulette-toernooi-win-een-deel-van-10-000|1-oktober-t-m-4-oktober": {
-  "status": "bestond al",
-  "cms": "Circus: €5.000 Pragmatic Play toernooi (van 29 september t/m 5 oktober)",
-  "score": 0.58,
-  "datum": "2026-10-01"
- },
  "comeon|toernooien-bij-comeon|25-september-t-m-7-oktober": {
   "status": "live",
   "item_id": "6ab50f3976e8d6a8bda4ce31",
@@ -1511,6 +1505,15 @@
   "slug": "jacks-nl-maak-kans-op-een-deel-van-de-500-prijzenpot",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-10-01"
+ },
+ "circus|circus-nl-roulette-toernooi-win-een-deel-van-10-000|1-oktober-t-m-4-oktober": {
+  "status": "live",
+  "item_id": "6abe56d12119bb6f26efa49e",
+  "hash": null,
+  "slug": "circus-circus-nl-roulette-toernooi-win-een-deel-van-10-000",
+  "check": "2/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-01"
  }
 }
