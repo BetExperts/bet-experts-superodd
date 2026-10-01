@@ -583,20 +583,24 @@
   "datum": "2026-09-24"
  },
  "711|20-procent-extra-tegoed-boven-je-storting-tot-maximaal-200|1-september-t-m-30-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f54dfd7249e0b442736",
   "slug": "711-20-procent-extra-tegoed-boven-je-storting-tot-maximaal-200",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-01"
  },
  "711|multiplier-drops-bij-711-10-000-prijzen|1-september-t-m-30-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f56dfd7249e0b442813",
   "slug": "711-multiplier-drops-10-000-prijzen",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/711-multiplier-drops-pragmatic-play-september",
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-01"
  },
  "vbet|draai-aan-het-lucky-wheel-bij-vbet|28-augustus-t-m-12-oktober": {
   "status": "live",
@@ -919,6 +923,11 @@
    "slug": "starcasino-1-000-sport-toernooi",
    "name": "Starcasino: €1.000 Sport Toernooi (van 28 september t/m 4 oktober)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6abcd974a113ed323bb5de97": {
+   "slug": "circus-pak-willekeurig-geldprijzen",
+   "name": "Circus: Pak willekeurig geldprijzen",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -961,13 +970,15 @@
   "verwijderd": "2026-09-28"
  },
  "vbet|vbet-winmissies-verdien-tot-720-free-spins|25-september-t-m-30-september": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab62d5bc4913869c0a6059f",
   "hash": null,
   "slug": "vbet-winmissies-verdien-tot-720-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-25"
+  "datum": "2026-09-25",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-01"
  },
  "vbet|elk-weekend-10-gratis-spins-bij-vbet|iedere-vr-za-zo": {
   "status": "live",
@@ -1162,7 +1173,7 @@
   "status": "bestond al",
   "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
   "score": 0.84,
-  "hash": "28265b802baf0aabbfb58d10c1b7dce8",
+  "hash": "baf90b81cae8171f9cfb1fb67f6d48ba",
   "datum": "2026-09-28"
  },
  "toto-acties|nfl-verdien-een-5-gratis-weddenschap": {
