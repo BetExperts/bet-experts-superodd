@@ -1,13 +1,18 @@
 {
-  "datum": "2026-09-30",
+  "datum": "2026-10-01",
   "gehad": [
-    "le-pharaoh"
+    "le-pharaoh",
+    "big-bass-blast"
   ],
-  "laatste_provider": "6abbe2aee1f746b71466932c",
+  "laatste_provider": "6abbe25ab4601a817a2663b7",
   "historie": [
     {
       "datum": "2026-09-30",
       "slot": "le-pharaoh"
+    },
+    {
+      "datum": "2026-10-01",
+      "slot": "big-bass-blast"
     }
   ]
 }
