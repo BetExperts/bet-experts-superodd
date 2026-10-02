@@ -1324,13 +1324,10 @@
   "datum": "2026-09-30"
  },
  "toto-acties|toto-exclusief-speel-25-en-krijg-10-gratis-spins": {
-  "status": "live",
-  "item_id": "6abcd976a13ac908f226783e",
-  "hash": "6089950ffbc0ef7b51a2bb69f2b4495d",
-  "slug": "toto-exclusief-speel-25-en-krijg-10-gratis-spins",
-  "check": "bron: toto.nl/acties",
-  "bron": "https://www.toto.nl/acties",
-  "datum": "2026-09-30"
+  "status": "bestond al",
+  "cms": "TOTO Exclusief (wekelijks, RECURRING)",
+  "item_id": "6ab53f21ed7e65c979c56788",
+  "datum": "2026-10-02"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
