@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-01",
+  "datum": "2026-10-02",
   "gehad": [
     "669ab9f5aceb8b717cea24c3",
     "66bb685ec057aa8c4337ceea",
@@ -7,9 +7,10 @@
     "66a24463b6de25483eec85e9",
     "6a7afdaa4a7453c17d31cab5",
     "64ff0fbd5a8f205b05d5465c",
-    "67c9acaf7db0b29e5b03370d"
+    "67c9acaf7db0b29e5b03370d",
+    "64ff0fbd5a8f205b05d54687"
   ],
-  "laatste_book": "67c9acaf7db0b29e5b03370d",
+  "laatste_book": "64ff0fbd5a8f205b05d54687",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -17,7 +18,8 @@
     "66a24463b6de25483eec85e9": "welkomstbonus-comeon-sport",
     "6a7afdaa4a7453c17d31cab5": "starcasino-sport-welkomstbonus-scoor-een-eu80-free-bet",
     "64ff0fbd5a8f205b05d5465c": "jacks-nl-wed-eu10-krijg-eu50",
-    "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-eu55-free-bets-bij-eu10-inzet"
+    "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-eu55-free-bets-bij-eu10-inzet",
+    "64ff0fbd5a8f205b05d54687": "unibet-welkomstbonus"
   },
   "historie": [
     {
@@ -54,6 +56,11 @@
       "datum": "2026-10-01",
       "book": "Vbet",
       "slug": "vbet-welkomstbonus-eu55-free-bets-bij-eu10-inzet"
+    },
+    {
+      "datum": "2026-10-02",
+      "book": "Unibet",
+      "slug": "unibet-welkomstbonus"
     }
   ]
 }
