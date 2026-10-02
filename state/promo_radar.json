@@ -842,8 +842,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-09-30",
-   "slot": "Immortal Romance Assembl’Em"
+   "start": "2026-10-07",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -933,6 +933,11 @@
    "name": "Starcasino: Win & Get Nations League",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/winandgetnationsleague"
+  },
+  "6abcd976a13ac908f226783e": {
+   "slug": "toto-exclusief-speel-25-en-krijg-10-gratis-spins",
+   "name": "TOTO: Exclusief! Speel €25 en krijg 10 Gratis Spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -946,13 +951,15 @@
   "reden": "kalenderdata onjuist (voorwaarden van andere actie), 25-09"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-3-000|25-september-t-m-1-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab62d5709fbc5725a086068",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-3-000",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-25"
+  "datum": "2026-09-25",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-02"
  },
  "one|onecasino-spins-royale-toernooi|23-september-t-m-2-oktober": {
   "status": "live",
@@ -1430,33 +1437,19 @@
   "datum": "2026-10-01"
  },
  "handmatig|oranje-palace-bet-builder-griekenland-nederland": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6abe2b91ac8e44c4f27a72ef",
   "slug": "oranje-palace-bet-builder-griekenland-nederland-5-free-bet",
   "bron": "mail Oranje Palace 01-10",
-  "datum": "2026-10-01"
- },
- "comeon|toernooien-bij-comeon|25-september-t-m-7-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3976e8d6a8bda4ce31",
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-10-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-02"
  },
  "oranje-palace|wed-10-op-de-nations-league-en-pak-5-free-bet|1-oktober-t-m-4-oktober": {
   "status": "bestond al",
   "cms": "Oranje Palace: Maak een Bet Builder op Griekenland – Nederland en pak een €5 Free Bet",
   "score": 0.65,
   "datum": "2026-10-01"
- },
- "888|toernooien-bij-888|25-september-t-m-7-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3acb059f721b3e2095",
-  "slug": "888-toernooien",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
-  "datum": "2026-09-24"
  },
  "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-oktober-t-m-7-oktober": {
   "status": "live",
@@ -1530,5 +1523,21 @@
   "cms": "TOTO: TOTO's Missies – verdien tot 80 free spins (van 1 oktober t/m 5 oktober)",
   "score": 0.96,
   "datum": "2026-10-01"
+ },
+ "comeon|toernooien-bij-comeon|27-september-t-m-8-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3976e8d6a8bda4ce31",
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-24"
+ },
+ "888|toernooien-bij-888|25-september-t-m-8-oktober": {
+  "status": "live",
+  "item_id": "6ab50f3acb059f721b3e2095",
+  "slug": "888-toernooien",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
+  "datum": "2026-09-24"
  }
 }
