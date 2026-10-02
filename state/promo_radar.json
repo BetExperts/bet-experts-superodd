@@ -1581,5 +1581,14 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-10-02"
+ },
+ "circus|voltooi-de-missie-om-free-bets-en-spins-te-pakken|2-oktober-t-m-6-oktober": {
+  "status": "live",
+  "item_id": "6abfdf00122260e26cd33102",
+  "hash": null,
+  "slug": "circus-voltooi-de-missie-om-free-bets-en-spins-te-pakken",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/international-builder-nl-card",
+  "datum": "2026-10-02"
  }
 }
