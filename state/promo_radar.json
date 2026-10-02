@@ -1536,5 +1536,41 @@
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
   "datum": "2026-09-24"
+ },
+ "toto|win-met-lucky-numbers-bij-toto-lightning-roulette|1-oktober-t-m-3-oktober": {
+  "status": "draft",
+  "item_id": "6abf7c65fb5922bf46a7a653",
+  "hash": null,
+  "slug": "toto-win-met-lucky-numbers-lightning-roulette",
+  "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-02"
+ },
+ "starcasino|le-missie": {
+  "status": "live",
+  "item_id": "6abf7c67334bd533bade0d12",
+  "hash": "b5e4bf16635369865a7917403b8f740c",
+  "slug": "starcasino-le-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-02"
+ },
+ "toto-acties|lucky-number-7-bij-toto-lightning-roulette": {
+  "status": "live",
+  "item_id": "6abf7c7265e04f7be76547f8",
+  "hash": "3e924e80d747d7734077eae7f0be6eec",
+  "slug": "toto-lucky-number-7-lightning-roulette",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-02"
+ },
+ "toto-acties|toto-score-6-speel-gratis-mee-en-win-tot-25-000": {
+  "status": "live",
+  "item_id": "6abf7c7dd436fa75cbe66931",
+  "hash": "3b6d8ab3929f62d85bf583c269e93cb5",
+  "slug": "toto-score-6-speel-gratis-mee-en-win-tot-25-000",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-02"
  }
 }
