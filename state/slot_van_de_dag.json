@@ -1,10 +1,11 @@
 {
-  "datum": "2026-10-01",
+  "datum": "2026-10-02",
   "gehad": [
     "le-pharaoh",
-    "big-bass-blast"
+    "big-bass-blast",
+    "le-santa"
   ],
-  "laatste_provider": "6abbe25ab4601a817a2663b7",
+  "laatste_provider": "6abbe2aee1f746b71466932c",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -13,6 +14,10 @@
     {
       "datum": "2026-10-01",
       "slot": "big-bass-blast"
+    },
+    {
+      "datum": "2026-10-02",
+      "slot": "le-santa"
     }
   ]
 }
