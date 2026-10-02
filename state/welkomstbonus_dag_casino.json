@@ -1,13 +1,15 @@
 {
-  "datum": "2026-10-01",
+  "datum": "2026-10-02",
   "gehad": [
     "682b116bb82996896cb52d5d",
-    "67c9acaf7db0b29e5b03370d"
+    "67c9acaf7db0b29e5b03370d",
+    "669ab9f5aceb8b717cea24c3"
   ],
-  "laatste_book": "67c9acaf7db0b29e5b03370d",
+  "laatste_book": "669ab9f5aceb8b717cea24c3",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
-    "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots"
+    "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
+    "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-casino-pak-200-aan-free-spins"
   },
   "historie": [
     {
@@ -19,6 +21,11 @@
       "datum": "2026-10-01",
       "book": "Vbet",
       "slug": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots"
+    },
+    {
+      "datum": "2026-10-02",
+      "book": "TOTO",
+      "slug": "welkomstbonus-toto-casino-pak-200-aan-free-spins"
     }
   ]
 }
