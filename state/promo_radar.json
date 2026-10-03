@@ -315,12 +315,14 @@
   "item_id": "6ab53f21ed7e65c979c56788"
  },
  "one|one-casino-spin-royale-80-000-aan-prijzen|23-september-t-m-2-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f148ea57f0499f230a2",
   "slug": "one-casino-spin-royale-80-000-aan-prijzen",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-03"
  },
  "tonybet|exclusieve-welkomstbonus-tonybet-tot-300-free-spins|altijd-geldig": {
   "status": "verwijderd",
@@ -938,6 +940,11 @@
    "slug": "toto-exclusief-speel-25-en-krijg-10-gratis-spins",
    "name": "TOTO: Exclusief! Speel €25 en krijg 10 Gratis Spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6abe2b21d57b3c39b0de31f9": {
+   "slug": "toto-speciaal-voor-jou-2-gratis-weddenschap-en-5-gratis-spins",
+   "name": "TOTO: Speciaal voor jou: €2 Gratis Weddenschap en 5 Gratis Spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -962,13 +969,15 @@
   "verwijderd": "2026-10-02"
  },
  "one|onecasino-spins-royale-toernooi|23-september-t-m-2-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab62d58a9791b1f2d1941cd",
   "hash": null,
   "slug": "one-casino-onecasino-spins-royale-toernooi",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://nl.onecasino.com/promotions/free-spins",
-  "datum": "2026-09-25"
+  "datum": "2026-09-25",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-03"
  },
  "leovegas|pak-5-free-bet-door-in-te-zetten-op-de-nations-league|21-september-t-m-27-september": {
   "status": "verwijderd",
@@ -1067,13 +1076,15 @@
   "datum": "2026-09-28"
  },
  "oranje-palace|pak-50-free-spins-met-de-weekbonus-van-oranje-palace|28-september-t-m-2-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6aba159d4e9d106aabfa657c",
   "hash": null,
   "slug": "oranje-palace-pak-50-free-spins",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/week-bonus-2026-40",
-  "datum": "2026-09-28"
+  "datum": "2026-09-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-03"
  },
  "toto|toto-maandag-maak-kans-op-500-cash-of-free-spins|iedere-maandag": {
   "status": "draft",
