@@ -1601,5 +1601,41 @@
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/international-builder-nl-card",
   "datum": "2026-10-02"
+ },
+ "handmatig|toto-zet-20-in-bet-builder-nederland-servie-krijg-5-gratis-weddenschap": {
+  "status": "einddatum",
+  "item_id": "6ac0e3f72345bfa2e6e685ae",
+  "slug": "toto-zet-20-in-bet-builder-nederland-servie-krijg-5-gratis-weddenschap",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-03"
+ },
+ "handmatig|bingoal-gates-of-olympus-2500-prize-drop": {
+  "status": "einddatum",
+  "item_id": "6ac0e4b3a385863682e400ae",
+  "slug": "bingoal-gates-of-olympus-2500-prize-drop",
+  "bron": "bingoal.nl/promoties (screenshot gebruiker)",
+  "datum": "2026-10-03"
+ },
+ "handmatig|bingoal-5000-pragmatic-play-toernooi": {
+  "status": "einddatum",
+  "item_id": "6ac0e5023710f8f995e357c2",
+  "slug": "bingoal-5000-pragmatic-play-toernooi",
+  "bron": "https://www.bingoal.nl/nl/promotie/NL5KPRAGMATICTOERNOOI",
+  "datum": "2026-10-03"
+ },
+ "handmatig|starcasino-le-missie-150-free-spins": {
+  "status": "einddatum",
+  "item_id": "6ac0e8bb35366d0fed8c4a91",
+  "slug": "starcasino-le-missie-150-free-spins",
+  "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-03"
+ },
+ "starcasino-missie|de-le-missie|2026-10-04": {
+  "status": "bron-handmatig",
+  "item_id": "6ac0e8bb35366d0fed8c4a91",
+  "hash": "eb3f0e7e3746de8aef579503fd4477f9",
+  "slug": "starcasino-le-missie-150-free-spins",
+  "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-03"
  }
 }

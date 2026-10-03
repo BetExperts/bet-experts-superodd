@@ -67,13 +67,35 @@ def card_key(card):
 
 GENERIC = {"free", "bets", "bet", "spins", "welkomstbonus", "promotie", "inzet", "win", "zet", "gratis", "extra"}
 
+SPORT_WORDS = [r"dart", r"basketbal", r"\bnfl\b", r"tennis", r"\bf1\b|formule ?1|grand prix", r"nations league", r"champions league",
+               r"europa league", r"eredivisie", r"ijshockey|\bnhl\b", r"\bnba\b", r"wielren|tour de", r"snooker", r"golf\b", r"\bufc\b|\bmma\b"]
+GAME_WORDS = [r"roulette", r"blackjack", r"baccarat", r"poker", r"bingo", r"pragmatic", r"evolution", r"hacksaw", r"playtech",
+              r"play'?n ?go", r"plinko", r"crash", r"game ?show", r"monopoly"]
+blob_all = lambda f: " ".join(str(v) for v in f.values() if isinstance(v, str))
+
 def similar_existing(card, existing, bm_name=""):
     """Staat deze actie al in de CMS? (zelfde bookmaker, overlappende woorden + exact dezelfde getallen)"""
     drop = GENERIC | tokens(bm_name) | tokens(bm_name.replace(".NL", "").replace(".nl", ""))
     ct = tokens(card["title"] + " " + " ".join(card["bullets"])) - drop
     nums = key_numbers(card)
     best = (0, None)
+    card_txt = card["title"] + " " + " ".join(card["bullets"])
+    card_sports = [sp for sp in SPORT_WORDS if re.search(sp, card_txt, re.I)]
+    card_games = [g for g in GAME_WORDS if re.search(g, card_txt, re.I)]
+    try:
+        from pr_build import classify
+        want_gv = C.GELDIG_SPORT if classify(card)[0] else C.GELDIG_CASINO
+    except Exception:
+        want_gv = None
     for f in existing:
+        if f.get("welkomstbonus-promotie") and "welcomeBonus" not in card.get("types", []):
+            continue              # een losse actie is nooit "dezelfde" als de welkomstbonus (Bet365 NL-€5 vs. welkomst €50)
+        if want_gv and f.get("geldig-voor") and f.get("geldig-voor") != want_gv:
+            continue              # sportactie nooit matchen met een casinopromo (en andersom)
+        if card_games and not any(re.search(g, blob_all(f), re.I) for g in card_games):
+            continue              # ander spel/provider (Roulette-toernooi is niet het Pragmatic-slottoernooi)
+        if card_sports and not any(re.search(sp, blob_all(f), re.I) for sp in card_sports):
+            continue              # andere sport (darts-actie is niet dezelfde als de basketbal-/NFL-actie)
         blob = " ".join(str(f.get(k) or "") for k in ("name", "subtitel", "informatie", "voorwaarde-promotie",
                                                       "bedrag-of-boost", "check-1", "check-2", "check-3"))
         tok = len(ct & tokens(blob)) / max(1, len(ct))
@@ -164,9 +186,11 @@ def main():
                 b = pw.chromium.launch()
                 star = pr_starcasino.fetch(b)
                 big, small = pr_starcasino.fetch_tournaments(b)
+                missies = pr_starcasino.fetch_missies(b)
                 b.close()
-            star += big
-            print(f"   starcasino.nl: {len(star) - len(big)} promoties + {len(big)} toernooien ≥ €{pr_starcasino.MIN_PRIZE} "
+            star += big + missies
+            print(f"   starcasino.nl: {len(star) - len(big) - len(missies)} promoties + {len(missies)} missie(s) + "
+                  f"{len(big)} toernooien ≥ €{pr_starcasino.MIN_PRIZE} "
                   f"({len(small)} kleinere overgeslagen)")
         except Exception as e:
             print(f"   ! starcasino.nl niet gelezen: {e} (bestaande StarCasino-promo's blijven ongemoeid)")
@@ -191,10 +215,12 @@ def main():
         if k in state:
             continue
         if c["op"] == "toto" and toto is not None:
-            state[k] = {"status": "overgeslagen", "reden": "TOTO komt via de directe bron toto.nl/acties"}; continue
+            # alleen overslaan als dezelfde actie op toto.nl/acties staat; anders (bijv. Bet & Get darts) gewoon verwerken
+            if max([similar_existing(c, [{"name": x["title"], "subtitel": x["desc"]}])[0] for x in toto] or [0]) >= 0.5:
+                state[k] = {"status": "overgeslagen", "reden": "TOTO komt via de directe bron toto.nl/acties"}; continue
         if not cfg["id"]:
             state[k] = {"status": "overgeslagen", "reden": "bookmaker niet in CMS"}; continue
-        if "welcomeBonus" in c["types"]:
+        if "welcomeBonus" in c["types"] and k not in getattr(C, "WELCOME_TOEGESTAAN", ()):
             state[k] = {"status": "overgeslagen", "reden": "welkomstbonus (beheert de gebruiker zelf)"}; continue
         _, end, _ = parse_period(c["tag"])
         if end and end < date.today():
@@ -214,7 +240,7 @@ def main():
     cur_by_title = {"|".join(card_key(c).split("|")[:2]): c for c in cards}
     remap = {}
     if star is None:     # bron niet bereikbaar -> StarCasino-promo's niet als 'verdwenen' behandelen
-        current |= {k for k in state if k.startswith(("starcasino|", "starcasino-toernooi|"))}
+        current |= {k for k in state if k.startswith(("starcasino|", "starcasino-toernooi|", "starcasino-missie|"))}
     if toto is None:     # idem voor toto.nl/acties
         current |= {k for k in state if k.startswith("toto-acties|")}
     now = datetime.now().astimezone()

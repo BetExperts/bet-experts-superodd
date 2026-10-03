@@ -52,6 +52,9 @@ def fetch(browser):
             continue
         cat = lines[0].upper() if lines[0].isupper() else ""
         rest = lines[1:] if cat else lines
+        rest = [l for l in rest if not re.match(r"(?i)^verloopt in\b|^\d+\s*[dum]\b", l)]   # aftelklokje is geen titel
+        if not rest:
+            continue
         title, desc = rest[0], " ".join(rest[1:])
         if not cat or cat in SKIP_CATEGORIES or SKIP.search(title) or title in seen:
             continue

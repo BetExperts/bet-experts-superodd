@@ -73,6 +73,8 @@ GELDIG_CASINO = "149fd8f57ae471590f6553417235ec74"
 
 # Welkomstbonussen beheert de gebruiker zelf met exacte deal-cijfers -> altijd als draft.
 WELCOME_AS_DRAFT = True
+# kalenderkaarten met welkomst-tag die de gebruiker tóch als promo wil (key = card_key)
+WELCOME_TOEGESTAAN = {"hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig"}
 
 STATE_FILE = "state/promo_radar.json"
 DISCLAIMER = "Wat kost gokken jou? Stop op tijd. 18+ | Speel bewust."

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Directe bron voor de promo-radar: starcasino.nl/bonussen (staat niet in de bonuskalender).
+"""Directe bron voor de promo-radar: starcasino.nl/bonussen, /missies en /tournaments (staan niet in de bonuskalender).
 
 Levert 'kaarten' in hetzelfde formaat als pr_calendar.fetch_cards(), aangevuld met de
 detail-URL, de banner en de volledige tekst van de promotiepagina (bron = StarCasino zelf)."""
@@ -37,11 +37,12 @@ def _bullets(text):
         l = line.strip()
         m = re.match(r"^(?:✅|-|•|\d️⃣|\d+[.)])\s*(.+)$", l)
         if m and 12 <= len(m.group(1)) <= 160:
-            out.append(re.sub(r"\s*[🎰🏆⚽🔥📱🍀]+\s*$", "", m.group(1)).strip())
+            out.append(re.sub(r"\s*[🎰🏆⚽🔥📱🍀🎁🎯]+\s*$", "", m.group(1)).strip())
     return out
 
-def _dates(text, today=None):
-    """Alle 'DD maand [JJJJ]'-data in de tekst -> (start, end) (None als onbekend)."""
+def _dates(text, today=None, dd_mm=False):
+    """Alle 'DD maand [JJJJ]'-data in de tekst -> (start, end) (None als onbekend).
+    dd_mm=True: ook korte data als 'Vrijdag 02-10' (missiepagina)."""
     today = today or date.today()
     found = []
     for d, mnd, y in re.findall(r"\b(\d{1,2})[ -]([a-zA-Z]+)[ -]?(\d{4})?", text):
@@ -57,6 +58,15 @@ def _dates(text, today=None):
             found.append(date(int(y), int(m), int(d)))
         except ValueError:
             pass
+    if dd_mm:
+        for d, m in re.findall(r"(?<![\d-])(\d{1,2})-(\d{1,2})(?![\d-])", text):
+            try:
+                x = date(today.year, int(m), int(d))
+            except ValueError:
+                continue
+            if (x - today).days < -180:
+                x = x.replace(year=today.year + 1)
+            found.append(x)
     if not found:
         return None, None
     future = [x for x in found if x >= today]
@@ -107,6 +117,45 @@ def fetch(browser):
         })
     ctx.close()
     return cards
+
+
+# ---------------------------------------------------------------- missies
+MISSIES = BASE + "/missies"
+
+def fetch_missies(browser):
+    """De lopende missie op starcasino.nl/missies (staat niet op /bonussen). Eén pagina = één missie;
+    de sleutel bevat de einddatum, zodat een nieuwe missie met dezelfde naam een nieuwe promo wordt."""
+    ctx = browser.new_context(locale="nl-NL", user_agent=UA, viewport={"width": 1400, "height": 1000})
+    pg = ctx.new_page()
+    pg.goto(MISSIES, wait_until="domcontentloaded", timeout=60000)
+    pg.wait_for_timeout(7000)
+    h1 = pg.locator("h1")
+    raw_title = h1.first.inner_text().strip() if h1.count() else ""
+    text = _clean(pg.inner_text("body"))
+    imgs = pg.eval_on_selector_all("img", "els => els.map(e => [e.currentSrc||e.src, e.naturalWidth, e.naturalHeight])")
+    ctx.close()
+    title = re.sub(r"[^\w€&!?.,:'’ -]+", "", raw_title).strip()
+    if not title or "missie" not in (title + text[:500]).lower():
+        return []
+    i = text.find(raw_title)
+    body = text[i:] if i >= 0 else text
+    for stop in ("📜 Promotievoorwaarden", "Promotievoorwaarden\n", "\nInformatie\n"):
+        j = body.find(stop)
+        body = body[:j] if j > 0 else body
+    lines = [l.strip() for l in body.split("\n") if l.strip()]
+    desc = lines[1] if len(lines) > 1 else title
+    imgs = [x for x in imgs if x[1] >= 600 and "open-over-gokken" not in x[0] and not x[0].endswith(".svg")
+            and "/footer/" not in x[0]]
+    low = (title + " " + body).lower()
+    types = list(dict.fromkeys(t for pat, t in TYPE_RULES if re.search(pat, low)))
+    start, end = _dates(body, dd_mm=True)
+    return [{
+        "op": "starcasino", "kind": "missie", "title": title, "desc": desc, "bullets": (_bullets(body) or [desc])[:4],
+        "types": types, "tag": "", "period": (start, end, None), "detail_url": MISSIES,
+        "image": imgs[0][0] if imgs else None,
+        "key": f"starcasino-missie|{re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')}|{end}",
+        "hash": hashlib.md5(body.encode()).hexdigest(),
+    }]
 
 
 # ---------------------------------------------------------------- toernooien
