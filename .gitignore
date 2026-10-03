@@ -6,3 +6,4 @@ preview/
 logs/
 .DS_Store
 state/slot_agent_runs/
+state/stripe/
