@@ -888,7 +888,7 @@
  "starcasino|starclub": {
   "status": "bron-handmatig",
   "item_id": "6ab541d867ea55c8a770a447",
-  "hash": "b74569aa32f648d0fa471d28bb1c15e0"
+  "hash": "fa243ee9fe0274a7f2d604e0ff8806c3"
  },
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
@@ -945,6 +945,16 @@
    "slug": "toto-speciaal-voor-jou-2-gratis-weddenschap-en-5-gratis-spins",
    "name": "TOTO: Speciaal voor jou: €2 Gratis Weddenschap en 5 Gratis Spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6aba2fbfe06c8d04da0c3e53": {
+   "slug": "starcasino-5-000-playson-toernooi",
+   "name": "Starcasino: €5.000 Playson Toernooi (van 28 september t/m 4 oktober)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d867ea55c8a770a447": {
+   "name": "Starcasino: Starclub",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/casinowelkomstbonus"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1560,7 +1570,7 @@
  "starcasino|le-missie": {
   "status": "live",
   "item_id": "6abf7c67334bd533bade0d12",
-  "hash": "b5e4bf16635369865a7917403b8f740c",
+  "hash": "ce1faf191037389c35d34b482824517f",
   "slug": "starcasino-le-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
