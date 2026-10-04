@@ -93,7 +93,10 @@ def fetch(browser):
         try:
             pg.goto(OVERVIEW, wait_until="domcontentloaded", timeout=60000)
             pg.wait_for_timeout(3000)
-            el = pg.get_by_text(title, exact=True).first
+            # de titel staat ook in het zijmenu (nav/aside): neem de kaart in de content
+            hits = pg.get_by_text(title, exact=True)
+            el = next((hits.nth(i) for i in range(hits.count())
+                       if not hits.nth(i).evaluate("e => !!e.closest('nav, aside, header')")), hits.first)
             box = el.locator("xpath=ancestor::*[.//text()[contains(.,'Lees meer')]][1]")
             box.get_by_text("Lees meer").first.click()
             pg.wait_for_timeout(3500)
