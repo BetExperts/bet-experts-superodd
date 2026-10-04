@@ -888,7 +888,7 @@
  "starcasino|starclub": {
   "status": "bron-handmatig",
   "item_id": "6ab541d867ea55c8a770a447",
-  "hash": "fa243ee9fe0274a7f2d604e0ff8806c3"
+  "hash": "b74569aa32f648d0fa471d28bb1c15e0"
  },
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
@@ -1110,7 +1110,7 @@
   "reden": "kalender-details niet te vinden op toto.nl; item omgezet naar Ice Fishing"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|27-september-t-m-3-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6aba2fbcbac91d2bbc21706c",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
@@ -1651,5 +1651,14 @@
   "slug": "starcasino-le-missie-150-free-spins",
   "bron": "https://starcasino.nl/missies",
   "datum": "2026-10-03"
+ },
+ "toto-acties|toto-viert-feest-maak-kans-op-2500-cash": {
+  "status": "live",
+  "item_id": "6ac211265594730f7e122408",
+  "hash": "a373850b560554bc19947eb0f07ab16e",
+  "slug": "toto-viert-feest-maak-kans-op-2500-cash",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-04"
  }
 }
