@@ -1360,13 +1360,15 @@
   "datum": "2026-09-30"
  },
  "bet365|zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed|30-september-t-m-3-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abd25565457347c4e38eb5a",
   "hash": null,
   "slug": "bet365-zet-in-op-nations-league-wedstrijden-en-pak-5-wedtegoed",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-09-30"
+  "datum": "2026-09-30",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-04"
  },
  "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
   "status": "live",
@@ -1559,18 +1561,20 @@
   "datum": "2026-09-24"
  },
  "toto|win-met-lucky-numbers-bij-toto-lightning-roulette|1-oktober-t-m-3-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abf7c65fb5922bf46a7a653",
   "hash": null,
   "slug": "toto-win-met-lucky-numbers-lightning-roulette",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-02"
+  "datum": "2026-10-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-04"
  },
  "starcasino|le-missie": {
   "status": "live",
   "item_id": "6abf7c67334bd533bade0d12",
-  "hash": "ce1faf191037389c35d34b482824517f",
+  "hash": "b5e4bf16635369865a7917403b8f740c",
   "slug": "starcasino-le-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
