@@ -405,12 +405,14 @@
   "verwijderd": "2026-09-28"
  },
  "hard-rock|octofest-bij-hard-rock-casino|19-september-t-m-4-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f2bd2c8a1757a7ff223",
   "slug": "hard-rock-casino-octofest",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "comeon|weekknaller-bij-comeon|altijd-geldig": {
   "status": "live",
@@ -955,6 +957,11 @@
    "name": "Starcasino: Starclub",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/casinowelkomstbonus"
+  },
+  "6abf7c7265e04f7be76547f8": {
+   "slug": "toto-lucky-number-7-lightning-roulette",
+   "name": "TOTO: Lucky Number 7 Lightning Roulette",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1134,13 +1141,15 @@
   "reden": "toernooi-kaart op /bonussen; komt via /tournaments"
  },
  "starcasino-toernooi|playson-toernooi|2026-09-28": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6aba2fbfe06c8d04da0c3e53",
   "hash": "2024f7ebd293601870bd0045979c4fdc",
   "slug": "starcasino-5-000-playson-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
-  "datum": "2026-09-28"
+  "datum": "2026-09-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "starcasino-toernooi|sport-toernooi|2026-09-28": {
   "status": "live",
@@ -1180,11 +1189,13 @@
   "datum": "2026-09-28"
  },
  "handmatig|toto-ice-fishing": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6aba2fba6352d95819b50e60",
   "slug": "toto-ice-fishing-deel-van-10-000",
   "bron": "https://www.toto.nl/acties",
-  "datum": "2026-09-28"
+  "datum": "2026-09-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "toto-acties|toto-exclusief": {
   "status": "bestond al",
@@ -1286,31 +1297,37 @@
   "datum": "2026-09-29"
  },
  "leovegas|pak-5-free-bet-door-in-te-zetten-op-de-nations-league|27-september-t-m-4-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abb881c2877e460093d943b",
   "hash": null,
   "slug": "leovegas-pak-5-free-bet-door-in-te-zetten-op-de-nations-league",
   "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-29"
+  "datum": "2026-09-29",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "711|711-casino-quest-pak-25-free-spins|28-september-t-m-4-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abb8827eb747af563ad89c2",
   "hash": null,
   "slug": "711-casino-quest-pak-25-free-spins",
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/loyaliteitsprogramma",
-  "datum": "2026-09-29"
+  "datum": "2026-09-29",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "bet365|bet365-50-000-spins-verdeler|28-september-t-m-4-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abbb20f1311a883512cbb78",
   "hash": null,
   "slug": "bet365-50-000-spins-verdeler",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-09-29"
+  "datum": "2026-09-29",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "vbet|houdt-oranje-de-nul-en-pak-een-free-bet|29-september-t-m-1-oktober": {
   "status": "bestond al",
@@ -1336,13 +1353,15 @@
   "datum": "2026-09-30"
  },
  "jacks.nl|pragmatic-play-toernooi-met-een-prijzenpot-van-5-000|30-september-t-m-4-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abcd97524f2a6f78b5164dd",
   "hash": null,
   "slug": "jacks-nl-pragmatic-play-toernooi-met-een-prijzenpot-van-5-000",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-30"
+  "datum": "2026-09-30",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "toto-acties|toto-exclusief-speel-25-en-krijg-10-gratis-spins": {
   "status": "bestond al",
@@ -1371,13 +1390,15 @@
   "verwijderd": "2026-10-04"
  },
  "toto|bet-en-get-zet-10-in-en-ontvang-5-free-bet|30-september-t-m-4-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abd25588f5cf1863129c300",
   "hash": null,
   "slug": "toto-bet-en-get-zet-10-in-en-ontvang-5-free-bet",
   "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-30"
+  "datum": "2026-09-30",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "toto-acties|toto-s-missies-missie-2-van-3": {
   "status": "bestond al",
@@ -1526,13 +1547,15 @@
   "datum": "2026-10-01"
  },
  "circus|circus-nl-roulette-toernooi-win-een-deel-van-10-000|1-oktober-t-m-4-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe56d12119bb6f26efa49e",
   "hash": null,
   "slug": "circus-circus-nl-roulette-toernooi-win-een-deel-van-10-000",
   "check": "2/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
-  "datum": "2026-10-01"
+  "datum": "2026-10-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "toto|toto-viert-feest-en-jij-pakt-extra-voordeel|1-oktober-en-2-oktober": {
   "status": "overgeslagen",
@@ -1601,13 +1624,15 @@
   "datum": "2026-10-02"
  },
  "bet365|zet-in-en-bouw-je-eigen-aantal-free-spins-bij-bet365|2-oktober-t-m-4-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6abfaa03b9656131043e9f01",
   "hash": null,
   "slug": "bet365-zet-in-en-bouw-je-eigen-aantal-free-spins",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-02"
+  "datum": "2026-10-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "circus|voltooi-de-missie-om-free-bets-en-spins-te-pakken|2-oktober-t-m-6-oktober": {
   "status": "live",
@@ -1619,11 +1644,13 @@
   "datum": "2026-10-02"
  },
  "handmatig|toto-zet-20-in-bet-builder-nederland-servie-krijg-5-gratis-weddenschap": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ac0e3f72345bfa2e6e685ae",
   "slug": "toto-zet-20-in-bet-builder-nederland-servie-krijg-5-gratis-weddenschap",
   "bron": "https://www.toto.nl/acties",
-  "datum": "2026-10-03"
+  "datum": "2026-10-03",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "handmatig|bingoal-gates-of-olympus-2500-prize-drop": {
   "status": "einddatum",
@@ -1640,11 +1667,13 @@
   "datum": "2026-10-03"
  },
  "handmatig|starcasino-le-missie-150-free-spins": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ac0e8bb35366d0fed8c4a91",
   "slug": "starcasino-le-missie-150-free-spins",
   "bron": "https://starcasino.nl/missies",
-  "datum": "2026-10-03"
+  "datum": "2026-10-03",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-05"
  },
  "starcasino-missie|de-le-missie|2026-10-04": {
   "status": "bron-handmatig",
@@ -1662,5 +1691,14 @@
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-10-04"
+ },
+ "oranje-palace|pak-50-free-spins-met-de-weekbonus-van-oranje-palace|5-oktober-t-m-9-oktober": {
+  "status": "draft",
+  "item_id": "6ac34e3898695a120b8ad9b1",
+  "hash": null,
+  "slug": "oranje-palace-pak-50-free-spins",
+  "check": "0/2 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-wheel",
+  "datum": "2026-10-05"
  }
 }
