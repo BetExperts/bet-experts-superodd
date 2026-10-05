@@ -885,7 +885,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "ce1faf191037389c35d34b482824517f"
+  "hash": "6cc2b036c1323d761d92f1a05b458280"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -900,7 +900,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "06e323b53e960a1b12bc5b9ea0ab1aeb"
+  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -1821,6 +1821,15 @@
   "slug": "starcasino-de-le-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-05"
+ },
+ "circus|circus-prize-drops-game-shows-win-tot-1-000|5-oktober-t-m-11-oktober": {
+  "status": "live",
+  "item_id": "6ac3d379182a82073551c87d",
+  "hash": null,
+  "slug": "circus-prize-drops-game-shows-win-tot-1-000",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
   "datum": "2026-10-05"
  }
 }
