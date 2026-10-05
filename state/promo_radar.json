@@ -885,7 +885,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "6cc2b036c1323d761d92f1a05b458280"
+  "hash": "ce1faf191037389c35d34b482824517f"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -900,7 +900,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
+  "hash": "06e323b53e960a1b12bc5b9ea0ab1aeb"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -962,6 +962,11 @@
    "slug": "toto-lucky-number-7-lightning-roulette",
    "name": "TOTO: Lucky Number 7 Lightning Roulette",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d6c4dfb56f3fbfc8a0": {
+   "name": "Starcasino: Starcasino's Voetbal Quiz",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/starcasinoquiz"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1766,6 +1771,56 @@
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-10-05"
+ },
+ "888|welkomstbonus-tot-40-aan-free-chips|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "888|welkomstbonus-ontvang-tot-200-free-spins|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "comeon|exclusief-welkomstbonus-45-live-casino-coupons|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "comeon|exclusief-welkomstbonus-220-free-spins|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "toto-acties|speel-crazy-time-en-maak-kans-op-een-deel-van-10-000": {
+  "status": "bestond al",
+  "cms": "TOTO: Lucky Number 7 Lightning Roulette",
+  "score": 0.61,
+  "hash": "3fb8ee534c7b13d66e9aa9303d9fdb68",
+  "datum": "2026-10-05"
+ },
+ "starcasino-toernooi|3-oaks-gaming-toernooi|2026-10-05": {
+  "status": "live",
+  "item_id": "6ac39f37e0481ce4b0b6fc89",
+  "hash": "2acc5231020be4be3cb020a7961933d4",
+  "slug": "starcasino-5-000-3-oaks-gaming-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-10-05"
+ },
+ "starcasino-toernooi|sport-toernooi|2026-10-05": {
+  "status": "live",
+  "item_id": "6ac39f42c8dc6a4ec43e8b7c",
+  "hash": "b986932b5fe4456638ad0e9cf381dac5",
+  "slug": "starcasino-1-000-sport-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-10-05"
+ },
+ "starcasino-missie|de-le-missie|None": {
+  "status": "live",
+  "item_id": "6ac39fc9ac833c625da74779",
+  "hash": "eb3f0e7e3746de8aef579503fd4477f9",
+  "slug": "starcasino-de-le-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/missies",
   "datum": "2026-10-05"
  }
 }
