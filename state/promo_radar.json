@@ -1152,7 +1152,7 @@
   "verwijderd": "2026-10-05"
  },
  "starcasino-toernooi|sport-toernooi|2026-09-28": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6aba2fc27766e026d16f8515",
   "hash": "8032b6764b1ba72810d86e0fc89776a3",
   "slug": "starcasino-1-000-sport-toernooi",
@@ -1212,7 +1212,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.69,
-  "hash": "2c6aa2a302cb06258851b845f22b9cef",
+  "hash": "bd176e2255b28115a6ad657bb5ede9ef",
   "datum": "2026-09-28"
  },
  "toto-acties|verdien-een-5-gratis-weddenschap": {
@@ -1567,22 +1567,6 @@
   "score": 0.96,
   "datum": "2026-10-01"
  },
- "comeon|toernooien-bij-comeon|27-september-t-m-8-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3976e8d6a8bda4ce31",
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-24"
- },
- "888|toernooien-bij-888|25-september-t-m-8-oktober": {
-  "status": "live",
-  "item_id": "6ab50f3acb059f721b3e2095",
-  "slug": "888-toernooien",
-  "check": "1/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/pragmatic-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Pragmatic%20Play%20Toernooi%21",
-  "datum": "2026-09-24"
- },
  "toto|win-met-lucky-numbers-bij-toto-lightning-roulette|1-oktober-t-m-3-oktober": {
   "status": "verwijderd",
   "item_id": "6abf7c65fb5922bf46a7a653",
@@ -1699,6 +1683,89 @@
   "slug": "oranje-palace-pak-50-free-spins",
   "check": "0/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-wheel",
+  "datum": "2026-10-05"
+ },
+ "one|speel-rewards-vrij-bij-one-casino|alleen-5-oktober": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "comeon|toernooien-bij-comeon|1-oktober-t-m-8-oktober": {
+  "status": "draft",
+  "item_id": "6ac380afe57e07b1dd632d3b",
+  "hash": null,
+  "slug": "comeon-toernooien-29240",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "888|toernooien-bij-888|1-oktober-t-m-8-oktober": {
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "toto-acties|speel-20-in-disco-balls-en-krijg-5-gratis-chips": {
+  "status": "bestond al",
+  "cms": "TOTO: TOTO's Missies – verdien tot 80 free spins (van 1 oktober t/m 5 oktober)",
+  "score": 0.66,
+  "hash": "7de68a5d426ae5f00b5aa690d0ddc842",
+  "datum": "2026-10-05"
+ },
+ "bet365|bet365-gouden-fiches-verdeler-verdeel-75-000-fiches|5-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac380a19fa0a98c607b5be9",
+  "hash": null,
+  "slug": "bet365-gouden-fiches-verdeler-verdeel-75-000-fiches",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "jacks.nl|egt-digital-toernooi-met-een-prijzenpot-van-5-000|5-oktober-t-m-9-oktober": {
+  "status": "draft",
+  "item_id": "6ac380a2ac6175832af47f6d",
+  "hash": null,
+  "slug": "jacks-nl-egt-digital-toernooi-met-een-prijzenpot-van-5-000",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "toto|speel-crazy-time-en-win-een-deel-van-10-000|5-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac380a35b86e4a9bc17260f",
+  "hash": null,
+  "slug": "toto-speel-crazy-time-en-win-een-deel-van-10-000",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "vbet|doe-mee-met-het-red-rake-toernooi|5-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac380aa55e4089e68a181d5",
+  "hash": null,
+  "slug": "vbet-doe-mee-met-het-red-rake-toernooi",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|4-oktober-t-m-10-oktober": {
+  "status": "draft",
+  "item_id": "6ac380ab6f84d251da3606a4",
+  "hash": null,
+  "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|5-oktober-t-m-7-oktober": {
+  "status": "draft",
+  "item_id": "6ac380ad55e4089e68a182e4",
+  "hash": null,
+  "slug": "circus-krijg-tot-100-free-spins-met-missies",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-10-05"
  }
 }
