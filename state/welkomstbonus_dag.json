@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-05",
+  "datum": "2026-10-06",
   "gehad": [
     "669ab9f5aceb8b717cea24c3",
     "66bb685ec057aa8c4337ceea",
@@ -11,9 +11,10 @@
     "64ff0fbd5a8f205b05d54687",
     "6aad0c21a14e9435daf42e79",
     "6526a08a94d8631739581743",
-    "6909dcf78e3c22a32d06e2ad"
+    "6909dcf78e3c22a32d06e2ad",
+    "66a8a87062108480763b7309"
   ],
-  "laatste_book": "6909dcf78e3c22a32d06e2ad",
+  "laatste_book": "66a8a87062108480763b7309",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -25,7 +26,8 @@
     "64ff0fbd5a8f205b05d54687": "unibet-welkomstbonus",
     "6aad0c21a14e9435daf42e79": "oranje-palace-sport-welkomstbonus-3x-14-free-bets",
     "6526a08a94d8631739581743": "welkomstbonus-leovegas-sport",
-    "6909dcf78e3c22a32d06e2ad": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets"
+    "6909dcf78e3c22a32d06e2ad": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets",
+    "66a8a87062108480763b7309": "welkomstbonus-711-sport"
   },
   "historie": [
     {
@@ -82,6 +84,11 @@
       "datum": "2026-10-05",
       "book": "888",
       "slug": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets"
+    },
+    {
+      "datum": "2026-10-06",
+      "book": "711",
+      "slug": "welkomstbonus-711-sport"
     }
   ]
 }
