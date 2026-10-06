@@ -1861,5 +1861,12 @@
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/win-gratis-spins-op-3-olymp-fortunes-oktober",
   "datum": "2026-10-06"
+ },
+ "handmatig|one-casino-welcome-pass-10-rewards-en-de-gouden-kluis": {
+  "status": "handmatig",
+  "item_id": "6ac4dc08b602fd48cfdc9c17",
+  "slug": "one-casino-welcome-pass-10-rewards-en-de-gouden-kluis",
+  "bron": "https://nl.onecasino.com/promotions/welcome-pass",
+  "datum": "2026-10-06"
  }
 }
