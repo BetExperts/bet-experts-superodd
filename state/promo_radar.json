@@ -969,11 +969,6 @@
    "name": "Starcasino: Starcasino's Voetbal Quiz",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starcasinoquiz"
-  },
-  "6ac211265594730f7e122408": {
-   "slug": "toto-viert-feest-maak-kans-op-2500-cash",
-   "name": "TOTO: Viert feest! Maak kans op €2500 Cash!",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1690,7 +1685,7 @@
   "datum": "2026-10-03"
  },
  "toto-acties|toto-viert-feest-maak-kans-op-2500-cash": {
-  "status": "live",
+  "status": "handmatig",
   "item_id": "6ac211265594730f7e122408",
   "hash": "a373850b560554bc19947eb0f07ab16e",
   "slug": "toto-viert-feest-maak-kans-op-2500-cash",
