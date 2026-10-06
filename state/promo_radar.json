@@ -1848,5 +1848,18 @@
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
   "datum": "2026-10-05"
+ },
+ "one|speel-rewards-vrij-bij-one-casino|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "711|behaal-50-winst-en-pak-50-aan-free-spins|5-oktober-t-m-11-oktober": {
+  "status": "live",
+  "item_id": "6ac4c27441a62751b64c21f6",
+  "hash": null,
+  "slug": "711-behaal-50-winst-en-pak-50-aan-free-spins",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/win-gratis-spins-op-3-olymp-fortunes-oktober",
+  "datum": "2026-10-06"
  }
 }
