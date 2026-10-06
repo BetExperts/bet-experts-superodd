@@ -1226,7 +1226,7 @@
   "status": "bestond al",
   "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
   "score": 0.84,
-  "hash": "baf90b81cae8171f9cfb1fb67f6d48ba",
+  "hash": "8ea7a973d79b68a9053c83df1567a507",
   "datum": "2026-09-28"
  },
  "toto-acties|nfl-verdien-een-5-gratis-weddenschap": {
@@ -1884,6 +1884,15 @@
   "slug": "starcasino-star-rad",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/starwheel",
+  "datum": "2026-10-06"
+ },
+ "toto-acties|win-een-reis-naar-barcelona-aston-villa": {
+  "status": "live",
+  "item_id": "6ac4ecb25fdd43655e04b944",
+  "hash": "00ab585b4515deab4b52ff02952291c9",
+  "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
   "datum": "2026-10-06"
  }
 }
