@@ -969,6 +969,11 @@
    "name": "Starcasino: Starcasino's Voetbal Quiz",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starcasinoquiz"
+  },
+  "6ac4e24b38a35440fe5f617f": {
+   "slug": "starcasino-star-rad",
+   "name": "Starcasino: Star Rad",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1893,6 +1898,24 @@
   "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-06"
+ },
+ "one|club-one-iedere-week-extra-bonussen-bij-onecasino|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6ac525bd50ccf2d8551d8280",
+  "hash": null,
+  "slug": "one-casino-club-one-iedere-week-extra-bonussen-bij-onecasino-04736",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-06"
+ },
+ "circus|5-000-pragmatic-play-toernooi-bij-circus|6-oktober-t-m-12-oktober": {
+  "status": "live",
+  "item_id": "6ac525bfaef4de828a6f48b2",
+  "hash": null,
+  "slug": "circus-5-000-pragmatic-play-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-06"
  }
 }
