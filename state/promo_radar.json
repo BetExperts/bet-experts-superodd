@@ -1885,7 +1885,7 @@
   "datum": "2026-10-06"
  },
  "toto-acties|win-een-reis-naar-barcelona-aston-villa": {
-  "status": "live",
+  "status": "bron-handmatig",
   "item_id": "6ac4ecb25fdd43655e04b944",
   "hash": "00ab585b4515deab4b52ff02952291c9",
   "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
@@ -1948,5 +1948,12 @@
  "888|888-odds-boosts-60x-je-inleg|7-oktober-t-m-10-oktober": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "handmatig|toto-droomwedstrijd-barcelona-aston-villa": {
+  "status": "einddatum",
+  "item_id": "6ac4ecb25fdd43655e04b944",
+  "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
+  "bron": "tekst gebruiker (toto.nl, achter login)",
+  "datum": "2026-10-07"
  }
 }
