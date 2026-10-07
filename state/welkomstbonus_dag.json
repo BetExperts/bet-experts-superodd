@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-06",
+  "datum": "2026-10-07",
   "gehad": [
     "669ab9f5aceb8b717cea24c3",
     "66bb685ec057aa8c4337ceea",
@@ -12,9 +12,10 @@
     "6aad0c21a14e9435daf42e79",
     "6526a08a94d8631739581743",
     "6909dcf78e3c22a32d06e2ad",
-    "66a8a87062108480763b7309"
+    "66a8a87062108480763b7309",
+    "68dd287867de5cd59d44dc39"
   ],
-  "laatste_book": "66a8a87062108480763b7309",
+  "laatste_book": "68dd287867de5cd59d44dc39",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -27,7 +28,8 @@
     "6aad0c21a14e9435daf42e79": "oranje-palace-sport-welkomstbonus-3x-14-free-bets",
     "6526a08a94d8631739581743": "welkomstbonus-leovegas-sport",
     "6909dcf78e3c22a32d06e2ad": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets",
-    "66a8a87062108480763b7309": "welkomstbonus-711-sport"
+    "66a8a87062108480763b7309": "welkomstbonus-711-sport",
+    "68dd287867de5cd59d44dc39": "welkomstbonus-bingoal-sportsbook-zet-eu10-in-ontvang-5-profit-boosts"
   },
   "historie": [
     {
@@ -89,6 +91,11 @@
       "datum": "2026-10-06",
       "book": "711",
       "slug": "welkomstbonus-711-sport"
+    },
+    {
+      "datum": "2026-10-07",
+      "book": "Bingoal",
+      "slug": "welkomstbonus-bingoal-sportsbook-zet-eu10-in-ontvang-5-profit-boosts"
     }
   ]
 }
