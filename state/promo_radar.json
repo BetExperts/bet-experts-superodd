@@ -332,12 +332,14 @@
   "datum": "2026-09-24"
  },
  "jacks.nl|pak-maximaal-20-aan-free-bets-bij-jacks-nl|23-september-t-m-6-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f17d2c8a1757a7fe3e0",
   "slug": "jacks-nl-pak-maximaal-20-aan-free-bets",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://jacks.nl/tc-bonus",
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-07"
  },
  "oranje-palace|spaar-award-points-bij-oranje-palace-en-pak-beloningen|altijd-geldig": {
   "status": "live",
@@ -1551,13 +1553,15 @@
   "datum": "2026-10-01"
  },
  "hard-rock|stortingsbonus-tot-170-free-spins|1-oktober-t-m-6-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe5574de270322cc52eed0",
   "hash": null,
   "slug": "hard-rock-casino-stortingsbonus-tot-170-free-spins",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-01"
+  "datum": "2026-10-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-07"
  },
  "jacks.nl|maak-kans-op-een-deel-van-de-500-prijzenpot|1-oktober-t-m-31-oktober": {
   "status": "draft",
@@ -1641,13 +1645,15 @@
   "verwijderd": "2026-10-05"
  },
  "circus|voltooi-de-missie-om-free-bets-en-spins-te-pakken|2-oktober-t-m-6-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abfdf00122260e26cd33102",
   "hash": null,
   "slug": "circus-voltooi-de-missie-om-free-bets-en-spins-te-pakken",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/international-builder-nl-card",
-  "datum": "2026-10-02"
+  "datum": "2026-10-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-07"
  },
  "handmatig|toto-zet-20-in-bet-builder-nederland-servie-krijg-5-gratis-weddenschap": {
   "status": "verwijderd",
@@ -1917,5 +1923,14 @@
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-06"
+ },
+ "one|big-one-gameshow-speel-gratis-mee|alleen-7-oktober": {
+  "status": "live",
+  "item_id": "6ac5ef6f1ee65d7e707d5d0a",
+  "hash": null,
+  "slug": "one-casino-big-one-gameshow-speel-gratis-mee",
+  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-07"
  }
 }
