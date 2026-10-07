@@ -851,7 +851,7 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-10-07",
-   "slot": null
+   "slot": "Beanstalk Grows Wild 2"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -1878,7 +1878,7 @@
  "starcasino|star-rad": {
   "status": "live",
   "item_id": "6ac4e24b38a35440fe5f617f",
-  "hash": "9e2001c5a0aae34948ea31935b58e903",
+  "hash": "82991705620e18ce0898693d60cbe0a7",
   "slug": "starcasino-star-rad",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/starwheel",
@@ -1944,5 +1944,9 @@
   "score": 0.71,
   "hash": "555b362c49058f1a1a0190e1838b15cf",
   "datum": "2026-10-07"
+ },
+ "888|888-odds-boosts-60x-je-inleg|7-oktober-t-m-10-oktober": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
  }
 }
