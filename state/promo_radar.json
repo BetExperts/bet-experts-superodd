@@ -976,6 +976,11 @@
    "slug": "starcasino-star-rad",
    "name": "Starcasino: Star Rad",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ac211265594730f7e122408": {
+   "slug": "toto-viert-feest-maak-kans-op-2500-cash",
+   "name": "TOTO viert feest: Speel €20 in Disco Balls en krijg €5 gratis chips (t/m 6 oktober)",
+   "geldig_tot": "2026-10-06"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1717,24 +1722,6 @@
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
- "comeon|toernooien-bij-comeon|1-oktober-t-m-8-oktober": {
-  "status": "draft",
-  "item_id": "6ac380afe57e07b1dd632d3b",
-  "hash": null,
-  "slug": "comeon-toernooien-29240",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "888|toernooien-bij-888|1-oktober-t-m-8-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
  "toto-acties|speel-20-in-disco-balls-en-krijg-5-gratis-chips": {
   "status": "bestond al",
   "cms": "TOTO: TOTO's Missies – verdien tot 80 free spins (van 1 oktober t/m 5 oktober)",
@@ -1931,6 +1918,31 @@
   "slug": "one-casino-big-one-gameshow-speel-gratis-mee",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-10-07"
+ },
+ "comeon|toernooien-bij-comeon|7-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac380afe57e07b1dd632d3b",
+  "hash": null,
+  "slug": "comeon-toernooien-29240",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "888|toernooien-bij-888|7-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "toto-acties|toto-exclusief-speel-25-en-krijg-20-gratis-spins": {
+  "status": "bestond al",
+  "cms": "TOTO Exclusief: speel €25 en krijg 20 free spins (elke woensdag & donderdag)",
+  "score": 0.71,
+  "hash": "555b362c49058f1a1a0190e1838b15cf",
   "datum": "2026-10-07"
  }
 }
