@@ -279,6 +279,8 @@ def main():
             continue
         if not (expired or gone):
             continue
+        if gone and not expired and e.get("behouden"):
+            continue          # gebruiker heeft besloten: laten staan zolang hij niet verlopen is
         if gone and not expired:
             # Niet meer in de kalender maar 'Geldig tot' nog niet voorbij (of leeg): twijfelgeval -> NIET
             # verwijderen maar ter beoordeling (gebruiker: bij twijfel eerst vragen).
