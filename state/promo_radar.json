@@ -1911,5 +1911,23 @@
   "cms": "Hard Rock Casino: Rock Reload: Pak tot 100 free spins",
   "score": 0.79,
   "datum": "2026-10-08"
+ },
+ "comeon|comeon-bet-en-get-free-bet-builder-en-20-free-spins|8-oktober-t-m-12-oktober": {
+  "status": "draft",
+  "item_id": "6ac7c7dff4ce52eb8c154402",
+  "hash": null,
+  "slug": "comeon-bet-en-get-free-bet-builder-en-20-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-08"
+ },
+ "vbet|pak-gegarandeerde-free-bet-van-10-bij-vbet|8-oktober-t-m-10-oktober": {
+  "status": "draft",
+  "item_id": "6ac7c7e0b21a4800311ceaf5",
+  "hash": null,
+  "slug": "vbet-pak-gegarandeerde-free-bet-van-10",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.vbet.nl/nl/betbuilder",
+  "datum": "2026-10-08"
  }
 }
