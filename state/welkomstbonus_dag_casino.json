@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-07",
+  "datum": "2026-10-08",
   "gehad": [
     "682b116bb82996896cb52d5d",
     "67c9acaf7db0b29e5b03370d",
@@ -8,9 +8,10 @@
     "66a24463b6de25483eec85e9",
     "651bd6728c40de720bd8072a",
     "67974cf05b546fe28ef78cdc",
-    "66a8a87062108480763b7309"
+    "66a8a87062108480763b7309",
+    "64ff0fbd5a8f205b05d54670"
   ],
-  "laatste_book": "66a8a87062108480763b7309",
+  "laatste_book": "64ff0fbd5a8f205b05d54670",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -19,7 +20,8 @@
     "66a24463b6de25483eec85e9": "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
     "651bd6728c40de720bd8072a": "bet365-casino-welkomstbonus-stort-10-ontvang-100-free-spins",
     "67974cf05b546fe28ef78cdc": "one-casino-casino-welkomstbonus-50-bonus-tot-100",
-    "66a8a87062108480763b7309": "welkomstbonus-711-casino"
+    "66a8a87062108480763b7309": "welkomstbonus-711-casino",
+    "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-casino-100-bonus-tot-eu250-of-100-gratis-spins"
   },
   "historie": [
     {
@@ -61,6 +63,11 @@
       "datum": "2026-10-07",
       "book": "711",
       "slug": "welkomstbonus-711-casino"
+    },
+    {
+      "datum": "2026-10-08",
+      "book": "Circus",
+      "slug": "welkomstbonus-circus-casino-100-bonus-tot-eu250-of-100-gratis-spins"
     }
   ]
 }
