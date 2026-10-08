@@ -904,7 +904,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -925,7 +925,7 @@
   "6ab541dbe7e5f9b30ec2e9ce": {
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "https://starcasino.nl/geldkluisbonus"
+   "bron": "chrome-error://chromewebdata/"
   },
   "6aba2fc27766e026d16f8515": {
    "slug": "starcasino-1-000-sport-toernooi",
@@ -975,6 +975,11 @@
   "6ac4e24b38a35440fe5f617f": {
    "slug": "starcasino-star-rad",
    "name": "Starcasino: Star Rad",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ac5ef6f1ee65d7e707d5d0a": {
+   "slug": "one-casino-big-one-gameshow-speel-gratis-mee",
+   "name": "One Casino: Big One Gameshow: speel gratis mee",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ac211265594730f7e122408": {
@@ -1522,13 +1527,15 @@
   "datum": "2026-10-01"
  },
  "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-oktober-t-m-7-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe555b3a2916ab15e3b007",
   "hash": null,
   "slug": "leovegas-elke-dag-een-nieuwe-interessante-bonus",
   "check": "geen getallen; tekstoverlap",
   "bron": "https://www.leovegas.nl/promoties/free-spin-festival",
-  "datum": "2026-10-01"
+  "datum": "2026-10-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-08"
  },
  "circus|prize-drops-bij-circus-nl-op-gates-of-olympus-2500|1-oktober-t-m-7-oktober": {
   "status": "live",
@@ -1670,11 +1677,13 @@
   "verwijderd": "2026-10-05"
  },
  "handmatig|bingoal-gates-of-olympus-2500-prize-drop": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ac0e4b3a385863682e400ae",
   "slug": "bingoal-gates-of-olympus-2500-prize-drop",
   "bron": "bingoal.nl/promoties (screenshot gebruiker)",
-  "datum": "2026-10-03"
+  "datum": "2026-10-03",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-08"
  },
  "handmatig|bingoal-5000-pragmatic-play-toernooi": {
   "status": "einddatum",
@@ -1775,13 +1784,15 @@
   "datum": "2026-10-05"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|5-oktober-t-m-7-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ac380ad55e4089e68a182e4",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-05"
+  "datum": "2026-10-05",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-08"
  },
  "888|welkomstbonus-tot-40-aan-free-chips|altijd-geldig": {
   "status": "overgeslagen",
