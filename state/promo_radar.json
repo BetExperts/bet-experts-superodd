@@ -904,7 +904,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -925,7 +925,7 @@
   "6ab541dbe7e5f9b30ec2e9ce": {
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "chrome-error://chromewebdata/"
+   "bron": "https://starcasino.nl/geldkluisbonus"
   },
   "6aba2fc27766e026d16f8515": {
    "slug": "starcasino-1-000-sport-toernooi",
@@ -1538,7 +1538,7 @@
   "verwijderd": "2026-10-08"
  },
  "circus|prize-drops-bij-circus-nl-op-gates-of-olympus-2500|1-oktober-t-m-7-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe555d62786a50db2c9e9a",
   "hash": null,
   "slug": "circus-prize-drops-op-gates-of-olympus-2500",
@@ -1547,7 +1547,7 @@
   "datum": "2026-10-01"
  },
  "betmgm|doe-mee-met-de-betmgm-bonusweek|1-oktober-t-m-7-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe55682511f85c2d957764",
   "hash": null,
   "slug": "betmgm-doe-mee-met-de-betmgm-bonusweek",
@@ -1556,7 +1556,7 @@
   "datum": "2026-10-01"
  },
  "hard-rock|prize-drop-bij-hard-rock-casino|1-oktober-t-m-7-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abe55736e171d21adf94743",
   "hash": null,
   "slug": "hard-rock-casino-prize-drop",
@@ -1931,24 +1931,6 @@
   "bron": null,
   "datum": "2026-10-07"
  },
- "comeon|toernooien-bij-comeon|7-oktober-t-m-11-oktober": {
-  "status": "draft",
-  "item_id": "6ac380afe57e07b1dd632d3b",
-  "hash": null,
-  "slug": "comeon-toernooien-29240",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "888|toernooien-bij-888|7-oktober-t-m-11-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
  "toto-acties|toto-exclusief-speel-25-en-krijg-20-gratis-spins": {
   "status": "bestond al",
   "cms": "TOTO Exclusief: speel €25 en krijg 20 free spins (elke woensdag & donderdag)",
@@ -1966,5 +1948,29 @@
   "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
   "bron": "tekst gebruiker (toto.nl, achter login)",
   "datum": "2026-10-07"
+ },
+ "comeon|toernooien-bij-comeon|7-oktober-t-m-14-oktober": {
+  "status": "draft",
+  "item_id": "6ac380afe57e07b1dd632d3b",
+  "hash": null,
+  "slug": "comeon-toernooien-29240",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "888|toernooien-bij-888|5-oktober-t-m-14-oktober": {
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "hard-rock|rock-reload-pak-tot-110-free-spins|iedere-donderdag-en-vrijdag": {
+  "status": "bestond al",
+  "cms": "Hard Rock Casino: Rock Reload: Pak tot 100 free spins",
+  "score": 0.79,
+  "datum": "2026-10-08"
  }
 }
