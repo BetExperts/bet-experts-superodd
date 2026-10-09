@@ -1940,5 +1940,11 @@
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://promo.vbet.nl/nl/betbuilder",
   "datum": "2026-10-08"
+ },
+ "888|toernooien-bij-888|9-oktober-t-m-14-oktober": {
+  "status": "bestond al",
+  "cms": "888: Toernooien (van 5 oktober t/m 14 oktober)",
+  "score": 0.89,
+  "datum": "2026-10-09"
  }
 }
