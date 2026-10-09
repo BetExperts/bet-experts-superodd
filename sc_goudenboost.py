@@ -9,13 +9,15 @@ verouderde odd tonen; het feed is leidend.
 
   python3 sc_goudenboost.py --dry        # alleen tonen
   python3 sc_goudenboost.py --publish    # CMS-item live bijwerken (of aanmaken)
+  python3 sc_goudenboost.py --publish --post   # + Telegram-teaser bij een NIEUWE boost
 """
 import os, re, sys, json, argparse
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 import requests
-from so_config import WEBFLOW_TOKEN, WF_API, PROMOTIES_COLLECTION, PROMO_BASE
+from so_config import (WEBFLOW_TOKEN, WF_API, PROMOTIES_COLLECTION, PROMO_BASE,
+                       TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL)
 
 NL = ZoneInfo("Europe/Amsterdam")
 FEED = ("https://sb2frontend-altenar2.biahosted.com/api/BetCards/GetBetCards?culture=nl-NL&timezoneOffset=-120"
@@ -132,6 +134,17 @@ def fielddata(b):
     }
 
 
+def telegram(b, url):
+    """Zelfde opbouw als de Bet365/Oranje Palace-posts: wedstrijd + boost, niet de selectie zelf."""
+    tekst = "\n".join(["⭐ <b>Starcasino Gouden Boost LIVE!</b> 🏆", "", f"⚽ <b>{b['event'].replace(' - ', ' – ')}</b>",
+                       f"📈 Quotering geboost: <s>{_fmt(b['old_odd'])}</s> → <b>{_fmt(b['new_odd'])}</b>", "",
+                       f"<i>{DISCLAIMER}</i>"])
+    r = requests.post(f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage", timeout=30, data={
+        "chat_id": TELEGRAM_CHANNEL, "text": tekst, "parse_mode": "HTML",
+        "reply_markup": json.dumps({"inline_keyboard": [[{"text": "Bekijk de Boost →", "url": url}]]})})
+    r.raise_for_status()
+
+
 def _wf(method, path, body=None):
     r = requests.request(method, f"{WF_API}/collections/{PROMOTIES_COLLECTION}/items{path}",
                          headers={"Authorization": "Bearer " + WEBFLOW_TOKEN, "content-type": "application/json"},
@@ -144,6 +157,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--publish", action="store_true")
+    ap.add_argument("--post", action="store_true", help="Telegram bij een nieuwe boost (andere wedstrijd/selectie)")
     a = ap.parse_args()
     now = datetime.now(NL)
     print(f"== Starcasino Gouden Boost — {now:%Y-%m-%d %H:%M} ==")
@@ -163,8 +177,10 @@ def main():
     except Exception:
         state = {}
     sig = "|".join(str(b[k]) for k in ("event", "market", "selection", "old_odd", "new_odd"))
+    boost_key = f"{b['event']}|{b['market']}|{b['selection']}"
     if state.get("sig") == sig and state.get("item_id"):
-        print("  · Zelfde boost als vorige run — CMS ongewijzigd."); return
+        print("  · Zelfde boost als vorige run — CMS ongewijzigd.")
+        _post(a, b, state, boost_key); return
     if state.get("item_id"):
         _wf("PATCH", f"/{state['item_id']}/live", {"isDraft": False, "isArchived": False, "fieldData": fd})
         iid = state["item_id"]
@@ -176,6 +192,17 @@ def main():
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
     json.dump(state, open(STATE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"  ✔ CMS live bijgewerkt: {PROMO_BASE}{SLUG}")
+    _post(a, b, state, boost_key)
+
+
+def _post(a, b, state, boost_key):
+    """Telegram alleen bij een nieuwe boost; schommelende odds passen alleen stil de pagina aan."""
+    if not a.post or state.get("posted_key") == boost_key:
+        return
+    telegram(b, PROMO_BASE + SLUG)
+    state["posted_key"] = boost_key
+    json.dump(state, open(STATE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print("  ✔ Telegram-teaser verstuurd.")
 
 
 if __name__ == "__main__":
