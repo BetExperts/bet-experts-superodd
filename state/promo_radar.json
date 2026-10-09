@@ -922,6 +922,11 @@
   "verwijderd": "2026-09-28"
  },
  "_ter_beoordeling": {
+  "6ac39fc9ac833c625da74779": {
+   "slug": "starcasino-de-le-missie",
+   "name": "Starcasino: De Le Missie",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ab50f3acb059f721b3e2095": {
    "slug": "888-toernooien",
    "name": "888: Toernooien (van 1 oktober t/m 8 oktober)",
@@ -1899,24 +1904,6 @@
   "bron": "tekst gebruiker (toto.nl, achter login)",
   "datum": "2026-10-07"
  },
- "comeon|toernooien-bij-comeon|7-oktober-t-m-14-oktober": {
-  "status": "draft",
-  "item_id": "6ac380afe57e07b1dd632d3b",
-  "hash": null,
-  "slug": "comeon-toernooien-29240",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "888|toernooien-bij-888|5-oktober-t-m-14-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
  "hard-rock|rock-reload-pak-tot-110-free-spins|iedere-donderdag-en-vrijdag": {
   "status": "bestond al",
   "cms": "Hard Rock Casino: Rock Reload: Pak tot 100 free spins",
@@ -1942,9 +1929,66 @@
   "datum": "2026-10-08"
  },
  "888|toernooien-bij-888|9-oktober-t-m-14-oktober": {
-  "status": "bestond al",
-  "cms": "888: Toernooien (van 5 oktober t/m 14 oktober)",
-  "score": 0.89,
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "comeon|toernooien-bij-comeon|8-oktober-t-m-14-oktober": {
+  "status": "draft",
+  "item_id": "6ac380afe57e07b1dd632d3b",
+  "hash": null,
+  "slug": "comeon-toernooien-29240",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "oranje-palace|krijg-2-aan-free-bets-per-doelpunt-bij-oranje-palace|9-oktober-t-m-11-oktober": {
+  "status": "live",
+  "item_id": "6ac8b6f8cb189958b82d7ce7",
+  "hash": null,
+  "slug": "oranje-palace-krijg-2-aan-free-bets-per-doelpunt",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/liverpool-manchester-city",
+  "datum": "2026-10-09"
+ },
+ "one|onecasino-rise-of-the-dragons-toernooi-5-000-prijzenpot|9-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac8b70dd80923262636090a",
+  "hash": null,
+  "slug": "one-casino-onecasino-rise-of-the-dragons-toernooi-5-000-prijzenpot",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-09"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|9-oktober-t-m-14-oktober": {
+  "status": "draft",
+  "item_id": "6ac8b70ed146bbeb9becf546",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-09"
+ },
+ "starcasino|gates-of-olympus-missie": {
+  "status": "live",
+  "item_id": "6ac8b70f0a17d84141894532",
+  "hash": "17b6ae23130f93e072b1eac26da5d613",
+  "slug": "starcasino-gates-of-olympus-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-09"
+ },
+ "starcasino-missie|de-gates-of-olympus-missie|2026-10-11": {
+  "status": "live",
+  "item_id": "6ac8b725132188123bc6f71b",
+  "hash": "d7b4dd16b394102d26b3ca1733aa4aad",
+  "slug": "starcasino-de-gates-of-olympus-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/missies",
   "datum": "2026-10-09"
  }
 }
