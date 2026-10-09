@@ -177,7 +177,7 @@ def main():
     except Exception:
         state = {}
     sig = "|".join(str(b[k]) for k in ("event", "market", "selection", "old_odd", "new_odd"))
-    boost_key = f"{b['event']}|{b['market']}|{b['selection']}"
+    boost_key = f"{b['event']}|{phrase(b)}"          # niet de ruwe markt: Starcasino wisselt '(PSV)' / '()'
     if state.get("sig") == sig and state.get("item_id"):
         print("  · Zelfde boost als vorige run — CMS ongewijzigd.")
         _post(a, b, state, boost_key); return
