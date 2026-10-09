@@ -1965,7 +1965,7 @@
   "datum": "2026-10-09"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|9-oktober-t-m-14-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ac8b70ed146bbeb9becf546",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
@@ -1989,6 +1989,15 @@
   "slug": "starcasino-de-gates-of-olympus-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
+  "datum": "2026-10-09"
+ },
+ "bet365|zet-in-en-bouw-je-eigen-aantal-free-spins-bij-bet365|9-oktober-t-m-11-oktober": {
+  "status": "draft",
+  "item_id": "6ac8e110352211872be624ce",
+  "hash": null,
+  "slug": "bet365-zet-in-en-bouw-je-eigen-aantal-free-spins",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
   "datum": "2026-10-09"
  }
 }
