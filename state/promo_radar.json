@@ -850,8 +850,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-10-07",
-   "slot": "Beanstalk Grows Wild 2"
+   "start": "2026-10-14",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -921,7 +921,18 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6ab50f3acb059f721b3e2095": {
+   "slug": "888-toernooien",
+   "name": "888: Toernooien (van 1 oktober t/m 8 oktober)",
+   "geldig_tot": "2026-10-08"
+  },
+  "6ab50f3976e8d6a8bda4ce31": {
+   "slug": "comeon-toernooien",
+   "name": "ComeOn!: Toernooien (van 1 oktober t/m 8 oktober)",
+   "geldig_tot": "2026-10-08"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
