@@ -927,6 +927,11 @@
    "name": "Starcasino: De Le Missie",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6ac525bfaef4de828a6f48b2": {
+   "slug": "circus-5-000-pragmatic-play-toernooi",
+   "name": "Circus: €5.000 Pragmatic Play toernooi (van 6 oktober t/m 12 oktober)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ab50f3acb059f721b3e2095": {
    "slug": "888-toernooien",
    "name": "888: Toernooien (van 1 oktober t/m 8 oktober)",
@@ -1639,11 +1644,13 @@
   "verwijderd": "2026-10-08"
  },
  "handmatig|bingoal-5000-pragmatic-play-toernooi": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ac0e5023710f8f995e357c2",
   "slug": "bingoal-5000-pragmatic-play-toernooi",
   "bron": "https://www.bingoal.nl/nl/promotie/NL5KPRAGMATICTOERNOOI",
-  "datum": "2026-10-03"
+  "datum": "2026-10-03",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-10"
  },
  "handmatig|starcasino-le-missie-150-free-spins": {
   "status": "verwijderd",
@@ -1672,13 +1679,15 @@
   "datum": "2026-10-04"
  },
  "oranje-palace|pak-50-free-spins-met-de-weekbonus-van-oranje-palace|5-oktober-t-m-9-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ac34e3898695a120b8ad9b1",
   "hash": null,
   "slug": "oranje-palace-pak-50-free-spins",
   "check": "0/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-wheel",
-  "datum": "2026-10-05"
+  "datum": "2026-10-05",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-10"
  },
  "one|speel-rewards-vrij-bij-one-casino|alleen-5-oktober": {
   "status": "overgeslagen",
@@ -1701,13 +1710,15 @@
   "datum": "2026-10-05"
  },
  "jacks.nl|egt-digital-toernooi-met-een-prijzenpot-van-5-000|5-oktober-t-m-9-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ac380a2ac6175832af47f6d",
   "hash": null,
   "slug": "jacks-nl-egt-digital-toernooi-met-een-prijzenpot-van-5-000",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-05"
+  "datum": "2026-10-05",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-10"
  },
  "toto|speel-crazy-time-en-win-een-deel-van-10-000|5-oktober-t-m-11-oktober": {
   "status": "draft",
