@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Titel, CMS-velddata en Telegram-teaser voor de Oranje Palace Super Odd."""
+import re
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from op_config import OP_AFFILIATE
@@ -13,7 +14,7 @@ def _fmt(o):
 def phrase(data):
     """Leesbare omschrijving van de boost, bv. 'Thom van Bergen — Scoort of geeft een assist'."""
     sel = (data.get("selection") or "").strip()
-    market = (data.get("market") or "").strip()
+    market = re.sub(r"\s*\((?:volgens|according to)[^)]*\)", "", (data.get("market") or ""), flags=re.I).strip()
     base, tail = sel, ""
     for suf in (" - Ja", " - Nee", " - JA", " - NEE"):
         if sel.endswith(suf):
