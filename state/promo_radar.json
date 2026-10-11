@@ -899,7 +899,7 @@
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d93d653e3c3ce112dc",
-  "hash": "a5b7289fe220003b56579af5b1b134ba"
+  "hash": "89de1828e66577543b47e2f16e5d5fbc"
  },
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
@@ -941,6 +941,11 @@
    "name": "Starcasino: Party Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/partywheel"
+  },
+  "6ac8b6f8cb189958b82d7ce7": {
+   "slug": "oranje-palace-krijg-2-aan-free-bets-per-doelpunt",
+   "name": "Oranje Palace: Krijg €2 aan free bets per doelpunt (van 9 oktober t/m 11 oktober)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ab50f3acb059f721b3e2095": {
    "slug": "888-toernooien",
