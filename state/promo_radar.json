@@ -899,7 +899,7 @@
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d93d653e3c3ce112dc",
-  "hash": "89de1828e66577543b47e2f16e5d5fbc"
+  "hash": "a5b7289fe220003b56579af5b1b134ba"
  },
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
@@ -936,6 +936,11 @@
    "slug": "toto-score-6-speel-gratis-mee-en-win-tot-25-000",
    "name": "TOTO: Score 6: Speel gratis mee en win tot €25.000!",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d93d653e3c3ce112dc": {
+   "name": "Starcasino: Party Wheel",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/partywheel"
   },
   "6ab50f3acb059f721b3e2095": {
    "slug": "888-toernooien",
