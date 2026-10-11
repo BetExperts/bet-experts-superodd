@@ -1744,13 +1744,15 @@
   "datum": "2026-10-05"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|4-oktober-t-m-10-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ac380ab6f84d251da3606a4",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-05"
+  "datum": "2026-10-05",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-11"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|5-oktober-t-m-7-oktober": {
   "status": "verwijderd",
