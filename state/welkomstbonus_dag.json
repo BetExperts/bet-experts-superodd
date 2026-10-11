@@ -1,10 +1,11 @@
 {
-  "datum": "2026-10-10",
+  "datum": "2026-10-11",
   "gehad": [
     "64ff0fbd5a8f205b05d5465c",
-    "64ff0fbd5a8f205b05d54687"
+    "64ff0fbd5a8f205b05d54687",
+    "6aad0c21a14e9435daf42e79"
   ],
-  "laatste_book": "64ff0fbd5a8f205b05d54687",
+  "laatste_book": "6aad0c21a14e9435daf42e79",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -101,6 +102,11 @@
       "datum": "2026-10-10",
       "book": "Unibet",
       "slug": "unibet-welkomstbonus"
+    },
+    {
+      "datum": "2026-10-11",
+      "book": "Oranje Palace",
+      "slug": "oranje-palace-sport-welkomstbonus-3x-14-free-bets"
     }
   ]
 }
