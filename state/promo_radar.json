@@ -2133,5 +2133,72 @@
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-12"
+ },
+ "toto|win-een-voetbalreis-naar-barcelona-aston-villa|6-oktober-t-m-20-oktober": {
+  "status": "bestond al",
+  "cms": "TOTO Droomwedstrijd: win een voetbalreis naar Barcelona – Aston Villa (t/m 20 oktober)",
+  "score": 0.67,
+  "datum": "2026-10-12"
+ },
+ "toto-acties|speel-lightning-storm-en-maak-kans-op-een-deel-van-10-000": {
+  "status": "bestond al",
+  "cms": "TOTO: Lucky Number 7 Lightning Roulette",
+  "score": 0.67,
+  "hash": "50a85c9e094cbc192aae45b34c62e1a8",
+  "datum": "2026-10-12"
+ },
+ "leovegas|leovegas-the-club-exclusief-vip-programma-met-persoonlijke-beloningen|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6accc81ae52762ac21a0b2f2",
+  "hash": null,
+  "slug": "leovegas-the-club-exclusief-vip-programma-met-persoonlijke-beloningen",
+  "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
+ },
+ "toto|toto-sport-bonus-pak-20-free-spins|12-oktober-t-m-15-oktober": {
+  "status": "live",
+  "item_id": "6accc81cc026fdf6f80c8616",
+  "hash": null,
+  "slug": "toto-sport-bonus-pak-20-free-spins",
+  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
+ },
+ "jacks.nl|push-gaming-toernooi-met-2-000-aan-free-spins|10-oktober-t-m-14-oktober": {
+  "status": "draft",
+  "item_id": "6accc832e1c296e77a99129b",
+  "hash": null,
+  "slug": "jacks-nl-push-gaming-toernooi-met-2-000-aan-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
+ },
+ "toto|speel-lightning-storm-en-win-een-deel-van-10-000|12-oktober-t-m-18-oktober": {
+  "status": "draft",
+  "item_id": "6accc833947420266dea2f23",
+  "hash": null,
+  "slug": "toto-speel-lightning-storm-en-win-een-deel-van-10-000",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
+ },
+ "circus|circus-nl-roulette-toernooi-win-een-deel-van-10-000|12-oktober-t-m-18-oktober": {
+  "status": "live",
+  "item_id": "6accc835947420266dea2fc4",
+  "hash": null,
+  "slug": "circus-circus-nl-roulette-toernooi-win-een-deel-van-10-000",
+  "check": "2/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-10-12"
+ },
+ "toto|slots-toernooi-met-10-000-prijzenpot|12-oktober-t-m-18-oktober": {
+  "status": "draft",
+  "item_id": "6accc8512ea88cb9ff33e9a9",
+  "hash": null,
+  "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
  }
 }
