@@ -1,11 +1,12 @@
 {
-  "datum": "2026-10-11",
+  "datum": "2026-10-12",
   "gehad": [
     "64ff0fbd5a8f205b05d5465c",
     "64ff0fbd5a8f205b05d54687",
-    "6aad0c21a14e9435daf42e79"
+    "6aad0c21a14e9435daf42e79",
+    "64ff0fbd5a8f205b05d54670"
   ],
-  "laatste_book": "6aad0c21a14e9435daf42e79",
+  "laatste_book": "64ff0fbd5a8f205b05d54670",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -20,7 +21,7 @@
     "6909dcf78e3c22a32d06e2ad": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets",
     "66a8a87062108480763b7309": "welkomstbonus-711-sport",
     "68dd287867de5cd59d44dc39": "welkomstbonus-bingoal-sportsbook-zet-eu10-in-ontvang-5-profit-boosts",
-    "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-sport-100-match-op-je-eerste-weddenschap"
+    "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-sport-wed-eu10-ontvang-eu50"
   },
   "historie": [
     {
@@ -107,6 +108,11 @@
       "datum": "2026-10-11",
       "book": "Oranje Palace",
       "slug": "oranje-palace-sport-welkomstbonus-3x-14-free-bets"
+    },
+    {
+      "datum": "2026-10-12",
+      "book": "Circus",
+      "slug": "welkomstbonus-circus-sport-wed-eu10-ontvang-eu50"
     }
   ]
 }
