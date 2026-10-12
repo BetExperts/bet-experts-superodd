@@ -922,11 +922,6 @@
   "verwijderd": "2026-09-28"
  },
  "_ter_beoordeling": {
-  "6ac39fc9ac833c625da74779": {
-   "slug": "starcasino-de-le-missie",
-   "name": "Starcasino: De Le Missie",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
   "6ac525bfaef4de828a6f48b2": {
    "slug": "circus-5-000-pragmatic-play-toernooi",
    "name": "Circus: €5.000 Pragmatic Play toernooi (van 6 oktober t/m 12 oktober)",
@@ -946,26 +941,6 @@
    "slug": "oranje-palace-krijg-2-aan-free-bets-per-doelpunt",
    "name": "Oranje Palace: Krijg €2 aan free bets per doelpunt (van 9 oktober t/m 11 oktober)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ac8b70f0a17d84141894532": {
-   "slug": "starcasino-gates-of-olympus-missie",
-   "name": "Starcasino: Gates of Olympus Missie",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6aca2719e4ba3bed369ab10b": {
-   "slug": "oranje-palace-weekendbonus-50-free-spins-10-11-oktober",
-   "name": "Oranje Palace: Weekendbonus | 50 Free Spins op Hades Hot Roller 3x3 (10 t/m 11 oktober)",
-   "geldig_tot": "2026-10-11"
-  },
-  "6ab50f3acb059f721b3e2095": {
-   "slug": "888-toernooien",
-   "name": "888: Toernooien (van 1 oktober t/m 8 oktober)",
-   "geldig_tot": "2026-10-08"
-  },
-  "6ab50f3976e8d6a8bda4ce31": {
-   "slug": "comeon-toernooien",
-   "name": "ComeOn!: Toernooien (van 1 oktober t/m 8 oktober)",
-   "geldig_tot": "2026-10-08"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1088,7 +1063,7 @@
   "datum": "2026-09-26"
  },
  "hard-rock|hard-rock-casino-main-stage-mash-up-verdien-tot-55-free-spins|iedere-ma-di-wo": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6aba159c4503fb00bef00453",
   "hash": null,
   "slug": "hard-rock-casino-main-stage-mash-up-verdien-tot-55-free-spins",
@@ -1108,7 +1083,7 @@
   "verwijderd": "2026-10-03"
  },
  "toto|toto-maandag-maak-kans-op-500-cash-of-free-spins|iedere-maandag": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6aba159f4e9d106aabfa65b7",
   "hash": null,
   "slug": "toto-maandag-maak-kans-op-500-cash-of-free-spins",
@@ -1558,7 +1533,7 @@
   "verwijderd": "2026-10-07"
  },
  "jacks.nl|maak-kans-op-een-deel-van-de-500-prijzenpot|1-oktober-t-m-31-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6abe557f9f37cb9bc41f1ef1",
   "hash": null,
   "slug": "jacks-nl-maak-kans-op-een-deel-van-de-500-prijzenpot",
@@ -1837,13 +1812,15 @@
   "verwijderd": "2026-10-12"
  },
  "starcasino-missie|de-le-missie|None": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ac39fc9ac833c625da74779",
   "hash": "eb3f0e7e3746de8aef579503fd4477f9",
   "slug": "starcasino-de-le-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
-  "datum": "2026-10-05"
+  "datum": "2026-10-05",
+  "reden": "op verzoek gebruiker",
+  "verwijderd": "2026-10-12"
  },
  "circus|circus-prize-drops-game-shows-win-tot-1-000|5-oktober-t-m-11-oktober": {
   "status": "verwijderd",
@@ -1913,7 +1890,7 @@
   "datum": "2026-10-06"
  },
  "one|club-one-iedere-week-extra-bonussen-bij-onecasino|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ac525bd50ccf2d8551d8280",
   "hash": null,
   "slug": "one-casino-club-one-iedere-week-extra-bonussen-bij-onecasino-04736",
@@ -2014,13 +1991,15 @@
   "datum": "2026-10-09"
  },
  "starcasino|gates-of-olympus-missie": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ac8b70f0a17d84141894532",
   "hash": "17b6ae23130f93e072b1eac26da5d613",
   "slug": "starcasino-gates-of-olympus-missie",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
-  "datum": "2026-10-09"
+  "datum": "2026-10-09",
+  "reden": "op verzoek gebruiker",
+  "verwijderd": "2026-10-12"
  },
  "starcasino-missie|de-gates-of-olympus-missie|2026-10-11": {
   "status": "verwijderd",
@@ -2054,7 +2033,7 @@
   "datum": "2026-10-12"
  },
  "bet365|speel-bij-bet365-mee-met-de-champions-league-challenge|7-september-t-m-27-januari": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6acc98e2c7559918515f22ea",
   "hash": null,
   "slug": "bet365-speel-mee-met-de-champions-league-challenge",
@@ -2108,7 +2087,7 @@
   "datum": "2026-10-05"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|11-oktober-t-m-17-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accabe4d8b682c3b7fc9f77",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
@@ -2117,7 +2096,7 @@
   "datum": "2026-10-12"
  },
  "vbet|vbet-slot-van-de-dag-verdien-tot-175-free-spins|12-oktober-t-m-18-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accabe5a14ccc562d23a196",
   "hash": null,
   "slug": "vbet-slot-van-de-dag-verdien-tot-175-free-spins",
@@ -2126,7 +2105,7 @@
   "datum": "2026-10-12"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|12-oktober-t-m-14-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accabe7158b115c41648f10",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
@@ -2148,7 +2127,7 @@
   "datum": "2026-10-12"
  },
  "leovegas|leovegas-the-club-exclusief-vip-programma-met-persoonlijke-beloningen|altijd-geldig": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accc81ae52762ac21a0b2f2",
   "hash": null,
   "slug": "leovegas-the-club-exclusief-vip-programma-met-persoonlijke-beloningen",
@@ -2166,7 +2145,7 @@
   "datum": "2026-10-12"
  },
  "jacks.nl|push-gaming-toernooi-met-2-000-aan-free-spins|10-oktober-t-m-14-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accc832e1c296e77a99129b",
   "hash": null,
   "slug": "jacks-nl-push-gaming-toernooi-met-2-000-aan-free-spins",
@@ -2175,7 +2154,7 @@
   "datum": "2026-10-12"
  },
  "toto|speel-lightning-storm-en-win-een-deel-van-10-000|12-oktober-t-m-18-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accc833947420266dea2f23",
   "hash": null,
   "slug": "toto-speel-lightning-storm-en-win-een-deel-van-10-000",
@@ -2193,7 +2172,7 @@
   "datum": "2026-10-12"
  },
  "toto|slots-toernooi-met-10-000-prijzenpot|12-oktober-t-m-18-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6accc8512ea88cb9ff33e9a9",
   "hash": null,
   "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
