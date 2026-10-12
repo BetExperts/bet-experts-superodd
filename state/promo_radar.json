@@ -2206,5 +2206,14 @@
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-12"
+ },
+ "comeon|comeon-trials-of-olympus-quest|12-oktober-t-m-26-oktober": {
+  "status": "draft",
+  "item_id": "6acd0e9ee461de1daf6918ae",
+  "hash": null,
+  "slug": "comeon-trials-of-olympus-quest",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-12"
  }
 }
