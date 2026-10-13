@@ -20,7 +20,7 @@ IMG_QUALITY = 76       # WebP-kwaliteit (doel < 40 KB)
 # Operators die hier niet staan (geen deal) worden overgeslagen.
 BOOKMAKERS = {
     "jacks.nl":      {"id": "64ff0fbd5a8f205b05d5465c", "name": "JACKS.NL",  "pages": ["https://jacks.nl/promoties"]},
-    "oranje-palace": {"id": "6aad0c21a14e9435daf42e79", "name": "Oranje Palace", "pages": ["https://www.oranjepalace.nl/nl/promoties"]},
+    "oranje-palace": {"id": "6aad0c21a14e9435daf42e79", "name": "Oranje Palace", "pages": ["https://www.oranjepalace.nl/nl/promoties", "https://www.oranjepalace.nl/nl/toernooien"]},
     "circus":        {"id": None, "name": "Circus",    "pages": ["https://www.circus.nl/nl/promoties", "https://www.circus.nl/nl/promoties/casino",
                                                                   "https://www.circus.nl/nl/promoties/sport", "https://www.circus.nl/nl/promoties/toernooien"]},
     "leovegas":      {"id": None, "name": "LeoVegas",  "pages": ["https://www.leovegas.nl/promoties", "https://www.leovegas.nl/promoties/wedden"]},
@@ -105,6 +105,7 @@ EVERGREEN_SLUGS = {
     "jacks-nl-superboost",                           # JACKS.NL Superboost (jacks_superboost.py, specials-pagina)
     "betmgm-odds-boost",                             # BetMGM Odds Boost (handmatig via betmgm_boost.py, geen bron om te scrapen)
     "jacks-nl-100x-je-inzet",                        # JACKS.NL 100x (vaste pagina, bij elke nieuwe 100x-actie bijwerken)
+    "starcasino-gouden-boost",                       # Starcasino Gouden Boost (sc_goudenboost.py, elk uur)
     # Terugkerende acties: blijven staan en worden bijgewerkt zodra ze terugkomen (gebruiker, 24-09)
     "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
     "888-casino-welkomstbonus-special-400-free-spins",
