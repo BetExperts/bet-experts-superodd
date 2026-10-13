@@ -2239,5 +2239,12 @@
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-13"
+ },
+ "handmatig|711-king-of-europe-2026": {
+  "status": "einddatum",
+  "item_id": "6ace20075998bfc966daf595",
+  "slug": "711-60000-king-of-europe-toernooi",
+  "bron": "711.nl/promoties/60000-king-of-europe + mail gebruiker",
+  "datum": "2026-10-13"
  }
 }
