@@ -84,24 +84,60 @@ def crawl(headless=True):
         out.append({"home": m.group(1).strip(), "away": m.group(2).strip().rstrip(":"),
                     "event": f"{m.group(1).strip()} – {m.group(2).strip().rstrip(':')}", "selection": sel,
                     "old": _odd(odds[0]), "new": _odd(odds[1]), "kickoff": _when(when, now)})
+    if not out:
+        for i, l in enumerate(lines):
+            m = re.search(r"\(vs\.?\s+([^)]+)\)\s*$", l)
+            if not m or i == 0:
+                continue
+            speler, opp = lines[i - 1], m.group(1).strip()
+            rest = lines[i + 1:i + 7]
+            odds = [x for x in rest if re.fullmatch(r"\d+[.,]\d{2}", x)]
+            when = next((x for x in rest if re.search(r"\d{1,2}:\d{2}", x)), "")
+            if not odds:
+                continue
+            home, away = _wedstrijd_bij(opp, now) or (None, None)
+            ev = f"{home} – {away}" if home else f"{speler} vs {opp}"
+            out.append({"home": home or speler, "away": away or opp, "event": ev,
+                        "selection": f"{speler}: {re.sub(r'\s*\(vs[^)]*\)\s*$', '', l)}",
+                        "old": _odd(odds[0]) if len(odds) > 1 else None, "new": _odd(odds[-1]),
+                        "kickoff": _when(when, now)})
+            break
     return out
+
+def _wedstrijd_bij(opp, now):
+    """(thuis, uit) van de wedstrijd van vandaag/morgen met deze tegenstander, via de football-API van de site."""
+    o = opp.lower()
+    for lg in ("champions-league", "europa-league", "conference-league", "eredivisie", "nations-league", "wk-kwalificatie",
+               "premier-league", "la-liga", "bundesliga", "serie-a", "ligue-1", "jupiler-pro-league"):
+        try:
+            d = requests.get(f"https://www.bet-experts.nl/api/fixtures/{lg}", timeout=20).json()
+        except Exception:
+            continue
+        for f in (d.get("response") or {}).get("upcoming") or []:
+            h, a_ = f["teams"]["home"]["name"], f["teams"]["away"]["name"]
+            ko = datetime.fromisoformat(f["fixture"]["date"].replace("Z", "+00:00")).astimezone(NL)
+            if (o in h.lower() or o in a_.lower()) and 0 <= (ko.date() - now.date()).days <= 1:
+                return h, a_
+    return None
 
 def fmt(x):
     return f"{x:.2f}"
 
 def build_fields(bst):
-    ev, sel, old, new = bst["event"], bst["selection"], fmt(bst["old"]), fmt(bst["new"])
+    ev, sel, new = bst["event"], bst["selection"], fmt(bst["new"])
+    old = fmt(bst["old"]) if bst.get("old") else None
+    pijl = f"{old} → {new}" if old else f"nu {new}"
     ko = bst.get("kickoff")
     wanneer = f"{ko:%d-%m-%Y} om {ko:%H:%M}" if ko else ""
     datum = f" ({ko:%d-%m} om {ko:%H:%M})" if ko else ""
     fd = {
-        "name": f"TOTO Lekker Man: {ev} @ {new} (was {old})",
-        "subtitel": f"{ev}{datum} · verhoogd van {old} naar {new}",
+        "name": f"TOTO Lekker Man: {ev} @ {new}" + (f" (was {old})" if old else ""),
+        "subtitel": f"{ev}{datum} · " + (f"verhoogd van {old} naar {new}" if old else f"Lekker Man-quotering {new}"),
         "informatie": f"TOTO Lekker Man: {ev}",
-        "bonus-tekst": f"{old} → {new}",
-        "bedrag-of-boost": f"Lekker Man {old} → {new}",
+        "bonus-tekst": pijl,
+        "bedrag-of-boost": f"Lekker Man {pijl}",
         "soort-welkomstbonus": "Lekker Man (verhoogde quotering)",
-        "check-1": f"Lekker Man: {old} → {new}",
+        "check-1": f"Lekker Man: {pijl}",
         "check-2": sel[:80],
         "check-3": "De odds-boost van TOTO",
         "button-1": "Bekijk de Lekker Man bij TOTO",
@@ -115,7 +151,7 @@ def build_fields(bst):
         "nederlands-elftal": "nederland" in ev.lower(),
         "content-soort-promotie-1": (f"<h3><strong>TOTO Lekker Man: {ev}</strong></h3>"
             f"<p>Met de <strong>Lekker Man</strong> verhoogt TOTO de quotering op een speciale weddenschap bij een grote wedstrijd. "
-            f"Bij <strong>{ev}</strong>{datum} gaat het om: <strong>{sel}</strong>. De quotering gaat van {old} naar <strong>{new}</strong>.</p>"),
+            f"Bij <strong>{ev}</strong>{datum} gaat het om: <strong>{sel}</strong>. " + (f"De quotering gaat van {old} naar <strong>{new}</strong>." if old else f"De verhoogde quotering is <strong>{new}</strong>.") + "</p>"),
         "content-informatie-promotie-2": ("<h3><strong>Zo pak je de Lekker Man</strong></h3><ul>"
             "<li>Log in bij TOTO of maak een account aan (24+).</li>"
             "<li>Ga naar Sport en open de Lekker Man.</li>"
@@ -129,8 +165,8 @@ def build_fields(bst):
         "stap-2-titel": "Zoek de Lekker Man", "stap-2-tekst": f"De Lekker Man van nu: {ev} — {sel}.",
         "stap-3-titel": "Plaats je weddenschap", "stap-3-tekst": f"Zet in tegen de verhoogde quotering van {new}, vóór de aftrap.",
         "waar-op-letten-tekst": "De Lekker Man is kort geldig (tot de aftrap) en wisselt per wedstrijd. Controleer de actuele boost en eventuele maximale inzet bij TOTO.",
-        "voorwaarde-promotie": f"TOTO Lekker Man bij {ev}: {sel}, verhoogd van {old} naar {new}. Geldig tot de aftrap. Alleen voor spelers van 24 jaar of ouder. {DISCLAIMER}",
-        "volledige-voorwaarden-tekst": f"TOTO Lekker Man bij {ev}{datum}: {sel}, verhoogde quotering {new} (was {old}). Geldig tot de aftrap; alleen voor spelers van 24+. Voorwaarden van TOTO zijn van toepassing.",
+        "voorwaarde-promotie": f"TOTO Lekker Man bij {ev}: {sel}, " + (f"verhoogd van {old} naar {new}" if old else f"verhoogde quotering {new}") + f". Geldig tot de aftrap. Alleen voor spelers van 24 jaar of ouder. {DISCLAIMER}",
+        "volledige-voorwaarden-tekst": f"TOTO Lekker Man bij {ev}{datum}: {sel}, verhoogde quotering {new}" + (f" (was {old})" if old else "") + f". Geldig tot de aftrap; alleen voor spelers van 24+. Voorwaarden van TOTO zijn van toepassing.",
         "bonus-types": "odds-boost,sport",
         "bonus-rubrieken": [RUB_SUPERODD, "6ab50fb0ddc77f0861db8e44"],   # SuperOdd, Sport bonus (zoals Bet365/Lucky's Boost)
     }
@@ -138,7 +174,7 @@ def build_fields(bst):
 
 def caption(bst):
     return "\n".join(["⚡ <b>TOTO Lekker Man LIVE!</b> 🔥", "", f"⚽ <b>{bst['event']}</b>",
-                      f"📈 Quotering geboost: <s>{fmt(bst['old'])}</s> → <b>{fmt(bst['new'])}</b>", "", f"<i>{DISCLAIMER}</i>"])
+                      (f"📈 Quotering geboost: <s>{fmt(bst['old'])}</s> → <b>{fmt(bst['new'])}</b>" if bst.get("old") else f"🎯 {bst['selection']}\n📈 Lekker Man-quotering: <b>{fmt(bst['new'])}</b>"), "", f"<i>{DISCLAIMER}</i>"])
 
 def send_telegram(text, url, test=False):
     chat = TELEGRAM_TEST_CHAT if test else TELEGRAM_CHANNEL
@@ -175,7 +211,7 @@ def main():
             bst["kickoff"] = datetime.fromisoformat(k).astimezone(NL) if k else None
         except Exception:
             pass
-    print(f"  Wedstrijd: {bst['event']} | {bst['selection']} | {fmt(bst['old'])} -> {fmt(bst['new'])} | aftrap {bst['kickoff']}")
+    print(f"  Wedstrijd: {bst['event']} | {bst['selection']} | {fmt(bst['old']) if bst.get('old') else '?'} -> {fmt(bst['new'])} | aftrap {bst['kickoff']}")
     if bst["kickoff"] and now >= bst["kickoff"]:
         print("  · Wedstrijd is al begonnen — niets bijwerken/posten."); return
     fd = build_fields(bst)
