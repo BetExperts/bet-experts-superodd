@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-12",
+  "datum": "2026-10-13",
   "gehad": [
     "682b116bb82996896cb52d5d",
     "67c9acaf7db0b29e5b03370d",
@@ -13,9 +13,10 @@
     "6aad0c21a14e9435daf42e79",
     "68cbed5af6f10040b58ea680",
     "64ff0fbd5a8f205b05d54687",
-    "66bb685ec057aa8c4337ceea"
+    "66bb685ec057aa8c4337ceea",
+    "6909dcf78e3c22a32d06e2ad"
   ],
-  "laatste_book": "66bb685ec057aa8c4337ceea",
+  "laatste_book": "6909dcf78e3c22a32d06e2ad",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -29,7 +30,8 @@
     "6aad0c21a14e9435daf42e79": "oranje-palace-casino-welkomstbonus-100-tot-250",
     "68cbed5af6f10040b58ea680": "hard-rock-casino-welkomstbonus-100-deposit-match-stort-eu100-speel-met-eu200",
     "64ff0fbd5a8f205b05d54687": "unibet-casino-welkomstbonus-ontvang-100-free-spins",
-    "66bb685ec057aa8c4337ceea": "betmgm-welkomstaanbieding-tot-1000-free-spins"
+    "66bb685ec057aa8c4337ceea": "betmgm-welkomstaanbieding-tot-1000-free-spins",
+    "6909dcf78e3c22a32d06e2ad": "888-casino-welkomstbonus-special-400-free-spins"
   },
   "historie": [
     {
@@ -96,6 +98,11 @@
       "datum": "2026-10-12",
       "book": "BetMGM",
       "slug": "betmgm-welkomstaanbieding-tot-1000-free-spins"
+    },
+    {
+      "datum": "2026-10-13",
+      "book": "888",
+      "slug": "888-casino-welkomstbonus-special-400-free-spins"
     }
   ]
 }
