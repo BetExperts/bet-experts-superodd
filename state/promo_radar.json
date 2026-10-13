@@ -2221,5 +2221,23 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-12"
+ },
+ "unibet|win-tot-1-000x-je-inzet-tijdens-het-spelen|12-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6ace003a9419dd8f99f6fed0",
+  "hash": null,
+  "slug": "unibet-win-tot-1-000x-je-inzet-tijdens-het-spelen",
+  "check": "0/1 kerngetallen gevonden",
+  "bron": "https://www.unibet.nl/promotions/casino-promotions/x-wins-prize-drops?lobby=article&promo=x-wins-prize-drops",
+  "datum": "2026-10-13"
+ },
+ "circus|5-000-pragmatic-play-toernooi-bij-circus|13-oktober-t-m-19-oktober": {
+  "status": "live",
+  "item_id": "6ace003ccc1c607f8da4f5ea",
+  "hash": null,
+  "slug": "circus-5-000-pragmatic-play-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-10-13"
  }
 }
