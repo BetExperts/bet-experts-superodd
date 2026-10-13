@@ -1,12 +1,13 @@
 {
-  "datum": "2026-10-12",
+  "datum": "2026-10-13",
   "gehad": [
     "64ff0fbd5a8f205b05d5465c",
     "64ff0fbd5a8f205b05d54687",
     "6aad0c21a14e9435daf42e79",
-    "64ff0fbd5a8f205b05d54670"
+    "64ff0fbd5a8f205b05d54670",
+    "6a7afdaa4a7453c17d31cab5"
   ],
-  "laatste_book": "64ff0fbd5a8f205b05d54670",
+  "laatste_book": "6a7afdaa4a7453c17d31cab5",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -113,6 +114,11 @@
       "datum": "2026-10-12",
       "book": "Circus",
       "slug": "welkomstbonus-circus-sport-wed-eu10-ontvang-eu50"
+    },
+    {
+      "datum": "2026-10-13",
+      "book": "Starcasino",
+      "slug": "starcasino-sport-welkomstbonus-scoor-een-eu80-free-bet"
     }
   ]
 }
