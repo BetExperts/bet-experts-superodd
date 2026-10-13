@@ -43,6 +43,10 @@ def send_photo(caption, url, test=False):
         r = requests.post(api, data=data, files={"photo": f}, timeout=30)
     r.raise_for_status(); return True
 
+TEAM_FIX = {"Hadjuk Split": "Hajduk Split"}
+KICKOFF_OVERRIDE = {("Hajduk Split", "Ajax"): "2026-10-15 18:45"}   # opgave gebruiker 13-10 (voorwaarden 888 zeiden nog 10-10)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
@@ -59,6 +63,15 @@ def main():
         print(f"FOUT bij crawlen: {e}"); sys.exit(2)
     if not data:
         print("Geen actieve 60x-boost gevonden op de 888-pagina. Niets gedaan."); sys.exit(0)
+
+    # 888-schrijffouten in teamnamen
+    for k in ("home", "away"):
+        data[k] = TEAM_FIX.get(data[k], data[k])
+    # 888 laat soms de datum van de vorige actie in de voorwaarden staan: handmatige aftraptijd per wedstrijd
+    ov = KICKOFF_OVERRIDE.get((data["home"], data["away"]))
+    if ov:
+        k = datetime.strptime(ov, "%Y-%m-%d %H:%M").replace(tzinfo=NL)
+        data.update(kickoff=k, date=f"{k:%d-%m-%Y}", time=f"{k:%H:%M}", datetime_text=f"{k:%d-%m-%Y} om {k:%H:%M}")
 
     fields, live = B.build_fields(data, now)
     print(f"  Wedstrijd : {data['home']} – {data['away']}  ({data['market']})")

@@ -10,6 +10,7 @@ Daaruit halen we thuis/uit, datum, tijd en markt.
 import os, re
 from datetime import datetime
 from zoneinfo import ZoneInfo
+import time
 from s888_config import PROMO_URL
 
 NL = ZoneInfo("Europe/Amsterdam")
@@ -66,7 +67,7 @@ def crawl_60x(headless=True, timeout_ms=45000):
                         "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"))
         page = ctx.new_page()
         try:
-            page.goto(PROMO_URL, wait_until="domcontentloaded", timeout=timeout_ms)
+            page.goto(f"{PROMO_URL}/?v={int(time.time())}", wait_until="domcontentloaded", timeout=timeout_ms)   # cachebuster: de CDN serveerde anders een oude boost
         except Exception as e:
             browser.close(); raise RuntimeError(f"Kon 888-pagina niet laden: {e}")
 
