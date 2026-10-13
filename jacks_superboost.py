@@ -80,7 +80,7 @@ def crawl():
             pg.wait_for_timeout(4000)
             for el in pg.query_selector_all(".KambiBC-react-reward-container__label"):
                 t = (el.inner_text() or "").replace("\n", " ")
-                if re.search(r"superboost", t, re.I):
+                if re.search(r"superboost|special|max\.?\s*inzet", t, re.I):
                     reward = t; break
         except Exception as e:
             print(f"  ! wedcoupon niet gelezen: {e}")
@@ -91,7 +91,9 @@ def crawl():
     title, event, sels = body[0], body[1], body[2:]
     m = re.search(r"/event/(\d+)", best.get("href") or "")
     out = {"title": title, "event": event.replace(" - ", " – "), "selections": sels, "old": best["old"], "new": best["new"],
-           "event_id": m.group(1) if m else None, "max": None, "expiry": None, "is_superboost": bool(reward)}
+           "event_id": m.group(1) if m else None, "max": None, "expiry": None,
+           # Superboost-label in de coupon, of een 'Special XL'-kaart (bv. Zijlijn Special XL 2.60 -> 10.00)
+           "is_superboost": bool(reward) or bool(re.search(r"\bXL\b|superboost", title, re.I)) or best["new"] / best["old"] >= 3}
     if reward:
         mm = re.search(r"Max\.?\s*inzet\s*€\s*([\d.,]+)", reward, re.I)
         me = re.search(r"Verloopt\s+(.+)$", reward, re.I)
