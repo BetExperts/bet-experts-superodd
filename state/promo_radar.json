@@ -1336,16 +1336,6 @@
   "status": "overgeslagen",
   "reden": "TOTO komt via de directe bron toto.nl/acties"
  },
- "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-30-september": {
-  "status": "draft",
-  "item_id": "6abcd974a113ed323bb5de97",
-  "hash": null,
-  "slug": "circus-pak-willekeurig-geldprijzen",
-  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-30",
-  "behouden": true
- },
  "jacks.nl|pragmatic-play-toernooi-met-een-prijzenpot-van-5-000|30-september-t-m-4-oktober": {
   "status": "verwijderd",
   "item_id": "6abcd97524f2a6f78b5164dd",
@@ -1361,7 +1351,8 @@
   "status": "bestond al",
   "cms": "TOTO Exclusief (wekelijks, RECURRING)",
   "item_id": "6ab53f21ed7e65c979c56788",
-  "datum": "2026-10-02"
+  "datum": "2026-10-02",
+  "hash": "894e257b9304ce69dcc5330a712aaa36"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
@@ -2272,5 +2263,33 @@
  "888|888-odds-boosts-60x-je-inleg|12-oktober-t-m-15-oktober": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-14-oktober": {
+  "status": "draft",
+  "item_id": "6abcd974a113ed323bb5de97",
+  "hash": null,
+  "slug": "circus-pak-willekeurig-geldprijzen",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-30",
+  "behouden": true
+ },
+ "tonybet|pak-elke-week-25-free-bet|12-oktober-t-m-5-juni": {
+  "status": "live",
+  "item_id": "6acf4e8eef9e306c271c0e27",
+  "hash": null,
+  "slug": "tonybet-pak-elke-week-25-free-bet",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://tonybet.nl/promoties/champions-league-free-bet?bonusType=sport",
+  "datum": "2026-10-14"
+ },
+ "circus|match-of-the-week-pak-een-20-free-bet-bij-circus-nl|12-oktober-t-m-18-oktober": {
+  "status": "live",
+  "item_id": "6acf4ea817b854148f874ef2",
+  "hash": null,
+  "slug": "circus-match-of-the-week-pak-een-20-free-bet",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/bet-match-of-the-week",
+  "datum": "2026-10-14"
  }
 }
