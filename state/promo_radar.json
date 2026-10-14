@@ -2075,24 +2075,6 @@
   "bron": "https://starcasino.nl/missies",
   "datum": "2026-10-12"
  },
- "comeon|toernooien-bij-comeon|8-oktober-t-m-18-oktober": {
-  "status": "draft",
-  "item_id": "6ac380afe57e07b1dd632d3b",
-  "hash": null,
-  "slug": "comeon-toernooien-29240",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "888|toernooien-bij-888|9-oktober-t-m-18-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|11-oktober-t-m-17-oktober": {
   "status": "live",
   "item_id": "6accabe4d8b682c3b7fc9f77",
@@ -2291,5 +2273,23 @@
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/bet-match-of-the-week",
   "datum": "2026-10-14"
+ },
+ "comeon|toernooien-bij-comeon|14-oktober-t-m-18-oktober": {
+  "status": "draft",
+  "item_id": "6ac380afe57e07b1dd632d3b",
+  "hash": null,
+  "slug": "comeon-toernooien-29240",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "888|toernooien-bij-888|14-oktober-t-m-18-oktober": {
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
  }
 }
