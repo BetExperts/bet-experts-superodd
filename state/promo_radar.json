@@ -2291,5 +2291,14 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-05"
+ },
+ "711|20-000-crazy-time-toernooi|14-oktober-t-m-19-oktober": {
+  "status": "live",
+  "item_id": "6acfb1145c7cf074e1da8c05",
+  "hash": null,
+  "slug": "711-20-000-crazy-time-toernooi",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/20k-euro-crazy-time-toernooi",
+  "datum": "2026-10-14"
  }
 }
