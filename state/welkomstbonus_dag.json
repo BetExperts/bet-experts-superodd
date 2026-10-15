@@ -1,14 +1,15 @@
 {
-  "datum": "2026-10-14",
+  "datum": "2026-10-15",
   "gehad": [
     "64ff0fbd5a8f205b05d5465c",
     "64ff0fbd5a8f205b05d54687",
     "6aad0c21a14e9435daf42e79",
     "64ff0fbd5a8f205b05d54670",
     "6a7afdaa4a7453c17d31cab5",
-    "6909dcf78e3c22a32d06e2ad"
+    "6909dcf78e3c22a32d06e2ad",
+    "651bd6728c40de720bd8072a"
   ],
-  "laatste_book": "6909dcf78e3c22a32d06e2ad",
+  "laatste_book": "651bd6728c40de720bd8072a",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -125,6 +126,11 @@
       "datum": "2026-10-14",
       "book": "888",
       "slug": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets"
+    },
+    {
+      "datum": "2026-10-15",
+      "book": "Bet365",
+      "slug": "bet365-sport-welkomstbonus-tot-50-wedtegoed"
     }
   ]
 }
