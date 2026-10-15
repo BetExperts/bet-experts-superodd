@@ -2318,5 +2318,14 @@
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/20k-euro-crazy-time-toernooi",
   "datum": "2026-10-14"
+ },
+ "jacks.nl|bf-games-toernooi-met-2-000-aan-free-spins|15-oktober-t-m-19-oktober": {
+  "status": "draft",
+  "item_id": "6ad0a01504a4c4d22ba836bb",
+  "hash": null,
+  "slug": "jacks-nl-bf-games-toernooi-met-2-000-aan-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-15"
  }
 }
