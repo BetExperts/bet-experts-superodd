@@ -956,11 +956,6 @@
    "name": "Starcasino: Starcasino's Voetbal Quiz",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starcasinoquiz"
-  },
-  "6accc89c947420266dea66e1": {
-   "slug": "oranje-palace-weekbonus-25-free-spins-gator-hunters-2-12-13-oktober",
-   "name": "Oranje Palace: Weekbonus | 25 Free Spins op Gator Hunters 2 (12 t/m 13 oktober)",
-   "geldig_tot": "2026-10-13"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2313,6 +2308,22 @@
   "slug": "jacks-nl-bf-games-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
+  "datum": "2026-10-15"
+ },
+ "oranje-palace|luckys-quest-bij-oranje-palace|15-oktober-t-m-25-oktober": {
+  "status": "bestond al",
+  "cms": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
+  "score": 0.6,
+  "datum": "2026-10-15"
+ },
+ "oranje-palace|welkomstbonus-oranje-palace-100-free-spins|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "oranje-palace|pak-elke-dag-10-procent-bovenop-je-storting-tot-50|altijd-geldig": {
+  "status": "bestond al",
+  "cms": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
+  "score": 0.65,
   "datum": "2026-10-15"
  }
 }
