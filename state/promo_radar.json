@@ -383,12 +383,14 @@
   "datum": "2026-09-24"
  },
  "bet365|drops-en-wins-speel-mee-voor-490-000-per-week|16-september-t-m-14-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f24094b30e4af13813c",
   "slug": "bet365-drops-en-wins-speel-mee-voor-490-000-per-week",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-15"
  },
  "jacks.nl|ontvang-3-bonussen-via-de-app-van-jacks-nl|altijd-geldig": {
   "status": "live",
@@ -891,7 +893,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "6cc2b036c1323d761d92f1a05b458280"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -948,6 +950,16 @@
    "slug": "oranje-palace-pak-25-free-spins",
    "name": "Oranje Palace: Pak 25 free spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6acc98e2c7559918515f22ea": {
+   "slug": "bet365-speel-mee-met-de-champions-league-challenge",
+   "name": "Bet365: Speel mee met de Champions League Challenge",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d6c4dfb56f3fbfc8a0": {
+   "name": "Starcasino: Starcasino's Voetbal Quiz",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/starcasinoquiz"
   },
   "6accc89c947420266dea66e1": {
    "slug": "oranje-palace-weekbonus-25-free-spins-gator-hunters-2-12-13-oktober",
@@ -1989,13 +2001,15 @@
   "verwijderd": "2026-10-12"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|9-oktober-t-m-14-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ac8b70ed146bbeb9becf546",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-09"
+  "datum": "2026-10-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-15"
  },
  "starcasino|gates-of-olympus-missie": {
   "status": "verwijderd",
@@ -2094,13 +2108,15 @@
   "datum": "2026-10-12"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|12-oktober-t-m-14-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6accabe7158b115c41648f10",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-15"
  },
  "toto|win-een-voetbalreis-naar-barcelona-aston-villa|6-oktober-t-m-20-oktober": {
   "status": "bestond al",
@@ -2134,13 +2150,15 @@
   "datum": "2026-10-12"
  },
  "jacks.nl|push-gaming-toernooi-met-2-000-aan-free-spins|10-oktober-t-m-14-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6accc832e1c296e77a99129b",
   "hash": null,
   "slug": "jacks-nl-push-gaming-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-15"
  },
  "toto|speel-lightning-storm-en-win-een-deel-van-10-000|12-oktober-t-m-18-oktober": {
   "status": "live",
