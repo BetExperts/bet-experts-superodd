@@ -884,7 +884,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "a63270e8bcfd82722c7c1d5fce374da3"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -894,7 +894,7 @@
  "starcasino|starclub": {
   "status": "bron-handmatig",
   "item_id": "6ab541d867ea55c8a770a447",
-  "hash": "a0abeefd22772e1ec92673d0b674cf33"
+  "hash": "00ae0911695758e52eaf3734e0602b41"
  },
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
@@ -961,6 +961,11 @@
    "name": "Starcasino: WoW Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/woensdagwheel"
+  },
+  "6ab541d867ea55c8a770a447": {
+   "name": "Starcasino: Starclub",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/starclubextra"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
