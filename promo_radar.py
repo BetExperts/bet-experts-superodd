@@ -124,7 +124,9 @@ def git_push(paths):
         return True
     try:
         subprocess.run(["git", "-C", BASE, "add"] + paths, check=True)
-        subprocess.run(["git", "-C", BASE, "commit", "-q", "-m", f"promo-radar: {len(paths)} afbeelding(en)"], check=True)
+        # niets gewijzigd (zelfde banner stond al in de repo, bv. een terugkerende actie): geen commit nodig
+        if subprocess.run(["git", "-C", BASE, "diff", "--cached", "--quiet"]).returncode != 0:
+            subprocess.run(["git", "-C", BASE, "commit", "-q", "-m", f"promo-radar: {len(paths)} afbeelding(en)"], check=True)
         subprocess.run(["git", "-C", BASE, "pull", "-q", "--rebase", "--autostash"], check=False)
         subprocess.run(["git", "-C", BASE, "push", "-q"], check=True)
         return True
