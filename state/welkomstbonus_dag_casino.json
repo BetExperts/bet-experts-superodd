@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-15",
+  "datum": "2026-10-16",
   "gehad": [
     "682b116bb82996896cb52d5d",
     "67c9acaf7db0b29e5b03370d",
@@ -16,9 +16,10 @@
     "66bb685ec057aa8c4337ceea",
     "6909dcf78e3c22a32d06e2ad",
     "6526a08a94d8631739581743",
-    "68dd287867de5cd59d44dc39"
+    "68dd287867de5cd59d44dc39",
+    "6a7afdaa4a7453c17d31cab5"
   ],
-  "laatste_book": "68dd287867de5cd59d44dc39",
+  "laatste_book": "6a7afdaa4a7453c17d31cab5",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -35,7 +36,8 @@
     "66bb685ec057aa8c4337ceea": "betmgm-welkomstaanbieding-tot-1000-free-spins",
     "6909dcf78e3c22a32d06e2ad": "888-casino-welkomstbonus-special-400-free-spins",
     "6526a08a94d8631739581743": "leovegas-casino-welkomstbonus-2026-tot-eu200-1-400-free-spins-op-henry-the-ape",
-    "68dd287867de5cd59d44dc39": "welkomstbonus-bingoal-casino-100-bonus-tot-eu250"
+    "68dd287867de5cd59d44dc39": "welkomstbonus-bingoal-casino-100-bonus-tot-eu250",
+    "6a7afdaa4a7453c17d31cab5": "starcasino-casino-welkomstbonus-100-bonus-tot-wel-eu250-voor-nieuwe-spelers"
   },
   "historie": [
     {
@@ -117,6 +119,11 @@
       "datum": "2026-10-15",
       "book": "Bingoal",
       "slug": "welkomstbonus-bingoal-casino-100-bonus-tot-eu250"
+    },
+    {
+      "datum": "2026-10-16",
+      "book": "Starcasino",
+      "slug": "starcasino-casino-welkomstbonus-100-bonus-tot-wel-eu250-voor-nieuwe-spelers"
     }
   ]
 }
