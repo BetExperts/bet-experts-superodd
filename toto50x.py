@@ -40,11 +40,31 @@ def save_state(state):
     json.dump(state, open(STATE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 HERO_API = "https://www.bet-experts.nl/api/hero"
+OVERRIDE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state", "toto50x_override.json")
+DAGEN = ["ma", "di", "wo", "do", "vr", "za", "zo"]
+MND = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+def handmatig(now):
+    """Door de gebruiker gekozen wedstrijd (python3 toto50x.py --zet 'Telstar - Feyenoord' --selectie
+    'Feyenoord wint' --odd 1.28). Geldt tot de aftrap voorbij is; daarna kiest de agent weer zelf."""
+    try:
+        o = json.load(open(OVERRIDE_FILE, encoding="utf-8"))
+    except Exception:
+        return None
+    ko = datetime.fromisoformat(o["kickoff"]).astimezone(NL)
+    if now >= ko:
+        return None
+    o["wanneer"] = f"{DAGEN[ko.weekday()]} {ko.day} {MND[ko.month - 1]}, {ko:%H:%M}"
+    return o
 
 
 def kies_wedstrijd(state, now):
     """Wedstrijd van de dag: de eerder vandaag gekozen wedstrijd blijft staan; anders de belangrijkste
     topwedstrijd van vandaag die nog minstens 60 min moet beginnen (score uit /api/hero)."""
+    h = handmatig(now)
+    if h:
+        return h
     prev = (state or {}).get(STATE_KEY) or {}
     vandaag = f"{now:%Y-%m-%d}"
     if prev.get("dag") == vandaag and prev.get("teams") and prev.get("kickoff"):
@@ -71,7 +91,21 @@ def main():
     ap.add_argument("--no-telegram", action="store_true")
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--headed", action="store_true")
+    ap.add_argument("--zet", help="handmatige wedstrijd 'Thuis - Uit' (aftrap uit /api/hero)")
+    ap.add_argument("--selectie", help="bv. 'Feyenoord wint'")
+    ap.add_argument("--odd", help="normale quotering, bv. 1.28")
     a = ap.parse_args()
+    if a.zet:
+        thuis, uit = [x.strip() for x in a.zet.split(" - ", 1)]
+        items = requests.get(HERO_API, timeout=30).json().get("items") or []
+        it = next((i for i in items if i["home"].lower() == thuis.lower() and i["away"].lower() == uit.lower()), None)
+        if not it:
+            print(f"FOUT: {a.zet} niet gevonden in de topwedstrijden (/api/hero)."); sys.exit(1)
+        ko = datetime.fromisoformat(it["ko"].replace("Z", "+00:00")).astimezone(NL)
+        o = {"teams": [it["home"], it["away"]], "match": f"{it['home']} - {it['away']}", "kickoff": ko.isoformat(),
+             "selectie": a.selectie, "odd": a.odd}
+        json.dump(o, open(OVERRIDE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        print(f"  Handmatige keuze opgeslagen: {o['match']} | {a.selectie} @ {a.odd} | aftrap {ko:%Y-%m-%d %H:%M}")
 
     now = datetime.now(NL)
     print(f"== TOTO 50x — {now:%Y-%m-%d %H:%M} ==")
