@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-"""TOTO 50x-agent: crawl toto.nl -> CMS-titel bijwerken -> dagelijks Telegram (foto).
+"""TOTO 50x-agent: wedstrijd van de dag kiezen -> CMS-titel bijwerken -> dagelijks Telegram (foto).
+
+Sinds 16-10-2026 (mail TOTO): de 50x-actie is generiek — nieuwe spelers mogen zelf een wedstrijd kiezen en
+wij communiceren zelf welke. toto.nl noemt de wedstrijd dus niet meer. De agent kiest elke dag de belangrijkste
+wedstrijd van vandaag uit onze topwedstrijden (/api/hero: Oranje, NL-topclubs, Europese toppers, met
+voorbeschouwing), die nog minstens een uur moet beginnen. Geen geschikte wedstrijd -> algemene titel.
 
   python3 toto50x.py --dry          # alleen crawlen + tonen
   python3 toto50x.py --test         # CMS-titel live + Telegram naar TEST-chat
@@ -13,7 +18,7 @@ import os, sys, json, argparse
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-import toto_crawl as C
+import requests
 import toto_build as B
 import toto_telegram as TG
 import toto_api as API                      # aftraptijd (= geldig tot) opzoeken
@@ -34,6 +39,32 @@ def save_state(state):
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
     json.dump(state, open(STATE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
+HERO_API = "https://www.bet-experts.nl/api/hero"
+
+
+def kies_wedstrijd(state, now):
+    """Wedstrijd van de dag: de eerder vandaag gekozen wedstrijd blijft staan; anders de belangrijkste
+    topwedstrijd van vandaag die nog minstens 60 min moet beginnen (score uit /api/hero)."""
+    prev = (state or {}).get(STATE_KEY) or {}
+    vandaag = f"{now:%Y-%m-%d}"
+    if prev.get("dag") == vandaag and prev.get("teams") and prev.get("kickoff"):
+        return {"teams": prev["teams"], "match": prev["match"], "kickoff": prev["kickoff"]}
+    try:
+        items = requests.get(HERO_API, timeout=30, headers={"User-Agent": "bet-experts toto50x"}).json().get("items") or []
+    except Exception as e:
+        print(f"  · topwedstrijden niet op te halen: {e}")
+        return None
+    kand = []
+    for it in items:
+        ko = datetime.fromisoformat(it["ko"].replace("Z", "+00:00")).astimezone(NL)
+        if f"{ko:%Y-%m-%d}" == vandaag and ko >= now + timedelta(minutes=60):
+            kand.append((-(it.get("score") or 0), ko, it))
+    if not kand:
+        return None
+    _, ko, it = sorted(kand, key=lambda x: (x[0], x[1]))[0]
+    return {"teams": [it["home"], it["away"]], "match": f"{it['home']} - {it['away']}", "kickoff": ko.isoformat()}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true")
@@ -45,24 +76,16 @@ def main():
     now = datetime.now(NL)
     print(f"== TOTO 50x — {now:%Y-%m-%d %H:%M} ==")
 
-    try:
-        data = C.crawl_50x(headless=not a.headed)
-    except Exception as e:
-        print(f"FOUT bij crawlen: {e}"); sys.exit(2)
-
+    data = kies_wedstrijd(load_state(), now)
     if not data:
-        print("Geen 50x-actie gevonden op toto.nl (mogelijk even geen actie). Niets gedaan.")
-        sys.exit(0)
+        data = {"teams": [], "match": f"algemeen-{now:%Y-%m-%d}", "kickoff": None}
+        print("  Geen topwedstrijd meer vandaag -> algemene titel")
+    else:
+        print(f"  Wedstrijd: {data['match']}")
 
-    print(f"  Wedstrijd: {data['match']}")
-
-    # Aftrap opzoeken (staat niet op toto.nl → uit de API): voor 'geldig tot', het
-    # datum/tijd-veld, én om te bepalen of de wedstrijd al live is (dan namen weg).
-    kickoff = None; geldig_tot = None; wed_dt = ""; live = False
-    try:
-        kickoff = API.kickoff_for(data["teams"])
-    except Exception as e:
-        print(f"  · aftrap niet opgezocht: {e}")
+    # Aftrap (uit /api/hero): voor 'geldig tot', het datum/tijd-veld, en om te bepalen of de wedstrijd al
+    # live is (dan namen weg).
+    kickoff = data.get("kickoff"); geldig_tot = None; wed_dt = ""; live = not data["teams"]
     if kickoff:
         kk = datetime.fromisoformat(kickoff).astimezone(NL)
         live = now >= kk - timedelta(minutes=15)   # namen 15 min vóór de aftrap weg (agent draait elke 15 min)
@@ -72,7 +95,9 @@ def main():
         print(f"  Aftrap: {kk:%Y-%m-%d %H:%M} → "
               f"{'LIVE (algemeen, namen weg)' if live else 'vóór kickoff (met namen)'} | geldig tot {gt:%Y-%m-%d}")
     else:
-        print("  Aftrap onbekend (geldig tot/datum-tijd leeg; namen blijven staan)")
+        # algemene actie (geen wedstrijd gekozen): doorlopend, dus 'geldig tot' morgen 12:00 (nooit 'Verlopen')
+        geldig_tot = (now.replace(hour=12, minute=0, second=0, microsecond=0) + timedelta(days=1)).isoformat()
+        print("  Geen wedstrijd -> algemene titel, geldig tot morgen 12:00")
 
     title = B.build_title(data, live)
     print(f"  Titel    : {title}")
@@ -105,20 +130,25 @@ def main():
     state[STATE_KEY] = {"item_id": TOTO_ITEM_ID, "slug": TOTO_SLUG,
                         "match": data["match"], "title": title, "content_sig": content_sig,
                         "kickoff": kickoff, "geldig_tot": geldig_tot, "live": live,
-                        "url": promo_url, "updated": now.isoformat()}
+                        "url": promo_url, "updated": now.isoformat(), "dag": f"{now:%Y-%m-%d}",
+                        "teams": data["teams"], "tg_match": prev.get("tg_match")}
     save_state(state)
 
     # Telegram: één bericht per nieuwe wedstrijd, en alleen vóór kickoff (namen ok).
     if a.no_telegram:
         print("  · Telegram overgeslagen (--no-telegram).")
-    elif not match_changed:
+    elif prev.get("tg_match") == data["match"] and not a.test:
         print("  · Telegram overgeslagen (zelfde wedstrijd, al gepost).")
-    elif live:
-        print("  · Telegram overgeslagen (wedstrijd is al live).")
+    elif live or not data["teams"]:
+        print("  · Telegram overgeslagen (geen wedstrijd of al live).")
+    elif not (9 <= now.hour < 22) and not a.test:
+        print("  · Telegram wacht tot 09:00 (geen posts 's nachts).")
     else:
         caption = B.telegram_caption(data)
         if TG.send_photo(caption, promo_url, test=a.test):
             print(f"  ✔ Telegram-foto verstuurd{' (TEST)' if a.test else ''}.")
+            if not a.test:
+                state[STATE_KEY]["tg_match"] = data["match"]; save_state(state)
 
     print("KLAAR.")
 

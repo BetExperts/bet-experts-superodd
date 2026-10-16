@@ -127,8 +127,58 @@ def nl_fields(r, has_casinos, opt):
     return {k: v for k, v in out.items() if v}
 
 
+def seo_titel(title, name, has_demo):
+    """Vaste vorm (gebruiker, 01-10-2026): "<Naam> gratis demo spelen & review: ..." als er een demo is."""
+    t = (title or f"{name} review: RTP en max. winst").strip()
+    t = re.sub(r"^(.*?):\s*demo,\s*", r"\1 demo & review: ", t)                       # "X: demo, RTP en ..." -> "X demo & review: RTP en ..."
+    t = re.sub(r"\s(?:gratis\s+)?demo(?:\s+spelen)?\s*[+&]\s*review", " gratis demo spelen & review", t, flags=re.I)
+    if has_demo and "demo" not in t.lower():
+        t = re.sub(r"\sreview\b", " gratis demo spelen & review", t, count=1)
+    return t
+
+
+OPT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "opt")
+OPT_RAW = "https://raw.githubusercontent.com/BetExperts/bet-experts-superodd/main/assets/opt/"
+
+
+def klein_beeld(url, slug):
+    """Slotafbeelding verkleinen (max 600 px breed, WebP) i.p.v. het volledige origineel in Webflow te laten
+    inlezen: minder Webflow-bandbreedte (16-10-2026). Geeft het lokale pad terug, of None (dan origineel)."""
+    if not url:
+        return None
+    try:
+        import io
+        from PIL import Image
+        data = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=60).read()
+        im = Image.open(io.BytesIO(data)); im.load()
+        if im.width > 600:
+            im = im.resize((600, round(im.height * 600 / im.width)), Image.LANCZOS)
+        if im.mode not in ("RGB", "RGBA"):
+            im = im.convert("RGBA")
+        os.makedirs(OPT_DIR, exist_ok=True)
+        pad = os.path.join(OPT_DIR, f"slot-{slug}.webp")
+        im.save(pad, "WEBP", quality=80, method=6)
+        return pad if os.path.getsize(pad) < len(data) else None
+    except Exception as e:
+        print(f"   ! verkleinen mislukt ({e}), origineel wordt gebruikt: {url}")
+        return None
+
+
+def push_klein(paden):
+    """Verkleinde beelden naar de publieke repo, zodat Webflow ze via raw.githubusercontent kan inlezen."""
+    import subprocess, time
+    repo = os.path.dirname(os.path.abspath(__file__))
+    subprocess.run(["git", "-C", repo, "add"] + paden, check=True)
+    if subprocess.run(["git", "-C", repo, "diff", "--cached", "--quiet"]).returncode:
+        subprocess.run(["git", "-C", repo, "commit", "-q", "-m", f"assets/opt: {len(paden)} slotafbeelding(en)"], check=True)
+    subprocess.run(["git", "-C", repo, "pull", "-q", "--rebase", "--autostash"], check=False)
+    ok = subprocess.run(["git", "-C", repo, "push", "-q"]).returncode == 0
+    time.sleep(15)
+    return ok
+
+
 def field_data(r, provider_id, casino_ids, thumb):
-    fd = {"name": r["naam"], "slug": r["slug"], "seo-titel": r.get("seo_titel"), "meta-omschrijving": r.get("meta_omschrijving"),
+    fd = {"name": r["naam"], "slug": r["slug"], "seo-titel": seo_titel(r.get("seo_titel"), r["naam"], bool(r.get("slotslaunch_id"))), "meta-omschrijving": r.get("meta_omschrijving"),
           "provider": provider_id, "intro": r.get("intro"), "slotslaunch-game-id": r.get("slotslaunch_id"),
           "rtp": r.get("rtp"), "rtp-versies": r.get("rtp_versies"), "volatiliteit": r.get("volatiliteit"),
           "max-winst": r.get("max_winst"), "raster": r.get("raster"), "winlijnen": r.get("winlijnen"), "inzet": r.get("inzet"),
@@ -157,13 +207,19 @@ def main(argv):
     existing = {i["fieldData"]["slug"]: i for i in _all_items(SLOTS)}
     opt = {o["name"]: o["id"] for f in _wf(f"/collections/{SLOTS}")["fields"] if f["slug"] == "status-nl"
            for o in f["validations"]["options"]}
-    rows_new, rows_upd = [], []
+    rows_new, rows_upd, klein = [], [], []
     for r in reviews:
         pid = provs.get((r.get("provider") or "").lower())
         cas = sorted({books[CASINO_ALIAS.get(c.lower(), c)] for c in r.get("nl_casinos") or []
                       if CASINO_ALIAS.get(c.lower(), c) in books})          # alleen live bookmakers
         g = sl_game(r.get("slotslaunch_id"), prov_sl.get(pid))
-        fd = field_data(r, pid, cas, (g or {}).get("thumb"))
+        thumb = (g or {}).get("thumb")
+        if "--write" in argv:
+            pad = klein_beeld(thumb, r["slug"])
+            if pad:
+                klein.append((pad, thumb))
+                thumb = OPT_RAW + os.path.basename(pad)
+        fd = field_data(r, pid, cas, thumb)
         fd.update(nl_fields(r, bool(cas), opt))
         print(f"{fd['onze-beoordeling']:>4} {r['naam'][:32]:32} provider={'ok' if pid else '??'} casino's={len(cas)} "
               f"demo={r.get('slotslaunch_id')} img={'ok' if fd.get('afbeelding') else '-'} woorden={len(re.sub('<[^>]+>', ' ', fd.get('review', '')).split())}")
@@ -171,6 +227,14 @@ def main(argv):
             {"id": existing[r["slug"]]["id"], "fieldData": fd} if r["slug"] in existing else {"isDraft": "--publish" not in argv, "fieldData": fd})
     if "--write" not in argv:
         return
+    if klein and not push_klein([p for p, _ in klein]):    # push mislukt: dan toch de originele afbeelding
+        orig = {OPT_RAW + os.path.basename(p): o for p, o in klein}
+        for rows in (rows_new, rows_upd):
+            for row in rows:
+                a = row["fieldData"].get("afbeelding")
+                if a and a["url"] in orig:
+                    a["url"] = orig[a["url"]]
+        print("   ! verkleinde afbeeldingen niet gepusht; originele afbeeldingen gebruikt")
     live = "--publish" in argv
     for i in range(0, len(rows_new), 25):
         path = f"/collections/{SLOTS}/items" + ("/live" if live else "")
