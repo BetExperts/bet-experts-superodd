@@ -850,8 +850,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-10-14",
-   "slot": "Beanstalk Grows Wild 2"
+   "start": "2026-10-21",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -2133,13 +2133,15 @@
   "datum": "2026-10-12"
  },
  "toto|toto-sport-bonus-pak-20-free-spins|12-oktober-t-m-15-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6accc81cc026fdf6f80c8616",
   "hash": null,
   "slug": "toto-sport-bonus-pak-20-free-spins",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-16"
  },
  "jacks.nl|push-gaming-toernooi-met-2-000-aan-free-spins|10-oktober-t-m-14-oktober": {
   "status": "verwijderd",
@@ -2284,24 +2286,6 @@
   "bron": "https://www.circus.nl/nl/promoties/details/bet-match-of-the-week",
   "datum": "2026-10-14"
  },
- "comeon|toernooien-bij-comeon|14-oktober-t-m-18-oktober": {
-  "status": "draft",
-  "item_id": "6ac380afe57e07b1dd632d3b",
-  "hash": null,
-  "slug": "comeon-toernooien-29240",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "888|toernooien-bij-888|14-oktober-t-m-18-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
  "711|20-000-crazy-time-toernooi|14-oktober-t-m-19-oktober": {
   "status": "live",
   "item_id": "6acfb1145c7cf074e1da8c05",
@@ -2335,5 +2319,23 @@
   "cms": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
   "score": 0.65,
   "datum": "2026-10-15"
+ },
+ "888|toernooien-bij-888|16-oktober-t-m-22-oktober": {
+  "status": "draft",
+  "item_id": "6ac380b0793990f1e0993e53",
+  "hash": null,
+  "slug": "888-toernooien-0b705",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-05"
+ },
+ "comeon|toernooien-bij-comeon|16-oktober-t-m-22-oktober": {
+  "status": "draft",
+  "item_id": "6ad1c8f6bfcadf85b5b17e0b",
+  "hash": null,
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-16"
  }
 }
