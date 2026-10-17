@@ -1,25 +1,9 @@
 {
-  "datum": "2026-10-16",
+  "datum": "2026-10-17",
   "gehad": [
-    "682b116bb82996896cb52d5d",
-    "67c9acaf7db0b29e5b03370d",
-    "669ab9f5aceb8b717cea24c3",
-    "64ff0fbd5a8f205b05d5465c",
-    "66a24463b6de25483eec85e9",
-    "651bd6728c40de720bd8072a",
-    "67974cf05b546fe28ef78cdc",
-    "66a8a87062108480763b7309",
-    "64ff0fbd5a8f205b05d54670",
-    "6aad0c21a14e9435daf42e79",
-    "68cbed5af6f10040b58ea680",
-    "64ff0fbd5a8f205b05d54687",
-    "66bb685ec057aa8c4337ceea",
-    "6909dcf78e3c22a32d06e2ad",
-    "6526a08a94d8631739581743",
-    "68dd287867de5cd59d44dc39",
-    "6a7afdaa4a7453c17d31cab5"
+    "6909dcf78e3c22a32d06e2ad"
   ],
-  "laatste_book": "6a7afdaa4a7453c17d31cab5",
+  "laatste_book": "6909dcf78e3c22a32d06e2ad",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -34,7 +18,7 @@
     "68cbed5af6f10040b58ea680": "hard-rock-casino-welkomstbonus-100-deposit-match-stort-eu100-speel-met-eu200",
     "64ff0fbd5a8f205b05d54687": "unibet-casino-welkomstbonus-ontvang-100-free-spins",
     "66bb685ec057aa8c4337ceea": "betmgm-welkomstaanbieding-tot-1000-free-spins",
-    "6909dcf78e3c22a32d06e2ad": "888-casino-welkomstbonus-special-400-free-spins",
+    "6909dcf78e3c22a32d06e2ad": "888-casino-welkomstbonus-ontvang-tot-200-free-spins",
     "6526a08a94d8631739581743": "leovegas-casino-welkomstbonus-2026-tot-eu200-1-400-free-spins-op-henry-the-ape",
     "68dd287867de5cd59d44dc39": "welkomstbonus-bingoal-casino-100-bonus-tot-eu250",
     "6a7afdaa4a7453c17d31cab5": "starcasino-casino-welkomstbonus-100-bonus-tot-wel-eu250-voor-nieuwe-spelers"
@@ -124,6 +108,11 @@
       "datum": "2026-10-16",
       "book": "Starcasino",
       "slug": "starcasino-casino-welkomstbonus-100-bonus-tot-wel-eu250-voor-nieuwe-spelers"
+    },
+    {
+      "datum": "2026-10-17",
+      "book": "888",
+      "slug": "888-casino-welkomstbonus-ontvang-tot-200-free-spins"
     }
   ]
 }
