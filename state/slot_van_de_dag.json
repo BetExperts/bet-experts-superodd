@@ -1,14 +1,15 @@
 {
-  "datum": "2026-10-16",
+  "datum": "2026-10-17",
   "gehad": [
     "le-pharaoh",
     "big-bass-blast",
     "le-santa",
     "grunt-gold",
     "le-prechaun",
-    "tanked"
+    "tanked",
+    "dr-zappo"
   ],
-  "laatste_provider": "6abbe2287358828dca369663",
+  "laatste_provider": "6abbe2aee1f746b71466932c",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -33,6 +34,10 @@
     {
       "datum": "2026-10-16",
       "slot": "tanked"
+    },
+    {
+      "datum": "2026-10-17",
+      "slot": "dr-zappo"
     }
   ]
 }
