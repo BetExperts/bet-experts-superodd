@@ -927,11 +927,6 @@
    "name": "Circus: €5.000 Pragmatic Play toernooi (van 6 oktober t/m 12 oktober)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
-  "6abf7c7dd436fa75cbe66931": {
-   "slug": "toto-score-6-speel-gratis-mee-en-win-tot-25-000",
-   "name": "TOTO: Score 6: Speel gratis mee en win tot €25.000!",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
   "6ab541d93d653e3c3ce112dc": {
    "name": "Starcasino: Party Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
@@ -945,11 +940,6 @@
   "6acc98cbb692dcaf2b02445d": {
    "slug": "oranje-palace-pak-25-free-spins",
    "name": "Oranje Palace: Pak 25 free spins",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6acc98e2c7559918515f22ea": {
-   "slug": "bet365-speel-mee-met-de-champions-league-challenge",
-   "name": "Bet365: Speel mee met de Champions League Challenge",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ab541d6c4dfb56f3fbfc8a0": {
@@ -966,16 +956,6 @@
    "name": "Starcasino: Starclub",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starclubextra"
-  },
-  "6acc99d9249e1b1db42c3f85": {
-   "slug": "starcasino-de-gates-of-olympus-missie-5b31d",
-   "name": "Starcasino: De Gates of Olympus Missie",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6acf4ea817b854148f874ef2": {
-   "slug": "circus-match-of-the-week-pak-een-20-free-bet",
-   "name": "Circus: Match of the Week: pak een €20 free bet (van 12 oktober t/m 18 oktober)",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -1621,13 +1601,15 @@
   "behouden": true
  },
  "toto-acties|toto-score-6-speel-gratis-mee-en-win-tot-25-000": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6abf7c7dd436fa75cbe66931",
   "hash": "3b6d8ab3929f62d85bf583c269e93cb5",
   "slug": "toto-score-6-speel-gratis-mee-en-win-tot-25-000",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
-  "datum": "2026-10-02"
+  "datum": "2026-10-02",
+  "reden": "niet meer in kalender (gebruiker akkoord 18-10)",
+  "verwijderd": "2026-10-18"
  },
  "bet365|zet-in-en-bouw-je-eigen-aantal-free-spins-bij-bet365|2-oktober-t-m-4-oktober": {
   "status": "verwijderd",
@@ -2056,13 +2038,15 @@
   "verwijderd": "2026-10-12"
  },
  "bet365|speel-bij-bet365-mee-met-de-champions-league-challenge|7-september-t-m-27-januari": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6acc98e2c7559918515f22ea",
   "hash": null,
   "slug": "bet365-speel-mee-met-de-champions-league-challenge",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "niet meer in kalender (gebruiker akkoord 18-10)",
+  "verwijderd": "2026-10-18"
  },
  "starcasino-toernooi|push-gaming-toernooi|2026-10-12": {
   "status": "live",
@@ -2083,13 +2067,15 @@
   "datum": "2026-10-12"
  },
  "starcasino-missie|de-gates-of-olympus-missie|None": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6acc99d9249e1b1db42c3f85",
   "hash": "d7b4dd16b394102d26b3ca1733aa4aad",
   "slug": "starcasino-de-gates-of-olympus-missie-5b31d",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/missies",
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "niet meer in kalender (gebruiker akkoord 18-10)",
+  "verwijderd": "2026-10-18"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|11-oktober-t-m-17-oktober": {
   "status": "verwijderd",
@@ -2290,13 +2276,15 @@
   "datum": "2026-10-14"
  },
  "circus|match-of-the-week-pak-een-20-free-bet-bij-circus-nl|12-oktober-t-m-18-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6acf4ea817b854148f874ef2",
   "hash": null,
   "slug": "circus-match-of-the-week-pak-een-20-free-bet",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/bet-match-of-the-week",
-  "datum": "2026-10-14"
+  "datum": "2026-10-14",
+  "reden": "niet meer in kalender (gebruiker akkoord 18-10)",
+  "verwijderd": "2026-10-18"
  },
  "711|20-000-crazy-time-toernooi|14-oktober-t-m-19-oktober": {
   "status": "live",
