@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-17",
+  "datum": "2026-10-18",
   "gehad": [
     "le-pharaoh",
     "big-bass-blast",
@@ -7,9 +7,10 @@
     "grunt-gold",
     "le-prechaun",
     "tanked",
-    "dr-zappo"
+    "dr-zappo",
+    "wild-dojo-strike"
   ],
-  "laatste_provider": "6abbe2aee1f746b71466932c",
+  "laatste_provider": "6abcc003269c2bbc8388767a",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -38,6 +39,10 @@
     {
       "datum": "2026-10-17",
       "slot": "dr-zappo"
+    },
+    {
+      "datum": "2026-10-18",
+      "slot": "wild-dojo-strike"
     }
   ]
 }
