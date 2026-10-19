@@ -138,7 +138,7 @@ def main():
             print(f"FOUT: {a.zet} niet gevonden in de topwedstrijden (/api/hero)."); sys.exit(1)
         ko = datetime.fromisoformat(it["ko"].replace("Z", "+00:00")).astimezone(NL)
         o = {"teams": [it["home"], it["away"]], "match": f"{it['home']} - {it['away']}", "kickoff": ko.isoformat(),
-             "selectie": a.selectie, "odd": a.odd}
+             "selectie": a.selectie, "odd": a.odd, "fid": it.get("fid")}
         json.dump(o, open(OVERRIDE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
         print(f"  Handmatige keuze opgeslagen: {o['match']} | {a.selectie} @ {a.odd} | aftrap {ko:%Y-%m-%d %H:%M}")
 
