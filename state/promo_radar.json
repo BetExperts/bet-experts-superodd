@@ -921,43 +921,7 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {
-  "6ac525bfaef4de828a6f48b2": {
-   "slug": "circus-5-000-pragmatic-play-toernooi",
-   "name": "Circus: €5.000 Pragmatic Play toernooi (van 6 oktober t/m 12 oktober)",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ab541d93d653e3c3ce112dc": {
-   "name": "Starcasino: Party Wheel",
-   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "https://starcasino.nl/partywheel"
-  },
-  "6ac8b6f8cb189958b82d7ce7": {
-   "slug": "oranje-palace-krijg-2-aan-free-bets-per-doelpunt",
-   "name": "Oranje Palace: Krijg €2 aan free bets per doelpunt (van 9 oktober t/m 11 oktober)",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6acc98cbb692dcaf2b02445d": {
-   "slug": "oranje-palace-pak-25-free-spins",
-   "name": "Oranje Palace: Pak 25 free spins",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ab541d6c4dfb56f3fbfc8a0": {
-   "name": "Starcasino: Starcasino's Voetbal Quiz",
-   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "https://starcasino.nl/starcasinoquiz"
-  },
-  "6ab541d49a43a1d53046a7ea": {
-   "name": "Starcasino: WoW Wheel",
-   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "https://starcasino.nl/woensdagwheel"
-  },
-  "6ab541d867ea55c8a770a447": {
-   "name": "Starcasino: Starclub",
-   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
-   "bron": "https://starcasino.nl/starclubextra"
-  }
- },
+ "_ter_beoordeling": {},
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
