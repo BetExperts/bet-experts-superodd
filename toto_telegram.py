@@ -4,7 +4,7 @@ import json, requests
 from so_config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL, TELEGRAM_TEST_CHAT
 from toto_config import TOTO_IMAGE
 
-def send_photo(caption, promo_url, test=False):
+def send_photo(caption, promo_url, test=False, image=None):
     if not TELEGRAM_BOT_TOKEN:
         print("  · Telegram overgeslagen (geen TELEGRAM_BOT_TOKEN)."); return False
     chat_id = TELEGRAM_TEST_CHAT if test else TELEGRAM_CHANNEL
@@ -19,7 +19,7 @@ def send_photo(caption, promo_url, test=False):
             {"text": "Bekijk de actie →", "url": promo_url}
         ]]}),
     }
-    with open(TOTO_IMAGE, "rb") as f:
+    with open(image or TOTO_IMAGE, "rb") as f:   # image = wedstrijdbanner (19-10-2026), anders de vaste TOTO-afbeelding
         r = requests.post(api, data=data, files={"photo": f}, timeout=30)
     r.raise_for_status()
     return True

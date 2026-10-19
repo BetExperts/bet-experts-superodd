@@ -68,7 +68,7 @@ def kies_wedstrijd(state, now):
     prev = (state or {}).get(STATE_KEY) or {}
     vandaag = f"{now:%Y-%m-%d}"
     if prev.get("dag") == vandaag and prev.get("teams") and prev.get("kickoff"):
-        return {"teams": prev["teams"], "match": prev["match"], "kickoff": prev["kickoff"]}
+        return {"teams": prev["teams"], "match": prev["match"], "kickoff": prev["kickoff"], "fid": prev.get("fid")}
     try:
         items = requests.get(HERO_API, timeout=30, headers={"User-Agent": "bet-experts toto50x"}).json().get("items") or []
     except Exception as e:
@@ -82,7 +82,42 @@ def kies_wedstrijd(state, now):
     if not kand:
         return None
     _, ko, it = sorted(kand, key=lambda x: (x[0], x[1]))[0]
-    return {"teams": [it["home"], it["away"]], "match": f"{it['home']} - {it['away']}", "kickoff": ko.isoformat()}
+    return {"teams": [it["home"], it["away"]], "match": f"{it['home']} - {it['away']}", "kickoff": ko.isoformat(),
+            "fid": it.get("fid")}
+
+
+def _fid_voor(data):
+    """Wedstrijd-ID voor de banner: uit de keuze zelf, anders opzoeken in /api/hero op de clubnamen."""
+    if data.get("fid"):
+        return str(data["fid"])
+    try:
+        items = requests.get(HERO_API, timeout=30, headers={"User-Agent": "bet-experts toto50x"}).json().get("items") or []
+    except Exception:
+        return None
+    t = [x.lower() for x in data.get("teams") or []]
+    for it in items:
+        if len(t) == 2 and it["home"].lower() in t[0] + t[1] and it["away"].lower() in t[0] + t[1]:
+            return str(it["fid"])
+    return None
+
+
+def wedstrijd_banner(data):
+    """TOTO 50x-banner in eigen huisstijl met de wedstrijd erbij (gebruiker, 19-10-2026) -> pad naar PNG, of None."""
+    fid = _fid_voor(data)
+    if not fid:
+        return None
+    try:
+        d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "live-kijken-agent", "toto50x_banner")
+        sys.path.insert(0, d)
+        import banner, sync
+        w = sync.wedstrijd(fid)
+        if not w:
+            return None
+        pad = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state", f"toto50x-banner-{fid}.png")
+        return banner.render(w, "A", pad)
+    except Exception as e:
+        print(f"  · wedstrijdbanner mislukt ({e}), vaste afbeelding gebruikt")
+        return None
 
 
 def main():
@@ -165,7 +200,7 @@ def main():
                         "match": data["match"], "title": title, "content_sig": content_sig,
                         "kickoff": kickoff, "geldig_tot": geldig_tot, "live": live,
                         "url": promo_url, "updated": now.isoformat(), "dag": f"{now:%Y-%m-%d}",
-                        "teams": data["teams"], "tg_match": prev.get("tg_match")}
+                        "teams": data["teams"], "fid": data.get("fid"), "tg_match": prev.get("tg_match")}
     save_state(state)
 
     # Telegram: één bericht per nieuwe wedstrijd, en alleen vóór kickoff (namen ok).
@@ -179,7 +214,7 @@ def main():
         print("  · Telegram wacht tot 09:00 (geen posts 's nachts).")
     else:
         caption = B.telegram_caption(data)
-        if TG.send_photo(caption, promo_url, test=a.test):
+        if TG.send_photo(caption, promo_url, test=a.test, image=wedstrijd_banner(data)):
             print(f"  ✔ Telegram-foto verstuurd{' (TEST)' if a.test else ''}.")
             if not a.test:
                 state[STATE_KEY]["tg_match"] = data["match"]; save_state(state)
