@@ -921,7 +921,13 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {},
+ "_ter_beoordeling": {
+  "6ab50f22d2c8a1757a7fec6e": {
+   "slug": "unibet-3-verschillende-bingo-promoties",
+   "name": "Unibet: 3 verschillende Bingo-promoties",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  }
+ },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
@@ -2422,6 +2428,42 @@
   "slug": "starcasino-gulle-griezelweken",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/gullegriezelweken",
+  "datum": "2026-10-19"
+ },
+ "unibet|pak-vouchers-en-cash-met-bingo-missies-en-bet-en-gets|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6ad6102fd48815ca46a5b127",
+  "hash": null,
+  "slug": "unibet-pak-vouchers-en-cash-met-bingo-missies-en-bet-en-gets",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "hard-rock|golden-blast-toernooi-bij-hard-rock-casino|19-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6ad610317868c74d73a7cbb6",
+  "hash": null,
+  "slug": "hard-rock-casino-golden-blast-toernooi",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "bet365|herfst-prize-drops-dagelijks-10-000-gratis-spins|19-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6ad61032ad56de4225d72dd0",
+  "hash": null,
+  "slug": "bet365-herfst-prize-drops-dagelijks-10-000-gratis-spins",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "bet365|ontvang-50-gouden-fiches-met-sportweddenschappen|alleen-19-oktober": {
+  "status": "draft",
+  "item_id": "6ad61033ad56de4225d72de8",
+  "hash": null,
+  "slug": "bet365-ontvang-50-gouden-fiches-met-sportweddenschappen",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
   "datum": "2026-10-19"
  }
 }
