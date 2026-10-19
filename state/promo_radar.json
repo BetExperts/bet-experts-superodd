@@ -904,7 +904,7 @@
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
   "item_id": "6ab541dbe7e5f9b30ec2e9ce",
-  "hash": "217d08ced4844e60418cc884f4ddb8c1"
+  "hash": "e8cb0f091deca706033ecd8de7bda9f7"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-09-21": {
   "status": "bron-handmatig",
@@ -1211,7 +1211,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.69,
-  "hash": "d895165e6efc79aaf7613850d62198a5",
+  "hash": "3829d7804b82e465a90f1b217284bd29",
   "datum": "2026-09-28"
  },
  "toto-acties|verdien-een-5-gratis-weddenschap": {
@@ -2098,7 +2098,7 @@
   "verwijderd": "2026-10-18"
  },
  "vbet|vbet-slot-van-de-dag-verdien-tot-175-free-spins|12-oktober-t-m-18-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6accabe5a14ccc562d23a196",
   "hash": null,
   "slug": "vbet-slot-van-de-dag-verdien-tot-175-free-spins",
@@ -2395,6 +2395,74 @@
   "slug": "starcasino-1-000-sport-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-10-19"
+ },
+ "toto-acties|ontvang-20-gratis-spins": {
+  "status": "bestond al",
+  "cms": "TOTO: Zet €20 in op basketbal en krijg een €5 gratis weddenschap",
+  "score": 0.5,
+  "hash": "4cadb9a16a238ad5c78d590d1ab05f73",
+  "datum": "2026-10-19"
+ },
+ "toto-acties|speel-monopoly-roulette-en-maak-kans-op-een-deel-van-10-000": {
+  "status": "bestond al",
+  "cms": "TOTO: Lucky Number 7 Lightning Roulette",
+  "score": 0.67,
+  "hash": "6ace2ffc7b5fa1b4581dff5f319bc1b8",
+  "datum": "2026-10-19"
+ },
+ "toto|slots-toernooi-met-10-000-prijzenpot|19-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6ad5de41be1b604393c1018c",
+  "hash": null,
+  "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "toto|speel-monopoly-roulette-en-win-een-deel-van-10-000|19-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6ad5de43b30b7bca7f065ebc",
+  "hash": null,
+  "slug": "toto-speel-monopoly-roulette-en-win-een-deel-van-10-000",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "hard-rock|pak-elke-dag-een-bonus-met-de-supermarktweken-van-hard-rock-casino|19-oktober-t-m-1-november": {
+  "status": "draft",
+  "item_id": "6ad5de45b30b7bca7f065f4c",
+  "hash": null,
+  "slug": "hard-rock-casino-pak-elke-dag-een-bonus",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|18-oktober-t-m-24-oktober": {
+  "status": "draft",
+  "item_id": "6ad5de472269e253694042eb",
+  "hash": null,
+  "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-19"
+ },
+ "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|19-oktober-t-m-21-oktober": {
+  "status": "live",
+  "item_id": "6ad5de48a345dbda3c1bf597",
+  "hash": null,
+  "slug": "circus-krijg-tot-100-free-spins-met-missies",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/wager-and-get-promo",
+  "datum": "2026-10-19"
+ },
+ "starcasino|gulle-griezelweken": {
+  "status": "live",
+  "item_id": "6ad5de65b90e768614a8eb2b",
+  "hash": "52dc8fb15b2e7074e2d4953fd2af8f00",
+  "slug": "starcasino-gulle-griezelweken",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/gullegriezelweken",
   "datum": "2026-10-19"
  }
 }
