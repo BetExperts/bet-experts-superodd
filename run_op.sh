@@ -12,4 +12,5 @@ echo "===== $(date '+%Y-%m-%d %H:%M:%S') =====" >> logs/oranjepalace.log
 
 # Starcasino Gouden Boost (publiek Altenar-feed, geen browser nodig) — zelfde ritme als de Lucky's Boost.
 echo "===== $(date '+%Y-%m-%d %H:%M:%S') =====" >> logs/starcasino_goudenboost.log
-.venv/bin/python sc_goudenboost.py --publish --post >> logs/starcasino_goudenboost.log 2>&1
+# 20-10-2026 (gebruiker): Telegram-posts van de Gouden Boost UIT (postte steeds dezelfde boost). Alleen de site bijwerken.
+.venv/bin/python sc_goudenboost.py --publish >> logs/starcasino_goudenboost.log 2>&1

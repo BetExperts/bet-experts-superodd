@@ -168,6 +168,9 @@ def main():
     if not gb:
         print(f"Geen actieve Gouden Boost in het feed ({len(boosts)} boosts). Niets gedaan."); return
     b = min(gb, key=lambda x: x["kickoff"])
+    # 20-10-2026: het feed wisselt '0.5' en '0,5' af -> zag eruit als een nieuwe boost (dubbele posts). Altijd NL-notatie.
+    for k in ("market", "selection"):
+        b[k] = re.sub(r"(?<=\d)\.(?=\d)", ",", str(b.get(k) or ""))
     fd = fielddata(b)
     print(f"  {b['event']} | {b['market']} — {b['selection']} | {b['old_odd']} -> {b['new_odd']}\n  Titel: {fd['name']}")
     if a.dry:
