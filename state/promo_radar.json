@@ -926,6 +926,11 @@
    "slug": "unibet-3-verschillende-bingo-promoties",
    "name": "Unibet: 3 verschillende Bingo-promoties",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ad61033ad56de4225d72de8": {
+   "slug": "bet365-ontvang-50-gouden-fiches-met-sportweddenschappen",
+   "name": "Bet365: Ontvang 50 gouden fiches met sportweddenschappen",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2209,13 +2214,15 @@
   "datum": "2026-10-13"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|13-oktober-t-m-19-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ace003ccc1c607f8da4f5ea",
   "hash": null,
   "slug": "circus-5-000-pragmatic-play-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
-  "datum": "2026-10-13"
+  "datum": "2026-10-13",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-20"
  },
  "handmatig|711-king-of-europe-2026": {
   "status": "einddatum",
@@ -2271,22 +2278,26 @@
   "verwijderd": "2026-10-18"
  },
  "711|20-000-crazy-time-toernooi|14-oktober-t-m-19-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6acfb1145c7cf074e1da8c05",
   "hash": null,
   "slug": "711-20-000-crazy-time-toernooi",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/20k-euro-crazy-time-toernooi",
-  "datum": "2026-10-14"
+  "datum": "2026-10-14",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-20"
  },
  "jacks.nl|bf-games-toernooi-met-2-000-aan-free-spins|15-oktober-t-m-19-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad0a01504a4c4d22ba836bb",
   "hash": null,
   "slug": "jacks-nl-bf-games-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-15"
+  "datum": "2026-10-15",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-20"
  },
  "oranje-palace|luckys-quest-bij-oranje-palace|15-oktober-t-m-25-oktober": {
   "status": "bestond al",
