@@ -371,12 +371,14 @@
   "verwijderd": "2026-09-29"
  },
  "unibet|3-verschillende-bingo-promoties|altijd-geldig": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ab50f22d2c8a1757a7fec6e",
   "slug": "unibet-3-verschillende-bingo-promoties",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-09-24"
+  "datum": "2026-09-24",
+  "reden": "niet meer bij de bookmaker (gecontroleerd)",
+  "verwijderd": "2026-10-20"
  },
  "bet365|drops-en-wins-speel-mee-voor-490-000-per-week|16-september-t-m-14-oktober": {
   "status": "verwijderd",
@@ -921,18 +923,7 @@
   "reden": "verlopen",
   "verwijderd": "2026-09-28"
  },
- "_ter_beoordeling": {
-  "6ab50f22d2c8a1757a7fec6e": {
-   "slug": "unibet-3-verschillende-bingo-promoties",
-   "name": "Unibet: 3 verschillende Bingo-promoties",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ad61033ad56de4225d72de8": {
-   "slug": "bet365-ontvang-50-gouden-fiches-met-sportweddenschappen",
-   "name": "Bet365: Ontvang 50 gouden fiches met sportweddenschappen",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  }
- },
+ "_ter_beoordeling": {},
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "BetMGM: Sport Welkomstbonus | Stort €10 & pak 2× 100% Profit Boost",
@@ -2469,16 +2460,18 @@
   "datum": "2026-10-19"
  },
  "bet365|ontvang-50-gouden-fiches-met-sportweddenschappen|alleen-19-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad61033ad56de4225d72de8",
   "hash": null,
   "slug": "bet365-ontvang-50-gouden-fiches-met-sportweddenschappen",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "niet meer bij de bookmaker (gecontroleerd)",
+  "verwijderd": "2026-10-20"
  },
  "jacks.nl|amusnet-toernooi-met-2-000-aan-free-spins|20-oktober-t-m-24-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ad7235a5bf590d4165fb7a3",
   "hash": null,
   "slug": "jacks-nl-amusnet-toernooi-met-2-000-aan-free-spins",
@@ -2487,7 +2480,7 @@
   "datum": "2026-10-20"
  },
  "one|zet-in-op-de-champions-league-en-pak-15-free-bet|20-oktober-en-21-oktober": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6ad7235ba4e4e0bd8b636a44",
   "hash": null,
   "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
