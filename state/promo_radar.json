@@ -2476,5 +2476,23 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-10-19"
+ },
+ "jacks.nl|amusnet-toernooi-met-2-000-aan-free-spins|20-oktober-t-m-24-oktober": {
+  "status": "draft",
+  "item_id": "6ad7235a5bf590d4165fb7a3",
+  "hash": null,
+  "slug": "jacks-nl-amusnet-toernooi-met-2-000-aan-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-20"
+ },
+ "one|zet-in-op-de-champions-league-en-pak-15-free-bet|20-oktober-en-21-oktober": {
+  "status": "draft",
+  "item_id": "6ad7235ba4e4e0bd8b636a44",
+  "hash": null,
+  "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-20"
  }
 }
