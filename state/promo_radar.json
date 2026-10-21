@@ -1905,11 +1905,13 @@
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
  "handmatig|toto-droomwedstrijd-barcelona-aston-villa": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ac4ecb25fdd43655e04b944",
   "slug": "toto-win-een-reis-naar-barcelona-aston-villa",
   "bron": "tekst gebruiker (toto.nl, achter login)",
-  "datum": "2026-10-07"
+  "datum": "2026-10-07",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-21"
  },
  "hard-rock|rock-reload-pak-tot-110-free-spins|iedere-donderdag-en-vrijdag": {
   "status": "bestond al",
