@@ -2240,16 +2240,6 @@
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
- "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-14-oktober": {
-  "status": "draft",
-  "item_id": "6abcd974a113ed323bb5de97",
-  "hash": null,
-  "slug": "circus-pak-willekeurig-geldprijzen",
-  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-09-30",
-  "behouden": true
- },
  "tonybet|pak-elke-week-25-free-bet|12-oktober-t-m-5-juni": {
   "status": "live",
   "item_id": "6acf4e8eef9e306c271c0e27",
@@ -2489,5 +2479,24 @@
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-20"
+ },
+ "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-21-oktober": {
+  "status": "draft",
+  "item_id": "6abcd974a113ed323bb5de97",
+  "hash": null,
+  "slug": "circus-pak-willekeurig-geldprijzen",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-09-30",
+  "behouden": true
+ },
+ "one|rock-paper-win-event-bij-one-casino|21-oktober-t-m-30-oktober": {
+  "status": "draft",
+  "item_id": "6ad888e4564d9f6171a1652e",
+  "hash": null,
+  "slug": "one-casino-rock-paper-win-event",
+  "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-21"
  }
 }
