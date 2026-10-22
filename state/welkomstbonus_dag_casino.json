@@ -1,13 +1,14 @@
 {
-  "datum": "2026-10-21",
+  "datum": "2026-10-22",
   "gehad": [
     "6909dcf78e3c22a32d06e2ad",
     "682b116bb82996896cb52d5d",
     "68cbed5af6f10040b58ea680",
     "669ab9f5aceb8b717cea24c3",
-    "6aad0c21a14e9435daf42e79"
+    "6aad0c21a14e9435daf42e79",
+    "67c9acaf7db0b29e5b03370d"
   ],
-  "laatste_book": "6aad0c21a14e9435daf42e79",
+  "laatste_book": "67c9acaf7db0b29e5b03370d",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -137,6 +138,11 @@
       "datum": "2026-10-21",
       "book": "Oranje Palace",
       "slug": "oranje-palace-casino-welkomstbonus-100-free-spins"
+    },
+    {
+      "datum": "2026-10-22",
+      "book": "Vbet",
+      "slug": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots"
     }
   ]
 }
