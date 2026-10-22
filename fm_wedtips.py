@@ -19,7 +19,7 @@ Draaien (Mac, gebruikt een kopie van het FootyMetrics-scannerprofiel):
     .venv/bin/python fm_wedtips.py                  # velden invullen
     .venv/bin/python fm_wedtips.py --slug <slug>    # één voorbeschouwing (ook --dry)
 """
-import argparse, html, json, os, re, shutil, tempfile, time, unicodedata, urllib.request, zlib
+import argparse, html, json, os, re, shutil, statistics, tempfile, time, unicodedata, urllib.request, zlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
@@ -254,14 +254,21 @@ def zoek_fixture(fm, v, cache):
 # ---------------------------------------------------------------- kandidaten
 def odds_per_groep(odds, kant):
     """{'bet365': 1.85, 'kambi': 1.80, ...} — hoogste odd per NL-merkgroep voor deze kant."""
-    uit = {}
+    uit, alle = {}, []
     for o in odds or []:
         v = fl(o.get(kant))
         if not v or v <= 1:
             continue
+        alle.append((o.get("bk"), v))
         for g, info in GROEPEN.items():
             if o.get("bk") in info["ids"]:
                 uit[g] = max(v, uit.get(g, 0))
+    # Uitschieters weg: een odd ≥1.35× de mediaan van de andere bookmakers is bijna altijd een verkeerd gekoppelde markt
+    # (22-10-2026: TOTO 'schot op doel' 2.20 stond bij FootyMetrics als 'schoten' terwijl de rest 1.15-1.20 bood).
+    for g in list(uit):
+        rest = [v for bk, v in alle if bk not in GROEPEN[g]["ids"]]
+        if len(rest) >= 2 and uit[g] >= 1.35 * statistics.median(rest):
+            del uit[g]
     return uit
 
 
