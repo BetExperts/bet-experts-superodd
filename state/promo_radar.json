@@ -2524,5 +2524,18 @@
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-22"
+ },
+ "888|888-odds-boosts-60x-je-inleg|22-oktober-t-m-25-oktober": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "711|25-000-hacksaw-le-toernooi|21-oktober-t-m-26-oktober": {
+  "status": "live",
+  "item_id": "6ad9fdf75e442c3b2d983a06",
+  "hash": null,
+  "slug": "711-25-000-hacksaw-le-toernooi",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/25k-euro-hacksaw-le-toernooi",
+  "datum": "2026-10-22"
  }
 }
