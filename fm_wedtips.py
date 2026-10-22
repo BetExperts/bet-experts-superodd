@@ -177,7 +177,8 @@ class FM:
     def __enter__(self):
         self.tmp = Path(tempfile.mkdtemp()) / "p"
         shutil.copytree(PROFILE, self.tmp, ignore=shutil.ignore_patterns(
-            "Singleton*", "*.lock", "Cache", "Code Cache", "GPUCache", "Service Worker"))
+            "Singleton*", "*.lock", "Cache", "Code Cache", "GPUCache", "Service Worker", "RunningChromeVersion"),
+            ignore_dangling_symlinks=True)   # Chrome-symlinks die alleen bestaan terwijl de scanner draait
         self.pw = sync_playwright().start()
         self.ctx = self.pw.chromium.launch_persistent_context(str(self.tmp), channel="chrome", headless=True)
         self.page = self.ctx.pages[0] if self.ctx.pages else self.ctx.new_page()
