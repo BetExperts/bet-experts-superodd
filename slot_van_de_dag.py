@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Slot van de dag in het Telegram-kanaal Bet Experts Casino (@betexpertscasino).
 
-Kandidaten: live slots met 'Status NL' = Beschikbaar in NL en een deelafbeelding. Willekeurig, maar een slot pas
+Kandidaten: live slots van een topprovider (so_config.TOP_PROVIDERS) met 'Status NL' = Beschikbaar in NL en een deelafbeelding. Willekeurig, maar een slot pas
 opnieuw als alle andere geweest zijn, en nooit twee dagen achter elkaar dezelfde provider.
 
   python3 slot_van_de_dag.py --dry
@@ -44,6 +44,7 @@ def main():
     items = [i for i in _all_items(SLOTS) if i.get("lastPublished") and not i.get("isDraft")
              and i["fieldData"].get("status-nl") == opt.get("Beschikbaar in NL")
              and (i["fieldData"].get("deelafbeelding") or {}).get("url")]
+    items = [i for i in items if T.is_top((provs.get(i["fieldData"].get("provider")) or {}).get("slug"))]
     if not items:
         print("  ! Geen kandidaten."); return
     gehad = [s for s in st.get("gehad", []) if s in {i["fieldData"]["slug"] for i in items}]

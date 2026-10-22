@@ -101,8 +101,16 @@ def slot_caption(fd, provider, soort):
     return "\n".join(lines)
 
 
+def is_top(provider_slug):
+    from so_config import TOP_PROVIDERS
+    return provider_slug in TOP_PROVIDERS
+
+
 def post_slot(item, soort, provider=None, provider_slug=None, test=False):
     fd = item["fieldData"]
+    if not is_top(provider_slug):                       # alleen slots van topproviders in het casino-kanaal
+        print(f"  · {fd.get('name')} ({provider or 'onbekende provider'}): geen topprovider, niet gepost")
+        return False
     key = "slot:" + fd["slug"]
     if soort != "dag" and not test and al_gepost(key, soort):
         return False

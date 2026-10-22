@@ -36,6 +36,11 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHANNEL   = os.environ.get("TELEGRAM_CHANNEL") or "@BetExpertsGroup"
 # Aparte testbestemming (je eigen user-id of testkanaal) voor --test.
 TELEGRAM_CASINO_CHANNEL = os.environ.get("TELEGRAM_CASINO_CHANNEL") or "@betexpertscasino"   # casino-kanaal
+# Casino-kanaal: alleen slots van deze topproviders posten (nieuwe releases, "nu speelbaar in NL" en slot van de dag).
+# Slugs uit de Webflow-collectie Casino providers; aanpassen = deze lijst wijzigen (22-10-2026, wens Jasper).
+TOP_PROVIDERS = {"pragmatic-play", "netent", "playn-go", "hacksaw-gaming", "nolimit-city", "push-gaming", "relax-gaming",
+                 "big-time-gaming", "red-tiger", "elk-studios", "thunderkick", "yggdrasil", "games-global",
+                 "blueprint-gaming", "quickspin", "playtech", "light-and-wonder", "wazdan"}
 TELEGRAM_TEST_CHAT = os.environ.get("TELEGRAM_TEST_CHAT", "").strip()
 
 # Disclaimer (verplicht, KSA)
