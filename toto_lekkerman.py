@@ -21,7 +21,7 @@ URL = "https://sport.toto.nl/wedden/729/lekker-man/wedstrijden"
 PROMOTIES = "65e6fb5b08aed95b983b590f"
 SLUG = "toto-lekker-man"
 TOTO_BM = "669ab9f5aceb8b717cea24c3"
-AFFILIATE = "https://partner.toto.nl/C.ashx?btag=a_375b_474c_&affid=184&siteid=375&adid=474&c="
+AFFILIATE = "https://www.bet-experts.nl/go/toto-lekker-man"
 LOGO = "https://cdn.prod.website-files.com/64f9f8e867f73b8e88841e09/66ec2585dcd5bb973c21cbab_toto-nederland-rond.webp"
 RUB_SPECIALS = "65eb24f2e8d4c04e87892eab"
 RUB_SUPERODD = "6aaa9afdf92f60c1aeff6a58"   # rubriek SuperOdd: de kalender toont dan de eigen boost-naam

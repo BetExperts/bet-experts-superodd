@@ -43,8 +43,8 @@ BOOKMAKERS = {
 # Vaste affiliatelink per operator (gaat vóór de automatische keuze uit de welkomstbonussen)
 # TOTO (directe bron toto.nl/acties): sport- en casinolink apart
 TOTO_AFFILIATE = {
-    "SPORT": "https://partner.toto.nl/C.ashx?btag=a_375b_445c_&affid=184&siteid=375&adid=445&c=",
-    "CASINO": "https://partner.toto.nl/C.ashx?btag=a_547b_443c_&affid=184&siteid=547&adid=443&c=",
+    "SPORT": "https://www.bet-experts.nl/go/toto",
+    "CASINO": "https://www.bet-experts.nl/go/toto-casino",
 }
 # Acties (geen welkomstbonus) van deze bookmakers -> algemene promotiepagina-link i.p.v. de welkomstbonus-link.
 # Oranje Palace (16-10-2026): één promotiepagina voor casino en sport; Lucky's Quest heeft per editie een andere URL.
