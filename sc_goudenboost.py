@@ -26,7 +26,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 
 SLUG = "starcasino-gouden-boost"
 BOOKMAKER_ID = "6a7afdaa4a7453c17d31cab5"                     # Starcasino in de Bookmakers-collectie
-AFFILIATE = "https://media1.affiliates.starcasino.nl/redirect.aspx?pid=2170&bid=1478"
+AFFILIATE = "https://www.bet-experts.nl/go/starcasino"
 RUBRIEK_SUPERODD = "6aaa9afdf92f60c1aeff6a58"                  # zelfde rubrieken als de Lucky's Boost
 RUBRIEK_SPORT = "6ab50fb0ddc77f0861db8e44"
 GELDIG_SPORT = "9c0fbc22d905260428d1de2988b86dea"

@@ -26,7 +26,7 @@ KAMBI = "https://eu-offering-api.kambicdn.com/offering/v2018/jvh"
 PROMOTIES = "65e6fb5b08aed95b983b590f"
 SLUG = "jacks-nl-superboost"
 BOOKMAKER = "64ff0fbd5a8f205b05d5465c"
-AFFILIATE = "https://media.friendsofjacks.eu/redirect.aspx?pid=2527&bid=2257"
+AFFILIATE = "https://www.bet-experts.nl/go/jacks-boosts"
 LOGO = ("https://cdn.prod.website-files.com/64f9f8e867f73b8e88841e09/65e725359304931c5d92e1bc_jacks.nl-logo-"
         "e1696321802604-218z18lvv1o46wzs6lsayoaxs28disg3dmap8j3nn61w.webp")
 STATE = "state/jacks_superboost.json"

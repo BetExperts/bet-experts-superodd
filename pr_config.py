@@ -49,10 +49,10 @@ TOTO_AFFILIATE = {
 # Acties (geen welkomstbonus) van deze bookmakers -> algemene promotiepagina-link i.p.v. de welkomstbonus-link.
 # Oranje Palace (16-10-2026): één promotiepagina voor casino en sport; Lucky's Quest heeft per editie een andere URL.
 PROMOTIE_LINK = {
-    "6aad0c21a14e9435daf42e79": "https://record.oranjepalaceaffiliates.nl/_uAsFg0X5kIn6PBA04iUMN2Nd7ZgqdRLk/1/",
+    "6aad0c21a14e9435daf42e79": "https://www.bet-experts.nl/go/oranjepalace-quest",
 }
 AFFILIATE_OVERRIDE = {
-    "starcasino": "https://media1.affiliates.starcasino.nl/redirect.aspx?pid=2170&bid=1477",
+    "starcasino": "https://www.bet-experts.nl/go/starcasino-casino",
 }
 # id None -> wordt bij de start opgezocht op naam in de Bookmakers-collectie.
 

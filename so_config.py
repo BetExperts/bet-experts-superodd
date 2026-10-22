@@ -14,7 +14,7 @@ RUBRIEK_SUPERODD = "6aaa9afdf92f60c1aeff6a58"
 BET365_BOOKMAKER = "651bd6728c40de720bd8072a"
 
 # Bet365 sport-affiliatelink (nooit gokken — deze staat vast in de CMS)
-BET365_AFFILIATE = "https://www.bet365.nl/hub/nl-nl/open-account?affiliate=365_02599619"
+BET365_AFFILIATE = "https://www.bet-experts.nl/go/bet365"
 
 # geldig-voor optie: Sport
 GELDIG_VOOR_SPORT = "9c0fbc22d905260428d1de2988b86dea"

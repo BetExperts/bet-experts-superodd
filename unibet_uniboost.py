@@ -20,7 +20,7 @@ URL = "https://www.unibet.nl/promotions"
 PROMOTIES = "65e6fb5b08aed95b983b590f"
 SLUG = "unibet-uniboost"
 ITEM_ID = "6ab569a498befe31ca6d402d"
-AFFILIATE = "https://b1.trickyrock.com/redirect.aspx?pid=86118747&bid=39312"
+AFFILIATE = "https://www.bet-experts.nl/go/unibet"
 STATE = "state/unibet_uniboost.json"
 KAMBI = "https://eu-offering-api.kambicdn.com/offering/v2018/ubnl/betoffer/outcome.json"
 

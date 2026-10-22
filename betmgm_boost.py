@@ -20,7 +20,7 @@ NL = ZoneInfo("Europe/Amsterdam")
 PROMOTIES = "65e6fb5b08aed95b983b590f"
 SLUG = "betmgm-odds-boost"
 BOOKMAKER = "66bb685ec057aa8c4337ceea"
-AFFILIATE = "https://casino.betmgm.nl/redirect.aspx?pid=3781431&lpid=3329&bid=20762"
+AFFILIATE = "https://www.bet-experts.nl/go/betmgm"
 LOGO_FROM = "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
 STATE = "state/betmgm_boost.json"
 RUB_SUPERODD, RUB_SPORT = "6aaa9afdf92f60c1aeff6a58", "6ab50fb0ddc77f0861db8e44"
