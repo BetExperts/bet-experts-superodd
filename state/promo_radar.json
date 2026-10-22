@@ -2304,24 +2304,6 @@
   "score": 0.65,
   "datum": "2026-10-15"
  },
- "888|toernooien-bij-888|16-oktober-t-m-22-oktober": {
-  "status": "draft",
-  "item_id": "6ac380b0793990f1e0993e53",
-  "hash": null,
-  "slug": "888-toernooien-0b705",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-05"
- },
- "comeon|toernooien-bij-comeon|16-oktober-t-m-22-oktober": {
-  "status": "draft",
-  "item_id": "6ad1c8f6bfcadf85b5b17e0b",
-  "hash": null,
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-16"
- },
  "starcasino-missie|de-le-missie|2026-10-18": {
   "status": "verwijderd",
   "item_id": "6ad1da11bef3cb026d348278",
@@ -2514,6 +2496,33 @@
   "slug": "betmgm-pak-tot-35-extra-cash",
   "check": "0/3 kerngetallen gevonden",
   "bron": "https://www.betmgm.nl/campaigns/casino-welcome",
+  "datum": "2026-10-22"
+ },
+ "888|toernooien-bij-888|17-oktober-t-m-28-oktober": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "comeon|toernooien-bij-comeon|17-oktober-t-m-28-oktober": {
+  "status": "draft",
+  "item_id": "6ad9dad424c8f966f82d972b",
+  "hash": null,
+  "slug": "comeon-toernooien-e0dbf",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-22"
+ },
+ "circus|5-000-ruby-play-toernooi-bij-circus|20-oktober-t-m-26-oktober": {
+  "status": "live",
+  "item_id": "6ad9da8ea0b374f76dcf9394",
+  "hash": null,
+  "slug": "circus-5-000-ruby-play-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
   "datum": "2026-10-22"
  }
 }
