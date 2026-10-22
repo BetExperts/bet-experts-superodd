@@ -117,7 +117,9 @@ def crawl_super_boost(headless=True, timeout_ms=45000):
 
         # Wacht tot de Super-Boost-badge geladen is (max ~timeout).
         try:
-            page.wait_for_selector('img[src*="SuperBoostBadges/Super-Boost"]', timeout=timeout_ms)
+            # state=attached: de Super Boost staat soms buiten beeld in een carrousel (22-10-2026), dan is hij niet 'visible'
+            page.wait_for_selector('img[src*="SuperBoostBadges/Super-Boost"]', state="attached", timeout=timeout_ms)
+            page.wait_for_timeout(1500)
         except Exception:
             browser.close()
             return None
