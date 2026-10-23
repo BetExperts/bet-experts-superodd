@@ -1,22 +1,9 @@
 {
-  "datum": "2026-10-22",
+  "datum": "2026-10-23",
   "gehad": [
-    "64ff0fbd5a8f205b05d5465c",
-    "64ff0fbd5a8f205b05d54687",
-    "6aad0c21a14e9435daf42e79",
-    "64ff0fbd5a8f205b05d54670",
-    "6a7afdaa4a7453c17d31cab5",
-    "6909dcf78e3c22a32d06e2ad",
-    "651bd6728c40de720bd8072a",
-    "66bb685ec057aa8c4337ceea",
-    "67c9acaf7db0b29e5b03370d",
-    "6526a08a94d8631739581743",
-    "66a8a87062108480763b7309",
-    "68dd287867de5cd59d44dc39",
-    "66a24463b6de25483eec85e9",
-    "669ab9f5aceb8b717cea24c3"
+    "66bb685ec057aa8c4337ceea"
   ],
-  "laatste_book": "669ab9f5aceb8b717cea24c3",
+  "laatste_book": "66bb685ec057aa8c4337ceea",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -173,6 +160,11 @@
       "datum": "2026-10-22",
       "book": "TOTO",
       "slug": "welkomstbonus-toto-sport-pak-eu50-aan-freebets"
+    },
+    {
+      "datum": "2026-10-23",
+      "book": "BetMGM",
+      "slug": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
     }
   ]
 }
