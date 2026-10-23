@@ -852,8 +852,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-10-21",
-   "slot": "3 Gems of Vegas Superwheel"
+   "start": "2026-10-28",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -928,6 +928,11 @@
    "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
    "name": "One Casino: Zet in op de Champions League en pak €15 free bet",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ac380afe57e07b1dd632d3b": {
+   "slug": "comeon-toernooien-29240",
+   "name": "ComeOn!: Toernooien (van 16 oktober t/m 22 oktober)",
+   "geldig_tot": "2026-10-22"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
