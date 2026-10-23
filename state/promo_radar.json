@@ -901,7 +901,7 @@
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d93d653e3c3ce112dc",
-  "hash": "89de1828e66577543b47e2f16e5d5fbc"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
@@ -928,6 +928,11 @@
    "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
    "name": "One Casino: Zet in op de Champions League en pak €15 free bet",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d93d653e3c3ce112dc": {
+   "name": "Starcasino: Party Wheel",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/partywheel"
   },
   "6ac380afe57e07b1dd632d3b": {
    "slug": "comeon-toernooien-29240",
@@ -2542,5 +2547,41 @@
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/25k-euro-hacksaw-le-toernooi",
   "datum": "2026-10-22"
+ },
+ "oranje-palace|pak-een-gratis-weddenschap-van-1-bij-oranje-palace|23-oktober-t-m-25-oktober": {
+  "status": "live",
+  "item_id": "6adb28c68301427e76fe05ab",
+  "hash": null,
+  "slug": "oranje-palace-pak-een-gratis-weddenschap-van-1",
+  "check": "geen getallen; tekstoverlap",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/welkomstbonus-casino",
+  "datum": "2026-10-23"
+ },
+ "leovegas|tot-200-extra-cash-bonus-bij-leovegas|23-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6adb290bc3c3efa973cca2b7",
+  "hash": null,
+  "slug": "leovegas-tot-200-extra-cash-bonus",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-23"
+ },
+ "bet365|zet-in-op-eredivisie-wedstrijden-en-pak-5-wedtegoed|23-oktober-t-m-25-oktober": {
+  "status": "draft",
+  "item_id": "6adb290d7010afb1940892cc",
+  "hash": null,
+  "slug": "bet365-zet-in-op-eredivisie-wedstrijden-en-pak-5-wedtegoed",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-10-23"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-3-000|23-oktober-t-m-26-oktober": {
+  "status": "draft",
+  "item_id": "6adb290ef2e21dc2f3428301",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-3-000",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-23"
  }
 }
