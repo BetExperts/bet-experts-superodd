@@ -1,16 +1,14 @@
 {
-  "datum": "2026-10-18",
+  "datum": "2026-10-24",
   "gehad": [
     "le-pharaoh",
-    "big-bass-blast",
     "le-santa",
-    "grunt-gold",
     "le-prechaun",
     "tanked",
     "dr-zappo",
-    "wild-dojo-strike"
+    "fist-of-destruction-megamultiplier"
   ],
-  "laatste_provider": "6abcc003269c2bbc8388767a",
+  "laatste_provider": "6abbe2aee1f746b71466932c",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -43,6 +41,10 @@
     {
       "datum": "2026-10-18",
       "slot": "wild-dojo-strike"
+    },
+    {
+      "datum": "2026-10-24",
+      "slot": "fist-of-destruction-megamultiplier"
     }
   ]
 }
