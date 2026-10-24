@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-23",
+  "datum": "2026-10-24",
   "gehad": [
     "6909dcf78e3c22a32d06e2ad",
     "682b116bb82996896cb52d5d",
@@ -7,9 +7,10 @@
     "669ab9f5aceb8b717cea24c3",
     "6aad0c21a14e9435daf42e79",
     "67c9acaf7db0b29e5b03370d",
-    "66a24463b6de25483eec85e9"
+    "66a24463b6de25483eec85e9",
+    "67974cf05b546fe28ef78cdc"
   ],
-  "laatste_book": "66a24463b6de25483eec85e9",
+  "laatste_book": "67974cf05b546fe28ef78cdc",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -149,6 +150,11 @@
       "datum": "2026-10-23",
       "book": "ComeOn!",
       "slug": "comeon-welkomstbonus-casino-200-free-spins-bij-comeon"
+    },
+    {
+      "datum": "2026-10-24",
+      "book": "One Casino",
+      "slug": "one-casino-casino-welkomstbonus-50-bonus-tot-100"
     }
   ]
 }
