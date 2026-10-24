@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "a5b7289fe220003b56579af5b1b134ba"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -2423,7 +2423,7 @@
  "starcasino|gulle-griezelweken": {
   "status": "live",
   "item_id": "6ad5de65b90e768614a8eb2b",
-  "hash": "240a8dd0ec00ce72c3a2dc5751c56a29",
+  "hash": "e2df9a260f1cff986a08cdeec55d6838",
   "slug": "starcasino-gulle-griezelweken",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/gullegriezelweken",
