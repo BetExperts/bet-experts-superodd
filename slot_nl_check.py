@@ -9,11 +9,32 @@ casino's gekeken of er een spelpagina is (200 + de naam in de titel; niet gevond
   - item live bijwerken als het gepubliceerd is, en de deelafbeelding opnieuw maken.
 Zonder treffer: status 'Binnenkort in NL' (als 'Live in NL' in de toekomst ligt) of 'Nog niet in NL'.
 
+Bronnen per casino (sleutel = naam exact zoals in de Bookmakers-collectie), alleen-lezen, robots.txt gerespecteerd:
+  - URL-sjablonen (CASINOS, 1 request per slug):  Unibet, LeoVegas, BetMGM, Toto, JACKS.NL, 711
+  - sitemap (SITEMAPS, 1 request per run):         Starcasino, Oranje Palace, One Casino
+      One Casino zet soms een code achter de naam (starburstr300000): zonder exacte treffer wordt zo'n
+      kandidaat geopend en telt hij alleen als de paginatitel exact de slotnaam is.
+  - publieke spelcatalogus (KATALOGI, één keer per run, exacte genormaliseerde naam + providercheck):
+      Vbet       go-cms.vbet.nl games/pages/N (24 per pagina, ~107 requests) -> /nl/casino/game-view/<id>/<alias>
+                 (eigen sitemapformaat; anoniem = inlogscherm voor het spel, onbekend id = 'niet beschikbaar')
+      Tonybet    platform.tonybet.nl/api/v3/casino/game (500 per pagina, ~8 requests) -> providerpagina
+                 /casino/all/<provider> (spelpagina's sturen anonieme bezoekers naar de homepage)
+      Hard Rock  hardrockcasino.nl/api/games (robots: Allow /api/games; 500 per pagina, ~10 requests)
+                 -> /spelreviews/<slug> als die in de sitemap staat, anders /g/nl/<code>/fun|real (404 bij onbekend)
+  - handmatige spellijst (KATALOGI, alleen naam, geen provider): Bet365 = state/bet365_gamelijst.json, door Jasper
+      gekopieerd van casino.bet365.nl/gameslist/nl (23-10-2026; site blokkeert scripts). Opnieuw plakken = bijwerken.
+  - Circus = state/circus_gamelijst.json: slugs van onze slots die op circus.nl/nl/casino/slots/alle-slots staan
+      (23-10-2026 eenmalig in de ingebouwde browser vergeleken; scripts krijgen 403). Nieuwe lijst = opnieuw vergelijken.
+  - Bingoal = state/bingoal_gamelijst.json: id, naam en provider van 4.669 spellen (25-10-2026 in de ingebouwde browser
+      via het aanbiedersfilter; scripts krijgen een Cloudflare-blokkade) -> /nl/casino/spel/<id>/. Nieuwe lijst = opnieuw uitlezen.
+  - niet mogelijk (23-10-2026): 888 Casino/Sport en ComeOn! (robots.txt verbiedt /rest/* én /*/casino/game*; spellijst alleen via /rest).
+
   python slot_nl_check.py            # dry-run
   python slot_nl_check.py --write    # bijwerken (LaunchAgent: dagelijks)
   python slot_nl_check.py --write --all   # ook casinolijsten van al beschikbare slots aanvullen
+  python slot_nl_check.py --write --all --alleen=Bet365   # alleen deze casino('s) controleren (komma-gescheiden)
 """
-import datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.request
+import datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 from slot_og import SLOTS, PROVIDERS, _all_items, _env, _wf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -34,6 +55,164 @@ CASINOS = {
     "711": ["https://www.711.nl/casino/{p}/{s}", "https://www.711.nl/casino/{p711}/{s}"],
 }
 P711 = {"elk-studios": "elk", "print-studios": "silver-bullet"}   # 711 gebruikt soms een andere providermap
+# casino's zonder voorspelbare game-URL: opzoeken in hun eigen sitemap (23-10-2026). naam -> (sitemap, url-regex)
+SITEMAPS = {
+    "Starcasino": ("https://starcasino.nl/sitemap-games-nl.xml", r"<loc>(https://starcasino\.nl/game/[^/<]+/([^<]+))</loc>"),
+    "Oranje Palace": ("https://www.oranjepalace.nl/sitemap.xml", r"<loc>(https://www\.oranjepalace\.nl/nl/spellen/([^<]+))</loc>"),
+    "One Casino": ("https://nl.onecasino.com/sitemap.xml", r"<loc>(https://nl\.onecasino\.com/casino/([a-z0-9]+))</loc>"),
+}
+# sitemap-casino's waarvan de slug soms een code achter de naam heeft: kandidaat openen, titel vóór dit teken = naam
+SITEMAP_TITEL = {"One Casino": "➡"}
+_SM = {}
+_KAT = {}
+_LAATST = {}                                      # host -> tijdstip laatste request (throttle)
+
+
+def _kern(t):
+    return re.sub(r"[^a-z0-9]", "", slugify(re.sub(r"[™®©]", "", t or "")))
+
+
+def _get(url, timeout=60):
+    """GET met minstens 0,6 s tussen requests per host; geeft de body als tekst."""
+    host = urllib.parse.urlsplit(url).netloc
+    wacht = _LAATST.get(host, 0) + 0.6 - time.time()
+    if wacht > 0:
+        time.sleep(wacht)
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
+            return r.read().decode("utf-8", "replace")
+    finally:
+        _LAATST[host] = time.time()
+
+
+def sitemap_index(casino):
+    """{genormaliseerde gamenaam: url} uit de sitemap van het casino (één keer per run)."""
+    if casino not in _SM:
+        url, rx = SITEMAPS[casino]
+        try:
+            xml = _get(url)
+            _SM[casino] = {}
+            for m in re.finditer(rx, xml):
+                _SM[casino].setdefault(_kern(m.group(2)), m.group(1))
+        except Exception as e:
+            print(f"[{casino}] sitemap niet bruikbaar: {e}", file=sys.stderr)
+            _SM[casino] = {}
+    return _SM[casino]
+
+
+def _titel_check(casino, idx, kern):
+    """Sitemap-slug = naam + code (bv. starburstr300000): open max. 3 kandidaten, exacte titel telt."""
+    code = re.compile(r"(?=[a-z0-9]*\d)(?=[a-z0-9]*[a-z])[a-z0-9]{3,8}")   # letters én cijfers (geen '1000'-versies)
+    for slug in [s for s in idx if s.startswith(kern) and code.fullmatch(s[len(kern):])][:3]:
+        try:
+            t = re.search(r"<title[^>]*>(.*?)</title>", _get(idx[slug], 25), re.S | re.I)
+        except Exception:
+            continue
+        if t and _kern(html.unescape(t.group(1)).split(SITEMAP_TITEL[casino])[0]) == kern:
+            return idx[slug]
+    return None
+
+
+# --- publieke spelcatalogi: {genormaliseerde naam: [(provider, url), ...]} -----------------------------------
+def _kat_vbet():
+    api = "https://go-cms.vbet.nl/api/public/v1/dut/casino/partners/18756479/platforms/0/games/pages/{}"
+    idx, page, last = {}, 1, 1
+    while page <= last and page <= 300:
+        d = json.loads(_get(api.format(page)))["data"]
+        last = d["lastPage"]
+        for g in d["data"]:
+            idx.setdefault(_kern(g["name"]), []).append(
+                ((g.get("provider") or {}).get("title", ""), f"https://www.vbet.nl/nl/casino/game-view/{g['id']}/{g['alias']}"))
+        page += 1
+    return idx
+
+
+def _kat_tonybet():
+    api = "https://platform.tonybet.nl/api/v3/casino/game?has_live=0&is_desktop=1&perPage=500&page={}&_trlang=nl"
+    idx, page = {}, 1
+    while page <= 40:
+        d = json.loads(_get(api.format(page)))["data"]
+        for g in d["items"]:
+            p = g.get("producer") or {}
+            idx.setdefault(_kern(g["title"]), []).append(
+                (p.get("text") or p.get("name", ""), f"https://tonybet.nl/casino/all/{p.get('platformSlug') or p.get('name')}"))
+        if not d["pagination"].get("gotMore"):
+            break
+        page += 1
+    return idx
+
+
+def _kat_hardrock():
+    api = "https://hardrockcasino.nl/api/games?device_support=desktop&locale=nl&per_page=500&page={}"
+    try:                                           # spelreviews = echte, publieke spelpagina's (alleen populaire titels)
+        rev = {_kern(m.group(2)): m.group(1) for m in
+               re.finditer(r"<loc>(https://hardrockcasino\.nl/spelreviews/([^<]+))</loc>", _get("https://hardrockcasino.nl/sitemap.xml"))}
+    except Exception:
+        rev = {}
+    idx, page, last = {}, 1, 1
+    while page <= last and page <= 40:
+        d = json.loads(_get(api.format(page)))
+        last = d["meta"]["last_page"]
+        for g in d["data"]:
+            k = _kern(g["name"])
+            url = rev.get(k) or (g.get("fun_play_url") if g.get("fun_play") else None) or g.get("real_play_url")
+            if url:
+                idx.setdefault(k, []).append((g.get("provider", ""), url))
+        page += 1
+    return idx
+
+
+def _kat_bet365():
+    d = json.load(open(os.path.join(HERE, "state", "bet365_gamelijst.json")))
+    idx = {}
+    for namen in d["secties"].values():
+        for n in namen:
+            idx.setdefault(_kern(n), []).append(("", d["bron"]))
+    return idx
+
+
+def _kat_circus():
+    d = json.load(open(os.path.join(HERE, "state", "circus_gamelijst.json")))
+    return {_kern(sl): [("", d["bron"])] for sl in d["slugs"]}
+
+
+def _kat_bingoal():
+    d = json.load(open(os.path.join(HERE, "state", "bingoal_gamelijst.json")))
+    idx = {}
+    for g in d["spellen"]:
+        idx.setdefault(_kern(g["naam"]), []).append((g.get("provider", ""), f"https://www.bingoal.nl/nl/casino/spel/{g['id']}/"))
+    return idx
+
+
+KATALOGI = {"Vbet": _kat_vbet, "Tonybet": _kat_tonybet, "Hard Rock Casino": _kat_hardrock, "Bet365": _kat_bet365,
+            "Circus": _kat_circus, "Bingoal": _kat_bingoal}
+ALLEEN = None                                     # --alleen=A,B: alleen deze casino's controleren
+
+
+def katalogus(casino):
+    """Spelcatalogus van het casino, één keer per run; bij een fout leeg (casino wordt dan overgeslagen)."""
+    if casino not in _KAT:
+        try:
+            _KAT[casino] = KATALOGI[casino]()
+        except Exception as e:
+            print(f"[{casino}] catalogus niet bruikbaar: {e}", file=sys.stderr)
+            _KAT[casino] = {}
+    return _KAT[casino]
+
+
+def _prov_ok(prov_slug, naam):
+    a, b = _kern(prov_slug), _kern(naam)
+    return not a or not b or a in b or b in a or a[:4] == b[:4]
+
+
+def _kies(treffers, prov_slug):
+    """Bij dezelfde naam van meerdere providers: alleen de juiste provider; één provider: altijd (aggregatornamen)."""
+    if not treffers:
+        return None
+    goed = [u for p, u in treffers if _prov_ok(prov_slug, p)]
+    if goed:
+        return goed[0]
+    return treffers[0][1] if len({_kern(p) for p, u in treffers}) == 1 else None
 
 
 def slugify(s):
@@ -65,6 +244,8 @@ def find_casinos(item, prov_slug):
     slugs = list(dict.fromkeys([fd["slug"], slugify(fd["name"])] + aliases))
     found = {}
     for casino, templates in CASINOS.items():
+        if ALLEEN and casino not in ALLEEN:
+            continue
         for tpl in templates:
             for s in slugs:
                 url = tpl.format(s=s, p=prov_slug or "", p711=P711.get(prov_slug, prov_slug or ""))
@@ -73,8 +254,33 @@ def find_casinos(item, prov_slug):
                 if _probe(url, fd["name"]):
                     found[casino] = url
                     break
-                time.sleep(0.4)
+                time.sleep(0.5)
             if casino in found:
+                break
+    kernen = list(dict.fromkeys(_kern(s) for s in slugs))
+    for casino in SITEMAPS:                       # exacte naam- of slugmatch in de sitemap
+        if ALLEEN and casino not in ALLEEN:
+            continue
+        idx = sitemap_index(casino)
+        for k in kernen:
+            if k in idx:
+                found[casino] = idx[k]
+                break
+        else:
+            if casino in SITEMAP_TITEL and idx:   # naam + code in de slug: alleen bij exacte paginatitel
+                for k in kernen:
+                    url = _titel_check(casino, idx, k)
+                    if url:
+                        found[casino] = url
+                        break
+    for casino in KATALOGI:                       # exacte genormaliseerde naam in de spelcatalogus (+ providercheck)
+        if ALLEEN and casino not in ALLEEN:
+            continue
+        idx = katalogus(casino)
+        for k in kernen:
+            url = _kies(idx.get(k), prov_slug)
+            if url:
+                found[casino] = url
                 break
     return found
 
@@ -105,13 +311,17 @@ def is_nieuw(status, release, live_nl, today):
     grens = (t - dt.timedelta(days=NIEUW_DAGEN)).isoformat()
     if status != STATUS["ja"]:
         return not release or release >= (t - dt.timedelta(days=180)).isoformat()
+    if release and release < (t - dt.timedelta(days=180)).isoformat():
+        return False                               # oude titel die we later toevoegden: niet "nieuw", ook al is de NL-datum recent
     d = live_nl or release
     return bool(d) and grens <= d <= today
 
 
 def main(argv):
     _env()
+    global ALLEEN
     write, alles = "--write" in argv, "--all" in argv
+    ALLEEN = next((set(a.split("=", 1)[1].split(",")) for a in argv if a.startswith("--alleen=")), None)
     today = dt.date.today().isoformat()
     items = _all_items(SLOTS)
     provs = {p["id"]: p["fieldData"]["slug"] for p in _all_items(PROVIDERS)}
@@ -199,12 +409,14 @@ def main(argv):
     # nieuwe slots die vandaag in NL live gingen: melden in het casino-kanaal
     nu_live = [it["fieldData"]["slug"] for i, (it, new) in merged.items()
                if new.get("status-nl") == opt[STATUS["ja"]] and name_of.get(it["fieldData"].get("status-nl")) in (STATUS["nee"], STATUS["binnenkort"])]
-    if nu_live:
+    if nu_live and not os.environ.get("GEEN_TELEGRAM"):
         import casino_telegram as T
         provs = {p["id"]: p["fieldData"] for p in _all_items(PROVIDERS)}
         fresh = {i["fieldData"]["slug"]: i for i in _all_items(SLOTS)}
         for sl in nu_live:
             it = fresh.get(sl)
+            if not it["fieldData"].get("nieuw"):   # oudere titels die we later aanvulden niet als "nu live" melden
+                continue
             pf = provs.get(it["fieldData"].get("provider")) or {}
             if T.post_slot(it, "live_nl", pf.get("name"), pf.get("slug")):
                 print(f"Telegram casino: {it['fieldData']['name']} nu live in NL gepost")
