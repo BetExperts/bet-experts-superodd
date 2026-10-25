@@ -1,14 +1,15 @@
 {
-  "datum": "2026-10-24",
+  "datum": "2026-10-25",
   "gehad": [
     "le-pharaoh",
     "le-santa",
     "le-prechaun",
     "tanked",
     "dr-zappo",
-    "fist-of-destruction-megamultiplier"
+    "fist-of-destruction-megamultiplier",
+    "dinopolis"
   ],
-  "laatste_provider": "6abbe2aee1f746b71466932c",
+  "laatste_provider": "6abbe23e6c88ab0e063e8a79",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -45,6 +46,10 @@
     {
       "datum": "2026-10-24",
       "slot": "fist-of-destruction-megamultiplier"
+    },
+    {
+      "datum": "2026-10-25",
+      "slot": "dinopolis"
     }
   ]
 }
