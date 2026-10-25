@@ -2401,13 +2401,15 @@
   "datum": "2026-10-19"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|18-oktober-t-m-24-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad5de472269e253694042eb",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-25"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|19-oktober-t-m-21-oktober": {
   "status": "verwijderd",
@@ -2468,13 +2470,15 @@
   "verwijderd": "2026-10-20"
  },
  "jacks.nl|amusnet-toernooi-met-2-000-aan-free-spins|20-oktober-t-m-24-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad7235a5bf590d4165fb7a3",
   "hash": null,
   "slug": "jacks-nl-amusnet-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-20"
+  "datum": "2026-10-20",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-25"
  },
  "one|zet-in-op-de-champions-league-en-pak-15-free-bet|20-oktober-en-21-oktober": {
   "status": "live",
