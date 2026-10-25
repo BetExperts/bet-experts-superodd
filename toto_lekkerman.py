@@ -66,6 +66,15 @@ def crawl(headless=True):
         pg.goto(URL, wait_until="domcontentloaded", timeout=60000)
         pg.wait_for_timeout(8000)
         text = pg.inner_text("body")
+        # 25-10-2026: nieuwe opzet ('Speler & Speler' + 'allebei …', zonder 'vs'): detailpagina heeft oude/nieuwe odd + wedstrijd
+        details = []
+        for href in dict.fromkeys(a.get_attribute("href") for a in pg.query_selector_all("main a[href*='/wedden/wedstrijd/']")):
+            try:
+                pg.goto("https://sport.toto.nl" + href, wait_until="domcontentloaded", timeout=60000)
+                pg.wait_for_timeout(5000)
+                details.append(pg.inner_text("main"))
+            except Exception:
+                pass
         b.close()
     lines = [l.strip() for l in text.split("\n") if l.strip()]
     now = datetime.now(NL)
@@ -101,6 +110,25 @@ def crawl(headless=True):
                         "selection": f"{speler}: {re.sub(r'\s*\(vs[^)]*\)\s*$', '', l)}",
                         "old": _odd(odds[0]) if len(odds) > 1 else None, "new": _odd(odds[-1]),
                         "kickoff": _when(when, now)})
+            break
+    if not out:
+        for d in details:
+            dl = [l.strip() for l in d.split("\n") if l.strip()]
+            # LEKKER MAN / Vandaag 14:30 / titel / omschrijving / oude odd / nieuwe odd / VOETBAL / Wedoptie / competitie / thuis / uit
+            if len(dl) < 6 or dl[0].upper() != "LEKKER MAN":
+                continue
+            odds = [x for x in dl[2:8] if re.fullmatch(r"\d+[.,]\d{2}", x)]
+            if not odds:
+                continue
+            i = dl.index(odds[-1])
+            home = away = None
+            if "Wedoptie" in dl:
+                j = dl.index("Wedoptie")
+                if j + 3 < len(dl):
+                    home, away = dl[j + 2], dl[j + 3]
+            ev = f"{home} – {away}" if home and away else dl[2]
+            out.append({"home": home or dl[2], "away": away or "", "event": ev, "selection": dl[3] if i > 3 else dl[2],
+                        "old": _odd(odds[0]) if len(odds) > 1 else None, "new": _odd(odds[-1]), "kickoff": _when(dl[1], now)})
             break
     return out
 

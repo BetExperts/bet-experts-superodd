@@ -97,13 +97,21 @@ def main():
     ap.add_argument("--post", action="store_true"); ap.add_argument("--test", action="store_true")
     ap.add_argument("--coupon", help="Unibet-couponlink van de boost (coupon=combination|<outcomeId>|...): "
                                       "normale odd komt dan uit Kambi i.p.v. de (soms verouderde) promotekst")
+    ap.add_argument("--handmatig", help="boost die niet op de promotiepagina staat (bv. alleen in de betslip): "
+                                         "'Thuis - Uit|selectie|oude odd|nieuwe odd[|max inzet]'")
     a = ap.parse_args()
     now = datetime.now(NL)
     print(f"== Unibet Uniboost — {now:%Y-%m-%d %H:%M} ==")
-    try:
-        b = crawl()
-    except Exception as e:
-        print(f"FOUT bij crawlen: {e}"); sys.exit(2)
+    if a.handmatig:
+        d = [x.strip() for x in a.handmatig.split("|")]
+        h, w = [x.strip() for x in d[0].split(" - ", 1)]
+        b = {"title": "Uniboost", "home": h, "away": w, "event": f"{h} – {w}", "selection": d[1],
+             "old": float(d[2].replace(",", ".")), "new": float(d[3].replace(",", ".")), "max": d[4] if len(d) > 4 else None}
+    else:
+        try:
+            b = crawl()
+        except Exception as e:
+            print(f"FOUT bij crawlen: {e}"); sys.exit(2)
     if not b:
         print("Geen Uniboost op de promotiepagina. Niets gedaan."); return
     try:
