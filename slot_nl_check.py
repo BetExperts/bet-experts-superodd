@@ -10,7 +10,7 @@ casino's gekeken of er een spelpagina is (200 + de naam in de titel; niet gevond
 Zonder treffer: status 'Binnenkort in NL' (als 'Live in NL' in de toekomst ligt) of 'Nog niet in NL'.
 
 Bronnen per casino (sleutel = naam exact zoals in de Bookmakers-collectie), alleen-lezen, robots.txt gerespecteerd:
-  - URL-sjablonen (CASINOS, 1 request per slug):  Unibet, LeoVegas, BetMGM, Toto, JACKS.NL, 711
+  - URL-sjablonen (CASINOS, 1 request per slug):  Unibet, LeoVegas, BetMGM, Toto, JACKS.NL, 711, Winz
   - sitemap (SITEMAPS, 1 request per run):         Starcasino, Oranje Palace, One Casino
       One Casino zet soms een code achter de naam (starburstr300000): zonder exacte treffer wordt zo'n
       kandidaat geopend en telt hij alleen als de paginatitel exact de slotnaam is.
@@ -53,6 +53,7 @@ CASINOS = {
     "Toto": ["https://casino.toto.nl/casino/games/{s}", "https://casino.toto.nl/casino/games/{s}-{p}"],
     "JACKS.NL": ["https://jacks.nl/casino/slots/{s}"],
     "711": ["https://www.711.nl/casino/{p}/{s}", "https://www.711.nl/casino/{p711}/{s}"],
+    "Winz": ["https://www.winz.nl/slots/{s}"],   # 26-10-2026: titel 'Naam - Provider | Winz', onbekend = 404 (sitemap is onvolledig)
 }
 P711 = {"elk-studios": "elk", "print-studios": "silver-bullet"}   # 711 gebruikt soms een andere providermap
 # casino's zonder voorspelbare game-URL: opzoeken in hun eigen sitemap (23-10-2026). naam -> (sitemap, url-regex)
