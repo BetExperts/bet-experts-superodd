@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-25",
+  "datum": "2026-10-26",
   "gehad": [
     "6909dcf78e3c22a32d06e2ad",
     "682b116bb82996896cb52d5d",
@@ -9,9 +9,10 @@
     "67c9acaf7db0b29e5b03370d",
     "66a24463b6de25483eec85e9",
     "67974cf05b546fe28ef78cdc",
-    "651bd6728c40de720bd8072a"
+    "651bd6728c40de720bd8072a",
+    "6a7afdaa4a7453c17d31cab5"
   ],
-  "laatste_book": "651bd6728c40de720bd8072a",
+  "laatste_book": "6a7afdaa4a7453c17d31cab5",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -161,6 +162,11 @@
       "datum": "2026-10-25",
       "book": "Bet365",
       "slug": "bet365-casino-welkomstbonus-stort-10-ontvang-100-free-spins"
+    },
+    {
+      "datum": "2026-10-26",
+      "book": "Starcasino",
+      "slug": "starcasino-casino-welkomstbonus-100-bonus-tot-wel-eu250-voor-nieuwe-spelers"
     }
   ]
 }
