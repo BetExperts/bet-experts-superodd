@@ -939,6 +939,11 @@
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/woensdagwheel"
   },
+  "6ad0b70562369dc48f7e9d55": {
+   "slug": "oranje-palace-luckys-quest-75-free-spins-15-25-oktober",
+   "name": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
+   "geldig_tot": "2026-10-25"
+  },
   "6ac380afe57e07b1dd632d3b": {
    "slug": "comeon-toernooien-29240",
    "name": "ComeOn!: Toernooien (van 16 oktober t/m 22 oktober)",
@@ -2351,13 +2356,15 @@
   "datum": "2026-10-19"
  },
  "starcasino-toernooi|sport-toernooi|2026-10-19": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad5c4d487c59bf7797d4902",
   "hash": "202f7999ab52f099e5de820e0908e1cd",
   "slug": "starcasino-1-000-sport-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "toto-acties|ontvang-20-gratis-spins": {
   "status": "bestond al",
@@ -2383,13 +2390,15 @@
   "datum": "2026-10-19"
  },
  "toto|speel-monopoly-roulette-en-win-een-deel-van-10-000|19-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad5de43b30b7bca7f065ebc",
   "hash": null,
   "slug": "toto-speel-monopoly-roulette-en-win-een-deel-van-10-000",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "hard-rock|pak-elke-dag-een-bonus-met-de-supermarktweken-van-hard-rock-casino|19-oktober-t-m-1-november": {
   "status": "live",
@@ -2441,22 +2450,26 @@
   "datum": "2026-10-19"
  },
  "hard-rock|golden-blast-toernooi-bij-hard-rock-casino|19-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad610317868c74d73a7cbb6",
   "hash": null,
   "slug": "hard-rock-casino-golden-blast-toernooi",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "bet365|herfst-prize-drops-dagelijks-10-000-gratis-spins|19-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad61032ad56de4225d72dd0",
   "hash": null,
   "slug": "bet365-herfst-prize-drops-dagelijks-10-000-gratis-spins",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "bet365|ontvang-50-gouden-fiches-met-sportweddenschappen|alleen-19-oktober": {
   "status": "verwijderd",
@@ -2509,13 +2522,15 @@
   "datum": "2026-10-21"
  },
  "betmgm|pak-tot-35-extra-cash-bij-betmgm|22-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad9b49a8a9a9d1b25c1989c",
   "hash": null,
   "slug": "betmgm-pak-tot-35-extra-cash",
   "check": "0/3 kerngetallen gevonden",
   "bron": "https://www.betmgm.nl/campaigns/casino-welcome",
-  "datum": "2026-10-22"
+  "datum": "2026-10-22",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "888|toernooien-bij-888|17-oktober-t-m-28-oktober": {
   "status": "draft",
@@ -2558,31 +2573,37 @@
   "datum": "2026-10-22"
  },
  "oranje-palace|pak-een-gratis-weddenschap-van-1-bij-oranje-palace|23-oktober-t-m-25-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6adb28c68301427e76fe05ab",
   "hash": null,
   "slug": "oranje-palace-pak-een-gratis-weddenschap-van-1",
   "check": "geen getallen; tekstoverlap",
   "bron": "https://www.oranjepalace.nl/nl/promoties/welkomstbonus-casino",
-  "datum": "2026-10-23"
+  "datum": "2026-10-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "leovegas|tot-200-extra-cash-bonus-bij-leovegas|23-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adb290bc3c3efa973cca2b7",
   "hash": null,
   "slug": "leovegas-tot-200-extra-cash-bonus",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-23"
+  "datum": "2026-10-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "bet365|zet-in-op-eredivisie-wedstrijden-en-pak-5-wedtegoed|23-oktober-t-m-25-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adb290d7010afb1940892cc",
   "hash": null,
   "slug": "bet365-zet-in-op-eredivisie-wedstrijden-en-pak-5-wedtegoed",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-23"
+  "datum": "2026-10-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-26"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-3-000|23-oktober-t-m-26-oktober": {
   "status": "draft",
