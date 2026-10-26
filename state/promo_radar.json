@@ -2731,5 +2731,14 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-10-26"
+ },
+ "circus|game-show-prize-drops-bij-circus-nl-met-prijzenpot-van-5-000|23-oktober-t-m-31-oktober": {
+  "status": "live",
+  "item_id": "6adf6b2408d1c137a1c53558",
+  "hash": null,
+  "slug": "circus-game-show-prize-drops-met-prijzenpot-van-5-000",
+  "check": "4/4 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
+  "datum": "2026-10-26"
  }
 }
