@@ -61,7 +61,7 @@ def build_fielddata(data, now=None):
         "soort-welkomstbonus": "Lucky's Boost (verhoogde quotering)",
         "minimale-storting": "Geen",
         "odds-om-vrij-te-spelen": new,
-        "rondspeelvoorwaarden": "Geen",
+        "rondspeelvoorwaarden": "Winst is echt geld",   # OP-verzoek 15-10: nooit "Geen"/"zonder inzetvereiste"
         "leeftijd": "24 jaar of ouder",
         "check-1": f"Lucky's Boost: {old} → {new}",
         "check-2": ph,
