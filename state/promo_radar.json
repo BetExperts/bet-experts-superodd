@@ -2215,13 +2215,15 @@
   "verwijderd": "2026-10-19"
  },
  "comeon|comeon-trials-of-olympus-quest|12-oktober-t-m-26-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6acd0e9ee461de1daf6918ae",
   "hash": null,
   "slug": "comeon-trials-of-olympus-quest",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-27"
  },
  "unibet|win-tot-1-000x-je-inzet-tijdens-het-spelen|12-oktober-t-m-25-oktober": {
   "status": "verwijderd",
@@ -2553,26 +2555,30 @@
   "datum": "2026-10-22"
  },
  "circus|5-000-ruby-play-toernooi-bij-circus|20-oktober-t-m-26-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad9da8ea0b374f76dcf9394",
   "hash": null,
   "slug": "circus-5-000-ruby-play-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
-  "datum": "2026-10-22"
+  "datum": "2026-10-22",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-27"
  },
  "888|888-odds-boosts-60x-je-inleg|22-oktober-t-m-25-oktober": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
  "711|25-000-hacksaw-le-toernooi|21-oktober-t-m-26-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad9fdf75e442c3b2d983a06",
   "hash": null,
   "slug": "711-25-000-hacksaw-le-toernooi",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/25k-euro-hacksaw-le-toernooi",
-  "datum": "2026-10-22"
+  "datum": "2026-10-22",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-27"
  },
  "oranje-palace|pak-een-gratis-weddenschap-van-1-bij-oranje-palace|23-oktober-t-m-25-oktober": {
   "status": "verwijderd",
@@ -2608,13 +2614,15 @@
   "verwijderd": "2026-10-26"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-3-000|23-oktober-t-m-26-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adb290ef2e21dc2f3428301",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-3-000",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-23"
+  "datum": "2026-10-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-27"
  },
  "circus|circus-nl-prize-drops-1-miljoen-prijzenpot|23-oktober-t-m-1-november": {
   "status": "draft",
@@ -2749,5 +2757,11 @@
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-26"
+ },
+ "711|711-casino-quest-pak-5-free-spins|26-oktober-t-m-1-november": {
+  "status": "bestond al",
+  "cms": "711: Loyaliteitsprogramma",
+  "score": 0.68,
+  "datum": "2026-10-27"
  }
 }
