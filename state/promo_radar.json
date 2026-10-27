@@ -891,7 +891,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "6cc2b036c1323d761d92f1a05b458280"
+  "hash": "101ebbdeac37bfabc370bffddf0e3050"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -938,6 +938,11 @@
    "name": "Starcasino: WoW Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/woensdagwheel"
+  },
+  "6ab541d6c4dfb56f3fbfc8a0": {
+   "name": "Starcasino: Starcasino's Voetbal Quiz",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/starcasinoquiz"
   },
   "6ad0b70562369dc48f7e9d55": {
    "slug": "oranje-palace-luckys-quest-75-free-spins-15-25-oktober",
@@ -2762,6 +2767,15 @@
   "status": "bestond al",
   "cms": "711: Loyaliteitsprogramma",
   "score": 0.68,
+  "datum": "2026-10-27"
+ },
+ "tonybet|tonybet-trick-or-treat-toernooi-9-000-en-10-000-gratis-spins|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6ae07ffe1ffaf34343c873ff",
+  "hash": null,
+  "slug": "tonybet-trick-or-treat-toernooi-9-000-en-10-000-gratis-spins",
+  "check": "0/4 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-10-27"
  }
 }
