@@ -2777,5 +2777,32 @@
   "check": "0/4 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-27"
+ },
+ "circus|voltooi-de-missie-om-free-bets-en-spins-te-pakken|27-oktober-t-m-29-oktober": {
+  "status": "live",
+  "item_id": "6ae0aa469f35a9dba37d8fde",
+  "hash": null,
+  "slug": "circus-voltooi-de-missie-om-free-bets-en-spins-te-pakken",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/nl-court-to-pitch",
+  "datum": "2026-10-27"
+ },
+ "bet365|bet365-strijd-van-de-monsters|26-oktober-t-m-2-november": {
+  "status": "draft",
+  "item_id": "6ae0aa9428a4e5d3a4b9380f",
+  "hash": null,
+  "slug": "bet365-strijd-van-de-monsters",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-10-27"
+ },
+ "toto-acties|win-kaarten-voor-nederland-griekenland": {
+  "status": "live",
+  "item_id": "6ae0aa96d51bec75cc0d0a13",
+  "hash": "a12f0eea788b5e04b93bd3a76d4000d6",
+  "slug": "toto-win-kaarten-voor-nederland-griekenland",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-10-27"
  }
 }
