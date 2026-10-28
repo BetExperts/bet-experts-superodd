@@ -891,7 +891,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  "hash": "101ebbdeac37bfabc370bffddf0e3050"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -2810,6 +2810,33 @@
   "cms": "TOTO: Nations League – zet €10 in en krijg een €10 gratis weddenschap",
   "score": 0.62,
   "hash": "3652a877f175ce772c152c599f8f9df7",
+  "datum": "2026-10-28"
+ },
+ "hard-rock|wicked-wins-bij-hard-rock-casino|28-oktober-t-m-1-november": {
+  "status": "draft",
+  "item_id": "6ae1fbd92940409325286682",
+  "hash": null,
+  "slug": "hard-rock-casino-wicked-wins",
+  "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-28"
+ },
+ "circus|wicked-wins-prize-drop-bij-circus|28-oktober-t-m-1-november": {
+  "status": "live",
+  "item_id": "6ae1fbdb1442358b0b395f6b",
+  "hash": null,
+  "slug": "circus-wicked-wins-prize-drop",
+  "check": "geen getallen; tekstoverlap",
+  "bron": "https://www.circus.nl/nl/promoties/details/wickedwins-pragmaticplay-halloween-circusnl-2026-nl",
+  "datum": "2026-10-28"
+ },
+ "oranje-palace|prize-drop-bij-oranje-palace-win-tot-1-000x-je-inzet|28-oktober-t-m-1-november": {
+  "status": "live",
+  "item_id": "6ae1fc2b1442358b0b397cef",
+  "hash": null,
+  "slug": "oranje-palace-prize-drop-win-tot-1-000x-je-inzet",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/wicked-wins-pragmatic-play",
   "datum": "2026-10-28"
  }
 }
