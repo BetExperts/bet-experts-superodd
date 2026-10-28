@@ -2787,24 +2787,6 @@
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-10-27"
  },
- "comeon|toernooien-bij-comeon|22-oktober-t-m-28-oktober": {
-  "status": "draft",
-  "item_id": "6ad9dad424c8f966f82d972b",
-  "hash": null,
-  "slug": "comeon-toernooien-e0dbf",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-22"
- },
- "888|toernooien-bij-888|22-oktober-t-m-28-oktober": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "toto-acties|verdien-een-10-gratis-weddenschap": {
   "status": "bestond al",
   "cms": "TOTO: Nations League – zet €10 in en krijg een €10 gratis weddenschap",
@@ -2837,6 +2819,24 @@
   "slug": "oranje-palace-prize-drop-win-tot-1-000x-je-inzet",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/wicked-wins-pragmatic-play",
+  "datum": "2026-10-28"
+ },
+ "888|toernooien-bij-888|22-oktober-t-m-2-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "comeon|toernooien-bij-comeon|22-oktober-t-m-2-november": {
+  "status": "draft",
+  "item_id": "6ae233f2b3e104e5e7d7d58e",
+  "hash": null,
+  "slug": "comeon-toernooien-b38e7",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-10-28"
  }
 }
