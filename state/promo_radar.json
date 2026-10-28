@@ -853,7 +853,7 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-10-28",
-   "slot": null
+   "slot": "3 Gems of Vegas Superwheel"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "256b5f383795da353a0a494b2aaae6bc"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -2541,24 +2541,6 @@
   "reden": "verlopen",
   "verwijderd": "2026-10-26"
  },
- "888|toernooien-bij-888|17-oktober-t-m-28-oktober": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
- "comeon|toernooien-bij-comeon|17-oktober-t-m-28-oktober": {
-  "status": "draft",
-  "item_id": "6ad9dad424c8f966f82d972b",
-  "hash": null,
-  "slug": "comeon-toernooien-e0dbf",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-22"
- },
  "circus|5-000-ruby-play-toernooi-bij-circus|20-oktober-t-m-26-oktober": {
   "status": "verwijderd",
   "item_id": "6ad9da8ea0b374f76dcf9394",
@@ -2804,5 +2786,23 @@
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-10-27"
+ },
+ "comeon|toernooien-bij-comeon|22-oktober-t-m-28-oktober": {
+  "status": "draft",
+  "item_id": "6ad9dad424c8f966f82d972b",
+  "hash": null,
+  "slug": "comeon-toernooien-e0dbf",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-22"
+ },
+ "888|toernooien-bij-888|22-oktober-t-m-28-oktober": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
  }
 }
