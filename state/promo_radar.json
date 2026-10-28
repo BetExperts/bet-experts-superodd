@@ -853,7 +853,7 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-10-28",
-   "slot": "3 Gems of Vegas Superwheel"
+   "slot": "Supernova Shooting Stars"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -891,7 +891,7 @@
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
   "item_id": "6ab541d6c4dfb56f3fbfc8a0",
-  "hash": "101ebbdeac37bfabc370bffddf0e3050"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|starclub": {
   "status": "bron-handmatig",
@@ -1928,7 +1928,7 @@
   "status": "bestond al",
   "cms": "TOTO Exclusief: speel €25 en krijg 20 free spins (elke woensdag & donderdag)",
   "score": 0.71,
-  "hash": "90ef17dd3fdcaf010494276721592f72",
+  "hash": "02b08f73747c10ffd1b163b17739c0a5",
   "datum": "2026-10-07"
  },
  "888|888-odds-boosts-60x-je-inleg|7-oktober-t-m-10-oktober": {
@@ -2804,5 +2804,12 @@
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
   "datum": "2026-10-22"
+ },
+ "toto-acties|verdien-een-10-gratis-weddenschap": {
+  "status": "bestond al",
+  "cms": "TOTO: Nations League – zet €10 in en krijg een €10 gratis weddenschap",
+  "score": 0.62,
+  "hash": "3652a877f175ce772c152c599f8f9df7",
+  "datum": "2026-10-28"
  }
 }
