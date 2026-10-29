@@ -2829,5 +2829,14 @@
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
   "datum": "2026-10-22"
+ },
+ "711|20-000-horror-toernooi|28-oktober-t-m-2-november": {
+  "status": "live",
+  "item_id": "6ae388cf684eba09d35668e1",
+  "hash": null,
+  "slug": "711-20-000-horror-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/20k-euro-horror-toernooi-oktober",
+  "datum": "2026-10-29"
  }
 }
