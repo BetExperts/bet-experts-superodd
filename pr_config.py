@@ -110,6 +110,7 @@ EVERGREEN_SLUGS = {
     "jacks-nl-superboost",                           # JACKS.NL Superboost (jacks_superboost.py, specials-pagina)
     "betmgm-odds-boost",                             # BetMGM Odds Boost (handmatig via betmgm_boost.py, geen bron om te scrapen)
     "jacks-nl-100x-je-inzet",                        # JACKS.NL 100x (vaste pagina, bij elke nieuwe 100x-actie bijwerken)
+    "711-super-boost",                               # 711 Super Boost (s7-agent)
     "starcasino-gouden-boost",                       # Starcasino Gouden Boost (sc_goudenboost.py, elk uur)
     # Terugkerende acties: blijven staan en worden bijgewerkt zodra ze terugkomen (gebruiker, 24-09)
     "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",

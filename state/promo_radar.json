@@ -924,11 +924,6 @@
   "verwijderd": "2026-09-28"
  },
  "_ter_beoordeling": {
-  "6ad7235ba4e4e0bd8b636a44": {
-   "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
-   "name": "One Casino: Zet in op de Champions League en pak €15 free bet",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
   "6ab541d93d653e3c3ce112dc": {
    "name": "Starcasino: Party Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
@@ -943,31 +938,6 @@
    "name": "Starcasino: Starcasino's Voetbal Quiz",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starcasinoquiz"
-  },
-  "6ae1c384d09a87762b22f65d": {
-   "slug": "711-super-boost",
-   "name": "711 Super Boost: Manchester City - Brighton (3 selecties) @ 3.79",
-   "geldig_tot": "2026-10-28"
-  },
-  "6ad1c8f6bfcadf85b5b17e0b": {
-   "slug": "comeon-toernooien",
-   "name": "ComeOn!: Toernooien (van 17 oktober t/m 28 oktober)",
-   "geldig_tot": "2026-10-28"
-  },
-  "6ad0b70562369dc48f7e9d55": {
-   "slug": "oranje-palace-luckys-quest-75-free-spins-15-25-oktober",
-   "name": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
-   "geldig_tot": "2026-10-25"
-  },
-  "6ac380b0793990f1e0993e53": {
-   "slug": "888-toernooien-0b705",
-   "name": "888: Toernooien (van 17 oktober t/m 28 oktober)",
-   "geldig_tot": "2026-10-28"
-  },
-  "6ac380afe57e07b1dd632d3b": {
-   "slug": "comeon-toernooien-29240",
-   "name": "ComeOn!: Toernooien (van 16 oktober t/m 22 oktober)",
-   "geldig_tot": "2026-10-22"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2520,13 +2490,15 @@
   "verwijderd": "2026-10-25"
  },
  "one|zet-in-op-de-champions-league-en-pak-15-free-bet|20-oktober-en-21-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad7235ba4e4e0bd8b636a44",
   "hash": null,
   "slug": "one-casino-zet-in-op-de-champions-league-en-pak-15-free-bet",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-20"
+  "datum": "2026-10-20",
+  "reden": "handmatig offline (gebruiker 29-10)",
+  "verwijderd": "2026-10-29"
  },
  "circus|pak-willekeurig-geldprijzen-bij-circus-nl|alleen-21-oktober": {
   "status": "draft",
