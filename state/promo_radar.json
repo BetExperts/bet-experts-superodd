@@ -2812,15 +2812,6 @@
   "bron": "https://www.oranjepalace.nl/nl/promoties/wicked-wins-pragmatic-play",
   "datum": "2026-10-28"
  },
- "888|toernooien-bij-888|22-oktober-t-m-2-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "comeon|toernooien-bij-comeon|22-oktober-t-m-2-november": {
   "status": "draft",
   "item_id": "6ae233f2b3e104e5e7d7d58e",
@@ -2829,5 +2820,14 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-10-28"
+ },
+ "888|toernooien-bij-888|28-oktober-t-m-2-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
  }
 }
