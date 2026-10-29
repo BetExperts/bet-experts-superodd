@@ -944,10 +944,25 @@
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/starcasinoquiz"
   },
+  "6ae1c384d09a87762b22f65d": {
+   "slug": "711-super-boost",
+   "name": "711 Super Boost: Manchester City - Brighton (3 selecties) @ 3.79",
+   "geldig_tot": "2026-10-28"
+  },
+  "6ad1c8f6bfcadf85b5b17e0b": {
+   "slug": "comeon-toernooien",
+   "name": "ComeOn!: Toernooien (van 17 oktober t/m 28 oktober)",
+   "geldig_tot": "2026-10-28"
+  },
   "6ad0b70562369dc48f7e9d55": {
    "slug": "oranje-palace-luckys-quest-75-free-spins-15-25-oktober",
    "name": "Oranje Palace: Lucky's Quest | Tot 75 Free Spins (15 t/m 25 oktober)",
    "geldig_tot": "2026-10-25"
+  },
+  "6ac380b0793990f1e0993e53": {
+   "slug": "888-toernooien-0b705",
+   "name": "888: Toernooien (van 17 oktober t/m 28 oktober)",
+   "geldig_tot": "2026-10-28"
   },
   "6ac380afe57e07b1dd632d3b": {
    "slug": "comeon-toernooien-29240",
@@ -2189,13 +2204,15 @@
   "verwijderd": "2026-10-19"
  },
  "bet365|bet365-live-casino-missies-win-gouden-fiches-en-geldprijzen|12-oktober-t-m-28-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6accd597effe4161a7af6f5f",
   "hash": null,
   "slug": "bet365-live-casino-missies-win-gouden-fiches-en-geldprijzen",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-12"
+  "datum": "2026-10-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-29"
  },
  "bet365|spellen-van-de-maand-ontvang-tot-100-gratis-spins|12-oktober-t-m-18-oktober": {
   "status": "verwijderd",
@@ -2683,13 +2700,15 @@
   "datum": "2026-10-26"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|26-oktober-t-m-28-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf2f590d49319bd6936c32",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-29"
  },
  "vbet|doe-mee-met-het-red-tiger-toernooi|26-oktober-t-m-1-november": {
   "status": "draft",
