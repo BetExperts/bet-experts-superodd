@@ -852,8 +852,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-10-28",
-   "slot": "Supernova Shooting Stars"
+   "start": "2026-11-04",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -2645,13 +2645,15 @@
   "datum": "2026-10-26"
  },
  "jacks.nl|games-global-toernooi-met-5-000-aan-prijzen|25-oktober-t-m-29-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf2f0b5f765857a1101b4c",
   "hash": null,
   "slug": "jacks-nl-games-global-toernooi-met-5-000-aan-prijzen",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-30"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|25-oktober-t-m-31-oktober": {
   "status": "draft",
@@ -2752,13 +2754,15 @@
   "datum": "2026-10-27"
  },
  "circus|voltooi-de-missie-om-free-bets-en-spins-te-pakken|27-oktober-t-m-29-oktober": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ae0aa469f35a9dba37d8fde",
   "hash": null,
   "slug": "circus-voltooi-de-missie-om-free-bets-en-spins-te-pakken",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/nl-court-to-pitch",
-  "datum": "2026-10-27"
+  "datum": "2026-10-27",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-30"
  },
  "bet365|bet365-strijd-van-de-monsters|26-oktober-t-m-2-november": {
   "status": "draft",
@@ -2838,5 +2842,17 @@
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/20k-euro-horror-toernooi-oktober",
   "datum": "2026-10-29"
+ },
+ "vbet|10-free-spins-zonder-storting-en-10-extra-bij-50-inzet|iedere-vr-za-zo": {
+  "status": "bestond al",
+  "cms": "Vbet: Elk weekend 10 gratis spins",
+  "score": 0.58,
+  "datum": "2026-10-30"
+ },
+ "circus|5-000-pragmatic-play-toernooi-bij-circus|27-oktober-t-m-2-november": {
+  "status": "bestond al",
+  "cms": "Circus: €5.000 Pragmatic Play toernooi (van 27 oktober t/m 2 november)",
+  "score": 1.0,
+  "datum": "2026-10-30"
  }
 }
