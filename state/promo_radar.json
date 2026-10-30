@@ -2854,5 +2854,38 @@
   "cms": "Circus: €5.000 Pragmatic Play toernooi (van 27 oktober t/m 2 november)",
   "score": 1.0,
   "datum": "2026-10-30"
+ },
+ "handmatig|oranje-palace-liverpool-arsenal-free-bet-10": {
+  "status": "einddatum",
+  "item_id": "6ae456672c6c9d592af000a0",
+  "slug": "oranje-palace-liverpool-arsenal-free-bet-tot-10",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/liv-ars-freebet-10",
+  "datum": "2026-10-30"
+ },
+ "888|888-odds-boosts-60x-je-inleg|30-oktober-t-m-3-november": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "toto-acties|halloween-blackjack": {
+  "status": "bestond al",
+  "cms": "TOTO: Lucky 777",
+  "score": 0.82,
+  "hash": "bae39005c46f94b7a1fd53ebbdba2bf2",
+  "datum": "2026-10-30"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-4-000|30-oktober-t-m-5-november": {
+  "status": "live",
+  "item_id": "6ae462248f18509273314059",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-4-000",
+  "check": "handmatig gecontroleerd 30-10",
+  "bron": "https://www.oranjepalace.nl/nl/toernooien/palace-races-pragmatic-play-44",
+  "datum": "2026-10-30"
+ },
+ "oranje-palace|zet-in-op-liverpool-arsenal-en-krijg-een-free-bet|30-oktober-t-m-1-november": {
+  "status": "bestond al",
+  "cms": "Oranje Palace: Wed op Liverpool – Arsenal en pak een Free Bet tot €10 (van 30 oktober t/m 1 november)",
+  "score": 0.83,
+  "datum": "2026-10-30"
  }
 }
