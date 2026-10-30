@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-29",
+  "datum": "2026-10-30",
   "gehad": [
     "6909dcf78e3c22a32d06e2ad",
     "682b116bb82996896cb52d5d",
@@ -13,9 +13,10 @@
     "6a7afdaa4a7453c17d31cab5",
     "64ff0fbd5a8f205b05d54687",
     "6adf238ccbe229030cf45818",
-    "68dd287867de5cd59d44dc39"
+    "68dd287867de5cd59d44dc39",
+    "66a8a87062108480763b7309"
   ],
-  "laatste_book": "68dd287867de5cd59d44dc39",
+  "laatste_book": "66a8a87062108480763b7309",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -186,6 +187,11 @@
       "datum": "2026-10-29",
       "book": "Bingoal",
       "slug": "welkomstbonus-bingoal-casino-100-bonus-tot-eu250"
+    },
+    {
+      "datum": "2026-10-30",
+      "book": "711",
+      "slug": "welkomstbonus-711-casino"
     }
   ]
 }
