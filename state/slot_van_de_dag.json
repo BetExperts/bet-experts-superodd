@@ -1,5 +1,5 @@
 {
-  "datum": "2026-10-25",
+  "datum": "2026-10-31",
   "gehad": [
     "le-pharaoh",
     "le-santa",
@@ -7,9 +7,10 @@
     "tanked",
     "dr-zappo",
     "fist-of-destruction-megamultiplier",
-    "dinopolis"
+    "dinopolis",
+    "forge-of-olympus"
   ],
-  "laatste_provider": "6abbe23e6c88ab0e063e8a79",
+  "laatste_provider": "6abbe21ae1f746b714665901",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -50,6 +51,10 @@
     {
       "datum": "2026-10-25",
       "slot": "dinopolis"
+    },
+    {
+      "datum": "2026-10-31",
+      "slot": "forge-of-olympus"
     }
   ]
 }
