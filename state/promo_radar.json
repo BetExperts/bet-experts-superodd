@@ -2521,13 +2521,15 @@
   "behouden": true
  },
  "one|rock-paper-win-event-bij-one-casino|21-oktober-t-m-30-oktober": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ad888e4564d9f6171a1652e",
   "hash": null,
   "slug": "one-casino-rock-paper-win-event",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-21"
+  "datum": "2026-10-21",
+  "reden": "verlopen",
+  "verwijderd": "2026-10-31"
  },
  "betmgm|pak-tot-35-extra-cash-bij-betmgm|22-oktober-t-m-25-oktober": {
   "status": "verwijderd",
