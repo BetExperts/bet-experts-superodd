@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "256b5f383795da353a0a494b2aaae6bc"
+  "hash": "98f6a8e6ab73d981c5509845733ce122"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -2866,24 +2866,6 @@
   "reden": "verlopen",
   "verwijderd": "2026-11-02"
  },
- "comeon|toernooien-bij-comeon|22-oktober-t-m-2-november": {
-  "status": "draft",
-  "item_id": "6ae233f2b3e104e5e7d7d58e",
-  "hash": null,
-  "slug": "comeon-toernooien-b38e7",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-28"
- },
- "888|toernooien-bij-888|28-oktober-t-m-2-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "711|20-000-horror-toernooi|28-oktober-t-m-2-november": {
   "status": "live",
   "item_id": "6ae388cf684eba09d35668e1",
@@ -3108,6 +3090,42 @@
   "hash": null,
   "slug": "toto-speel-crazy-time-en-win-een-deel-van-10-000",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-02"
+ },
+ "888|toernooien-bij-888|28-oktober-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "comeon|toernooien-bij-comeon|22-oktober-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6ae89c356c25353460664ffd",
+  "hash": null,
+  "slug": "comeon-toernooien",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-02"
+ },
+ "hard-rock|reel-rushtoernooi-bij-hard-rock-casino|2-november-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6ae89c370c52868a2abc353b",
+  "hash": null,
+  "slug": "hard-rock-casino-reel-rushtoernooi",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-02"
+ },
+ "hard-rock|hard-rock-casino-main-stage-mash-up-verdien-tot-95-free-spins|iedere-ma-di-wo": {
+  "status": "draft",
+  "item_id": "6ae89c38ccd1811b9dfebd78",
+  "hash": null,
+  "slug": "hard-rock-casino-main-stage-mash-up-verdien-tot-95-free-spins",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-02"
  }
