@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "98f6a8e6ab73d981c5509845733ce122"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -3126,6 +3126,30 @@
   "hash": null,
   "slug": "hard-rock-casino-main-stage-mash-up-verdien-tot-95-free-spins",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-02"
+ },
+ "711|711-casino-quest-pak-5-free-spins|2-november-t-m-8-november": {
+  "status": "bestond al",
+  "cms": "711: Loyaliteitsprogramma",
+  "score": 0.68,
+  "datum": "2026-11-02"
+ },
+ "bet365|zet-in-op-champions-league-wedstrijden-en-pak-5-wedtegoed|2-november-t-m-4-november": {
+  "status": "draft",
+  "item_id": "6ae8cb6dace351690a2bec0c",
+  "hash": null,
+  "slug": "bet365-zet-in-op-champions-league-wedstrijden-en-pak-5-wedtegoed",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-02"
+ },
+ "bet365|50-wedtegoed-bij-10-inzet-op-feyenoord-inter|2-november-en-3-november": {
+  "status": "draft",
+  "item_id": "6ae8cb6e9ceeca6a40a5e24e",
+  "hash": null,
+  "slug": "bet365-50-wedtegoed-bij-10-inzet-op-feyenoord-inter",
+  "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-11-02"
  }
