@@ -2413,13 +2413,15 @@
   "verwijderd": "2026-10-26"
  },
  "hard-rock|pak-elke-dag-een-bonus-met-de-supermarktweken-van-hard-rock-casino|19-oktober-t-m-1-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad5de45b30b7bca7f065f4c",
   "hash": null,
   "slug": "hard-rock-casino-pak-elke-dag-een-bonus",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|18-oktober-t-m-24-oktober": {
   "status": "verwijderd",
@@ -2444,13 +2446,15 @@
   "verwijderd": "2026-10-22"
  },
  "starcasino|gulle-griezelweken": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ad5de65b90e768614a8eb2b",
   "hash": "e2df9a260f1cff986a08cdeec55d6838",
   "slug": "starcasino-gulle-griezelweken",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/gullegriezelweken",
-  "datum": "2026-10-19"
+  "datum": "2026-10-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "unibet|pak-vouchers-en-cash-met-bingo-missies-en-bet-en-gets|altijd-geldig": {
   "status": "draft",
@@ -2619,13 +2623,15 @@
   "verwijderd": "2026-10-27"
  },
  "circus|circus-nl-prize-drops-1-miljoen-prijzenpot|23-oktober-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adb2bf18c97cdd84e2c1845",
   "hash": null,
   "slug": "circus-circus-nl-prize-drops-1-miljoen-prijzenpot",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-23"
+  "datum": "2026-10-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "888|verhoogde-welkomstbonus-ontvang-tot-400-free-spins-80-coupons-of-50-free-bets|23-oktober-t-m-3-november": {
   "status": "overgeslagen",
@@ -2636,22 +2642,26 @@
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
  "hard-rock|halloween-toernooi-bij-hard-rock-casino|26-oktober-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf2f072c38c5b74a283d19",
   "hash": null,
   "slug": "hard-rock-casino-halloween-toernooi",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "toto|slots-toernooi-met-10-000-prijzenpot|26-oktober-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf2f08d7f554f426191536",
   "hash": null,
   "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "toto|speel-ice-fishing-en-win-een-deel-van-10-000|25-oktober-t-m-31-oktober": {
   "status": "verwijderd",
@@ -2687,13 +2697,15 @@
   "verwijderd": "2026-11-01"
  },
  "oranje-palace|luckys-quest-bij-oranje-palace|26-oktober-t-m-1-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6adf2f0e1cf8a57d1bcd3cec",
   "hash": null,
   "slug": "oranje-palace-luckys-quest",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-quest-2026-43",
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|26-oktober-t-m-28-oktober": {
   "status": "verwijderd",
@@ -2707,13 +2719,15 @@
   "verwijderd": "2026-10-29"
  },
  "vbet|doe-mee-met-het-red-tiger-toernooi|26-oktober-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf2f5aaab3025981b56b7d",
   "hash": null,
   "slug": "vbet-doe-mee-met-het-red-tiger-toernooi",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "vbet|vbet-fifty-fifty-feest-ontvang-tot-350-free-spins|25-oktober-t-m-31-oktober": {
   "status": "verwijderd",
@@ -2727,13 +2741,15 @@
   "verwijderd": "2026-11-01"
  },
  "starcasino-toernooi|playson-toernooi|2026-10-26": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6adf2f6118be1eeb8f5edf8e",
   "hash": "82334e785e1934b62bb6bd85482c5580",
   "slug": "starcasino-5-000-playson-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "starcasino-toernooi|sport-toernooi|2026-10-26": {
   "status": "live",
@@ -2756,13 +2772,15 @@
   "verwijderd": "2026-11-01"
  },
  "toto|toto-halloween-week-7-dagen-lang-bonussen|29-september-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6adf9486b91029c2c2de9dd1",
   "hash": null,
   "slug": "toto-halloween-week-7-dagen-lang-bonussen",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-26"
+  "datum": "2026-10-26",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "711|711-casino-quest-pak-5-free-spins|26-oktober-t-m-1-november": {
   "status": "bestond al",
@@ -2816,22 +2834,26 @@
   "datum": "2026-10-28"
  },
  "hard-rock|wicked-wins-bij-hard-rock-casino|28-oktober-t-m-1-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae1fbd92940409325286682",
   "hash": null,
   "slug": "hard-rock-casino-wicked-wins",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-28"
+  "datum": "2026-10-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "circus|wicked-wins-prize-drop-bij-circus|28-oktober-t-m-1-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ae1fbdb1442358b0b395f6b",
   "hash": null,
   "slug": "circus-wicked-wins-prize-drop",
   "check": "geen getallen; tekstoverlap",
   "bron": "https://www.circus.nl/nl/promoties/details/wickedwins-pragmaticplay-halloween-circusnl-2026-nl",
-  "datum": "2026-10-28"
+  "datum": "2026-10-28",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "oranje-palace|prize-drop-bij-oranje-palace-win-tot-1-000x-je-inzet|28-oktober-t-m-1-november": {
   "status": "live",
@@ -2882,11 +2904,13 @@
   "datum": "2026-10-30"
  },
  "handmatig|oranje-palace-liverpool-arsenal-free-bet-10": {
-  "status": "einddatum",
+  "status": "verwijderd",
   "item_id": "6ae456672c6c9d592af000a0",
   "slug": "oranje-palace-liverpool-arsenal-free-bet-tot-10",
   "bron": "https://www.oranjepalace.nl/nl/promoties/liv-ars-freebet-10",
-  "datum": "2026-10-30"
+  "datum": "2026-10-30",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-02"
  },
  "888|888-odds-boosts-60x-je-inleg|30-oktober-t-m-3-november": {
   "status": "overgeslagen",
