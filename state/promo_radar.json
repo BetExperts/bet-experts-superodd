@@ -948,6 +948,21 @@
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/geldkluisbonus"
+  },
+  "6ae6ee8963c69f88921f01d5": {
+   "slug": "unibet-6-666-wacky-halloween-toernooi",
+   "name": "Unibet: €6.666 Wacky Halloween Toernooi",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ae3878ff256977017fbc883": {
+   "slug": "circus-5-000-pragmatic-play-toernooi",
+   "name": "Circus: €5.000 Pragmatic Play toernooi (van 27 oktober t/m 2 november)",
+   "geldig_tot": "2026-11-02"
+  },
+  "6ad9dad424c8f966f82d972b": {
+   "slug": "comeon-toernooien-e0dbf",
+   "name": "ComeOn!: Toernooien (van 22 oktober t/m 2 november)",
+   "geldig_tot": "2026-11-02"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2809,13 +2824,15 @@
   "verwijderd": "2026-10-30"
  },
  "bet365|bet365-strijd-van-de-monsters|26-oktober-t-m-2-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae0aa9428a4e5d3a4b9380f",
   "hash": null,
   "slug": "bet365-strijd-van-de-monsters",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-10-27"
+  "datum": "2026-10-27",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-03"
  },
  "toto-acties|win-kaarten-voor-nederland-griekenland": {
   "status": "live",
@@ -3093,24 +3110,6 @@
   "bron": null,
   "datum": "2026-11-02"
  },
- "888|toernooien-bij-888|28-oktober-t-m-8-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
- "comeon|toernooien-bij-comeon|22-oktober-t-m-8-november": {
-  "status": "draft",
-  "item_id": "6ae89c356c25353460664ffd",
-  "hash": null,
-  "slug": "comeon-toernooien",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-02"
- },
  "hard-rock|reel-rushtoernooi-bij-hard-rock-casino|2-november-t-m-8-november": {
   "status": "draft",
   "item_id": "6ae89c370c52868a2abc353b",
@@ -3152,5 +3151,23 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-11-02"
+ },
+ "888|toernooien-bij-888|2-november-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "comeon|toernooien-bij-comeon|2-november-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6ae999247520125691a0e7ea",
+  "hash": null,
+  "slug": "comeon-toernooien-46d53",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-03"
  }
 }
