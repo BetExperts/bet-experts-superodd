@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-02",
+  "datum": "2026-11-03",
   "gehad": [
     "6909dcf78e3c22a32d06e2ad",
     "682b116bb82996896cb52d5d",
@@ -17,9 +17,10 @@
     "66a8a87062108480763b7309",
     "64ff0fbd5a8f205b05d5465c",
     "66bb685ec057aa8c4337ceea",
-    "64ff0fbd5a8f205b05d54670"
+    "64ff0fbd5a8f205b05d54670",
+    "6526a08a94d8631739581743"
   ],
-  "laatste_book": "64ff0fbd5a8f205b05d54670",
+  "laatste_book": "6526a08a94d8631739581743",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -210,6 +211,11 @@
       "datum": "2026-11-02",
       "book": "Circus",
       "slug": "circus-casino-welkomstbonus-100-free-spins"
+    },
+    {
+      "datum": "2026-11-03",
+      "book": "LeoVegas",
+      "slug": "leovegas-casino-welkomstbonus-2026-tot-eu200-1-400-free-spins-op-henry-the-ape"
     }
   ]
 }
