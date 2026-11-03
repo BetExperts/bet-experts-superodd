@@ -3171,5 +3171,23 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-03"
+ },
+ "oranje-palace|50-procent-live-boost-bij-oranje-palace|2-november-t-m-5-november": {
+  "status": "draft",
+  "item_id": "6ae9e4b70ab5cdfed81c632a",
+  "hash": null,
+  "slug": "oranje-palace-50-procent-live-boost",
+  "check": "0/2 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/welkomstbonus-casino",
+  "datum": "2026-11-03"
+ },
+ "jacks.nl|pak-maximaal-15-aan-free-bets-bij-jacks-nl|3-november-t-m-5-november": {
+  "status": "draft",
+  "item_id": "6ae9e4bb11525fbdf4881109",
+  "hash": null,
+  "slug": "jacks-nl-pak-maximaal-15-aan-free-bets",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-03"
  }
 }
