@@ -853,7 +853,7 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-11-04",
-   "slot": null
+   "slot": "Supernova Shooting Stars"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -952,6 +952,11 @@
   "6ae6ee8963c69f88921f01d5": {
    "slug": "unibet-6-666-wacky-halloween-toernooi",
    "name": "Unibet: €6.666 Wacky Halloween Toernooi",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ae8cb6e9ceeca6a40a5e24e": {
+   "slug": "bet365-50-wedtegoed-bij-10-inzet-op-feyenoord-inter",
+   "name": "Bet365: €50 wedtegoed bij €10 inzet op Feyenoord – Inter",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ae3878ff256977017fbc883": {
@@ -2942,13 +2947,15 @@
   "datum": "2026-10-30"
  },
  "jacks.nl|halloween-pragmatic-play-toernooi-met-5-000-aan-prijzen|30-oktober-t-m-3-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae49ea073cb5221dfc59164",
   "hash": null,
   "slug": "jacks-nl-halloween-pragmatic-play-toernooi-met-5-000-aan-prijzen",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-10-30"
+  "datum": "2026-10-30",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-04"
  },
  "unibet|6-666-wacky-halloween-toernooi-bij-unibet|1-november-en-2-november": {
   "status": "live",
