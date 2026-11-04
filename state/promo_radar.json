@@ -1367,7 +1367,7 @@
   "cms": "TOTO Exclusief (wekelijks, RECURRING)",
   "item_id": "6ab53f21ed7e65c979c56788",
   "datum": "2026-10-02",
-  "hash": "894e257b9304ce69dcc5330a712aaa36"
+  "hash": "119b831a9a4c3ce45643d8d5c40dfcfc"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
@@ -3217,5 +3217,14 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-11-03"
+ },
+ "bet365|bet365-cashverdeler|3-november-t-m-10-november": {
+  "status": "draft",
+  "item_id": "6aeafa5997f9509065f09dd3",
+  "hash": null,
+  "slug": "bet365-cashverdeler",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-04"
  }
 }
