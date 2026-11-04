@@ -948,26 +948,6 @@
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/geldkluisbonus"
-  },
-  "6ae6ee8963c69f88921f01d5": {
-   "slug": "unibet-6-666-wacky-halloween-toernooi",
-   "name": "Unibet: €6.666 Wacky Halloween Toernooi",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ae8cb6e9ceeca6a40a5e24e": {
-   "slug": "bet365-50-wedtegoed-bij-10-inzet-op-feyenoord-inter",
-   "name": "Bet365: €50 wedtegoed bij €10 inzet op Feyenoord – Inter",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6ae3878ff256977017fbc883": {
-   "slug": "circus-5-000-pragmatic-play-toernooi",
-   "name": "Circus: €5.000 Pragmatic Play toernooi (van 27 oktober t/m 2 november)",
-   "geldig_tot": "2026-11-02"
-  },
-  "6ad9dad424c8f966f82d972b": {
-   "slug": "comeon-toernooien-e0dbf",
-   "name": "ComeOn!: Toernooien (van 22 oktober t/m 2 november)",
-   "geldig_tot": "2026-11-02"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2958,13 +2938,15 @@
   "verwijderd": "2026-11-04"
  },
  "unibet|6-666-wacky-halloween-toernooi-bij-unibet|1-november-en-2-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ae6ee8963c69f88921f01d5",
   "hash": null,
   "slug": "unibet-6-666-wacky-halloween-toernooi",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.unibet.nl/promotions/casino-promotions/wacky-toernooi?lobby=article&promo=wacky-tournament",
-  "datum": "2026-11-01"
+  "datum": "2026-11-01",
+  "reden": "handmatig akkoord gebruiker",
+  "verwijderd": "2026-11-04"
  },
  "toto|verdien-tot-wel-100-free-spins-met-totos-missies|1-november-t-m-5-november": {
   "status": "draft",
@@ -3153,13 +3135,15 @@
   "datum": "2026-11-02"
  },
  "bet365|50-wedtegoed-bij-10-inzet-op-feyenoord-inter|2-november-en-3-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae8cb6e9ceeca6a40a5e24e",
   "hash": null,
   "slug": "bet365-50-wedtegoed-bij-10-inzet-op-feyenoord-inter",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-11-02"
+  "datum": "2026-11-02",
+  "reden": "handmatig akkoord gebruiker",
+  "verwijderd": "2026-11-04"
  },
  "888|toernooien-bij-888|2-november-t-m-8-november": {
   "status": "draft",
@@ -3219,7 +3203,7 @@
   "datum": "2026-11-03"
  },
  "bet365|bet365-cashverdeler|3-november-t-m-10-november": {
-  "status": "draft",
+  "status": "live",
   "item_id": "6aeafa5997f9509065f09dd3",
   "hash": null,
   "slug": "bet365-cashverdeler",
@@ -3233,6 +3217,15 @@
   "hash": null,
   "slug": "vbet-plaats-een-bet-builder-op-de-champions-league",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-04"
+ },
+ "jacks.nl|playson-toernooi-met-5-000-aan-prijzen|4-november-t-m-8-november": {
+  "status": "draft",
+  "item_id": "6aeb361eb6519994b9fb4ba8",
+  "hash": null,
+  "slug": "jacks-nl-playson-toernooi-met-5-000-aan-prijzen",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-04"
  }
