@@ -948,6 +948,11 @@
    "name": "Starcasino: Geldkluis",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/geldkluisbonus"
+  },
+  "6aeb10426fef18625f13026f": {
+   "slug": "vbet-plaats-een-bet-builder-op-de-champions-league",
+   "name": "Vbet: Plaats een bet builder op de Champions League",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -3039,13 +3044,15 @@
   "datum": "2026-11-02"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|2-november-t-m-4-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae85479c336b5326abfdf94",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-02"
+  "datum": "2026-11-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-05"
  },
  "oranje-palace|luckys-quest-bij-oranje-palace|2-november-t-m-8-november": {
   "status": "live",
@@ -3126,13 +3133,15 @@
   "datum": "2026-11-02"
  },
  "bet365|zet-in-op-champions-league-wedstrijden-en-pak-5-wedtegoed|2-november-t-m-4-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae8cb6dace351690a2bec0c",
   "hash": null,
   "slug": "bet365-zet-in-op-champions-league-wedstrijden-en-pak-5-wedtegoed",
   "check": "geen officiële promopagina bekend",
   "bron": null,
-  "datum": "2026-11-02"
+  "datum": "2026-11-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-05"
  },
  "bet365|50-wedtegoed-bij-10-inzet-op-feyenoord-inter|2-november-en-3-november": {
   "status": "verwijderd",
