@@ -896,7 +896,7 @@
  "starcasino|starclub": {
   "status": "bron-handmatig",
   "item_id": "6ab541d867ea55c8a770a447",
-  "hash": "00ae0911695758e52eaf3734e0602b41"
+  "hash": "c96f6a2bbf2be4033fc005ea25d5a0c8"
  },
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
@@ -3237,5 +3237,11 @@
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-04"
+ },
+ "bet365|twist-en-voorspel-bij-bet365-win-tot-10-per-speelronde|2-november-t-m-31-januari": {
+  "status": "bestond al",
+  "cms": "Bet365 Super Odd Vandaag: AZ - Juventus @ 3.50 (was 2.45)",
+  "score": 0.64,
+  "datum": "2026-11-05"
  }
 }
