@@ -3263,5 +3263,23 @@
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-06"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|6-november-t-m-12-november": {
+  "status": "draft",
+  "item_id": "6aedd92b3eed49cd4fac49df",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-06"
+ },
+ "starcasino|win-en-get-premier-league": {
+  "status": "live",
+  "item_id": "6aedd92d3eed49cd4fac4a83",
+  "hash": "30a7d02742c91c69d964b6d621b42045",
+  "slug": "starcasino-win-en-get-premier-league",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/winandgetpremierleague",
+  "datum": "2026-11-06"
  }
 }
