@@ -1895,16 +1895,6 @@
   "reden": "verlopen",
   "verwijderd": "2026-10-13"
  },
- "one|big-one-gameshow-speel-gratis-mee|alleen-7-oktober": {
-  "status": "live",
-  "item_id": "6ac5ef6f1ee65d7e707d5d0a",
-  "hash": null,
-  "slug": "one-casino-big-one-gameshow-speel-gratis-mee",
-  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-10-07",
-  "behouden": true
- },
  "toto-acties|toto-exclusief-speel-25-en-krijg-20-gratis-spins": {
   "status": "bestond al",
   "cms": "TOTO Exclusief: speel €25 en krijg 20 free spins (elke woensdag & donderdag)",
@@ -2953,13 +2943,15 @@
   "verwijderd": "2026-11-06"
  },
  "hard-rock|stortingsbonus-tot-150-free-spins|1-november-t-m-6-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6ae74fb373c9a502ac04f997",
   "hash": null,
   "slug": "hard-rock-casino-stortingsbonus-tot-150-free-spins",
   "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-01"
+  "datum": "2026-11-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-07"
  },
  "jacks.nl|november-boost-kies-uit-casino-live-casino-en-sport|altijd-geldig": {
   "status": "draft",
@@ -2989,13 +2981,15 @@
   "datum": "2026-11-01"
  },
  "vbet|vbet-casinoknaller-ontvang-tot-300-free-spins|1-november-t-m-6-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae756d08b2fa43090357527",
   "hash": null,
   "slug": "vbet-casinoknaller-ontvang-tot-300-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-01"
+  "datum": "2026-11-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-07"
  },
  "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-november-t-m-7-november": {
   "status": "draft",
@@ -3281,5 +3275,15 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/winandgetpremierleague",
   "datum": "2026-11-06"
+ },
+ "one|big-one-gameshow-speel-gratis-mee|alleen-7-november": {
+  "status": "live",
+  "item_id": "6ac5ef6f1ee65d7e707d5d0a",
+  "hash": null,
+  "slug": "one-casino-big-one-gameshow-speel-gratis-mee",
+  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-10-07",
+  "behouden": true
  }
 }
