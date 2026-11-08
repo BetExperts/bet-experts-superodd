@@ -1,10 +1,11 @@
 {
-  "datum": "2026-11-07",
+  "datum": "2026-11-08",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
-    "64ff0fbd5a8f205b05d5465c"
+    "64ff0fbd5a8f205b05d5465c",
+    "66a8a87062108480763b7309"
   ],
-  "laatste_book": "64ff0fbd5a8f205b05d5465c",
+  "laatste_book": "66a8a87062108480763b7309",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -241,6 +242,11 @@
       "datum": "2026-11-07",
       "book": "JACKS.NL",
       "slug": "welkomstbonus-jacks-nl-sport-nieuw"
+    },
+    {
+      "datum": "2026-11-08",
+      "book": "711",
+      "slug": "welkomstbonus-711-sport"
     }
   ]
 }
