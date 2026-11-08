@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-07",
+  "datum": "2026-11-08",
   "gehad": [
     "le-pharaoh",
     "le-santa",
@@ -9,9 +9,10 @@
     "fist-of-destruction-megamultiplier",
     "dinopolis",
     "forge-of-olympus",
-    "2-wild-2-die"
+    "2-wild-2-die",
+    "conquer-babylon"
   ],
-  "laatste_provider": "6abbe2aee1f746b71466932c",
+  "laatste_provider": "6abbe23823702733446bddc3",
   "historie": [
     {
       "datum": "2026-09-30",
@@ -60,6 +61,10 @@
     {
       "datum": "2026-11-07",
       "slot": "2-wild-2-die"
+    },
+    {
+      "datum": "2026-11-08",
+      "slot": "conquer-babylon"
     }
   ]
 }
