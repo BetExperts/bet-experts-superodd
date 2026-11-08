@@ -928,6 +928,11 @@
    "slug": "vbet-plaats-een-bet-builder-op-de-champions-league",
    "name": "Vbet: Plaats een bet builder op de Champions League",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6aeeef03f74b430573227e2d": {
+   "slug": "711-stortingsbonus-40-procent-tot-400-7-november",
+   "name": "711: Stortingsbonus 40% tot €400 | alleen op 7 november",
+   "geldig_tot": "2026-11-07"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -2992,31 +2997,37 @@
   "verwijderd": "2026-11-07"
  },
  "leovegas|elke-dag-een-nieuwe-interessante-bonus|1-november-t-m-7-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae756d1ec41a5cd0738ed04",
   "hash": null,
   "slug": "leovegas-elke-dag-een-nieuwe-interessante-bonus",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-01"
+  "datum": "2026-11-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-08"
  },
  "betmgm|doe-mee-met-de-betmgm-bonusweek|1-november-t-m-7-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae756d3ec41a5cd0738edb4",
   "hash": null,
   "slug": "betmgm-doe-mee-met-de-betmgm-bonusweek",
   "check": "geen getallen; tekstoverlap",
   "bron": "https://www.betmgm.nl/campaigns/casino-welcome",
-  "datum": "2026-11-01"
+  "datum": "2026-11-01",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-08"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|1-november-t-m-7-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6ae85477d1bb43ef07c9ebca",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-02"
+  "datum": "2026-11-02",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-08"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|2-november-t-m-4-november": {
   "status": "verwijderd",
