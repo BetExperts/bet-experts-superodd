@@ -1203,7 +1203,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.69,
-  "hash": "73443c821d227e2aa71dd11c4d5a4306",
+  "hash": "3b7deba8cae102a694f05fff7617fe49",
   "datum": "2026-09-28"
  },
  "toto-acties|verdien-een-5-gratis-weddenschap": {
@@ -3356,5 +3356,68 @@
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
   "datum": "2026-10-22"
+ },
+ "jacks.nl|gamomat-toernooi-met-2-000-aan-free-spins|9-november-t-m-13-november": {
+  "status": "draft",
+  "item_id": "6af1cf12a502d17bb683bee0",
+  "hash": null,
+  "slug": "jacks-nl-gamomat-toernooi-met-2-000-aan-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
+ },
+ "hard-rock|power-combo-toernooi-bij-hard-rock-casino|9-november-t-m-15-november": {
+  "status": "draft",
+  "item_id": "6af1cf1339d9473b7dc0dc61",
+  "hash": null,
+  "slug": "hard-rock-casino-power-combo-toernooi",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
+ },
+ "toto|speel-ice-fishing-en-win-een-deel-van-10-000|9-november-t-m-15-november": {
+  "status": "draft",
+  "item_id": "6af1cf14c454982e3ee2ec50",
+  "hash": null,
+  "slug": "toto-speel-ice-fishing-en-win-een-deel-van-10-000",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
+ },
+ "oranje-palace|luckys-quest-bij-oranje-palace|9-november-t-m-15-november": {
+  "status": "live",
+  "item_id": "6af1cf150ab66531b8be5b7b",
+  "hash": null,
+  "slug": "oranje-palace-luckys-quest",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-quest-2026-46",
+  "datum": "2026-11-09"
+ },
+ "vbet|doe-mee-met-het-spinomania-toernooi|9-november-t-m-15-november": {
+  "status": "draft",
+  "item_id": "6af1d0404873bac8b41da35f",
+  "hash": null,
+  "slug": "vbet-doe-mee-met-het-spinomania-toernooi",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
+ },
+ "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|8-november-t-m-14-november": {
+  "status": "draft",
+  "item_id": "6af1d041889bb901fcca896a",
+  "hash": null,
+  "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
+ },
+ "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|9-november-t-m-11-november": {
+  "status": "draft",
+  "item_id": "6af1d042a8488fc7f7530363",
+  "hash": null,
+  "slug": "circus-krijg-tot-100-free-spins-met-missies",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-09"
  }
 }
