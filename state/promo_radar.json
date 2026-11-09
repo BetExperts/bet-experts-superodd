@@ -3261,24 +3261,6 @@
   "bron": null,
   "datum": "2026-11-05"
  },
- "comeon|toernooien-bij-comeon|2-november-t-m-9-november": {
-  "status": "draft",
-  "item_id": "6ae999247520125691a0e7ea",
-  "hash": null,
-  "slug": "comeon-toernooien-46d53",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-03"
- },
- "888|toernooien-bij-888|2-november-t-m-9-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "vbet|10-free-spins-zonder-storting|iedere-vr-za-zo": {
   "status": "bestond al",
   "cms": "Vbet: Elk weekend 10 gratis spins",
@@ -3356,5 +3338,23 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-11-09"
+ },
+ "comeon|toernooien-bij-comeon|6-november-t-m-14-november": {
+  "status": "draft",
+  "item_id": "6ae999247520125691a0e7ea",
+  "hash": null,
+  "slug": "comeon-toernooien-46d53",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-03"
+ },
+ "888|toernooien-bij-888|6-november-t-m-14-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
  }
 }
