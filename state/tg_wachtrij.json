@@ -1,0 +1,60 @@
+[
+ {
+  "id": "interlands-op-tv",
+  "na": "2026-11-12T09:30",
+  "tot": "2026-11-12T18:00",
+  "slug": "interlands-op-tv-12-tot-en-met-17-november-2026",
+  "kop": "📺 Interlands op tv: alle duels van deze week",
+  "tekst": "Vanaf vandaag is het interlandweek. We zetten alle 52 Nations League-duels van 12 t/m 17 november op een rij, per dag, met de Nederlandse zender. Oranje speelt vrijdag tegen Griekenland en maandag in Berlijn, allebei op NPO 3.",
+  "knop": "📺 Bekijk het tv-overzicht"
+ },
+ {
+  "id": "eventgids-ned-gre",
+  "na": "2026-11-13T10:00",
+  "tot": "2026-11-13T20:00",
+  "slug": "nederland-griekenland-hoe-laat-tv-stadion-opstelling-13-november-2026",
+  "kop": "🇳🇱 Vanavond: Nederland – Griekenland",
+  "tekst": "Om 20:45 uur in de Johan Cruijff ArenA, live op NPO 3. Oranje en Griekenland staan allebei op 8 punten: wie wint, zet een grote stap richting groepswinst. Alles over de aftrap, de tv-uitzending, de vermoedelijke opstelling en de onderlinge duels lees je hier.",
+  "knop": "🇳🇱 Alles over Nederland – Griekenland"
+ },
+ {
+  "id": "opstelling-oranje-gre",
+  "na": "2026-11-13T19:30",
+  "tot": "2026-11-13T20:40",
+  "voorwaarde": "bevestigde_elf",
+  "slug": "opstelling-oranje-vandaag",
+  "kop": "📋 De opstelling van Oranje is bekend",
+  "tekst": "Xavi heeft zijn basiself tegen Griekenland gekozen. Bekijk de officiële opstelling van Oranje en de Grieken.",
+  "knop": "📋 Bekijk de opstelling",
+  "kaart": "nederland-griekenland-hoe-laat-tv-stadion-opstelling-13-november-2026"
+ },
+ {
+  "id": "interlandbreaks",
+  "na": "2026-11-14T10:00",
+  "tot": "2026-11-14T20:00",
+  "slug": "interlandbreaks-2026-2027-alle-data-geen-eredivisie",
+  "kop": "❓ Waarom is er dit weekend geen Eredivisie?",
+  "tekst": "Het is interlandbreak. We zetten alle interlandperiodes van dit seizoen op een rij, en wanneer de Eredivisie weer begint. De Keuken Kampioen Divisie speelt dit weekend gewoon door.",
+  "knop": "📅 Alle interlandbreaks"
+ },
+ {
+  "id": "eventgids-dui-ned",
+  "na": "2026-11-16T10:00",
+  "tot": "2026-11-16T20:00",
+  "slug": "duitsland-nederland-hoe-laat-tv-stadion-16-november-2026",
+  "kop": "🇩🇪🇳🇱 Vanavond: Duitsland – Nederland",
+  "tekst": "De klassieker in het Olympiastadion in Berlijn, om 20:45 uur live op NPO 3. Duitsland onder Jürgen Klopp, Oranje onder Xavi, en het gaat om de kwartfinales van de Nations League. Alles over de wedstrijd, de rivaliteit en wat er op het spel staat lees je hier.",
+  "knop": "🇩🇪 Alles over Duitsland – Nederland"
+ },
+ {
+  "id": "opstelling-oranje-dui",
+  "na": "2026-11-16T19:30",
+  "tot": "2026-11-16T20:40",
+  "voorwaarde": "bevestigde_elf",
+  "slug": "opstelling-oranje-vandaag",
+  "kop": "📋 De opstelling van Oranje in Berlijn is bekend",
+  "tekst": "Xavi heeft zijn basiself tegen Duitsland gekozen. Bekijk de officiële opstelling van Oranje en Duitsland.",
+  "knop": "📋 Bekijk de opstelling",
+  "kaart": "duitsland-nederland-hoe-laat-tv-stadion-16-november-2026"
+ }
+]
