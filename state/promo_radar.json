@@ -3207,15 +3207,6 @@
   "reden": "verlopen",
   "verwijderd": "2026-11-06"
  },
- "bet365|bet365-cashverdeler|3-november-t-m-10-november": {
-  "status": "live",
-  "item_id": "6aeafa5997f9509065f09dd3",
-  "hash": null,
-  "slug": "bet365-cashverdeler",
-  "check": "geen officiële promopagina bekend",
-  "bron": null,
-  "datum": "2026-11-04"
- },
  "vbet|plaats-een-bet-builder-op-de-champions-league-bij-vbet|alleen-4-november": {
   "status": "draft",
   "item_id": "6aeb10426fef18625f13026f",
@@ -3269,13 +3260,15 @@
   "verwijderd": "2026-11-09"
  },
  "toto|win-een-voetbalreis-naar-manchester-city-napolo|27-oktober-t-m-9-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6aedafa9384319a295bda4a4",
   "hash": null,
   "slug": "toto-win-een-voetbalreis-naar-manchester-city-napolo",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-06"
+  "datum": "2026-11-06",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-10"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|6-november-t-m-12-november": {
   "status": "draft",
@@ -3328,24 +3321,6 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
   "datum": "2026-11-09"
- },
- "comeon|toernooien-bij-comeon|6-november-t-m-14-november": {
-  "status": "draft",
-  "item_id": "6ae999247520125691a0e7ea",
-  "hash": null,
-  "slug": "comeon-toernooien-46d53",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-03"
- },
- "888|toernooien-bij-888|6-november-t-m-14-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
  },
  "jacks.nl|gamomat-toernooi-met-2-000-aan-free-spins|9-november-t-m-13-november": {
   "status": "draft",
@@ -3445,5 +3420,50 @@
   "check": "4/4 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
   "datum": "2026-11-09"
+ },
+ "comeon|toernooien-bij-comeon|8-november-t-m-14-november": {
+  "status": "draft",
+  "item_id": "6ae999247520125691a0e7ea",
+  "hash": null,
+  "slug": "comeon-toernooien-46d53",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-03"
+ },
+ "888|toernooien-bij-888|8-november-t-m-14-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "bet365|bet365-cashverdeler|9-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6af2f4fbc0d3438869d17c0a",
+  "hash": null,
+  "slug": "bet365-cashverdeler-b6725",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-10"
+ },
+ "bet365|ontvang-tot-50-gouden-fiches-per-week-bij-bet365|10-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6af2f4fa357d6e9125ee1e77",
+  "hash": null,
+  "slug": "bet365-ontvang-tot-50-gouden-fiches-per-week",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-10"
+ },
+ "vbet|vbet-lucky-boost-kans-op-hogere-odds-bij-live-weddenschappen|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6af2f4fc66b85d52049fe849",
+  "hash": null,
+  "slug": "vbet-lucky-boost-kans-op-hogere-odds-bij-live-weddenschappen",
+  "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-10"
  }
 }
