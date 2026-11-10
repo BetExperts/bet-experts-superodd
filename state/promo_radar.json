@@ -934,6 +934,11 @@
    "name": "TOTO: Win kaarten voor Nederland - Griekenland",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6af318f11fffe64ff32b19a3": {
+   "slug": "888-free-bet-nederland-griekenland",
+   "name": "888: €5 free bet voor Nederland – Griekenland (10 t/m 13 nov)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
    "name": "ComeOn!: Toernooien (van 2 november t/m 8 november)",
@@ -3463,6 +3468,32 @@
   "hash": null,
   "slug": "vbet-lucky-boost-kans-op-hogere-odds-bij-live-weddenschappen",
   "check": "geen getallen; tekstoverlap (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-10"
+ },
+ "toto-acties|win-een-reis-naar-arsenal-real-madrid": {
+  "status": "live",
+  "item_id": "6af30584911b8153e5a18db5",
+  "hash": "dcba3534fcfaf67c9bc0ca14cd1d8017",
+  "slug": "toto-win-een-reis-naar-arsenal-real-madrid",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-10"
+ },
+ "888|wager-en-get-free-bet|10-t-m-13-november": {
+  "status": "live",
+  "item_id": "6af318f11fffe64ff32b19a3",
+  "slug": "888-free-bet-nederland-griekenland",
+  "check": "handmatig, bron promo.888.nl/wager_get_free_bet",
+  "bron": "https://promo.888.nl/wager_get_free_bet/",
+  "datum": "2026-11-10"
+ },
+ "toto|win-een-voetbalreis-naar-arsenal-real-madrid|10-november-t-m-24-november": {
+  "status": "draft",
+  "item_id": "6af31f25012423ded91c4884",
+  "hash": null,
+  "slug": "toto-win-een-voetbalreis-naar-arsenal-real-madrid",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-10"
  }
