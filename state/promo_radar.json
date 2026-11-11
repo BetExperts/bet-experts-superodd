@@ -1347,7 +1347,7 @@
   "cms": "TOTO Exclusief (wekelijks, RECURRING)",
   "item_id": "6ab53f21ed7e65c979c56788",
   "datum": "2026-10-02",
-  "hash": "119b831a9a4c3ce45643d8d5c40dfcfc"
+  "hash": "c610b8bc299716b3d8fa87531c46c4ca"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
@@ -3519,6 +3519,15 @@
   "slug": "circus-5-000-pragmatic-play-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-11-11"
+ },
+ "vbet|ontvang-1-free-bet-per-goal-van-oranje-bij-vbet|11-november-t-m-13-november": {
+  "status": "draft",
+  "item_id": "6af471f3f9e140c7f9fbdfdf",
+  "hash": null,
+  "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-11-11"
  }
 }
