@@ -3496,5 +3496,29 @@
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-10"
+ },
+ "888|pak-5-free-spins-per-goal-bij-nederland-griekenland|10-november-t-m-13-november": {
+  "status": "bestond al",
+  "cms": "888: €5 free bet voor Nederland – Griekenland (10 t/m 13 nov)",
+  "score": 0.67,
+  "datum": "2026-11-11"
+ },
+ "comeon|speel-casino-en-scoor-een-free-bet-voor-nederland-griekenland|10-november-t-m-13-november": {
+  "status": "draft",
+  "item_id": "6af44706f64822797c4dad46",
+  "hash": null,
+  "slug": "comeon-speel-casino-en-scoor-een-free-bet-voor-nederland-griekenland",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-11"
+ },
+ "circus|5-000-pragmatic-play-toernooi-bij-circus|10-november-t-m-16-november": {
+  "status": "live",
+  "item_id": "6af44708a7d9dff32439fbd5",
+  "hash": null,
+  "slug": "circus-5-000-pragmatic-play-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
+  "datum": "2026-11-11"
  }
 }
