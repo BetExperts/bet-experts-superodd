@@ -3533,5 +3533,23 @@
   "check": "1/2 kerngetallen gevonden",
   "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
   "datum": "2026-10-22"
+ },
+ "711|25-000-playn-go-toernooi|11-november-t-m-15-november": {
+  "status": "live",
+  "item_id": "6af59921561bfb89070e6630",
+  "hash": null,
+  "slug": "711-25-000-playn-go-toernooi",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/25k-euro-playngo-toernooi-november",
+  "datum": "2026-11-12"
+ },
+ "circus|voltooi-3-missies-en-pak-free-bets-en-free-spins|12-november-t-m-14-november": {
+  "status": "live",
+  "item_id": "6af59a43f6c67cba88e793cb",
+  "hash": null,
+  "slug": "circus-voltooi-3-missies-en-pak-free-bets-en-free-spins",
+  "check": "2/3 kerngetallen gevonden",
+  "bron": "https://www.circus.nl/nl/promoties/details/nl-court-to-pitch",
+  "datum": "2026-11-12"
  }
 }
