@@ -3551,5 +3551,14 @@
   "check": "2/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/nl-court-to-pitch",
   "datum": "2026-11-12"
+ },
+ "jacks.nl|pak-maximaal-10-aan-free-bets-bij-jacks-nl|12-november-t-m-17-november": {
+  "status": "draft",
+  "item_id": "6af5ae1d89348122ebce11ef",
+  "hash": null,
+  "slug": "jacks-nl-pak-maximaal-10-aan-free-bets",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-12"
  }
 }
