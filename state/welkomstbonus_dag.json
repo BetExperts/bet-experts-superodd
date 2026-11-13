@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-12",
+  "datum": "2026-11-13",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
     "64ff0fbd5a8f205b05d5465c",
@@ -7,9 +7,10 @@
     "68dd287867de5cd59d44dc39",
     "669ab9f5aceb8b717cea24c3",
     "64ff0fbd5a8f205b05d54687",
-    "66a24463b6de25483eec85e9"
+    "66a24463b6de25483eec85e9",
+    "6aad0c21a14e9435daf42e79"
   ],
-  "laatste_book": "66a24463b6de25483eec85e9",
+  "laatste_book": "6aad0c21a14e9435daf42e79",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -271,6 +272,11 @@
       "datum": "2026-11-12",
       "book": "ComeOn!",
       "slug": "welkomstbonus-comeon-sport"
+    },
+    {
+      "datum": "2026-11-13",
+      "book": "Oranje Palace",
+      "slug": "oranje-palace-sport-welkomstbonus-3x-14-free-bets"
     }
   ]
 }
