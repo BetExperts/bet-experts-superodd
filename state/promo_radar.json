@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "64359946e0402feac7d66a03976191f0"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -943,6 +943,11 @@
    "name": "Starcasino: WoW Wheel",
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/woensdagwheel"
+  },
+  "6af44706f64822797c4dad46": {
+   "slug": "comeon-speel-casino-en-scoor-een-free-bet-voor-nederland-griekenland",
+   "name": "ComeOn!: Speel casino en scoor een free bet voor Nederland – Griekenland (van 10 november t/m 13 november)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
@@ -3439,15 +3444,6 @@
   "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
   "datum": "2026-11-09"
  },
- "comeon|toernooien-bij-comeon|8-november-t-m-14-november": {
-  "status": "draft",
-  "item_id": "6ae999247520125691a0e7ea",
-  "hash": null,
-  "slug": "comeon-toernooien-46d53",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-03"
- },
  "bet365|bet365-cashverdeler|9-november-t-m-22-november": {
   "status": "draft",
   "item_id": "6af2f4fbc0d3438869d17c0a",
@@ -3485,12 +3481,14 @@
   "datum": "2026-11-10"
  },
  "888|wager-en-get-free-bet|10-t-m-13-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af318f11fffe64ff32b19a3",
   "slug": "888-free-bet-nederland-griekenland",
   "check": "handmatig, bron promo.888.nl/wager_get_free_bet",
   "bron": "https://promo.888.nl/wager_get_free_bet/",
-  "datum": "2026-11-10"
+  "datum": "2026-11-10",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-13"
  },
  "toto|win-een-voetbalreis-naar-arsenal-real-madrid|10-november-t-m-24-november": {
   "status": "draft",
@@ -3569,5 +3567,36 @@
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-12"
+ },
+ "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|10-november-t-m-13-november": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "comeon|toernooien-bij-comeon|8-november-t-m-18-november": {
+  "status": "draft",
+  "item_id": "6af6ea2634a4cf41943c377c",
+  "hash": null,
+  "slug": "comeon-toernooien-ecece",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "bet365|verdien-tot-45-gratis-spins-per-weekend|13-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6af6e9d3fc3791de91b3865c",
+  "hash": null,
+  "slug": "bet365-verdien-tot-45-gratis-spins-per-weekend",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "oranje-palace|pak-5-free-bet-bij-twee-keer-10-inzet|13-november-t-m-15-november": {
+  "status": "live",
+  "item_id": "6af6e9d462f7726f80e0109c",
+  "hash": null,
+  "slug": "oranje-palace-pak-5-free-bet-bij-twee-keer-10-inzet",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/nations-league-free-bet-5",
+  "datum": "2026-11-13"
  }
 }
