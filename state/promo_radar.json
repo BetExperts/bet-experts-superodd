@@ -949,6 +949,11 @@
    "name": "ComeOn!: Speel casino en scoor een free bet voor Nederland – Griekenland (van 10 november t/m 13 november)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6ae07ffe1ffaf34343c873ff": {
+   "slug": "tonybet-trick-or-treat-toernooi-9-000-en-10-000-gratis-spins",
+   "name": "Tonybet: Trick-or-Treat Toernooi: €9.000 en 10.000 gratis spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
    "name": "ComeOn!: Toernooien (van 2 november t/m 8 november)",
@@ -3597,6 +3602,28 @@
   "slug": "oranje-palace-pak-5-free-bet-bij-twee-keer-10-inzet",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/nations-league-free-bet-5",
+  "datum": "2026-11-13"
+ },
+ "vbet|krijg-150-free-spins-als-welkomstbonus-bij-vbet|altijd-geldig": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "vbet|50-procent-free-bet-tot-25-bij-spanje-engeland|13-november-t-m-15-november": {
+  "status": "draft",
+  "item_id": "6af713a7efccf0ab5fcda133",
+  "hash": null,
+  "slug": "vbet-50-procent-free-bet-tot-25-bij-spanje-engeland",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "starcasino|level-up-free-spins": {
+  "status": "live",
+  "item_id": "6af713a8d77ce1435e903058",
+  "hash": "3d6dcda96a1049faa3f09fd8e37a37fe",
+  "slug": "starcasino-level-up-free-spins",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/level-up-free-spins",
   "datum": "2026-11-13"
  }
 }
