@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-12",
+  "datum": "2026-11-13",
   "gehad": [
     "68dd287867de5cd59d44dc39",
     "67c9acaf7db0b29e5b03370d",
@@ -9,9 +9,10 @@
     "682b116bb82996896cb52d5d",
     "6a7afdaa4a7453c17d31cab5",
     "67974cf05b546fe28ef78cdc",
-    "66bb685ec057aa8c4337ceea"
+    "66bb685ec057aa8c4337ceea",
+    "6adf238ccbe229030cf45818"
   ],
-  "laatste_book": "66bb685ec057aa8c4337ceea",
+  "laatste_book": "6adf238ccbe229030cf45818",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -252,6 +253,11 @@
       "datum": "2026-11-12",
       "book": "BetMGM",
       "slug": "betmgm-welkomstaanbieding-tot-1000-free-spins"
+    },
+    {
+      "datum": "2026-11-13",
+      "book": "Winz",
+      "slug": "winz-casino-welkomstbonus-200-gratis-spins"
     }
   ]
 }
