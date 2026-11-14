@@ -954,6 +954,11 @@
    "name": "Tonybet: Trick-or-Treat Toernooi: €9.000 en 10.000 gratis spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6af713a8d77ce1435e903058": {
+   "slug": "starcasino-level-up-free-spins",
+   "name": "Starcasino: Level-Up Free Spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
    "name": "ComeOn!: Toernooien (van 2 november t/m 8 november)",
@@ -3345,13 +3350,15 @@
   "datum": "2026-11-09"
  },
  "jacks.nl|gamomat-toernooi-met-2-000-aan-free-spins|9-november-t-m-13-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af1cf12a502d17bb683bee0",
   "hash": null,
   "slug": "jacks-nl-gamomat-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-14"
  },
  "hard-rock|power-combo-toernooi-bij-hard-rock-casino|9-november-t-m-15-november": {
   "status": "draft",
@@ -3511,13 +3518,15 @@
   "datum": "2026-11-11"
  },
  "comeon|speel-casino-en-scoor-een-free-bet-voor-nederland-griekenland|10-november-t-m-13-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af44706f64822797c4dad46",
   "hash": null,
   "slug": "comeon-speel-casino-en-scoor-een-free-bet-voor-nederland-griekenland",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-11"
+  "datum": "2026-11-11",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-14"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|10-november-t-m-16-november": {
   "status": "live",
@@ -3529,13 +3538,15 @@
   "datum": "2026-11-11"
  },
  "vbet|ontvang-1-free-bet-per-goal-van-oranje-bij-vbet|11-november-t-m-13-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af471f3f9e140c7f9fbdfdf",
   "hash": null,
   "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-11"
+  "datum": "2026-11-11",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-14"
  },
  "888|toernooien-bij-888|9-november-t-m-18-november": {
   "status": "draft",
