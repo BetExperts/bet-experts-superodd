@@ -896,12 +896,12 @@
  "starcasino|starclub": {
   "status": "bron-handmatig",
   "item_id": "6ab541d867ea55c8a770a447",
-  "hash": "c96f6a2bbf2be4033fc005ea25d5a0c8"
+  "hash": "0e9b32e26c827ed9fda6e8300d5fd94b"
  },
  "starcasino|party-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d93d653e3c3ce112dc",
-  "hash": "89de1828e66577543b47e2f16e5d5fbc"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|geldkluis": {
   "status": "bron-handmatig",
@@ -958,6 +958,16 @@
    "slug": "starcasino-level-up-free-spins",
    "name": "Starcasino: Level-Up Free Spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ab541d867ea55c8a770a447": {
+   "name": "Starcasino: Starclub",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/starclubextra"
+  },
+  "6ab541d93d653e3c3ce112dc": {
+   "name": "Starcasino: Party Wheel",
+   "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
+   "bron": "https://starcasino.nl/partywheel"
   },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
