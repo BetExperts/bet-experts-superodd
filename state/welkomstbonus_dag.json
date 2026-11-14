@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-13",
+  "datum": "2026-11-14",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
     "64ff0fbd5a8f205b05d5465c",
@@ -8,9 +8,10 @@
     "669ab9f5aceb8b717cea24c3",
     "64ff0fbd5a8f205b05d54687",
     "66a24463b6de25483eec85e9",
-    "6aad0c21a14e9435daf42e79"
+    "6aad0c21a14e9435daf42e79",
+    "6909dcf78e3c22a32d06e2ad"
   ],
-  "laatste_book": "6aad0c21a14e9435daf42e79",
+  "laatste_book": "6909dcf78e3c22a32d06e2ad",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -277,6 +278,11 @@
       "datum": "2026-11-13",
       "book": "Oranje Palace",
       "slug": "oranje-palace-sport-welkomstbonus-3x-14-free-bets"
+    },
+    {
+      "datum": "2026-11-14",
+      "book": "888",
+      "slug": "888-sport-welkomstbonus-ontvang-eu50-aan-free-bets"
     }
   ]
 }
