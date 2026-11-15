@@ -3584,13 +3584,15 @@
   "datum": "2026-11-12"
  },
  "circus|voltooi-3-missies-en-pak-free-bets-en-free-spins|12-november-t-m-14-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af59a43f6c67cba88e793cb",
   "hash": null,
   "slug": "circus-voltooi-3-missies-en-pak-free-bets-en-free-spins",
   "check": "2/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/nl-court-to-pitch",
-  "datum": "2026-11-12"
+  "datum": "2026-11-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-15"
  },
  "jacks.nl|pak-maximaal-10-aan-free-bets-bij-jacks-nl|12-november-t-m-17-november": {
   "status": "draft",
