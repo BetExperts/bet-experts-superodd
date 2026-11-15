@@ -969,6 +969,11 @@
    "reden": "inhoud gewijzigd op starcasino.nl (handgeschreven promo niet automatisch overschreven)",
    "bron": "https://starcasino.nl/partywheel"
   },
+  "6af180b6d97009b7965cd67e": {
+   "slug": "starcasino-1-000-sport-toernooi",
+   "name": "Starcasino: €1.000 Sport Toernooi (van 9 november t/m 15 november)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
    "name": "ComeOn!: Toernooien (van 2 november t/m 8 november)",
@@ -3407,13 +3412,15 @@
   "datum": "2026-11-09"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|8-november-t-m-14-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af1d041889bb901fcca896a",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-15"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|9-november-t-m-11-november": {
   "status": "verwijderd",
