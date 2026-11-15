@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-14",
+  "datum": "2026-11-15",
   "gehad": [
     "68dd287867de5cd59d44dc39",
     "67c9acaf7db0b29e5b03370d",
@@ -11,9 +11,10 @@
     "67974cf05b546fe28ef78cdc",
     "66bb685ec057aa8c4337ceea",
     "6adf238ccbe229030cf45818",
-    "6909dcf78e3c22a32d06e2ad"
+    "6909dcf78e3c22a32d06e2ad",
+    "64ff0fbd5a8f205b05d54670"
   ],
-  "laatste_book": "6909dcf78e3c22a32d06e2ad",
+  "laatste_book": "64ff0fbd5a8f205b05d54670",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -23,7 +24,7 @@
     "651bd6728c40de720bd8072a": "bet365-casino-welkomstbonus-stort-10-ontvang-100-free-spins",
     "67974cf05b546fe28ef78cdc": "one-casino-casino-welkomstbonus-50-bonus-tot-100",
     "66a8a87062108480763b7309": "welkomstbonus-711-casino",
-    "64ff0fbd5a8f205b05d54670": "circus-casino-welkomstbonus-100-free-spins",
+    "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-casino-100-bonus-tot-eu250-of-100-gratis-spins",
     "6aad0c21a14e9435daf42e79": "oranje-palace-casino-welkomstbonus-100-free-spins",
     "68cbed5af6f10040b58ea680": "hard-rock-casino-welkomstbonus-100-deposit-match-stort-eu100-speel-met-eu200",
     "64ff0fbd5a8f205b05d54687": "unibet-casino-welkomstbonus-ontvang-100-free-spins",
@@ -264,6 +265,11 @@
       "datum": "2026-11-14",
       "book": "888",
       "slug": "888-casino-welkomstbonus-special-400-free-spins"
+    },
+    {
+      "datum": "2026-11-15",
+      "book": "Circus",
+      "slug": "welkomstbonus-circus-casino-100-bonus-tot-eu250-of-100-gratis-spins"
     }
   ]
 }
