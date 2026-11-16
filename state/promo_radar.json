@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "256b5f383795da353a0a494b2aaae6bc"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -972,6 +972,11 @@
   "6af180b6d97009b7965cd67e": {
    "slug": "starcasino-1-000-sport-toernooi",
    "name": "Starcasino: €1.000 Sport Toernooi (van 9 november t/m 15 november)",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6af2f4fa357d6e9125ee1e77": {
+   "slug": "bet365-ontvang-tot-50-gouden-fiches-per-week",
+   "name": "Bet365: Ontvang tot 50 gouden fiches per week (van 10 november t/m 22 november)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6ae89c356c25353460664ffd": {
@@ -1233,7 +1238,7 @@
   "status": "bestond al",
   "cms": "TOTO Maandag: elke maandag gratis spins en kans op cash of extra spins",
   "score": 0.69,
-  "hash": "3b7deba8cae102a694f05fff7617fe49",
+  "hash": "982f3853e1d5504047fa93275ab60329",
   "datum": "2026-09-28"
  },
  "toto-acties|verdien-een-5-gratis-weddenschap": {
@@ -3347,22 +3352,26 @@
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
  "starcasino-toernooi|pragmatic-play-toernooi|2026-11-09": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af18066b88c3212ce7df1de",
   "hash": "ea0e47c498e00a27cd67ec9fdd9624a9",
   "slug": "starcasino-5-000-pragmatic-play-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "starcasino-toernooi|sport-toernooi|2026-11-09": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af180b6d97009b7965cd67e",
   "hash": "68eef35f6e8bf799151da63a22ac2044",
   "slug": "starcasino-1-000-sport-toernooi",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/tournaments",
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "jacks.nl|gamomat-toernooi-met-2-000-aan-free-spins|9-november-t-m-13-november": {
   "status": "verwijderd",
@@ -3376,40 +3385,48 @@
   "verwijderd": "2026-11-14"
  },
  "hard-rock|power-combo-toernooi-bij-hard-rock-casino|9-november-t-m-15-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af1cf1339d9473b7dc0dc61",
   "hash": null,
   "slug": "hard-rock-casino-power-combo-toernooi",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "toto|speel-ice-fishing-en-win-een-deel-van-10-000|9-november-t-m-15-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af1cf14c454982e3ee2ec50",
   "hash": null,
   "slug": "toto-speel-ice-fishing-en-win-een-deel-van-10-000",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "oranje-palace|luckys-quest-bij-oranje-palace|9-november-t-m-15-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af1cf150ab66531b8be5b7b",
   "hash": null,
   "slug": "oranje-palace-luckys-quest",
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-quest-2026-46",
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "vbet|doe-mee-met-het-spinomania-toernooi|9-november-t-m-15-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af1d0404873bac8b41da35f",
   "hash": null,
   "slug": "vbet-doe-mee-met-het-spinomania-toernooi",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|8-november-t-m-14-november": {
   "status": "verwijderd",
@@ -3434,13 +3451,15 @@
   "verwijderd": "2026-11-12"
  },
  "711|711-casino-quest-pak-5-free-spins|9-november-t-m-15-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af20917c6db7bd8c772e9f0",
   "hash": null,
   "slug": "711-casino-quest-pak-5-free-spins",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-09"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "bet365|5-wedtegoed-bij-10-inzet-opde-nba|8-november-t-m-12-november": {
   "status": "verwijderd",
@@ -3465,22 +3484,15 @@
   "verwijderd": "2026-11-12"
  },
  "circus|circus-nl-game-show-prize-drops|9-november-t-m-15-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af2091b32aa11f828ed79e5",
   "hash": null,
   "slug": "circus-circus-nl-game-show-prize-drops",
   "check": "4/4 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/live-casino-promo",
-  "datum": "2026-11-09"
- },
- "bet365|bet365-cashverdeler|9-november-t-m-22-november": {
-  "status": "draft",
-  "item_id": "6af2f4fbc0d3438869d17c0a",
-  "hash": null,
-  "slug": "bet365-cashverdeler-b6725",
-  "check": "geen officiële promopagina bekend",
-  "bron": null,
-  "datum": "2026-11-10"
+  "datum": "2026-11-09",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "bet365|ontvang-tot-50-gouden-fiches-per-week-bij-bet365|10-november-t-m-22-november": {
   "status": "draft",
@@ -3565,23 +3577,16 @@
   "reden": "verlopen",
   "verwijderd": "2026-11-14"
  },
- "888|toernooien-bij-888|9-november-t-m-18-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "711|25-000-playn-go-toernooi|11-november-t-m-15-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af59921561bfb89070e6630",
   "hash": null,
   "slug": "711-25-000-playn-go-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/25k-euro-playngo-toernooi-november",
-  "datum": "2026-11-12"
+  "datum": "2026-11-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "circus|voltooi-3-missies-en-pak-free-bets-en-free-spins|12-november-t-m-14-november": {
   "status": "verwijderd",
@@ -3607,15 +3612,6 @@
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
- "comeon|toernooien-bij-comeon|8-november-t-m-18-november": {
-  "status": "draft",
-  "item_id": "6af6ea2634a4cf41943c377c",
-  "hash": null,
-  "slug": "comeon-toernooien-ecece",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-13"
- },
  "bet365|verdien-tot-45-gratis-spins-per-weekend|13-november-t-m-30-november": {
   "status": "draft",
   "item_id": "6af6e9d3fc3791de91b3865c",
@@ -3626,40 +3622,150 @@
   "datum": "2026-11-13"
  },
  "oranje-palace|pak-5-free-bet-bij-twee-keer-10-inzet|13-november-t-m-15-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af6e9d462f7726f80e0109c",
   "hash": null,
   "slug": "oranje-palace-pak-5-free-bet-bij-twee-keer-10-inzet",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/nations-league-free-bet-5",
-  "datum": "2026-11-13"
+  "datum": "2026-11-13",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "vbet|krijg-150-free-spins-als-welkomstbonus-bij-vbet|altijd-geldig": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
  },
  "vbet|50-procent-free-bet-tot-25-bij-spanje-engeland|13-november-t-m-15-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af713a7efccf0ab5fcda133",
   "hash": null,
   "slug": "vbet-50-procent-free-bet-tot-25-bij-spanje-engeland",
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-13"
+  "datum": "2026-11-13",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "starcasino|level-up-free-spins": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af713a8d77ce1435e903058",
   "hash": "3d6dcda96a1049faa3f09fd8e37a37fe",
   "slug": "starcasino-level-up-free-spins",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/level-up-free-spins",
-  "datum": "2026-11-13"
+  "datum": "2026-11-13",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-16"
  },
  "711|profiteer-van-super-early-payout-bij-nederland-griekenland|alleen-13-november": {
   "status": "bestond al",
   "cms": "711 Super Early Payout | Nederland – Griekenland: al uitbetaald bij 1 goal voorsprong",
   "score": 0.5,
   "datum": "2026-11-13"
+ },
+ "bet365|ontvang-tot-50-gouden-fiches-bij-bet365|16-november-t-m-22-november": {
+  "status": "bestond al",
+  "cms": "Bet365: Ontvang tot 50 gouden fiches per week (van 10 november t/m 22 november)",
+  "score": 1.0,
+  "datum": "2026-11-16"
+ },
+ "888|888-odds-boosts-60x-je-inleg|14-november-t-m-16-november": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "toto|speel-lightning-storm-en-win-een-deel-van-10-000|16-november-t-m-22-november": {
+  "status": "bestond al",
+  "cms": "TOTO: Speel Ice Fishing en win een deel van €10.000 (van 9 november t/m 15 november)",
+  "score": 0.86,
+  "datum": "2026-11-16"
+ },
+ "bet365|bet365-cashverdeler|16-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6af2f4fbc0d3438869d17c0a",
+  "hash": null,
+  "slug": "bet365-cashverdeler-b6725",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-10"
+ },
+ "888|toernooien-bij-888|9-november-t-m-20-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "comeon|toernooien-bij-comeon|8-november-t-m-20-november": {
+  "status": "draft",
+  "item_id": "6afae3a60f64f163aa744664",
+  "hash": null,
+  "slug": "comeon-toernooien-b1ae1",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-16"
+ },
+ "toto-acties|nations-league-verdien-een-gratis-weddenschap": {
+  "status": "bestond al",
+  "cms": "TOTO: Nations League – zet €10 in en krijg een €10 gratis weddenschap",
+  "score": 0.64,
+  "hash": "ddbdee39ff9529eb930b787b7ee8fd50",
+  "datum": "2026-11-16"
+ },
+ "toto|bet-en-get-zet-5-in-en-ontvang-10-free-bet|alleen-16-november": {
+  "status": "live",
+  "item_id": "6afae3a839bb2279e0ec5260",
+  "hash": null,
+  "slug": "toto-bet-en-get-zet-5-in-en-ontvang-10-free-bet",
+  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-16"
+ },
+ "vbet|ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland-bij-vbet|14-november-t-m-16-november": {
+  "status": "draft",
+  "item_id": "6afae3feba0d8fff6da3ee9c",
+  "hash": null,
+  "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-16"
+ },
+ "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|15-november-t-m-21-november": {
+  "status": "draft",
+  "item_id": "6afae4000b9284138a2c31f2",
+  "hash": null,
+  "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-16"
+ },
+ "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|16-november-t-m-18-november": {
+  "status": "draft",
+  "item_id": "6afae401c4c465fc27fb2ee1",
+  "hash": null,
+  "slug": "circus-krijg-tot-100-free-spins-met-missies",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-16"
+ },
+ "starcasino-toernooi|playson-toernooi|2026-11-16": {
+  "status": "live",
+  "item_id": "6afae402e9b98fdc3a03edaf",
+  "hash": "c912112c5f17a8f6e0972e1069dd3f5b",
+  "slug": "starcasino-5-000-playson-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-11-16"
+ },
+ "starcasino-toernooi|sport-toernooi|2026-11-16": {
+  "status": "live",
+  "item_id": "6afae45aaf94a5e3f120b5da",
+  "hash": "cb6c430ff913d6b8101fadc2a195d914",
+  "slug": "starcasino-1-000-sport-toernooi",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/tournaments",
+  "datum": "2026-11-16"
  }
 }
