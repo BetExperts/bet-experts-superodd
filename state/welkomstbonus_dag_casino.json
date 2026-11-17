@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-16",
+  "datum": "2026-11-17",
   "gehad": [
     "68dd287867de5cd59d44dc39",
     "67c9acaf7db0b29e5b03370d",
@@ -13,15 +13,16 @@
     "6adf238ccbe229030cf45818",
     "6909dcf78e3c22a32d06e2ad",
     "64ff0fbd5a8f205b05d54670",
-    "68cbed5af6f10040b58ea680"
+    "68cbed5af6f10040b58ea680",
+    "66a24463b6de25483eec85e9"
   ],
-  "laatste_book": "68cbed5af6f10040b58ea680",
+  "laatste_book": "66a24463b6de25483eec85e9",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-casino-pak-200-aan-free-spins",
     "64ff0fbd5a8f205b05d5465c": "welkomstbonus-jacks-casino",
-    "66a24463b6de25483eec85e9": "comeon-welkomstbonus-casino-200-free-spins-bij-comeon",
+    "66a24463b6de25483eec85e9": "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon",
     "651bd6728c40de720bd8072a": "bet365-casino-welkomstbonus-stort-10-ontvang-100-free-spins",
     "67974cf05b546fe28ef78cdc": "one-casino-casino-welkomstbonus-50-bonus-tot-100",
     "66a8a87062108480763b7309": "welkomstbonus-711-casino",
@@ -276,6 +277,11 @@
       "datum": "2026-11-16",
       "book": "Hard Rock Casino",
       "slug": "hard-rock-casino-welkomstbonus-100-deposit-match-stort-eu100-speel-met-eu200"
+    },
+    {
+      "datum": "2026-11-17",
+      "book": "ComeOn!",
+      "slug": "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon"
     }
   ]
 }
