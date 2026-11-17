@@ -984,6 +984,16 @@
    "name": "Circus: €5.000 Pragmatic Play toernooi (van 10 november t/m 16 november)",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6afae48ff04e41b4a8ece7e3": {
+   "slug": "toto-bet-en-get-zet-5-in-en-ontvang-10-free-bet-065fb",
+   "name": "TOTO: Bet & Get: zet €5 in en ontvang €10 free bet",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6afae3feba0d8fff6da3ee9c": {
+   "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland",
+   "name": "Vbet: Ontvang €1 free bet per goal van Oranje tegen Duitsland (van 14 november t/m 16 november)",
+   "geldig_tot": "2026-11-16"
+  },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
    "name": "ComeOn!: Toernooien (van 2 november t/m 8 november)",
@@ -3708,13 +3718,15 @@
   "datum": "2026-11-16"
  },
  "vbet|ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland-bij-vbet|14-november-t-m-16-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afae4e53f220bf2d883c9c8",
   "hash": null,
   "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland-f68df",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-17"
  },
  "toto|speel-lightning-storm-en-win-een-deel-van-10-000|16-november-t-m-22-november": {
   "status": "draft",
