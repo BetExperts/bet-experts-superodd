@@ -3849,5 +3849,14 @@
   "check": "3/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-17"
+ },
+ "comeon|doe-mee-aan-het-sport-toernooi-bij-comeon|17-november-t-m-6-december": {
+  "status": "draft",
+  "item_id": "6afc5e7e6206151365ba057f",
+  "hash": null,
+  "slug": "comeon-doe-mee-aan-het-sport-toernooi",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-17"
  }
 }
