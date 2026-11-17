@@ -3557,13 +3557,15 @@
   "verwijderd": "2026-11-14"
  },
  "circus|5-000-pragmatic-play-toernooi-bij-circus|10-november-t-m-16-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6af44708a7d9dff32439fbd5",
   "hash": null,
   "slug": "circus-5-000-pragmatic-play-toernooi",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/weekly-toernooi",
-  "datum": "2026-11-11"
+  "datum": "2026-11-11",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-17"
  },
  "vbet|ontvang-1-free-bet-per-goal-van-oranje-bij-vbet|11-november-t-m-13-november": {
   "status": "verwijderd",
@@ -3673,24 +3675,6 @@
   "check": "geen officiële promopagina bekend",
   "bron": null,
   "datum": "2026-11-10"
- },
- "comeon|toernooien-bij-comeon|8-november-t-m-20-november": {
-  "status": "draft",
-  "item_id": "6af6ea2634a4cf41943c377c",
-  "hash": null,
-  "slug": "comeon-toernooien-ecece",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-13"
- },
- "888|toernooien-bij-888|9-november-t-m-20-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
  },
  "toto-acties|nations-league-verdien-een-gratis-weddenschap": {
   "status": "bestond al",
@@ -3823,5 +3807,38 @@
   "cms": "711: Loyaliteitsprogramma",
   "score": 0.68,
   "datum": "2026-11-16"
+ },
+ "comeon|toernooien-bij-comeon|12-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6af6ea2634a4cf41943c377c",
+  "hash": null,
+  "slug": "comeon-toernooien-ecece",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "888|toernooien-bij-888|12-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "circus|10-000-games-global-toernooi-bij-circus|17-november-t-m-23-november": {
+  "status": "bestond al",
+  "cms": "Circus: €5.000 Pragmatic Play toernooi (van 10 november t/m 16 november)",
+  "score": 0.73,
+  "datum": "2026-11-17"
+ },
+ "toto|slots-toernooi-met-10-000-prijzenpot|16-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6afc2fd33ef0fe3befd2bc8a",
+  "hash": null,
+  "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-17"
  }
 }
