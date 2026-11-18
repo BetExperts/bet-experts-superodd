@@ -1402,7 +1402,7 @@
   "cms": "TOTO Exclusief (wekelijks, RECURRING)",
   "item_id": "6ab53f21ed7e65c979c56788",
   "datum": "2026-10-02",
-  "hash": "c610b8bc299716b3d8fa87531c46c4ca"
+  "hash": "46b7c7932a40e1049328c9bf363b4b49"
  },
  "hard-rock|zet-20-in-en-krijg-20-live-casino-tegoed|altijd-geldig": {
   "status": "draft",
@@ -3760,13 +3760,15 @@
   "datum": "2026-11-16"
  },
  "circus|voltooi-3-missies-en-pak-free-bets-en-free-spins|15-november-t-m-17-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6afb085c4b211d0c0467b3ce",
   "hash": null,
   "slug": "circus-voltooi-3-missies-en-pak-free-bets-en-free-spins",
   "check": "2/3 kerngetallen gevonden",
   "bron": "https://www.circus.nl/nl/promoties/details/goals-n-bullseyes-nl",
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-18"
  },
  "circus|circus-nl-roulette-prize-drops|16-november-t-m-22-november": {
   "status": "live",
@@ -3860,5 +3862,30 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-17"
+ },
+ "toto-acties|speel-en-verdien-gratis-chips": {
+  "status": "bestond al",
+  "cms": "TOTO: Lucky 777",
+  "score": 0.9,
+  "hash": "689ee0205d923de04122e4ca2d01bdac",
+  "datum": "2026-11-18"
+ },
+ "toto|pak-gratis-chips-in-het-live-casino-van-toto|18-november-en-19-november": {
+  "status": "live",
+  "item_id": "6afd8151db97dc58d72bc885",
+  "hash": null,
+  "slug": "toto-pak-gratis-chips-in-het-live-casino",
+  "check": "2/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-18"
+ },
+ "vbet|roulette-toernooi-bij-vbet|18-november-t-m-25-november": {
+  "status": "draft",
+  "item_id": "6afd81a997d12dca5c90cf05",
+  "hash": null,
+  "slug": "vbet-roulette-toernooi",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-18"
  }
 }
