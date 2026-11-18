@@ -3887,5 +3887,23 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-18"
+ },
+ "one|beat-the-dealer-event-bij-one-casino|18-november-t-m-27-november": {
+  "status": "draft",
+  "item_id": "6afdab2c22ef6630be6065cd",
+  "hash": null,
+  "slug": "one-casino-beat-the-dealer-event",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-18"
+ },
+ "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
+  "status": "live",
+  "item_id": "6afdab2def8ff22ff086570c",
+  "hash": "0c56fb7e6f9962831bb90754f4381ada",
+  "slug": "starcasino-crazy-odds-liverpool-wint-en-manchester-united-scoort-niet",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/crazy-odds-liverpool-man-united",
+  "datum": "2026-11-18"
  }
 }
