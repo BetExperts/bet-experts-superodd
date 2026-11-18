@@ -3599,13 +3599,15 @@
   "verwijderd": "2026-11-15"
  },
  "jacks.nl|pak-maximaal-10-aan-free-bets-bij-jacks-nl|12-november-t-m-17-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af5ae1d89348122ebce11ef",
   "hash": null,
   "slug": "jacks-nl-pak-maximaal-10-aan-free-bets",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-12"
+  "datum": "2026-11-12",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-18"
  },
  "jacks.nl|jacks-nl-odds-boost-zet-1-in-en-win-100|10-november-t-m-13-november": {
   "status": "overgeslagen",
