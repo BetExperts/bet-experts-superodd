@@ -3900,10 +3900,19 @@
  "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
   "status": "live",
   "item_id": "6afdab2def8ff22ff086570c",
-  "hash": "0c56fb7e6f9962831bb90754f4381ada",
+  "hash": "ea174909903a9c87e0394646618812d0",
   "slug": "starcasino-crazy-odds-liverpool-wint-en-manchester-united-scoort-niet",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/crazy-odds-liverpool-man-united",
+  "datum": "2026-11-18"
+ },
+ "711|35-000-toernooi-op-alle-gokkasten-bij-711|18-november-t-m-23-november": {
+  "status": "live",
+  "item_id": "6afde7712dfa8a91717d6176",
+  "hash": null,
+  "slug": "711-35-000-toernooi-op-alle-gokkasten",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.711.nl/promoties/35k-euro-all-slots-toernooi",
   "datum": "2026-11-18"
  }
 }
