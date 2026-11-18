@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-17",
+  "datum": "2026-11-18",
   "gehad": [
     "68dd287867de5cd59d44dc39",
     "67c9acaf7db0b29e5b03370d",
@@ -14,9 +14,10 @@
     "6909dcf78e3c22a32d06e2ad",
     "64ff0fbd5a8f205b05d54670",
     "68cbed5af6f10040b58ea680",
-    "66a24463b6de25483eec85e9"
+    "66a24463b6de25483eec85e9",
+    "64ff0fbd5a8f205b05d54687"
   ],
-  "laatste_book": "66a24463b6de25483eec85e9",
+  "laatste_book": "64ff0fbd5a8f205b05d54687",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -282,6 +283,11 @@
       "datum": "2026-11-17",
       "book": "ComeOn!",
       "slug": "comeon-welkomstbonus-dubbel-casino-400-free-spins-bij-comeon"
+    },
+    {
+      "datum": "2026-11-18",
+      "book": "Unibet",
+      "slug": "unibet-casino-welkomstbonus-ontvang-100-free-spins"
     }
   ]
 }
