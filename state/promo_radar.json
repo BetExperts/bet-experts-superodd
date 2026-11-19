@@ -3896,7 +3896,7 @@
  "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
   "status": "live",
   "item_id": "6afdab2def8ff22ff086570c",
-  "hash": "c60d948428e3ce639bf88791fdd90706",
+  "hash": "df9b2bf475798a94cd5dcfd04816170b",
   "slug": "starcasino-crazy-odds-liverpool-wint-en-manchester-united-scoort-niet",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/crazy-odds-liverpool-man-united",
@@ -3963,6 +3963,15 @@
   "slug": "toto-speel-toto-lightning-roulette-en-maak-kans-op-een-deel-van-5-000",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-19"
+ },
+ "toto|elke-dag-een-nieuwe-bonus-met-toto-live-parade|18-november-t-m-28-november": {
+  "status": "draft",
+  "item_id": "6afefca4a6ebf44b27c0c0cc",
+  "hash": null,
+  "slug": "toto-elke-dag-een-nieuwe-bonus-met-toto-live-parade",
+  "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
   "datum": "2026-11-19"
  }
 }
