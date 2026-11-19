@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "256b5f383795da353a0a494b2aaae6bc"
+  "hash": "d41d8cd98f00b204e9800998ecf8427e"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -989,10 +989,20 @@
    "name": "TOTO: Bet & Get: zet €5 in en ontvang €10 free bet",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6afae401c4c465fc27fb2ee1": {
+   "slug": "circus-krijg-tot-100-free-spins-met-missies",
+   "name": "Circus: Krijg tot 100 free spins met Missies (van 16 november t/m 18 november)",
+   "geldig_tot": "2026-11-18"
+  },
   "6afae3feba0d8fff6da3ee9c": {
    "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland",
    "name": "Vbet: Ontvang €1 free bet per goal van Oranje tegen Duitsland (van 14 november t/m 16 november)",
    "geldig_tot": "2026-11-16"
+  },
+  "6ae999247520125691a0e7ea": {
+   "slug": "comeon-toernooien-46d53",
+   "name": "ComeOn!: Toernooien (van 8 november t/m 18 november)",
+   "geldig_tot": "2026-11-18"
   },
   "6ae89c356c25353460664ffd": {
    "slug": "comeon-toernooien",
@@ -3733,13 +3743,15 @@
   "datum": "2026-11-16"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|16-november-t-m-18-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afae4e891366c8b5e93cfd7",
   "hash": null,
   "slug": "circus-krijg-tot-100-free-spins-met-missies-30d8f",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-19"
  },
  "starcasino-toernooi|playson-toernooi|2026-11-16": {
   "status": "live",
@@ -3798,13 +3810,15 @@
   "datum": "2026-11-16"
  },
  "jacks.nl|12-gaming-toernooi-met-1-000-aan-free-spins|15-november-t-m-18-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afb091053c9273e2fc1481a",
   "hash": null,
   "slug": "jacks-nl-12-gaming-toernooi-met-1-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-19"
  },
  "711|711-casino-quest-pak-5-free-spins|16-november-t-m-22-november": {
   "status": "bestond al",
@@ -3900,7 +3914,7 @@
  "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
   "status": "live",
   "item_id": "6afdab2def8ff22ff086570c",
-  "hash": "ea174909903a9c87e0394646618812d0",
+  "hash": "ff7b6dd416bb1eadca9951ca8626490a",
   "slug": "starcasino-crazy-odds-liverpool-wint-en-manchester-united-scoort-niet",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/crazy-odds-liverpool-man-united",
