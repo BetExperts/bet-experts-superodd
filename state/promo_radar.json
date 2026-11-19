@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -3826,24 +3826,6 @@
   "score": 0.68,
   "datum": "2026-11-16"
  },
- "comeon|toernooien-bij-comeon|12-november-t-m-22-november": {
-  "status": "draft",
-  "item_id": "6af6ea2634a4cf41943c377c",
-  "hash": null,
-  "slug": "comeon-toernooien-ecece",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-13"
- },
- "888|toernooien-bij-888|12-november-t-m-22-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "circus|10-000-games-global-toernooi-bij-circus|17-november-t-m-23-november": {
   "status": "bestond al",
   "cms": "Circus: €5.000 Pragmatic Play toernooi (van 10 november t/m 16 november)",
@@ -3914,7 +3896,7 @@
  "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
   "status": "live",
   "item_id": "6afdab2def8ff22ff086570c",
-  "hash": "ff7b6dd416bb1eadca9951ca8626490a",
+  "hash": "c60d948428e3ce639bf88791fdd90706",
   "slug": "starcasino-crazy-odds-liverpool-wint-en-manchester-united-scoort-niet",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/crazy-odds-liverpool-man-united",
@@ -3928,5 +3910,59 @@
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/35k-euro-all-slots-toernooi",
   "datum": "2026-11-18"
+ },
+ "comeon|toernooien-bij-comeon|18-november-t-m-23-november": {
+  "status": "draft",
+  "item_id": "6af6ea2634a4cf41943c377c",
+  "hash": null,
+  "slug": "comeon-toernooien-ecece",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "888|toernooien-bij-888|18-november-t-m-23-november": {
+  "status": "draft",
+  "item_id": "6ad9dad58c3759e56a5b31c7",
+  "hash": null,
+  "slug": "888-toernooien",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
+  "datum": "2026-10-22"
+ },
+ "888|pak-een-5-free-bet-bij-888|altijd-geldig": {
+  "status": "live",
+  "item_id": "6afed28bbd714c0556485b18",
+  "hash": null,
+  "slug": "888-pak-een-5-free-bet",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/bet-get-eredivisie/?int_medium=Banner&int_source=Sportsbook%20page&int_campaign=Bet%20%26%20Get%20Eredivisie",
+  "datum": "2026-11-19"
+ },
+ "jacks.nl|kalamba-toernooi-met-2-000-aan-free-spins|19-november-t-m-23-november": {
+  "status": "draft",
+  "item_id": "6afed2dfb0391c2ce8ff3a48",
+  "hash": null,
+  "slug": "jacks-nl-kalamba-toernooi-met-2-000-aan-free-spins",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-19"
+ },
+ "comeon|comeon-bet-en-get-free-bet-builder-van-10|19-november-t-m-22-november": {
+  "status": "draft",
+  "item_id": "6afed2e1f79e463e1d385edf",
+  "hash": null,
+  "slug": "comeon-bet-en-get-free-bet-builder-van-10",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-19"
+ },
+ "toto-acties|speel-toto-lightning-roulette-en-maak-kans-op-een-deel-van-5-000": {
+  "status": "live",
+  "item_id": "6afed2e284a30f84ac0d1a09",
+  "hash": "6f6de759cda2321f1199ad5bc6c3cc4b",
+  "slug": "toto-speel-toto-lightning-roulette-en-maak-kans-op-een-deel-van-5-000",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-19"
  }
 }
