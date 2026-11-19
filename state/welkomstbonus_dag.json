@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-18",
+  "datum": "2026-11-19",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
     "64ff0fbd5a8f205b05d5465c",
@@ -13,9 +13,10 @@
     "651bd6728c40de720bd8072a",
     "6526a08a94d8631739581743",
     "67c9acaf7db0b29e5b03370d",
-    "66bb685ec057aa8c4337ceea"
+    "66bb685ec057aa8c4337ceea",
+    "6a7afdaa4a7453c17d31cab5"
   ],
-  "laatste_book": "66bb685ec057aa8c4337ceea",
+  "laatste_book": "6a7afdaa4a7453c17d31cab5",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -307,6 +308,11 @@
       "datum": "2026-11-18",
       "book": "BetMGM",
       "slug": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
+    },
+    {
+      "datum": "2026-11-19",
+      "book": "Starcasino",
+      "slug": "starcasino-sport-welkomstbonus-scoor-een-eu80-free-bet"
     }
   ]
 }
