@@ -852,7 +852,7 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-11-18",
+   "start": "2026-11-25",
    "slot": null
   }
  },
@@ -987,6 +987,11 @@
   "6afae48ff04e41b4a8ece7e3": {
    "slug": "toto-bet-en-get-zet-5-in-en-ontvang-10-free-bet-065fb",
    "name": "TOTO: Bet & Get: zet €5 in en ontvang €10 free bet",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6afd8151db97dc58d72bc885": {
+   "slug": "toto-pak-gratis-chips-in-het-live-casino",
+   "name": "TOTO: Pak gratis chips in het live casino",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
   "6afae401c4c465fc27fb2ee1": {
@@ -3792,13 +3797,15 @@
   "datum": "2026-11-16"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|13-november-t-m-19-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afb090eca437e3c0e51ca2e",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-20"
  },
  "hard-rock|hold-en-win-toernooi-bij-hard-rock-casino|16-november-t-m-22-november": {
   "status": "draft",
@@ -3911,24 +3918,6 @@
   "bron": "https://www.711.nl/promoties/35k-euro-all-slots-toernooi",
   "datum": "2026-11-18"
  },
- "comeon|toernooien-bij-comeon|18-november-t-m-23-november": {
-  "status": "draft",
-  "item_id": "6af6ea2634a4cf41943c377c",
-  "hash": null,
-  "slug": "comeon-toernooien-ecece",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-13"
- },
- "888|toernooien-bij-888|18-november-t-m-23-november": {
-  "status": "draft",
-  "item_id": "6ad9dad58c3759e56a5b31c7",
-  "hash": null,
-  "slug": "888-toernooien",
-  "check": "1/2 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/games-global-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Games%20Global%20Toernooi",
-  "datum": "2026-10-22"
- },
  "888|pak-een-5-free-bet-bij-888|altijd-geldig": {
   "status": "live",
   "item_id": "6afed28bbd714c0556485b18",
@@ -3973,5 +3962,32 @@
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-19"
+ },
+ "comeon|toernooien-bij-comeon|16-november-t-m-25-november": {
+  "status": "draft",
+  "item_id": "6af6ea2634a4cf41943c377c",
+  "hash": null,
+  "slug": "comeon-toernooien-ecece",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-13"
+ },
+ "888|toernooien-bij-888|16-november-t-m-25-november": {
+  "status": "draft",
+  "item_id": "6b000183e08cb6d94ef9738b",
+  "hash": null,
+  "slug": "888-toernooien-8b6f0",
+  "check": "0/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/klassieker-strijd-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Klassieker%20Strijd",
+  "datum": "2026-11-20"
+ },
+ "oranje-palace|2-free-bet-per-goal-bij-liverpool-man-united|20-november-t-m-22-november": {
+  "status": "live",
+  "item_id": "6afffd36a3d4bcc3f3e75b29",
+  "hash": null,
+  "slug": "oranje-palace-2-free-bet-per-goal-bij-liverpool-man-united",
+  "check": "2/2 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/liverpool-manchester-united",
+  "datum": "2026-11-20"
  }
 }
