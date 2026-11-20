@@ -3989,5 +3989,14 @@
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/liverpool-manchester-united",
   "datum": "2026-11-20"
+ },
+ "starcasino|grote-vangst-missie": {
+  "status": "live",
+  "item_id": "6b0023f460c0dd561c709312",
+  "hash": "71d9c17ffd740b5340b5f792b9fd6e8d",
+  "slug": "starcasino-grote-vangst-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/grote-vangst-missie",
+  "datum": "2026-11-20"
  }
 }
