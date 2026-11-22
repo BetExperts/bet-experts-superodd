@@ -1009,6 +1009,11 @@
    "name": "Circus: Krijg tot 100 free spins met Missies (van 16 november t/m 18 november)",
    "geldig_tot": "2026-11-18"
   },
+  "6afae4000b9284138a2c31f2": {
+   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash",
+   "name": "Circus: Behaal een hogere multiplier dan Tom en krijg €50 cash! (van 15 november t/m 21 november)",
+   "geldig_tot": "2026-11-21"
+  },
   "6afae3feba0d8fff6da3ee9c": {
    "slug": "vbet-ontvang-1-free-bet-per-goal-van-oranje-tegen-duitsland",
    "name": "Vbet: Ontvang €1 free bet per goal van Oranje tegen Duitsland (van 14 november t/m 16 november)",
@@ -3754,13 +3759,15 @@
   "datum": "2026-11-16"
  },
  "circus|behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash|15-november-t-m-21-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afae4e7c389cf7ed9586b4c",
   "hash": null,
   "slug": "circus-behaal-een-hogere-multiplier-dan-tom-en-krijg-50-cash-becd0",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-16"
+  "datum": "2026-11-16",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-22"
  },
  "circus|krijg-tot-100-free-spins-bij-circus-nl-met-missies|16-november-t-m-18-november": {
   "status": "verwijderd",
