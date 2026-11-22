@@ -4031,10 +4031,26 @@
  "starcasino|fun-boost-psv-wint-van-real-madrid": {
   "status": "live",
   "item_id": "6b00512c634166ec60e1b2e1",
-  "hash": "f5e7aed0052a50c0742d27b089ebc191",
+  "hash": "8dc9425b351c98b9ecb2e8f431870602",
   "slug": "starcasino-fun-boost-psv-wint-van-real-madrid",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/funboostpsvrealmadrid",
   "datum": "2026-11-20"
+ },
+ "toto-acties|maak-kans-op-een-deel-van-5-000": {
+  "status": "bestond al",
+  "cms": "TOTO: Speel “TOTO Lightning Roulette” en maak kans op een deel van €5.000",
+  "score": 0.65,
+  "hash": "3102a0c06bfafca1a19e937b564a84cd",
+  "datum": "2026-11-22"
+ },
+ "toto-acties|speel-25-en-krijg-25-gratis-spins": {
+  "status": "live",
+  "item_id": "6b02f1200b3327c7510faebd",
+  "hash": "147e31bde4d46974fdd808c286e6feb3",
+  "slug": "toto-speel-25-en-krijg-25-gratis-spins",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-22"
  }
 }
