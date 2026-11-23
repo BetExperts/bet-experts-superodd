@@ -4157,5 +4157,58 @@
   "check": "1/1 kerngetallen gevonden",
   "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-quest-2026-48",
   "datum": "2026-11-23"
+ },
+ "comeon|400-free-spins-80-aan-evolution-vouchers-of-50-aan-free-bets|23-november-t-m-3-december": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "888|verhoogde-welkomstbonus-ontvang-tot-400-free-spins-80-coupons-of-50-free-bets|23-november-t-m-3-december": {
+  "status": "overgeslagen",
+  "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "betmgm|win-grote-jackpots-bij-betmgm|altijd-geldig": {
+  "status": "draft",
+  "item_id": "6b0448172ab7222877f96b50",
+  "hash": null,
+  "slug": "betmgm-win-grote-jackpots",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "toto|slots-toernooi-met-10-000-prijzenpot|23-november-t-m-28-november": {
+  "status": "draft",
+  "item_id": "6b04491695656bb6303943cc",
+  "hash": null,
+  "slug": "toto-slots-toernooi-met-10-000-prijzenpot",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "vbet|ontvang-een-free-bet-per-goal-van-psv-en-feyenoord-bij-vbet|22-november-t-m-24-november": {
+  "status": "draft",
+  "item_id": "6b04491738e1ed514a566e3b",
+  "hash": null,
+  "slug": "vbet-ontvang-een-free-bet-per-goal-van-psv-en-feyenoord",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "hard-rock|hard-rock-black-friday-toernooi|23-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b04491924259881cfa41851",
+  "hash": null,
+  "slug": "hard-rock-casino-rock-black-friday-toernooi",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "toto-acties|maak-kans-op-2500-cash": {
+  "status": "live",
+  "item_id": "6b04491abc660b9b0ccfa00a",
+  "hash": "2ecc7d8676dd829621972c5226bf2e8a",
+  "slug": "toto-maak-kans-op-2500-cash",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-23"
  }
 }
