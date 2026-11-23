@@ -4210,5 +4210,62 @@
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
   "datum": "2026-11-23"
+ },
+ "jacks.nl|pak-maximaal-15-aan-free-bets-bij-jacks-nl|23-november-t-m-26-november": {
+  "status": "bestond al",
+  "cms": "JACKS.NL Odds Boost: Wattimena – Doets van 2,38 naar 5,00",
+  "score": 0.6,
+  "datum": "2026-11-23"
+ },
+ "711|711-casino-quest-pak-5-free-spins|23-november-t-m-29-november": {
+  "status": "bestond al",
+  "cms": "711: Loyaliteitsprogramma",
+  "score": 0.68,
+  "datum": "2026-11-23"
+ },
+ "toto|elke-dag-een-gratis-spin-en-kans-op-2-500|23-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b0480cfa5113ef7e160986d",
+  "hash": null,
+  "slug": "toto-elke-dag-een-gratis-spin-en-kans-op-2-500",
+  "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "hard-rock|stortingsbonus-tot-150-free-spins|23-november-t-m-28-november": {
+  "status": "live",
+  "item_id": "6b0480d08d41629e8d827649",
+  "hash": null,
+  "slug": "hard-rock-casino-stortingsbonus-tot-150-free-spins",
+  "check": "2/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|20-november-t-m-26-november": {
+  "status": "draft",
+  "item_id": "6b04812b0ceeaf429569f112",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "bet365|bet365-100-000-spins-verdeler|23-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b04812c0ceeaf429569f19c",
+  "hash": null,
+  "slug": "bet365-100-000-spins-verdeler",
+  "check": "geen officiële promopagina bekend",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "circus|tien-black-friday-acties-bij-circus-nl|23-november-t-m-30-november": {
+  "status": "live",
+  "item_id": "6b04812df3ede6adb0c43400",
+  "hash": null,
+  "slug": "circus-tien-black-friday-acties",
+  "check": "geen getallen; tekstoverlap",
+  "bron": "https://www.circus.nl/nl/promoties/details/circus-black-friday-neon-nightmare",
+  "datum": "2026-11-23"
  }
 }
