@@ -999,6 +999,16 @@
    "name": "TOTO: Speel “TOTO Lightning Roulette” en maak kans op een deel van €5.000",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6b02f1200b3327c7510faebd": {
+   "slug": "toto-speel-25-en-krijg-25-gratis-spins",
+   "name": "TOTO: Speel €25 en krijg 25 Gratis Spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6ad6102fd48815ca46a5b127": {
+   "slug": "unibet-pak-vouchers-en-cash-met-bingo-missies-en-bet-en-gets",
+   "name": "Unibet: Pak vouchers en cash met bingo missies en Bet & Gets",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6b02ac05fb24e1c7b1ef1024": {
    "slug": "oranje-palace-free-bet-per-doelpunt-liverpool-manchester-united",
    "name": "Oranje Palace: €2 Free Bet per doelpunt | Liverpool – Manchester United",
@@ -1058,11 +1068,6 @@
    "slug": "comeon-toernooien-b38e7",
    "name": "ComeOn!: Toernooien",
    "geldig_tot": "2026-11-08"
-  },
-  "6b02f1200b3327c7510faebd": {
-   "slug": "toto-speel-25-en-krijg-25-gratis-spins",
-   "name": "TOTO: Speel €25 en krijg 25 Gratis Spins",
-   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -3975,13 +3980,15 @@
   "verwijderd": "2026-11-23"
  },
  "711|35-000-toernooi-op-alle-gokkasten-bij-711|18-november-t-m-23-november": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6afde7712dfa8a91717d6176",
   "hash": null,
   "slug": "711-35-000-toernooi-op-alle-gokkasten",
   "check": "2/2 kerngetallen gevonden",
   "bron": "https://www.711.nl/promoties/35k-euro-all-slots-toernooi",
-  "datum": "2026-11-18"
+  "datum": "2026-11-18",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-24"
  },
  "888|pak-een-5-free-bet-bij-888|altijd-geldig": {
   "status": "live",
@@ -4120,24 +4127,6 @@
   "score": 0.85,
   "datum": "2026-11-23"
  },
- "888|toernooien-bij-888|18-november-t-m-30-november": {
-  "status": "draft",
-  "item_id": "6b000183e08cb6d94ef9738b",
-  "hash": null,
-  "slug": "888-toernooien-8b6f0",
-  "check": "0/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/klassieker-strijd-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Klassieker%20Strijd",
-  "datum": "2026-11-20"
- },
- "comeon|toernooien-bij-comeon|18-november-t-m-30-november": {
-  "status": "draft",
-  "item_id": "6b0418a3344ffd733ac15951",
-  "hash": null,
-  "slug": "comeon-toernooien-543f5",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-23"
- },
  "vbet|vbet-spinofest-12-000-free-spins-voor-de-top-250|23-november-t-m-29-november": {
   "status": "draft",
   "item_id": "6b0418a1737b21dcca550c20",
@@ -4274,5 +4263,66 @@
   "check": "geen getallen; tekstoverlap",
   "bron": "https://www.circus.nl/nl/promoties/details/circus-black-friday-neon-nightmare",
   "datum": "2026-11-23"
+ },
+ "comeon|toernooien-bij-comeon|20-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b0418a3344ffd733ac15951",
+  "hash": null,
+  "slug": "comeon-toernooien-543f5",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-23"
+ },
+ "888|toernooien-bij-888|20-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b000183e08cb6d94ef9738b",
+  "hash": null,
+  "slug": "888-toernooien-8b6f0",
+  "check": "0/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/klassieker-strijd-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Klassieker%20Strijd",
+  "datum": "2026-11-20"
+ },
+ "toto-acties|maak-kans-op-kaarten-voor-glory-collision-10-kickboxing": {
+  "status": "bestond al",
+  "cms": "TOTO: Win kaarten voor Nederland - Griekenland",
+  "score": 0.64,
+  "hash": "00a6892ee213084f4949c5eb9bfef29f",
+  "datum": "2026-11-24"
+ },
+ "one|scoor-een-15-free-bet-bij-one-casino|alleen-24-november": {
+  "status": "draft",
+  "item_id": "6b056a925814dcaf2136e711",
+  "hash": null,
+  "slug": "one-casino-scoor-een-15-free-bet",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-24"
+ },
+ "unibet|unibet-autumn-raffle-4-500-aan-bingo-prijzen|altijd-geldig": {
+  "status": "live",
+  "item_id": "6b056a950e0d69f50c23f22b",
+  "hash": null,
+  "slug": "unibet-autumn-raffle-4-500-aan-bingo-prijzen",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.unibet.nl/promotions/bingo-promotions/bingo-exclusive-autumn-2026-raffle?lobby=promotions&promo=nederland-raffle",
+  "datum": "2026-11-24"
+ },
+ "betmgm|betmgm-golden-boost-tot-1-000-extra-winst-op-je-bet-builder|20-juli-t-m-31-december": {
+  "status": "draft",
+  "item_id": "6b056afb977273a65fbd954e",
+  "hash": null,
+  "slug": "betmgm-golden-boost-tot-1-000-extra-winst-op-je-bet-builder",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://www.betmgm.nl/promoties/wedden/golden-boost",
+  "datum": "2026-11-24"
+ },
+ "jacks.nl|games-global-toernooi-met-10-000-aan-prijzen|24-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b056afc48d6e20dd43894ad",
+  "hash": null,
+  "slug": "jacks-nl-games-global-toernooi-met-10-000-aan-prijzen",
+  "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-24"
  }
 }
