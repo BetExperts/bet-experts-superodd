@@ -1058,6 +1058,11 @@
    "slug": "comeon-toernooien-b38e7",
    "name": "ComeOn!: Toernooien",
    "geldig_tot": "2026-11-08"
+  },
+  "6b02f1200b3327c7510faebd": {
+   "slug": "toto-speel-25-en-krijg-25-gratis-spins",
+   "name": "TOTO: Speel €25 en krijg 25 Gratis Spins",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -3988,13 +3993,15 @@
   "datum": "2026-11-19"
  },
  "jacks.nl|kalamba-toernooi-met-2-000-aan-free-spins|19-november-t-m-23-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afed2dfb0391c2ce8ff3a48",
   "hash": null,
   "slug": "jacks-nl-kalamba-toernooi-met-2-000-aan-free-spins",
   "check": "0/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-19"
+  "datum": "2026-11-19",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-24"
  },
  "comeon|comeon-bet-en-get-free-bet-builder-van-10|19-november-t-m-22-november": {
   "status": "verwijderd",
