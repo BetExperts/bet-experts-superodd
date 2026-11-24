@@ -1,9 +1,10 @@
 {
-  "datum": "2026-11-22",
+  "datum": "2026-11-24",
   "gehad": [
-    "64ff0fbd5a8f205b05d5465c"
+    "64ff0fbd5a8f205b05d5465c",
+    "64ff0fbd5a8f205b05d54687"
   ],
-  "laatste_book": "64ff0fbd5a8f205b05d5465c",
+  "laatste_book": "64ff0fbd5a8f205b05d54687",
   "laatste_slug": {
     "682b116bb82996896cb52d5d": "tonybet-casino-welkomstbonus-50-tot-260-26-gratis-spins",
     "67c9acaf7db0b29e5b03370d": "vbet-welkomstbonus-casino-pak-250-free-spins-op-5-top-slots",
@@ -294,6 +295,11 @@
       "datum": "2026-11-22",
       "book": "JACKS.NL",
       "slug": "welkomstbonus-jacks-casino"
+    },
+    {
+      "datum": "2026-11-24",
+      "book": "Unibet",
+      "slug": "unibet-casino-welkomstbonus-ontvang-100-free-spins"
     }
   ]
 }
