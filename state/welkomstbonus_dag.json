@@ -1,13 +1,14 @@
 {
-  "datum": "2026-11-24",
+  "datum": "2026-11-25",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
     "6a7afdaa4a7453c17d31cab5",
     "6aad0c21a14e9435daf42e79",
     "66a8a87062108480763b7309",
-    "66a24463b6de25483eec85e9"
+    "66a24463b6de25483eec85e9",
+    "6526a08a94d8631739581743"
   ],
-  "laatste_book": "66a24463b6de25483eec85e9",
+  "laatste_book": "6526a08a94d8631739581743",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -25,11 +26,6 @@
     "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-sport-100-match-op-je-eerste-weddenschap"
   },
   "historie": [
-    {
-      "datum": "2026-09-26",
-      "book": "BetMGM",
-      "slug": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart"
-    },
     {
       "datum": "2026-09-27",
       "book": "Bet365",
@@ -324,6 +320,11 @@
       "datum": "2026-11-24",
       "book": "ComeOn!",
       "slug": "welkomstbonus-comeon-sport"
+    },
+    {
+      "datum": "2026-11-25",
+      "book": "LeoVegas",
+      "slug": "welkomstbonus-leovegas-sport"
     }
   ]
 }
