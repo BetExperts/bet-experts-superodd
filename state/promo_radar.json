@@ -853,7 +853,7 @@
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
    "start": "2026-11-25",
-   "slot": null
+   "slot": "Gold Blitz Infinite"
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -4349,5 +4349,20 @@
   "check": "1/3 kerngetallen gevonden",
   "bron": "https://www.leovegas.nl/promoties/extra-voetbal",
   "datum": "2026-11-24"
+ },
+ "jacks.nl|elke-dag-een-bonus-bij-jacks-nl|25-november-t-m-25-december": {
+  "status": "bestond al",
+  "cms": "JACKS.NL: Express | elke dag een bonus en kans op €50.000",
+  "score": 0.5,
+  "datum": "2026-11-25"
+ },
+ "vbet|krijg-6-dagen-lang-50-free-spins-per-dag-bij-vbet|25-november-t-m-30-november": {
+  "status": "draft",
+  "item_id": "6b06e5a5e982cccc3ff3120f",
+  "hash": null,
+  "slug": "vbet-krijg-6-dagen-lang-50-free-spins-per-dag",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-25"
  }
 }
