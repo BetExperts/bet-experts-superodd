@@ -1009,6 +1009,16 @@
    "name": "Unibet: Pak vouchers en cash met bingo missies en Bet & Gets",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6af30584911b8153e5a18db5": {
+   "slug": "toto-win-een-reis-naar-arsenal-real-madrid",
+   "name": "TOTO: Win een reis naar Arsenal - Real Madrid",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6b056a925814dcaf2136e711": {
+   "slug": "one-casino-scoor-een-15-free-bet",
+   "name": "One Casino: Scoor een €15 free bet",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6b02ac05fb24e1c7b1ef1024": {
    "slug": "oranje-palace-free-bet-per-doelpunt-liverpool-manchester-united",
    "name": "Oranje Palace: €2 Free Bet per doelpunt | Liverpool – Manchester United",
@@ -3598,13 +3608,15 @@
   "verwijderd": "2026-11-13"
  },
  "toto|win-een-voetbalreis-naar-arsenal-real-madrid|10-november-t-m-24-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6af31f25012423ded91c4884",
   "hash": null,
   "slug": "toto-win-een-voetbalreis-naar-arsenal-real-madrid",
   "check": "1/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-10"
+  "datum": "2026-11-10",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-25"
  },
  "888|pak-5-free-spins-per-goal-bij-nederland-griekenland|10-november-t-m-13-november": {
   "status": "bestond al",
@@ -4069,13 +4081,15 @@
   "datum": "2026-11-20"
  },
  "starcasino|fun-boost-psv-wint-van-real-madrid": {
-  "status": "live",
+  "status": "verwijderd",
   "item_id": "6b00512c634166ec60e1b2e1",
   "hash": "8dc9425b351c98b9ecb2e8f431870602",
   "slug": "starcasino-fun-boost-psv-wint-van-real-madrid",
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/funboostpsvrealmadrid",
-  "datum": "2026-11-20"
+  "datum": "2026-11-20",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-25"
  },
  "toto-acties|maak-kans-op-een-deel-van-5-000": {
   "status": "bestond al",
@@ -4181,13 +4195,15 @@
   "datum": "2026-11-23"
  },
  "vbet|ontvang-een-free-bet-per-goal-van-psv-en-feyenoord-bij-vbet|22-november-t-m-24-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6b04491738e1ed514a566e3b",
   "hash": null,
   "slug": "vbet-ontvang-een-free-bet-per-goal-van-psv-en-feyenoord",
   "check": "1/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-23"
+  "datum": "2026-11-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-25"
  },
  "hard-rock|hard-rock-black-friday-toernooi|23-november-t-m-30-november": {
   "status": "draft",
@@ -4201,7 +4217,7 @@
  "toto-acties|maak-kans-op-2500-cash": {
   "status": "live",
   "item_id": "6b04491abc660b9b0ccfa00a",
-  "hash": "2ecc7d8676dd829621972c5226bf2e8a",
+  "hash": "02a80cb1b05645e0b98a60b961c642ed",
   "slug": "toto-maak-kans-op-2500-cash",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
