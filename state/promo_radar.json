@@ -4287,24 +4287,6 @@
   "bron": "https://www.circus.nl/nl/promoties/details/circus-black-friday-neon-nightmare",
   "datum": "2026-11-23"
  },
- "comeon|toernooien-bij-comeon|20-november-t-m-30-november": {
-  "status": "draft",
-  "item_id": "6b0418a3344ffd733ac15951",
-  "hash": null,
-  "slug": "comeon-toernooien-543f5",
-  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
-  "bron": null,
-  "datum": "2026-11-23"
- },
- "888|toernooien-bij-888|20-november-t-m-30-november": {
-  "status": "draft",
-  "item_id": "6b000183e08cb6d94ef9738b",
-  "hash": null,
-  "slug": "888-toernooien-8b6f0",
-  "check": "0/1 kerngetallen gevonden",
-  "bron": "https://promo.888.nl/klassieker-strijd-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Klassieker%20Strijd",
-  "datum": "2026-11-20"
- },
  "toto-acties|maak-kans-op-kaarten-voor-glory-collision-10-kickboxing": {
   "status": "bestond al",
   "cms": "TOTO: Win kaarten voor Nederland - Griekenland",
@@ -4371,5 +4353,50 @@
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-25"
+ },
+ "888|toernooien-bij-888|23-november-t-m-2-december": {
+  "status": "draft",
+  "item_id": "6b000183e08cb6d94ef9738b",
+  "hash": null,
+  "slug": "888-toernooien-8b6f0",
+  "check": "0/1 kerngetallen gevonden",
+  "bron": "https://promo.888.nl/klassieker-strijd-toernooi/?int_medium=Banner&int_source=Casino%20page&int_campaign=Klassieker%20Strijd",
+  "datum": "2026-11-20"
+ },
+ "comeon|toernooien-bij-comeon|23-november-t-m-2-december": {
+  "status": "draft",
+  "item_id": "6b080d0e868448ab7b1deadd",
+  "hash": null,
+  "slug": "comeon-toernooien-b91f1",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-26"
+ },
+ "unibet|unibet-win-free-spins-en-multipliers-tot-1-000x|25-november-t-m-13-januari": {
+  "status": "draft",
+  "item_id": "6b080d0fdc62f67797c565b8",
+  "hash": null,
+  "slug": "unibet-win-free-spins-en-multipliers-tot-1-000x",
+  "check": "1/2 kerngetallen gevonden",
+  "bron": "https://www.unibet.nl/promotions/casino-promotions/holiday-prize-express?lobby=promotions&promo=holiday-prize-express-casino",
+  "datum": "2026-11-26"
+ },
+ "hard-rock|holiday-prize-express-bij-hard-rock-7-000-000-aan-prijzen|25-november-t-m-13-januari": {
+  "status": "draft",
+  "item_id": "6b080d110a98140bcf029901",
+  "hash": null,
+  "slug": "hard-rock-casino-holiday-prize-express-rock-7-000-000-aan-prijzen",
+  "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-26"
+ },
+ "toto-acties|winnitt-weekly-speel-10-op-bingo-en-krijg-10-gratis-spins": {
+  "status": "live",
+  "item_id": "6b080d130185d088a22d7cf0",
+  "hash": "3b61761f155a1f7849b4e51141e30609",
+  "slug": "toto-winnitt-weekly-speel-10-op-bingo-en-krijg-10-gratis-spins",
+  "check": "bron: toto.nl/acties",
+  "bron": "https://www.toto.nl/acties",
+  "datum": "2026-11-26"
  }
 }
