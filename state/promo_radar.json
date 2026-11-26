@@ -1078,6 +1078,11 @@
    "slug": "comeon-toernooien-b38e7",
    "name": "ComeOn!: Toernooien",
    "geldig_tot": "2026-11-08"
+  },
+  "6ad9dad58c3759e56a5b31c7": {
+   "slug": "888-toernooien",
+   "name": "888: Toernooien (van 16 november t/m 25 november)",
+   "geldig_tot": "2026-11-25"
   }
  },
  "betmgm|elk-weekend-bij-betmgm-pak-tot-15-aan-free-chips|iedere-vr-za-zo": {
@@ -3963,13 +3968,15 @@
   "datum": "2026-11-18"
  },
  "vbet|roulette-toernooi-bij-vbet|18-november-t-m-25-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afd81a997d12dca5c90cf05",
   "hash": null,
   "slug": "vbet-roulette-toernooi",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-18"
+  "datum": "2026-11-18",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-26"
  },
  "one|beat-the-dealer-event-bij-one-casino|18-november-t-m-27-november": {
   "status": "draft",
@@ -4217,7 +4224,7 @@
  "toto-acties|maak-kans-op-2500-cash": {
   "status": "live",
   "item_id": "6b04491abc660b9b0ccfa00a",
-  "hash": "02a80cb1b05645e0b98a60b961c642ed",
+  "hash": "5842234ef99125f57d9c90c467a25543",
   "slug": "toto-maak-kans-op-2500-cash",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
