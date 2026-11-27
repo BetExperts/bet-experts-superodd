@@ -1,5 +1,5 @@
 {
-  "datum": "2026-11-26",
+  "datum": "2026-11-27",
   "gehad": [
     "64ff0fbd5a8f205b05d54670",
     "6a7afdaa4a7453c17d31cab5",
@@ -7,9 +7,10 @@
     "66a8a87062108480763b7309",
     "66a24463b6de25483eec85e9",
     "6526a08a94d8631739581743",
-    "67c9acaf7db0b29e5b03370d"
+    "67c9acaf7db0b29e5b03370d",
+    "64ff0fbd5a8f205b05d54687"
   ],
-  "laatste_book": "67c9acaf7db0b29e5b03370d",
+  "laatste_book": "64ff0fbd5a8f205b05d54687",
   "laatste_slug": {
     "669ab9f5aceb8b717cea24c3": "welkomstbonus-toto-sport-pak-eu50-aan-freebets",
     "66bb685ec057aa8c4337ceea": "betmgm-sport-welkomstbonus-ontvang-2-profit-boosts-exclusieve-seizoenkaart",
@@ -27,11 +28,6 @@
     "64ff0fbd5a8f205b05d54670": "welkomstbonus-circus-sport-100-match-op-je-eerste-weddenschap"
   },
   "historie": [
-    {
-      "datum": "2026-09-28",
-      "book": "ComeOn!",
-      "slug": "welkomstbonus-comeon-sport"
-    },
     {
       "datum": "2026-09-29",
       "book": "Starcasino",
@@ -326,6 +322,11 @@
       "datum": "2026-11-26",
       "book": "Vbet",
       "slug": "vbet-welkomstbonus-eu50-free-bets-bij-eu10-inzet"
+    },
+    {
+      "datum": "2026-11-27",
+      "book": "Unibet",
+      "slug": "unibet-welkomstbonus"
     }
   ]
 }
