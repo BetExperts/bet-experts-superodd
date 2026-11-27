@@ -1044,6 +1044,11 @@
    "name": "TOTO: Winnitt Weekly! Speel €10 op Bingo en krijg 10 Gratis Spins",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
   },
+  "6b095e7a9704f8b99072c434": {
+   "slug": "starcasino-black-friday-missie",
+   "name": "Starcasino: Black Friday Missie",
+   "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
   "6b02ac05fb24e1c7b1ef1024": {
    "slug": "oranje-palace-free-bet-per-doelpunt-liverpool-manchester-united",
    "name": "Oranje Palace: €2 Free Bet per doelpunt | Liverpool – Manchester United",
@@ -4470,6 +4475,15 @@
   "slug": "unibet-black-friday-stort-en-krijg-100-free-spins",
   "check": "3/3 kerngetallen gevonden",
   "bron": "https://www.unibet.nl/promotions/casino-promotions/black-friday-dep-get?lobby=promotions&promo=black-friday-dep-get",
+  "datum": "2026-11-27"
+ },
+ "oranje-palace|stel-je-eredivisie-team-samen-en-win-free-bets-bij-oranje-palace|altijd-geldig": {
+  "status": "live",
+  "item_id": "6b09c2532232fc9700690c8b",
+  "hash": null,
+  "slug": "oranje-palace-stel-je-eredivisie-team-samen-en-win-free-bets",
+  "check": "1/1 kerngetallen gevonden",
+  "bron": "https://www.oranjepalace.nl/nl/promoties/lucky-five",
   "datum": "2026-11-27"
  }
 }
