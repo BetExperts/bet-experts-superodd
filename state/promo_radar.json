@@ -852,8 +852,8 @@
  },
  "_recurring": {
   "6ab53f21ed7e65c979c56788": {
-   "start": "2026-11-25",
-   "slot": "Gold Blitz Infinite"
+   "start": "2026-12-02",
+   "slot": null
   }
  },
  "handmatig|starcasino-win-en-get-nations-league-10-live-free-bet": {
@@ -4249,7 +4249,7 @@
  "toto-acties|maak-kans-op-2500-cash": {
   "status": "live",
   "item_id": "6b04491abc660b9b0ccfa00a",
-  "hash": "5842234ef99125f57d9c90c467a25543",
+  "hash": "cdd1d84d2f50fccef54deb1c41426145",
   "slug": "toto-maak-kans-op-2500-cash",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
@@ -4286,13 +4286,15 @@
   "datum": "2026-11-23"
  },
  "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|20-november-t-m-26-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6b04812b0ceeaf429569f112",
   "hash": null,
   "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
   "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-23"
+  "datum": "2026-11-23",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-27"
  },
  "bet365|bet365-100-000-spins-verdeler|23-november-t-m-30-november": {
   "status": "draft",
@@ -4427,5 +4429,20 @@
  "888|888-odds-boosts-60x-je-inleg|26-november-t-m-29-november": {
   "status": "overgeslagen",
   "reden": "welkomstbonus (beheert de gebruiker zelf)"
+ },
+ "bet365|verdien-tot-45-gratis-spins-per-weekend|27-november-t-m-30-november": {
+  "status": "bestond al",
+  "cms": "Bet365: Verdien tot 45 gratis spins per weekend",
+  "score": 1.0,
+  "datum": "2026-11-27"
+ },
+ "vbet|50-free-spins-zonder-storting|iedere-vr-za-zo": {
+  "status": "draft",
+  "item_id": "6b0935fddbecca3abaff9e7a",
+  "hash": null,
+  "slug": "vbet-50-free-spins-zonder-storting",
+  "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-27"
  }
 }
