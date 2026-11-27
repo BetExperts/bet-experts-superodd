@@ -4444,5 +4444,23 @@
   "check": "0/2 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
   "datum": "2026-11-27"
+ },
+ "oranje-palace|toernooi-win-een-deel-van-de-prijzenpot-van-2-000|27-november-t-m-3-december": {
+  "status": "draft",
+  "item_id": "6b095e79d37352280161ef99",
+  "hash": null,
+  "slug": "oranje-palace-toernooi-win-een-deel-van-de-prijzenpot-van-2-000",
+  "check": "1/3 kerngetallen gevonden (alleen overzichtspagina)",
+  "bron": null,
+  "datum": "2026-11-27"
+ },
+ "starcasino|black-friday-missie": {
+  "status": "live",
+  "item_id": "6b095e7a9704f8b99072c434",
+  "hash": "93fa0fa91db5579023ae95776de32f50",
+  "slug": "starcasino-black-friday-missie",
+  "check": "bron: starcasino.nl",
+  "bron": "https://starcasino.nl/black-friday-missie",
+  "datum": "2026-11-27"
  }
 }
