@@ -4462,5 +4462,14 @@
   "check": "bron: starcasino.nl",
   "bron": "https://starcasino.nl/black-friday-missie",
   "datum": "2026-11-27"
+ },
+ "unibet|black-friday-stort-en-krijg-100-free-spins|27-november-t-m-29-november": {
+  "status": "live",
+  "item_id": "6b0988bc70572da1eedf3443",
+  "hash": null,
+  "slug": "unibet-black-friday-stort-en-krijg-100-free-spins",
+  "check": "3/3 kerngetallen gevonden",
+  "bron": "https://www.unibet.nl/promotions/casino-promotions/black-friday-dep-get?lobby=promotions&promo=black-friday-dep-get",
+  "datum": "2026-11-27"
  }
 }
