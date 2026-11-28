@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "b44482c343c48da50e0be1071850f79b"
+  "hash": "256b5f383795da353a0a494b2aaae6bc"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -1048,11 +1048,6 @@
    "slug": "starcasino-black-friday-missie",
    "name": "Starcasino: Black Friday Missie",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
-  },
-  "6b06b742a263928eec99d4b1": {
-   "slug": "toto-december-mania",
-   "name": "TOTO December Mania Warm Up: elke dag een gratis spin en kans op €2.500",
-   "geldig_tot": "2026-11-27"
   },
   "6b02ac05fb24e1c7b1ef1024": {
    "slug": "oranje-palace-free-bet-per-doelpunt-liverpool-manchester-united",
