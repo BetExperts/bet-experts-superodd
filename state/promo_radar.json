@@ -886,7 +886,7 @@
  "starcasino|wow-wheel": {
   "status": "bron-handmatig",
   "item_id": "6ab541d49a43a1d53046a7ea",
-  "hash": "256b5f383795da353a0a494b2aaae6bc"
+  "hash": "b44482c343c48da50e0be1071850f79b"
  },
  "starcasino|starcasino-s-voetbal-quiz": {
   "status": "bron-handmatig",
@@ -1048,6 +1048,11 @@
    "slug": "starcasino-black-friday-missie",
    "name": "Starcasino: Black Friday Missie",
    "reden": "niet meer in de bonuskalender, maar nog niet verlopen — nog geldig bij de bookmaker?"
+  },
+  "6b06b742a263928eec99d4b1": {
+   "slug": "toto-december-mania",
+   "name": "TOTO December Mania Warm Up: elke dag een gratis spin en kans op €2.500",
+   "geldig_tot": "2026-11-27"
   },
   "6b02ac05fb24e1c7b1ef1024": {
    "slug": "oranje-palace-free-bet-per-doelpunt-liverpool-manchester-united",
@@ -4009,13 +4014,15 @@
   "verwijderd": "2026-11-26"
  },
  "one|beat-the-dealer-event-bij-one-casino|18-november-t-m-27-november": {
-  "status": "draft",
+  "status": "verwijderd",
   "item_id": "6afdab2c22ef6630be6065cd",
   "hash": null,
   "slug": "one-casino-beat-the-dealer-event",
   "check": "0/1 kerngetallen gevonden (alleen overzichtspagina)",
   "bron": null,
-  "datum": "2026-11-18"
+  "datum": "2026-11-18",
+  "reden": "verlopen",
+  "verwijderd": "2026-11-28"
  },
  "starcasino|crazy-odds-liverpool-wint-en-manchester-united-scoort-niet": {
   "status": "verwijderd",
@@ -4254,7 +4261,7 @@
  "toto-acties|maak-kans-op-2500-cash": {
   "status": "live",
   "item_id": "6b04491abc660b9b0ccfa00a",
-  "hash": "cdd1d84d2f50fccef54deb1c41426145",
+  "hash": "9c80e620ae994bf48b573f84013d8d09",
   "slug": "toto-maak-kans-op-2500-cash",
   "check": "bron: toto.nl/acties",
   "bron": "https://www.toto.nl/acties",
